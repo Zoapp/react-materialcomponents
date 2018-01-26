@@ -1,3 +1,35 @@
+html {
+  height: 100%;
+}
+
 body {
-  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  min-height: 100%;
+}
+
+body > div {
+  position: absolute;
+  height: 100%;
+}
+
+.rmdc-content-fixed-adjust {
+  height: calc(100% - 64px);
+}
+
+.rmdc-content-height {
+  height: 100%;
+}
+
+.rmdc-content {
+  display: flex;
+  flex: 1 1 auto;
+  box-sizing: border-box;
+}
+
+main {
+  padding: 24px;
 }

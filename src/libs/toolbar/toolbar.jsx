@@ -9,31 +9,45 @@ import PropTypes from "prop-types";
 
 /*
 See:
-https://material.io/components/web/catalog/buttons/
-http://material-components-web.appspot.com/button.html
+https://material.io/components/web/catalog/toolbar/
+https://material-components-web.appspot.com/toolbar/index.html
 
 TODO:
-- Ripple effect
+- waterfall, flexible, fixedlastrow
 - Mixins
 */
 export default class Toolbar extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = { flexibleExpansionRatio: 0 };
-    this.handleScroll = this.handleScroll.bind(this);
-    this.calculations = { toolbarRowHeight: 0 };
-  }
-
-  handleScroll() {
-    this.setState({ scrollTop: this.getWindow().pageYOffset });
+    // TODO
+    this.todo = {};
   }
 
   render() {
-    const { className, fixed, waterfall, fixedLastRowOnly, flexible, flexibleDefaultBehavior,
-      children, windowContext, ...otherProps } = this.props;
-    const classes = "mdc-toolbar";
+    const {
+      children, className, fixed, ...otherProps
+    } = this.props;
+    let classes = "mdc-toolbar";
+    if (fixed) {
+      classes += " mdc-toolbar--fixed";
+    }
     return (
-      <header className={classes}>{children}</header>
+      <header className={classes} {...otherProps} >{children}</header>
     );
   }
 }
+
+Toolbar.defaultProps = {
+  children: null,
+  className: null,
+
+  fixed: false,
+};
+
+Toolbar.propTypes = {
+// React component props
+  children: PropTypes.node,
+  className: PropTypes.string,
+
+  fixed: PropTypes.bool,
+};

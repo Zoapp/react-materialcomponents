@@ -16,30 +16,31 @@ TODO:
 - All
 - Mixins
 */
-const Section = ({
-  children, className, alignStart, ...props
+const Icon = ({
+  className, icon, ...props
 }) => {
-  let classes = "mdc-toolbar__section";
-  if (alignStart) {
-    classes += " mdc-toolbar__section--align-start";
-  }
+  let classes = "material-icons";
   // TODO all
-  return (<section className={classes} {...props}>{children}</section>);
+  if (icon === "menu") {
+    classes += " mdc-toolbar__menu-icon";
+    const link = "#"; // TODO
+    return (<a href={link} className={classes} {...props}>{icon}</a>);
+  }
+  classes += ` ${icon}`;
+  return (<a className={classes} {...props}>{icon}</a>);
 };
 
-Section.defaultProps = {
-  children: null,
+Icon.defaultProps = {
   className: null,
 
-  alignStart: false,
+  icon: null,
 };
 
-Section.propTypes = {
+Icon.propTypes = {
 // React component props
-  children: PropTypes.node,
   className: PropTypes.string,
 
-  alignStart: PropTypes.bool,
+  icon: PropTypes.string,
 };
 
-export default Section;
+export default Icon;

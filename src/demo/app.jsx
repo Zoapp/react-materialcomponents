@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "material-components-web/dist/material-components-web.css";
 /* import "material-design-icons/iconfont/material-icons.css"; */
-import { Button, Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon } from "../../src";
+import { Button, Content, Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon, Drawer, DrawerContent, ListItem } from "../../src";
 
 export default class App extends Component {
   componentWillMount() {
@@ -10,8 +10,8 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
-        <Toolbar>
+      <Content fixed>
+        <Toolbar fixed>
           <ToolbarRow>
             <ToolbarSection alignStart>
               <ToolbarIcon icon="menu" />
@@ -19,10 +19,18 @@ export default class App extends Component {
             </ToolbarSection>
           </ToolbarRow>
         </Toolbar>
-        <div>
-          <Button>Hello</Button>
-        </div>
-      </div>
+        <Content fixed toolbarAdjust>
+          <Drawer>
+            <DrawerContent list>
+              <ListItem type="a" icon="inbox" activated>Inbox</ListItem>
+              <ListItem type="a" icon="star">Star</ListItem>
+            </DrawerContent>
+          </Drawer>
+          <main>
+            <Button>Hello</Button>
+          </main>
+        </Content>
+      </Content>
     );
   }
 }
