@@ -6,5 +6,8 @@
  */
 import ListItem from "./item";
 import List from "./list";
+import ListDivider from "./divider";
+import ListGroup from "./group";
+import ListGroupSubheader from "./subheader";
 
-export { List, ListItem };
+export { List, ListItem, ListDivider, ListGroup, ListGroupSubheader };
