@@ -17,10 +17,28 @@ TODO:
 - Mixins
 */
 const Button = ({
-  children, className, raised, unelevated, stroked, dense, compact, disabled, ripple, ...props
+  children,
+  className,
+  raised,
+  unelevated,
+  stroked,
+  dense,
+  compact,
+  disabled,
+  ripple,
+  cardAction,
+  ...props
 }) => {
-  const classes = "mdc-button";
-  // TODO raised, unelevated, stroked, dense, compact, disabled, ripple
+  let classes = "mdc-button";
+  // Special case for inner buttons of CardActions
+  if (cardAction) {
+    classes += " mdc-button--compact mdc-card__action";
+  } else {
+    // TODO raised, unelevated, stroked, dense, compact, disabled, ripple
+  }
+  if (className) {
+    classes += ` ${className}`;
+  }
   return (<button className={classes} disabled={disabled} {...props}>{children}</button>);
 };
 
@@ -36,6 +54,8 @@ Button.defaultProps = {
 
   disabled: false,
   ripple: false,
+
+  cardAction: false,
 };
 
 Button.propTypes = {
@@ -51,6 +71,8 @@ Button.propTypes = {
 
   disabled: PropTypes.bool,
   ripple: PropTypes.bool,
+
+  cardAction: PropTypes.bool,
 };
 
 export default Button;

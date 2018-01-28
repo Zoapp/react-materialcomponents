@@ -16,7 +16,10 @@ https://material.io/components/web/catalog/drawer/
 const DrawerHeader = ({
   children, className, list, ...props
 }) => {
-  const classes = "mdc-drawer__header";
+  let classes = "mdc-drawer__header";
+  if (className) {
+    classes += ` ${className}`;
+  }
   return (<header className={classes} {...props}><div className="mdc-drawer__header-content">{children}</div></header>);
 };
 

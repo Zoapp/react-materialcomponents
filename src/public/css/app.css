@@ -30,6 +30,19 @@ body > div {
   box-sizing: border-box;
 }
 
+.rmdc-fab--absolute {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+@media(min-width: 1024px) {
+   .rmdc-fab--absolute {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
 main {
   padding: 24px;
 }

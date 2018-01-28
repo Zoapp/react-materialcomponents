@@ -25,6 +25,9 @@ const List = ({
   if (twoLine) {
     classes += " mdc-list--two-line";
   }
+  if (className) {
+    classes += ` ${className}`;
+  }
   // TODO iterate througth children to check and set type
   return (<ul className={classes} {...props}>{children}</ul>);
 };

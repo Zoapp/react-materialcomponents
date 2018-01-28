@@ -23,10 +23,16 @@ const Icon = ({
   // TODO all
   if (icon === "menu") {
     classes += " mdc-toolbar__menu-icon";
+    if (className) {
+      classes += ` ${className}`;
+    }
     const link = "#"; // TODO
     return (<a href={link} className={classes} {...props}>{icon}</a>);
   }
   classes += ` ${icon}`;
+  if (className) {
+    classes += ` ${className}`;
+  }
   return (<a className={classes} {...props}>{icon}</a>);
 };
 

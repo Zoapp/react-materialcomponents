@@ -19,7 +19,10 @@ TODO:
 const Row = ({
   children, className, ...props
 }) => {
-  const classes = "mdc-toolbar__row";
+  let classes = "mdc-toolbar__row";
+  if (className) {
+    classes += ` ${className}`;
+  }
   // TODO all
   return (<div className={classes} {...props}>{children}</div>);
 };

@@ -8,37 +8,30 @@ import React from "react";
 import PropTypes from "prop-types";
 
 /*
-mdc-drawer__content
+mdc-card__subtitle
 See
-https://material.io/components/web/catalog/drawer/
+https://material.io/components/web/catalog/cards/
 
 */
-const DrawerContent = ({
-  children, className, list, ...props
+const CardSubtitle = ({
+  children, className, ...props
 }) => {
-  let classes = "mdc-drawer__content";
-  if (list) {
-    classes += " mdc-list";
-  }
+  let classes = "mdc-card__subtitle";
   if (className) {
     classes += ` ${className}`;
   }
-  return (<nav className={classes} {...props}>{children}</nav>);
+  return (<h2 className={classes} {...props}>{children}</h2>);
 };
 
-DrawerContent.defaultProps = {
+CardSubtitle.defaultProps = {
   children: null,
   className: null,
-
-  list: false,
 };
 
-DrawerContent.propTypes = {
+CardSubtitle.propTypes = {
 // React component props
   children: PropTypes.node,
   className: PropTypes.string,
-
-  list: PropTypes.bool,
 };
 
-export default DrawerContent;
+export default CardSubtitle;

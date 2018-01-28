@@ -19,7 +19,10 @@ TODO:
 const ListGroupSubheader = ({
   children, className, type, ...props
 }) => {
-  const classes = "mdc-list-group__subheader";
+  let classes = "mdc-list-group__subheader";
+  if (className) {
+    classes += ` ${className}`;
+  }
   // TODO type
   if (type !== "h3") {
     return (<h3 className={classes} {...props}>{children}</h3>);

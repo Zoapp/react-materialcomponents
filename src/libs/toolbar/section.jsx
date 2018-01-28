@@ -23,6 +23,9 @@ const Section = ({
   if (alignStart) {
     classes += " mdc-toolbar__section--align-start";
   }
+  if (className) {
+    classes += ` ${className}`;
+  }
   // TODO all
   return (<section className={classes} {...props}>{children}</section>);
 };

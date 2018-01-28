@@ -31,6 +31,9 @@ export default class Toolbar extends PureComponent {
     if (fixed) {
       classes += " mdc-toolbar--fixed";
     }
+    if (className) {
+      classes += ` ${className}`;
+    }
     return (
       <header className={classes} {...otherProps} >{children}</header>
     );

@@ -19,7 +19,10 @@ TODO:
 const Grid = ({
   children, className, ...props
 }) => {
-  const classes = "mdc-layout-grid";
+  let classes = "mdc-layout-grid";
+  if (className) {
+    classes += ` ${className}`;
+  }
   return (<div className={classes} {...props}>{children}</div>);
 };
 

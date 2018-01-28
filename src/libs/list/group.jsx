@@ -19,7 +19,10 @@ TODO:
 const ListGroup = ({
   children, className, ...props
 }) => {
-  const classes = "mdc-list-group";
+  let classes = "mdc-list-group";
+  if (className) {
+    classes += ` ${className}`;
+  }
   return (<div className={classes} {...props}>{children}</div>);
 };
 

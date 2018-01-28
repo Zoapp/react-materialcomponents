@@ -18,7 +18,10 @@ TODO:
 const Inner = ({
   children, className, ...props
 }) => {
-  const classes = "mdc-layout-grid__inner";
+  let classes = "mdc-layout-grid__inner";
+  if (className) {
+    classes += ` ${className}`;
+  }
   return (<div className={classes} {...props}>{children}</div>);
 };
 

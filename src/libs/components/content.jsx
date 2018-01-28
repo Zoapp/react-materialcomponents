@@ -25,6 +25,9 @@ const Content = ({
   if (toolbarAdjust) {
     classes += " mdc-toolbar-fixed-adjust";
   }
+  if (className) {
+    classes += ` ${className}`;
+  }
   return (<div className={classes} {...props}>{children}</div>);
 };
 

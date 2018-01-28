@@ -26,7 +26,10 @@ export default class Drawer extends PureComponent {
     const {
       children, className, type, ...props
     } = this.props;
-    const classes = `mdc-drawer mdc-drawer--${type} mdc-typography`;
+    let classes = `mdc-drawer mdc-drawer--${type} mdc-typography`;
+    if (className) {
+      classes += ` ${className}`;
+    }
     if (type === "permanent") {
       return (<nav className={classes} {...props}>{children}</nav>);
     }

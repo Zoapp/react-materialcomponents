@@ -24,6 +24,9 @@ const ListItem = ({
   if (activated) {
     classes += " mdc-list-item--activated";
   }
+  if (className) {
+    classes += ` ${className}`;
+  }
   if (icon) {
     graphic = (<i className="material-icons mdc-list-item__graphic" aria-hidden="true">{icon}</i>);
   }

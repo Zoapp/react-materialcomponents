@@ -19,7 +19,10 @@ TODO:
 const Title = ({
   children, className, ...props
 }) => {
-  const classes = "mdc-toolbar__title";
+  let classes = "mdc-toolbar__title";
+  if (className) {
+    classes += ` ${className}`;
+  }
   // TODO all
   return (<span className={classes} {...props}>{children}</span>);
 };
