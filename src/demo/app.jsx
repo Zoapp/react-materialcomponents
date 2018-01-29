@@ -83,12 +83,37 @@ export default class App extends Component {
                   <Button>Hello</Button>
                 </Cell>
                 <Cell>
-                <TextField label="Demo1" />
-                <TextField label="Demo2" defaultValue="Hello" />
-                <TextField label="Demo2" defaultValue="Hello" disabled />
-              </Cell>
+                  <TextField label="Demo1" />
+                  <TextField label="Demo2" defaultValue="Hello" />
+                  <TextField label="Demo2" defaultValue="Hello" disabled />
+                </Cell>
               </Inner>
             </Grid>
+            <section>
+              <div>
+                <div style={{ padding: "16px" }}>
+                  <Button>Hello</Button>
+                </div>
+                <div style={{ padding: "16px" }}>
+                  <Button raised icon="favorite">Hello</Button>
+                </div>
+                <div style={{ padding: "16px" }}>
+                  <Button raised>Hello</Button>
+                </div>
+                <div style={{ padding: "16px" }}>
+                  <Button raised disabled>Hello</Button>
+                </div>
+                <div style={{ padding: "16px" }}>
+                  <Button unelevated compact secondary>Hello</Button>
+                </div>
+                <div style={{ padding: "16px" }}>
+                  <Button stroked dense>Hello</Button>
+                </div>
+                <div style={{ padding: "16px" }}>
+                  <Button raised link="#">Hello</Button>
+                </div>
+              </div>
+            </section>
           </main>
         </Content>
         <Fab icon="favorite" />

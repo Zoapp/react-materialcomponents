@@ -13,6 +13,7 @@ https://material.io/components/web/catalog/buttons/
 http://material-components-web.appspot.com/button.html
 
 TODO:
+- secondary no related css in mdc.css
 - Ripple effect
 - Mixins
 */
@@ -24,7 +25,9 @@ const Button = ({
   stroked,
   dense,
   compact,
-  disabled,
+  secondary,
+  icon,
+  link,
   ripple,
   cardAction,
   ...props
@@ -34,12 +37,36 @@ const Button = ({
   if (cardAction) {
     classes += " mdc-button--compact mdc-card__action";
   } else {
-    // TODO raised, unelevated, stroked, dense, compact, disabled, ripple
+    if (raised) {
+      classes += " mdc-button--raised";
+    }
+    if (unelevated) {
+      classes += " mdc-button--unelevated";
+    }
+    if (stroked) {
+      classes += " mdc-button--stroked";
+    }
+    if (dense) {
+      classes += " mdc-button--dense";
+    }
+    if (compact) {
+      classes += " mdc-button--compact";
+    }
+    if (secondary) {
+      classes += " secondary-filled-button";
+    }
   }
   if (className) {
     classes += ` ${className}`;
   }
-  return (<button className={classes} disabled={disabled} {...props}>{children}</button>);
+  let i = "";
+  if (icon) {
+    i = (<i className="material-icons mdc-button__icon">{icon}</i>);
+  }
+  if (link) {
+    return (<a href={link} className={classes} {...props}>{i}{children}</a>);
+  }
+  return (<button className={classes} {...props}>{i}{children}</button>);
 };
 
 Button.defaultProps = {
@@ -51,8 +78,9 @@ Button.defaultProps = {
   stroked: false,
   dense: false,
   compact: false,
-
-  disabled: false,
+  secondary: false,
+  icon: null,
+  link: null,
   ripple: false,
 
   cardAction: false,
@@ -68,8 +96,10 @@ Button.propTypes = {
   stroked: PropTypes.bool,
   dense: PropTypes.bool,
   compact: PropTypes.bool,
+  secondary: PropTypes.bool,
+  icon: PropTypes.string,
+  link: PropTypes.string,
 
-  disabled: PropTypes.bool,
   ripple: PropTypes.bool,
 
   cardAction: PropTypes.bool,

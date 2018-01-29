@@ -11,6 +11,7 @@ import PropTypes from "prop-types";
 mdc-text-field
 See
 https://material.io/components/web/catalog/input-controls/text-field/
+https://material-components-web.appspot.com/text-field.html
 // TODO
 - Fullwidth
 - TextArea
@@ -24,7 +25,7 @@ export default class Textfield extends Component {
     this.state = { focused: false };
   }
 
-  onBlur = (event) => {
+  onBlur = () => {
     this.setState({ focused: false });
   }
 
@@ -45,18 +46,18 @@ export default class Textfield extends Component {
       lc += " mdc-text-field__label--float-above";
       bc += " mdc-text-field__bottom-line--active";
     }
-    let d = {};
+    const d = {};
     if (disabled) {
       classes += " mdc-text-field--disabled";
-      d.disabled = "disabled";  
+      d.disabled = "disabled";
     }
     let value;
-    if  (this.inputRef) {
-      value = this.inputRef.value;
+    if (this.inputRef) {
+      ({ value } = this.inputRef);
     } else if (props.value) {
-      ({ value } = props); 
+      ({ value } = props);
     } else if (props.defaultValue) {
-      ({ defaultValue: value } = props); 
+      ({ defaultValue: value } = props);
     }
     if ((!focused) &&
         (value && value.trim().length > 0)) {
