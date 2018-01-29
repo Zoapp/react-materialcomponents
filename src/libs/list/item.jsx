@@ -6,6 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Icon from "../components/icon";
 
 /*
 mdc-list-item
@@ -28,7 +29,7 @@ const ListItem = ({
     classes += ` ${className}`;
   }
   if (icon) {
-    graphic = (<i className="material-icons mdc-list-item__graphic" aria-hidden="true">{icon}</i>);
+    graphic = (<Icon className="mdc-list-item__graphic" aria-hidden="true" name={icon} />);
   }
   if (type === "a") {
     return (<a className={classes} {...props}>{graphic}{children}</a>);

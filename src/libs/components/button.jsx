@@ -6,6 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Icon from "./icon";
 
 /*
 See:
@@ -61,7 +62,7 @@ const Button = ({
   }
   let i = "";
   if (icon) {
-    i = (<i className="material-icons mdc-button__icon">{icon}</i>);
+    i = (<Icon className="mdc-button__icon" name={icon} />);
   }
   if (link) {
     return (<a href={link} className={classes} {...props}>{i}{children}</a>);

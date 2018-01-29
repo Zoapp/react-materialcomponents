@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 import React from "react";
-import PropTypes from "prop-types";
+import Icon from "../components/icon";
 
 /*
 See:
@@ -16,37 +16,4 @@ TODO:
 - All
 - Mixins
 */
-const Icon = ({
-  className, icon, ...props
-}) => {
-  let classes = "material-icons";
-  // TODO all
-  if (icon === "menu") {
-    classes += " mdc-toolbar__menu-icon";
-    if (className) {
-      classes += ` ${className}`;
-    }
-    const link = "#"; // TODO
-    return (<a href={link} className={classes} {...props}>{icon}</a>);
-  }
-  classes += ` ${icon}`;
-  if (className) {
-    classes += ` ${className}`;
-  }
-  return (<a className={classes} {...props}>{icon}</a>);
-};
-
-Icon.defaultProps = {
-  className: null,
-
-  icon: null,
-};
-
-Icon.propTypes = {
-// React component props
-  className: PropTypes.string,
-
-  icon: PropTypes.string,
-};
-
-export default Icon;
+export default props => <Icon className="mdc-toolbar__menu-icon" componentName="a" {...props} />;

@@ -21,7 +21,7 @@ export default class App extends Component {
         <Toolbar fixed>
           <ToolbarRow>
             <ToolbarSection alignStart>
-              <ToolbarIcon icon="menu" />
+              <ToolbarIcon name="menu" />
               <ToolbarTitle>Title</ToolbarTitle>
             </ToolbarSection>
           </ToolbarRow>

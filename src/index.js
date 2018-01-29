@@ -5,6 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 import Button from "./libs/components/button";
+import Icon from "./libs/components/icon";
 import Content from "./libs/components/content";
 import Fab from "./libs/components/fab";
 import TextField from "./libs/components/textfield";
