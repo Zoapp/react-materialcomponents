@@ -17,12 +17,14 @@ https://material-components-web.appspot.com/radio.html
 export default class Radio extends Component {
   render() {
     const {
-      className, id, name, label, checked, disabled, ...props
+      className, id, name, label, checked, disabled,
     } = this.props;
     let classes = "mdc-radio";
     if (className) {
       classes += ` ${className}`;
     }
+    // TODO better cid generator
+    const cid = id || Math.random().toString(36);
     let l = "";
     if (label) {
       /* eslint-disable jsx-a11y/label-has-for */
@@ -36,12 +38,10 @@ export default class Radio extends Component {
     if (checked) {
       d.defaultChecked = "checked";
     }
-    // TODO better cid generator
-    const cid = id || Math.random().toString(36);
     let component = (
       <div className={classes}>
         <input
-          class="mdc-radio__native-control"
+          className="mdc-radio__native-control"
           type="radio"
           id={cid}
           name={name}
@@ -53,17 +53,18 @@ export default class Radio extends Component {
           <div className="mdc-radio__inner-circle" />
         </div>
       </div>);
-      if (label) {
-        component = (<FormField>{component}{l}</FormField>);
-      }
-      return component;
+    if (label) {
+      component = (<FormField>{component}{l}</FormField>);
+    }
+    return component;
   }
-};
+}
 
 Radio.defaultProps = {
   className: null,
   id: null,
   label: null,
+  disabled: false,
   checked: false,
   name: null,
 };
@@ -73,6 +74,7 @@ Radio.propTypes = {
   className: PropTypes.string,
   id: PropTypes.string,
   label: PropTypes.string,
+  disabled: PropTypes.bool,
   checked: PropTypes.bool,
   name: PropTypes.string,
 };

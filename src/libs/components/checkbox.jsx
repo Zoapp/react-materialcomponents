@@ -79,7 +79,7 @@ export default class Checkbox extends Component {
     }
     return component;
   }
-};
+}
 
 Checkbox.defaultProps = {
   className: null,
@@ -97,6 +97,7 @@ Checkbox.propTypes = {
   label: PropTypes.string,
   id: PropTypes.string,
   disabled: PropTypes.bool,
+  checked: PropTypes.bool,
   indeterminate: PropTypes.bool,
   onChange: PropTypes.func,
 };

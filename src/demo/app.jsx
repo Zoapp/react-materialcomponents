@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "material-components-web/dist/material-components-web.css";
 /* import "material-design-icons/iconfont/material-icons.css"; */
 import {
-  Button, Content, Fab, TextField, Checkbox, Radio, FormField,
+  Button, Content, Fab, TextField, Checkbox, Radio, Select, Menu,
   Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon,
   Drawer, DrawerContent,
   List, ListItem, ListDivider, ListGroup, ListGroupSubheader,
@@ -137,6 +137,16 @@ export default class App extends Component {
               <div style={{ padding: "16px" }}>
                 <Radio label="radio 1" name="r3" checked disabled />
                 <Radio label="radio 2" name="r3" disabled />
+              </div>
+            </section>
+            <section>
+              <div style={{ padding: "16px" }}>
+                <Select />
+              </div>
+            </section>
+            <section>
+              <div style={{ padding: "16px" }}>
+                <Menu />
               </div>
             </section>
           </main>

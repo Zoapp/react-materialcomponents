@@ -12,6 +12,8 @@ import Fab from "./libs/components/fab";
 import TextField from "./libs/components/textfield";
 import Radio from "./libs/components/radio";
 import FormField from "./libs/components/formField";
+import Select from "./libs/components/select";
+import Menu from "./libs/components/menu";
 import { Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon } from "./libs/toolbar";
 import { Drawer, DrawerContent, DrawerHeader } from "./libs/drawer";
 import { List, ListItem, ListDivider, ListGroup, ListGroupSubheader } from "./libs/list";
@@ -19,7 +21,7 @@ import { Grid, Inner, Cell } from "./libs/layoutGrid";
 import { Card, CardActions, CardMedia, CardText, CardPrimary, CardTitle, CardSubtitle, } from "./libs/cards";
 
 export {
-  Button, Content, Fab, TextField, Checkbox, Radio, FormField,
+  Button, Content, Fab, TextField, Checkbox, Radio, FormField, Select, Menu,
   Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon,
   Drawer, DrawerContent, DrawerHeader,
   List, ListItem, ListDivider, ListGroup, ListGroupSubheader,
