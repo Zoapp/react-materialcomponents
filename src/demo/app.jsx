@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "material-components-web/dist/material-components-web.css";
 /* import "material-design-icons/iconfont/material-icons.css"; */
 import {
-  Button, Content, Fab, TextField,
+  Button, Content, Fab, TextField, Checkbox,
   Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon,
   Drawer, DrawerContent,
   List, ListItem, ListDivider, ListGroup, ListGroupSubheader,
@@ -112,6 +112,17 @@ export default class App extends Component {
                 <div style={{ padding: "16px" }}>
                   <Button raised link="#">Hello</Button>
                 </div>
+              </div>
+            </section>
+            <section>
+              <div style={{ padding: "16px" }}>
+                <Checkbox label="label" checked />
+              </div>
+              <div style={{ padding: "16px" }}>
+                <Checkbox label="label" checked disabled />
+              </div>
+              <div style={{ padding: "16px" }}>
+                <Checkbox label="label" indeterminate />
               </div>
             </section>
           </main>

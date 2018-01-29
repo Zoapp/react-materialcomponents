@@ -7,6 +7,7 @@
 import Button from "./libs/components/button";
 import Icon from "./libs/components/icon";
 import Content from "./libs/components/content";
+import Checkbox from "./libs/components/checkbox";
 import Fab from "./libs/components/fab";
 import TextField from "./libs/components/textfield";
 import { Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon } from "./libs/toolbar";
@@ -16,7 +17,7 @@ import { Grid, Inner, Cell } from "./libs/layoutGrid";
 import { Card, CardActions, CardMedia, CardText, CardPrimary, CardTitle, CardSubtitle, } from "./libs/cards";
 
 export {
-  Button, Content, Fab, TextField,
+  Button, Content, Fab, TextField, Checkbox,
   Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon,
   Drawer, DrawerContent, DrawerHeader,
   List, ListItem, ListDivider, ListGroup, ListGroupSubheader,
