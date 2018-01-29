@@ -13,11 +13,15 @@ mdc-card
 See
 https://material.io/components/web/catalog/cards/
 https://material-components-web.appspot.com/card.html
+
 */
 const Card = ({
-  children, className, title, subTitle, largeTitle, horizontalBlock, ...props
+  children, className, title, subTitle, largeTitle, horizontalBlock, darkTheme, ...props
 }) => {
   let classes = "mdc-card";
+  if (darkTheme) {
+    classes += " mdc-card--theme-dark";
+  }
   if (className) {
     classes += ` ${className}`;
   }
@@ -48,6 +52,7 @@ Card.defaultProps = {
   subTitle: null,
   largeTitle: false,
   horizontalBlock: false,
+  darkTheme: false,
 };
 
 Card.propTypes = {
@@ -59,6 +64,7 @@ Card.propTypes = {
   subTitle: PropTypes.string,
   largeTitle: PropTypes.bool,
   horizontalBlock: PropTypes.bool,
+  darkTheme: PropTypes.bool,
 };
 
 export default Card;

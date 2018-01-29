@@ -46,3 +46,28 @@ body > div {
 main {
   padding: 24px;
 }
+
+/* Theses style are missing from https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css  ??? */
+.mdc-text-field--focused:not(.mdc-text-field--invalid):not(.mdc-text-field--disabled) .mdc-text-field__label,
+.mdc-text-field--focused:not(.mdc-text-field--invalid):not(.mdc-text-field--disabled) .mdc-text-field__input::-webkit-input-placeholder {
+  /* @alternate */
+  color: #6200ee;
+  color: var(--mdc-theme-primary, #6200ee); }
+
+.mdc-text-field--focused:not(.mdc-text-field--invalid):not(.mdc-text-field--disabled) .mdc-text-field__label,
+.mdc-text-field--focused:not(.mdc-text-field--invalid):not(.mdc-text-field--disabled) .mdc-text-field__input::-moz-placeholder {
+  /* @alternate */
+  color: #6200ee;
+  color: var(--mdc-theme-primary, #6200ee); }
+
+.mdc-text-field--focused:not(.mdc-text-field--invalid):not(.mdc-text-field--disabled) .mdc-text-field__label,
+.mdc-text-field--focused:not(.mdc-text-field--invalid):not(.mdc-text-field--disabled) .mdc-text-field__input:-ms-input-placeholder {
+  /* @alternate */
+  color: #6200ee;
+  color: var(--mdc-theme-primary, #6200ee); }
+
+.mdc-text-field--focused:not(.mdc-text-field--invalid):not(.mdc-text-field--disabled) .mdc-text-field__label,
+.mdc-text-field--focused:not(.mdc-text-field--invalid):not(.mdc-text-field--disabled) .mdc-text-field__input::placeholder {
+  /* @alternate */
+  color: #6200ee;
+  color: var(--mdc-theme-primary, #6200ee); }

@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 /*
@@ -12,33 +12,81 @@ mdc-text-field
 See
 https://material.io/components/web/catalog/input-controls/text-field/
 // TODO
-- Prefilled
 - Fullwidth
 - TextArea
-- Disabled
 - Outlined
 - Helper
 - Leading and Trailing icons
-- Get native input
 */
-const Textfield = ({
-  children, className, label, id, ...props
-}) => {
-  let classes = "mdc-text-field";
-  if (className) {
-    classes += ` ${className}`;
+export default class Textfield extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { focused: false };
   }
-  // TODO better cid generator
-  const cid = id || `textfield-${label}`;
-  /* eslint-disable jsx-a11y/label-has-for */
-  return (
-    <div className={classes}>
-      <input type="text" id={cid} className="mdc-text-field__input" {...props} />
-      <label className="mdc-text-field__label" htmlFor={cid} >{label}</label>
-      <div className="mdc-text-field__bottom-line" />
-    </div>);
-  /* eslint-enable jsx-a11y/label-has-for */
-};
+
+  onBlur = (event) => {
+    this.setState({ focused: false });
+  }
+
+  onFocus = () => {
+    this.setState({ focused: true });
+  }
+
+  render() {
+    const {
+      children, className, label, id, type, disabled, onChange, ...props
+    } = this.props;
+    const { focused } = this.state;
+    let classes = "mdc-text-field mdc-text-field--upgraded";
+    let lc = "mdc-text-field__label";
+    let bc = "mdc-text-field__bottom-line";
+    if (focused) {
+      classes += " mdc-text-field--focused";
+      lc += " mdc-text-field__label--float-above";
+      bc += " mdc-text-field__bottom-line--active";
+    }
+    let d = {};
+    if (disabled) {
+      classes += " mdc-text-field--disabled";
+      d.disabled = "disabled";  
+    }
+    let value;
+    if  (this.inputRef) {
+      value = this.inputRef.value;
+    } else if (props.value) {
+      ({ value } = props); 
+    } else if (props.defaultValue) {
+      ({ defaultValue: value } = props); 
+    }
+    if ((!focused) &&
+        (value && value.trim().length > 0)) {
+      lc += " mdc-text-field__label--float-above";
+    }
+    if (className) {
+      classes += ` ${className}`;
+    }
+    // TODO better cid generator
+    const cid = id || Math.random().toString(36);
+    /* eslint-disable jsx-a11y/label-has-for */
+    return (
+      <div className={classes} >
+        <input
+          type={type}
+          id={cid}
+          className="mdc-text-field__input"
+          onBlur={this.onBlur}
+          onFocus={this.onFocus}
+          onChange={onChange}
+          ref={(c) => { this.inputRef = c; }}
+          {...props}
+          {...d}
+        />
+        <label focused={focused.toString()} className={lc} htmlFor={cid} >{label}</label>
+        <div className={bc} />
+      </div>);
+    /* eslint-enable jsx-a11y/label-has-for */
+  }
+}
 
 Textfield.defaultProps = {
   children: null,
@@ -46,14 +94,19 @@ Textfield.defaultProps = {
 
   label: null,
   id: null,
+  type: "text",
+  disabled: false,
+  onChange: () => {},
 };
 
 Textfield.propTypes = {
 // React component props
   children: PropTypes.node,
   className: PropTypes.string,
+
   label: PropTypes.string,
   id: PropTypes.string,
+  type: PropTypes.string,
+  disabled: PropTypes.bool,
+  onChange: PropTypes.func,
 };
-
-export default Textfield;

@@ -81,8 +81,12 @@ export default class App extends Component {
                 </Cell>
                 <Cell>
                   <Button>Hello</Button>
-                  <TextField label="Demo" />
                 </Cell>
+                <Cell>
+                <TextField label="Demo1" />
+                <TextField label="Demo2" defaultValue="Hello" />
+                <TextField label="Demo2" defaultValue="Hello" disabled />
+              </Cell>
               </Inner>
             </Grid>
           </main>
