@@ -15,6 +15,9 @@ import FormField from "./libs/components/formField";
 import Select from "./libs/components/select";
 import Menu from "./libs/components/menu";
 import Snackbar from "./libs/components/snackbar";
+import LinearProgress from "./libs/components/linearProgress";
+import Switch from "./libs/components/switch";
+import Slider from "./libs/components/slider";
 import { Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon } from "./libs/toolbar";
 import { Drawer, DrawerContent, DrawerHeader } from "./libs/drawer";
 import { List, ListItem, ListDivider, ListGroup, ListGroupSubheader } from "./libs/list";
@@ -23,6 +26,7 @@ import { Card, CardActions, CardMedia, CardText, CardPrimary, CardTitle, CardSub
 import { Tabbar, Tab } from "./libs/tab";
 export {
   Button, Content, Fab, TextField, Checkbox, Radio, FormField, Select, Menu, Snackbar,
+  LinearProgress, Switch, Slider,
   Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon,
   Drawer, DrawerContent, DrawerHeader,
   List, ListItem, ListDivider, ListGroup, ListGroupSubheader,

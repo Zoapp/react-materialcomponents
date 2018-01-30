@@ -3,6 +3,7 @@ import "material-components-web/dist/material-components-web.css";
 /* import "material-design-icons/iconfont/material-icons.css"; */
 import {
   Button, Content, Fab, TextField, Checkbox, Radio, Select, Menu, Snackbar,
+  LinearProgress, Switch, Slider,
   Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon,
   Drawer, DrawerContent,
   List, ListItem, ListDivider, ListGroup, ListGroupSubheader,
@@ -149,6 +150,31 @@ export default class App extends Component {
               <div style={{ padding: "16px" }}>
                 <Menu />
               </div>
+            </section>
+            <section>
+              <div style={{ padding: "16px" }}>
+                <Switch label="switch 1" checked />
+              </div>
+              <div style={{ padding: "16px" }}>
+                <Switch label="switch 2" checked disabled />
+              </div>
+              <div style={{ padding: "16px" }}>
+                <Switch label="switch 3" />
+              </div>
+            </section>
+            <section>
+              <div style={{ padding: "16px" }}>
+                <Slider label="slider 1" />
+              </div>
+              <div style={{ padding: "16px" }}>
+                <Slider label="slider 2" discrete disabled />
+              </div>
+              <div style={{ padding: "16px" }}>
+                <Slider label="slider 3" discrete valueMax="256" valueNow="20" />
+              </div>
+            </section>
+            <section>
+              <LinearProgress progress={0.2} buffer={0.5} />
             </section>
             <section>
               <div style={{ padding: "16px" }}>

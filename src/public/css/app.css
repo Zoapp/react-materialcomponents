@@ -43,6 +43,10 @@ body > div {
   }
 }
 
+.rmdc-switch-wrapper > label {
+  margin-left: 16px;
+}
+
 main {
   padding: 24px;
 }
