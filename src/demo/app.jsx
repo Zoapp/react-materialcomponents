@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "material-components-web/dist/material-components-web.css";
 /* import "material-design-icons/iconfont/material-icons.css"; */
 import {
-  Button, Content, Fab, TextField, Checkbox, Radio, Select, Menu,
+  Button, Content, Fab, TextField, Checkbox, Radio, Select, Menu, Snackbar,
   Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon,
   Drawer, DrawerContent,
   List, ListItem, ListDivider, ListGroup, ListGroupSubheader,
@@ -152,6 +152,7 @@ export default class App extends Component {
           </main>
         </Content>
         <Fab icon="favorite" />
+        <Snackbar message="Hello from snackbar" />
       </Content>
     );
   }

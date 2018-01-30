@@ -14,6 +14,7 @@ import Radio from "./libs/components/radio";
 import FormField from "./libs/components/formField";
 import Select from "./libs/components/select";
 import Menu from "./libs/components/menu";
+import Snackbar from "./libs/components/snackbar";
 import { Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon } from "./libs/toolbar";
 import { Drawer, DrawerContent, DrawerHeader } from "./libs/drawer";
 import { List, ListItem, ListDivider, ListGroup, ListGroupSubheader } from "./libs/list";
@@ -21,7 +22,7 @@ import { Grid, Inner, Cell } from "./libs/layoutGrid";
 import { Card, CardActions, CardMedia, CardText, CardPrimary, CardTitle, CardSubtitle, } from "./libs/cards";
 
 export {
-  Button, Content, Fab, TextField, Checkbox, Radio, FormField, Select, Menu,
+  Button, Content, Fab, TextField, Checkbox, Radio, FormField, Select, Menu, Snackbar,
   Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon,
   Drawer, DrawerContent, DrawerHeader,
   List, ListItem, ListDivider, ListGroup, ListGroupSubheader,
