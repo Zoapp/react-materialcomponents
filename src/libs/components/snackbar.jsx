@@ -11,6 +11,7 @@ import PropTypes from "prop-types";
 mdc-layout-grid__cell
 See:
 https://material.io/components/web/catalog/snackbars/
+https://material-components-web.appspot.com/snackbar.html
 
 TODO:
 - display, timeout

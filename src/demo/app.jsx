@@ -8,6 +8,7 @@ import {
   List, ListItem, ListDivider, ListGroup, ListGroupSubheader,
   Grid, Inner, Cell,
   Card, CardText, CardActions, CardMedia,
+  Tab, Tabbar,
 } from "../../src";
 
 export default class App extends Component {
@@ -147,6 +148,15 @@ export default class App extends Component {
             <section>
               <div style={{ padding: "16px" }}>
                 <Menu />
+              </div>
+            </section>
+            <section>
+              <div style={{ padding: "16px" }}>
+                <Tabbar>
+                  <Tab text="tab1" active />
+                  <Tab text="tab2" />
+                  <Tab text="tab3" />
+                </Tabbar>
               </div>
             </section>
           </main>
