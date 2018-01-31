@@ -60,7 +60,7 @@ const Slider = ({
       {...props}
     >
       <div className="mdc-slider__track-container">
-        <div clasName="mdc-slider__track" />
+        <div className="mdc-slider__track" />
       </div>
       {container}
     </div>);

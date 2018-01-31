@@ -24,6 +24,8 @@ import { List, ListItem, ListDivider, ListGroup, ListGroupSubheader } from "./li
 import { Grid, Inner, Cell } from "./libs/layoutGrid";
 import { Card, CardActions, CardMedia, CardText, CardPrimary, CardTitle, CardSubtitle, } from "./libs/cards";
 import { Tabbar, Tab } from "./libs/tab";
+import { GridList, Tile } from "./libs/gridList";
+
 export {
   Button, Content, Fab, TextField, Checkbox, Radio, FormField, Select, Menu, Snackbar,
   LinearProgress, Switch, Slider,
@@ -33,4 +35,5 @@ export {
   Grid, Inner, Cell,
   Card, CardActions, CardMedia, CardText, CardPrimary, CardTitle, CardSubtitle,
   Tabbar, Tab,
+  GridList, Tile,
 };

@@ -10,6 +10,7 @@ import {
   Grid, Inner, Cell,
   Card, CardText, CardActions, CardMedia,
   Tab, Tabbar,
+  GridList, Tile,
 } from "../../src";
 
 export default class App extends Component {
@@ -143,16 +144,6 @@ export default class App extends Component {
             </section>
             <section>
               <div style={{ padding: "16px" }}>
-                <Select />
-              </div>
-            </section>
-            <section>
-              <div style={{ padding: "16px" }}>
-                <Menu />
-              </div>
-            </section>
-            <section>
-              <div style={{ padding: "16px" }}>
                 <Switch label="switch 1" checked />
               </div>
               <div style={{ padding: "16px" }}>
@@ -170,7 +161,7 @@ export default class App extends Component {
                 <Slider label="slider 2" discrete disabled />
               </div>
               <div style={{ padding: "16px" }}>
-                <Slider label="slider 3" discrete valueMax="256" valueNow="20" />
+                <Slider label="slider 3" discrete valueMax={256} valueNow={20} />
               </div>
             </section>
             <section>
@@ -183,6 +174,27 @@ export default class App extends Component {
                   <Tab text="tab2" />
                   <Tab text="tab3" />
                 </Tabbar>
+              </div>
+            </section>
+            <section>
+              <GridList width="320px" tileWidth="76px" tileBackground="#212121" >
+                <Tile />
+                <Tile />
+                <Tile />
+                <Tile />
+                <Tile />
+                <Tile />
+                <Tile />
+              </GridList>
+            </section>
+            <section>
+              <div style={{ padding: "16px" }}>
+                <Select />
+              </div>
+            </section>
+            <section>
+              <div style={{ padding: "16px" }}>
+                <Menu />
               </div>
             </section>
           </main>
