@@ -7,6 +7,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Icon from "../components/icon";
+import Rmdc from "../";
 
 /*
 mdc-tab
@@ -19,7 +20,7 @@ TODO:
 - Mixins
 */
 const Tab = ({
-  className, active, text, icon, ...props
+  className, active, text, icon, href, ...props
 }) => {
   let classes = "mdc-tab";
   if (active) {
@@ -32,7 +33,7 @@ const Tab = ({
   if (icon) {
     i = (<Icon name={icon} className="mdc-tab__icon" aria-hidden="true" />);
   }
-  return (<a className={classes} {...props}>{i}{text}</a>);
+  return Rmdc.render(<a className={classes} href={href} >{i}{text}</a>, props);
 };
 
 Tab.defaultProps = {
@@ -41,6 +42,7 @@ Tab.defaultProps = {
   active: false,
   text: null,
   icon: null,
+  href: "#",
 };
 
 Tab.propTypes = {
@@ -50,6 +52,7 @@ Tab.propTypes = {
   active: PropTypes.bool,
   text: PropTypes.string,
   icon: PropTypes.string,
+  href: PropTypes.string,
 };
 
 export default Tab;

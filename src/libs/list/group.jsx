@@ -6,6 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 mdc-list-group
@@ -23,7 +24,7 @@ const ListGroup = ({
   if (className) {
     classes += ` ${className}`;
   }
-  return (<div className={classes} {...props}>{children}</div>);
+  return Rmdc.render(<div className={classes} {...props}>{children}</div>, props);
 };
 
 ListGroup.defaultProps = {

@@ -6,6 +6,7 @@
  */
 import React, { Children } from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 mdc-tab-bar
@@ -41,11 +42,12 @@ const Tabbar = ({
     classes += ` ${className}`;
   }
 
-  return (
-    <nav className={classes} {...props}>
+  const element = (
+    <nav className={classes}>
       {children}
       <span className="mdc-tab-bar__indicator" />
     </nav>);
+  return Rmdc.render(element, props);
 };
 
 Tabbar.defaultProps = {

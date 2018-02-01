@@ -6,6 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 mdc-grid-tile
@@ -32,10 +33,10 @@ const Tile = ({
   if (background) {
     primaryStyle.background = background;
   }
-  return (
+  return Rmdc.render((
     <ul className={classes} style={style} {...props} >
       <div className="mdc-grid-tile__primary" style={primaryStyle} />
-    </ul>);
+    </ul>), props);
 };
 
 Tile.defaultProps = {

@@ -6,6 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 mdc-drawer__content
@@ -23,7 +24,7 @@ const DrawerContent = ({
   if (className) {
     classes += ` ${className}`;
   }
-  return (<nav className={classes} {...props}>{children}</nav>);
+  return Rmdc.render(<nav className={classes} {...props}>{children}</nav>, props);
 };
 
 DrawerContent.defaultProps = {

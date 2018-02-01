@@ -6,6 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 See:
@@ -27,7 +28,7 @@ const Section = ({
     classes += ` ${className}`;
   }
   // TODO all
-  return (<section className={classes} {...props}>{children}</section>);
+  return Rmdc.render(<section className={classes}>{children}</section>, props);
 };
 
 Section.defaultProps = {

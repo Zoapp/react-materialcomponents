@@ -7,6 +7,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import FormField from "./formField";
+import Rmdc from "../";
 
 /*
 mdc-radio
@@ -17,7 +18,7 @@ https://material-components-web.appspot.com/radio.html
 export default class Radio extends Component {
   render() {
     const {
-      className, id, name, label, checked, disabled,
+      className, id, name, label, checked, disabled, ...props
     } = this.props;
     let classes = "mdc-radio";
     if (className) {
@@ -38,7 +39,7 @@ export default class Radio extends Component {
     if (checked) {
       d.defaultChecked = "checked";
     }
-    let component = (
+    let element = (
       <div className={classes}>
         <input
           className="mdc-radio__native-control"
@@ -54,9 +55,9 @@ export default class Radio extends Component {
         </div>
       </div>);
     if (label) {
-      component = (<FormField>{component}{l}</FormField>);
+      element = (<FormField>{element}{l}</FormField>);
     }
-    return component;
+    return Rmdc.render(element, props);
   }
 }
 

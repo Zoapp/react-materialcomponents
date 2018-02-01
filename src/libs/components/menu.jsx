@@ -6,7 +6,7 @@
  */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-
+import Rmdc from "../";
 /*
 mdc-simple-menu
 See:
@@ -19,7 +19,7 @@ TODO : all
 export default class Menu extends Component {
   render() {
     const {
-      className, disabled,
+      className, disabled, ...props
     } = this.props;
     let classes = "mdc-simple-menu";
     if (className) {
@@ -29,7 +29,7 @@ export default class Menu extends Component {
     if (disabled) {
       d.disabled = "disabled";
     }
-    const component = (
+    const element = (
       <div className={classes} tabIndex="-1" {...d} >
         <ul className="mdc-simple-menu__items mdc-list" role="menu" aria-hidden="true">
           <li className="mdc-list-item" role="menuitem" tabIndex="0">
@@ -40,7 +40,7 @@ export default class Menu extends Component {
           </li>
         </ul>
       </div>);
-    return component;
+    return Rmdc.render(element, props);
   }
 }
 

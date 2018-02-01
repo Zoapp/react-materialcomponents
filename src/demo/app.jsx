@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "material-components-web/dist/material-components-web.css";
 /* import "material-design-icons/iconfont/material-icons.css"; */
-import {
+import Rmdc, {
   Button, Content, Fab, TextField, Checkbox, Radio, Select, Menu, Snackbar,
   LinearProgress, Switch, Slider,
   Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon,
@@ -15,7 +15,7 @@ import {
 
 export default class App extends Component {
   componentWillMount() {
-    // window.mdc.autoInit();
+    Rmdc.init(this, { typography: true });
   }
 
   render() {
@@ -178,6 +178,7 @@ export default class App extends Component {
             </section>
             <section>
               <GridList width="320px" tileWidth="76px" tileBackground="#212121" >
+                <Tile />
                 <Tile />
                 <Tile />
                 <Tile />

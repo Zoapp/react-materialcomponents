@@ -6,6 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 mdc-drawer__header
@@ -20,7 +21,14 @@ const DrawerHeader = ({
   if (className) {
     classes += ` ${className}`;
   }
-  return (<header className={classes} {...props}><div className="mdc-drawer__header-content">{children}</div></header>);
+  return Rmdc.render(
+    (
+      <header className={classes} {...props}>
+        <div className="mdc-drawer__header-content">{children}</div>
+      </header>
+    ),
+    props,
+  );
 };
 
 DrawerHeader.defaultProps = {

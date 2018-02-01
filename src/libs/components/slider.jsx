@@ -6,6 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 mdc-slider
@@ -48,7 +49,7 @@ const Slider = ({
   if (className) {
     classes += ` ${className}`;
   }
-  return (
+  return Rmdc.render((
     <div
       className={classes}
       tabIndex="0"
@@ -63,7 +64,7 @@ const Slider = ({
         <div className="mdc-slider__track" />
       </div>
       {container}
-    </div>);
+    </div>), props);
 };
 
 Slider.defaultProps = {

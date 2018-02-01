@@ -6,6 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 mdc-card__subtitle
@@ -20,7 +21,7 @@ const CardSubtitle = ({
   if (className) {
     classes += ` ${className}`;
   }
-  return (<h2 className={classes} {...props}>{children}</h2>);
+  return Rmdc.render(<h2 className={classes} {...props}>{children}</h2>, props);
 };
 
 CardSubtitle.defaultProps = {

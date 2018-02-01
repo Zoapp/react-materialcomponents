@@ -6,6 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 material-icons
@@ -20,10 +21,11 @@ const Icon = ({
   if (className) {
     classes += ` ${className}`;
   }
-  return React.createElement(componentName, {
+  const element = React.createElement(componentName, {
     className: classes,
     ...props,
   }, name);
+  return Rmdc.render(element, props);
 };
 
 Icon.defaultProps = {

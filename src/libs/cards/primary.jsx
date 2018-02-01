@@ -8,6 +8,7 @@ import React, { Children } from "react";
 import PropTypes from "prop-types";
 import CardTitle from "./title";
 import CardSubtitle from "./subtitle";
+import Rmdc from "../";
 
 /*
 mdc-card__primary
@@ -41,7 +42,7 @@ const CardPrimary = ({
       return child;
     });
   }
-  return (<section className={classes} {...props}>{first}{t}{s}{ch}</section>);
+  return Rmdc.render(<section className={classes} {...props}>{first}{t}{s}{ch}</section>, props);
 };
 
 CardPrimary.defaultProps = {

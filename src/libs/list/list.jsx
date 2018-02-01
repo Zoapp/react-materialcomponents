@@ -6,6 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 mdc-list-item
@@ -29,7 +30,7 @@ const List = ({
     classes += ` ${className}`;
   }
   // TODO iterate througth children to check and set type
-  return (<ul className={classes} {...props}>{children}</ul>);
+  return Rmdc.render(<ul className={classes} {...props}>{children}</ul>, props);
 };
 
 List.defaultProps = {

@@ -6,6 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 mdc-layout-grid__cell
@@ -52,7 +53,7 @@ const Snackbar = ({
         </button>
       </div>);
   }
-  return (
+  return Rmdc.render((
     <div
       className={classes}
       aria-live="assertive"
@@ -62,7 +63,7 @@ const Snackbar = ({
     >
       <div className="mdc-snackbar__text">{message}</div>
       {actionWrapper}
-    </div>);
+    </div>), props);
 };
 
 Snackbar.defaultProps = {

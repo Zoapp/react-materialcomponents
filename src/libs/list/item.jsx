@@ -7,7 +7,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Icon from "../components/icon";
-
+import Rmdc from "../";
 /*
 mdc-list-item
 See:
@@ -32,9 +32,9 @@ const ListItem = ({
     graphic = (<Icon className="mdc-list-item__graphic" aria-hidden="true" name={icon} />);
   }
   if (type === "a") {
-    return (<a className={classes} {...props}>{graphic}{children}</a>);
+    return Rmdc.render(<a className={classes} {...props}>{graphic}{children}</a>, props);
   }
-  return (<li className={classes} {...props}>{graphic}{children}</li>);
+  return Rmdc.render(<li className={classes} {...props}>{graphic}{children}</li>, props);
 };
 
 ListItem.defaultProps = {

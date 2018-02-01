@@ -6,6 +6,7 @@
  */
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 See:
@@ -31,9 +32,15 @@ export default class Drawer extends PureComponent {
       classes += ` ${className}`;
     }
     if (type === "permanent") {
-      return (<nav className={classes} {...props}>{children}</nav>);
+      return Rmdc.render(<nav className={classes} {...props}>{children}</nav>, props);
     }
-    return (<aside className={classes} {...props}><nav className="mdc-drawer__drawer">{children}</nav></aside>);
+    return Rmdc.render(
+      (
+        <aside className={classes} {...props}>
+          <nav className="mdc-drawer__drawer">{children}</nav>
+        </aside>),
+      props,
+    );
   }
 }
 

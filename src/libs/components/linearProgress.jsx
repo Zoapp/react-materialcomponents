@@ -6,6 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 mdc-linear-progress
@@ -51,7 +52,7 @@ const LinearProgress = ({
   if (className) {
     classes += ` ${className}`;
   }
-  return (
+  const element = (
     <div role="progressbar" className={classes} {...props}>
       <div className="mdc-linear-progress__buffering-dots" />
       <div className="mdc-linear-progress__buffer" style={bufferStyle} />
@@ -62,6 +63,7 @@ const LinearProgress = ({
         <span className="mdc-linear-progress__bar-inner" />
       </div>
     </div>);
+  return Rmdc.render(element, props);
 };
 
 LinearProgress.defaultProps = {

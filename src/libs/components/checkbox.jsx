@@ -7,6 +7,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import FormField from "./formField";
+import Rmdc from "../";
 
 /*
 mdc-checkbox
@@ -52,7 +53,7 @@ export default class Checkbox extends Component {
     if (checked) {
       d.defaultChecked = "checked";
     }
-    let component = (
+    let element = (
       <div className={classes} {...props}>
         <input
           id={cid}
@@ -75,9 +76,9 @@ export default class Checkbox extends Component {
         </div>
       </div>);
     if (label) {
-      component = (<FormField>{component}{l}</FormField>);
+      element = (<FormField>{element}{l}</FormField>);
     }
-    return component;
+    return Rmdc.render(element, props);
   }
 }
 

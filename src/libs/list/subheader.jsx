@@ -6,6 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 mdc-list-group__subheader
@@ -24,10 +25,13 @@ const ListGroupSubheader = ({
     classes += ` ${className}`;
   }
   // TODO type
+  let element;
   if (type !== "h3") {
-    return (<h3 className={classes} {...props}>{children}</h3>);
+    element = (<h3 className={classes}>{children}</h3>);
+  } else {
+    element = (<h3 className={classes}>{children}</h3>);
   }
-  return (<h3 className={classes} {...props}>{children}</h3>);
+  return Rmdc.render(element, props);
 };
 
 ListGroupSubheader.defaultProps = {

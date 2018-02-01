@@ -6,6 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 See:
@@ -24,7 +25,7 @@ const Row = ({
     classes += ` ${className}`;
   }
   // TODO all
-  return (<div className={classes} {...props}>{children}</div>);
+  return Rmdc.render(<div className={classes}>{children}</div>, props);
 };
 
 Row.defaultProps = {

@@ -6,6 +6,7 @@
  */
 import React, { Children } from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 mdc-card__actions
@@ -26,7 +27,7 @@ const CardActions = ({
   // Iterate through children and set 'mdc-card__action'
   const ch = Children.map(children, child =>
     React.cloneElement(child, { ...child.props, cardAction: true }));
-  return (<section className={classes} {...props}>{ch}</section>);
+  return Rmdc.render(<section className={classes}>{ch}</section>, props);
 };
 
 CardActions.defaultProps = {

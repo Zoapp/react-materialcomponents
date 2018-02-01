@@ -6,6 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 mdc-fab
@@ -24,7 +25,8 @@ const Fab = ({
   if (icon) {
     ch = (<span className="mdc-fab__icon">{icon}</span>);
   }
-  return (<button className={classes} {...props} aria-label={label} >{ch}</button>);
+  const element = (<button className={classes} {...props} aria-label={label} >{ch}</button>);
+  return Rmdc.render(element, props);
 };
 
 Fab.defaultProps = {

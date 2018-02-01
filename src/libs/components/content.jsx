@@ -6,6 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 Helper container for mdc-toolbar-fixed-adjust
@@ -28,7 +29,8 @@ const Content = ({
   if (className) {
     classes += ` ${className}`;
   }
-  return (<div className={classes} {...props}>{children}</div>);
+  const element = (<div className={classes} {...props}>{children}</div>);
+  return Rmdc.render(element, props);
 };
 
 Content.defaultProps = {

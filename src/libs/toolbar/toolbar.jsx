@@ -6,6 +6,7 @@
  */
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 See:
@@ -34,9 +35,10 @@ export default class Toolbar extends PureComponent {
     if (className) {
       classes += ` ${className}`;
     }
-    return (
-      <header className={classes} {...otherProps} >{children}</header>
+    const element = (
+      <header className={classes} >{children}</header>
     );
+    return Rmdc.render(element, otherProps);
   }
 }
 

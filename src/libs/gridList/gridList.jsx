@@ -6,6 +6,7 @@
  */
 import React, { Children } from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 mdc-grid-list
@@ -17,7 +18,7 @@ TODO:
 - Mixins
 */
 const GridList = ({
-  children, className, width, tileWidth, tileBackground,
+  children, className, width, tileWidth, tileBackground, ...props
 }) => {
   let classes = "mdc-grid-list";
   if (className) {
@@ -30,23 +31,23 @@ const GridList = ({
   let ch = children;
   if (tileWidth || tileBackground) {
     ch = Children.map(children, (child) => {
-      const props = { ...child.props };
+      const ps = { ...child.props };
       if (tileWidth) {
-        props.width = tileWidth;
+        ps.width = tileWidth;
       }
       if (tileBackground) {
-        props.background = tileBackground;
+        ps.background = tileBackground;
       }
-      return React.cloneElement(child, props);
+      return React.cloneElement(child, ps);
     });
   }
 
-  return (
+  return Rmdc.render((
     <div className={classes}>
       <ul className="mdc-grid-list__tiles" style={style} >
         {ch}
       </ul>
-    </div>);
+    </div>), props);
 };
 
 GridList.defaultProps = {

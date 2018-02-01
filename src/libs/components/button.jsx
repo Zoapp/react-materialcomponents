@@ -7,6 +7,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Icon from "./icon";
+import Rmdc from "../";
 
 /*
 See:
@@ -64,10 +65,13 @@ const Button = ({
   if (icon) {
     i = (<Icon className="mdc-button__icon" name={icon} />);
   }
+  let element;
   if (link) {
-    return (<a href={link} className={classes} {...props}>{i}{children}</a>);
+    element = (<a href={link} className={classes}>{i}{children}</a>);
+  } else {
+    element = (<button className={classes}>{i}{children}</button>);
   }
-  return (<button className={classes} {...props}>{i}{children}</button>);
+  return Rmdc.render(element, props);
 };
 
 Button.defaultProps = {

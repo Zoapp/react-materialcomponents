@@ -6,6 +6,7 @@
  */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 mdc-text-field
@@ -69,7 +70,7 @@ export default class Textfield extends Component {
     // TODO better cid generator
     const cid = id || Math.random().toString(36);
     /* eslint-disable jsx-a11y/label-has-for */
-    return (
+    return Rmdc.render((
       <div className={classes} >
         <input
           type={type}
@@ -84,7 +85,7 @@ export default class Textfield extends Component {
         />
         <label focused={focused.toString()} className={lc} htmlFor={cid} >{label}</label>
         <div className={bc} />
-      </div>);
+      </div>), props);
     /* eslint-enable jsx-a11y/label-has-for */
   }
 }

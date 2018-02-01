@@ -6,6 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 mdc-card__media
@@ -24,10 +25,13 @@ const CardMedia = ({
     classes += ` ${className}`;
   }
   // Check if src and set img instead
+  let element;
   if (src) {
-    return (<img className={classes} src={src} alt={alt} {...props} />);
+    element = (<img className={classes} src={src} alt={alt} {...props} />);
+  } else {
+    element = (<section className={classes} {...props}>{children}</section>);
   }
-  return (<section className={classes} {...props}>{children}</section>);
+  return Rmdc.render(element, props);
 };
 
 CardMedia.defaultProps = {

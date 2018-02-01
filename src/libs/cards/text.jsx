@@ -6,6 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 mdc-card__supporting-text
@@ -20,7 +21,7 @@ const CardText = ({
   if (className) {
     classes += ` ${className}`;
   }
-  return (<section className={classes} {...props}>{children}</section>);
+  return Rmdc.render(<section className={classes}>{children}</section>, props);
 };
 
 CardText.defaultProps = {

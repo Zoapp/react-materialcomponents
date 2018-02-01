@@ -6,6 +6,7 @@
  */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 mdc-select
@@ -19,7 +20,7 @@ TODO : all
 export default class Select extends Component {
   render() {
     const {
-      className, disabled,
+      className, disabled, ...props
     } = this.props;
     let classes = "mdc-select";
     if (className) {
@@ -30,7 +31,7 @@ export default class Select extends Component {
       d.disabled = "disabled";
     }
     /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-    const component = (
+    const element = (
       <div className={classes} role="listbox">
         <div className="mdc-select__surface" tabIndex="0">
           <div className="mdc-select__label">Pick a Food Group</div>
@@ -61,7 +62,7 @@ export default class Select extends Component {
         </div>
       </div>);
     /* eslint-enable jsx-a11y/no-noninteractive-tabindex */
-    return component;
+    return Rmdc.render(element, props);
   }
 }
 

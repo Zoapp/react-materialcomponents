@@ -6,6 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
 /*
 mdc-form-field
@@ -19,7 +20,8 @@ const FormField = ({
   if (className) {
     classes += ` ${className}`;
   }
-  return (<div className={classes} {...props}>{children}</div>);
+  const element = (<div className={classes} {...props}>{children}</div>);
+  return Rmdc.render(element, props);
 };
 
 FormField.defaultProps = {

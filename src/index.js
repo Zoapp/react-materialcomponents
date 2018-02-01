@@ -4,6 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+import Rmdc from "./libs";
 import Button from "./libs/components/button";
 import Icon from "./libs/components/icon";
 import Content from "./libs/components/content";
@@ -37,3 +38,5 @@ export {
   Tabbar, Tab,
   GridList, Tile,
 };
+
+export default Rmdc;

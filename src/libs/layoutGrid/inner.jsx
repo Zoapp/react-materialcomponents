@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-
+import Rmdc from "../";
 /*
 mdc-layout-grid__inner
 See:
@@ -22,7 +22,7 @@ const Inner = ({
   if (className) {
     classes += ` ${className}`;
   }
-  return (<div className={classes} {...props}>{children}</div>);
+  return Rmdc.render(<div className={classes} {...props}>{children}</div>, props);
 };
 
 Inner.defaultProps = {

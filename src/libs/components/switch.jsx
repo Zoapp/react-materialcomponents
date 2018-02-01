@@ -7,6 +7,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import FormField from "./formField";
+import Rmdc from "../";
 
 /*
 mdc-switch
@@ -19,7 +20,7 @@ TODO:
 export default class Switch extends Component {
   render() {
     const {
-      className, id, label, checked, disabled, formField,
+      className, id, label, checked, disabled, formField, ...props
     } = this.props;
     const classes = "mdc-switch";
     // TODO better cid generator
@@ -37,7 +38,7 @@ export default class Switch extends Component {
     if (checked) {
       d.defaultChecked = "checked";
     }
-    let component = (
+    let element = (
       <div className={classes}>
         <input
           type="checkbox"
@@ -51,16 +52,16 @@ export default class Switch extends Component {
       </div>);
     if (label) {
       if (formField) {
-        component = (<FormField className={className}>{component}{l}</FormField>);
+        element = (<FormField className={className}>{element}{l}</FormField>);
       } else {
         let cn = "rmdc-switch-wrapper";
         if (className) {
           cn += ` ${className}`;
         }
-        component = (<div className={cn}>{component}{l}</div>);
+        element = (<div className={cn}>{element}{l}</div>);
       }
     }
-    return component;
+    return Rmdc.render(element, props);
   }
 }
 
