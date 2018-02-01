@@ -19,6 +19,7 @@ import Snackbar from "./libs/components/snackbar";
 import LinearProgress from "./libs/components/linearProgress";
 import Switch from "./libs/components/switch";
 import Slider from "./libs/components/slider";
+import IconToggle from "./libs/components/iconToggle";
 import { Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon } from "./libs/toolbar";
 import { Drawer, DrawerContent, DrawerHeader } from "./libs/drawer";
 import { List, ListItem, ListDivider, ListGroup, ListGroupSubheader } from "./libs/list";
@@ -29,7 +30,7 @@ import { GridList, Tile } from "./libs/gridList";
 
 export {
   Button, Content, Fab, TextField, Checkbox, Radio, FormField, Select, Menu, Snackbar,
-  LinearProgress, Switch, Slider,
+  LinearProgress, Switch, Slider, IconToggle,
   Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon,
   Drawer, DrawerContent, DrawerHeader,
   List, ListItem, ListDivider, ListGroup, ListGroupSubheader,

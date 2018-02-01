@@ -3,7 +3,7 @@ import "material-components-web/dist/material-components-web.css";
 /* import "material-design-icons/iconfont/material-icons.css"; */
 import Rmdc, {
   Button, Content, Fab, TextField, Checkbox, Radio, Select, Menu, Snackbar,
-  LinearProgress, Switch, Slider,
+  LinearProgress, Switch, Slider, IconToggle,
   Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon,
   Drawer, DrawerContent,
   List, ListItem, ListDivider, ListGroup, ListGroupSubheader,
@@ -187,6 +187,9 @@ export default class App extends Component {
                 <Tile />
                 <Tile />
               </GridList>
+            </section>
+            <section>
+              <IconToggle name="favorite" nameOff="favorite_border" />
             </section>
             <section>
               <div style={{ padding: "16px" }}>

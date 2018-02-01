@@ -21,6 +21,7 @@ const Icon = ({
   if (className) {
     classes += ` ${className}`;
   }
+  // TODO Font Awesome handling
   const element = React.createElement(componentName, {
     className: classes,
     ...props,
