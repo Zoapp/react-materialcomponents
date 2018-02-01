@@ -5,6 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 import React from "react";
+import DialogManager from "./dialog/manager";
 
 /**
  * Rmdc
@@ -40,6 +41,7 @@ const Rmdc = new class {
     if (ripple) {
       this.ripple = ripple;
     }
+    DialogManager.init();
   }
 
   changeTheme(theme) {
@@ -86,14 +88,16 @@ const Rmdc = new class {
     return element;
   }
 
-  openDialog(dialog) {
+  showDialog(dialog) {
     this.dialog = dialog;
     // TODO openDialog
+    DialogManager.open(dialog);
   }
 
   closeDialog() {
     this.dialog = null;
     // TODO close current dialog
+    DialogManager.closeCurrentDialog();
   }
 }();
 

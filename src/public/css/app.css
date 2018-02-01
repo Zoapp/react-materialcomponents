@@ -53,6 +53,11 @@ body > div {
   margin-left: 16px;
 }
 
+.rmdc-dialog {
+  background: transparent;
+  border: transparent;
+}
+
 main {
   padding: 24px;
 }

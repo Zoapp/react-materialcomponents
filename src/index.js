@@ -27,6 +27,7 @@ import { Grid, Inner, Cell } from "./libs/layoutGrid";
 import { Card, CardActions, CardMedia, CardText, CardPrimary, CardTitle, CardSubtitle, } from "./libs/cards";
 import { Tabbar, Tab } from "./libs/tab";
 import { GridList, Tile } from "./libs/gridList";
+import { Dialog, DialogHeader, DialogBody, DialogFooter } from "./libs/dialog";
 
 export {
   Button, Content, Fab, TextField, Checkbox, Radio, FormField, Select, Menu, Snackbar,
@@ -38,6 +39,7 @@ export {
   Card, CardActions, CardMedia, CardText, CardPrimary, CardTitle, CardSubtitle,
   Tabbar, Tab,
   GridList, Tile,
+  Dialog, DialogHeader, DialogBody, DialogFooter,
 };
 
 export default Rmdc;

@@ -32,6 +32,7 @@ const Button = ({
   link,
   ripple,
   cardAction,
+  onClick,
   ...props
 }) => {
   let classes = "mdc-button";
@@ -69,7 +70,7 @@ const Button = ({
   if (link) {
     element = (<a href={link} className={classes}>{i}{children}</a>);
   } else {
-    element = (<button className={classes}>{i}{children}</button>);
+    element = (<button className={classes} onClick={onClick} >{i}{children}</button>);
   }
   return Rmdc.render(element, props);
 };
@@ -89,6 +90,8 @@ Button.defaultProps = {
   ripple: false,
 
   cardAction: false,
+
+  onClick: null,
 };
 
 Button.propTypes = {
@@ -108,6 +111,8 @@ Button.propTypes = {
   ripple: PropTypes.bool,
 
   cardAction: PropTypes.bool,
+
+  onClick: PropTypes.func,
 };
 
 export default Button;

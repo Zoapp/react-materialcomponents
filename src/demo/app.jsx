@@ -11,11 +11,20 @@ import Rmdc, {
   Card, CardText, CardActions, CardMedia,
   Tab, Tabbar,
   GridList, Tile,
+  Dialog,
 } from "../../src";
 
 export default class App extends Component {
   componentWillMount() {
     Rmdc.init(this, { typography: true });
+  }
+
+  handleDialog = () => {
+    const dialog = (
+      <Dialog header="Are you happy?" actions={["Cancel", "Continue"]}>
+        Please check the left and right side of this element for fun.
+      </Dialog>);
+    Rmdc.showDialog(dialog);
   }
 
   render() {
@@ -203,7 +212,7 @@ export default class App extends Component {
             </section>
           </main>
         </Content>
-        <Fab icon="favorite" />
+        <Fab icon="favorite" onClick={this.handleDialog} />
         <Snackbar message="Hello from snackbar" />
       </Content>
     );
