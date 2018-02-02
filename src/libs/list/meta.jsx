@@ -9,13 +9,10 @@ import PropTypes from "prop-types";
 import Icon from "../components/icon";
 import Rmdc from "../";
 /*
-mdc-list-item
+mdc-list-item__meta
 See:
 https://material.io/components/web/catalog/lists/
 
-TODO:
-- Ripple effect
-- Mixins
 */
 const ListItemMeta = ({
   children, className, icon, href, color, label, ...props

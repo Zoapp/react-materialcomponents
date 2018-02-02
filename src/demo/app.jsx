@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import "material-components-web/dist/material-components-web.css";
 /* import "material-design-icons/iconfont/material-icons.css"; */
 import Rmdc, {
-  Button, Content, Fab, TextField, Checkbox, Radio, Select, Menu, Snackbar,
+  Button, Content, Fab, TextField, Checkbox, Radio, Select, Snackbar,
+  Menu, MenuItem, MenuDivider,
   LinearProgress, Switch, Slider, IconToggle,
   Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon,
   Drawer, DrawerContent,
@@ -243,9 +244,21 @@ export default class App extends Component {
             </section>
             <section>
               <div style={{ padding: "16px" }}>
-                <Menu />
+                <Button
+                  raised
+                  menu={
+                    <Menu>
+                      <MenuItem>Back</MenuItem>
+                      <MenuItem disabled>Forward</MenuItem>
+                      <MenuDivider />
+                      <MenuItem>Help</MenuItem>
+                    </Menu>}
+                >
+                  Show menu
+                </Button>
               </div>
             </section>
+            <section style={{ height: "200px" }} />
           </main>
         </Content>
         <Fab icon="favorite" onClick={this.handleDialog} />

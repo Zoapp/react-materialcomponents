@@ -14,7 +14,7 @@ import TextField from "./libs/components/textfield";
 import Radio from "./libs/components/radio";
 import FormField from "./libs/components/formField";
 import Select from "./libs/components/select";
-import Menu from "./libs/components/menu";
+import { Menu, MenuAnchor, MenuItem, MenuDivider } from "./libs/menu";
 import Snackbar from "./libs/components/snackbar";
 import LinearProgress from "./libs/components/linearProgress";
 import Switch from "./libs/components/switch";
@@ -30,7 +30,7 @@ import { GridList, Tile } from "./libs/gridList";
 import { Dialog, DialogHeader, DialogBody, DialogFooter } from "./libs/dialog";
 
 export {
-  Button, Content, Fab, TextField, Checkbox, Radio, FormField, Select, Menu, Snackbar,
+  Button, Content, Fab, TextField, Checkbox, Radio, FormField, Select, Snackbar,
   LinearProgress, Switch, Slider, IconToggle,
   Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon,
   Drawer, DrawerContent, DrawerHeader,
@@ -40,6 +40,7 @@ export {
   Tabbar, Tab,
   GridList, Tile,
   Dialog, DialogHeader, DialogBody, DialogFooter,
+  Menu, MenuAnchor, MenuItem, MenuDivider,
 };
 
 export default Rmdc;

@@ -12,8 +12,5 @@ See:
 https://material.io/components/web/catalog/toolbar/
 https://material-components-web.appspot.com/toolbar/index.html
 
-TODO:
-- All
-- Mixins
 */
 export default props => <Icon className="mdc-toolbar__menu-icon" componentName="a" {...props} />;

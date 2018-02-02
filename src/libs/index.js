@@ -6,6 +6,7 @@
  */
 import React from "react";
 import DialogManager from "./dialog/manager";
+import MenuAnchor from "./menu/anchor";
 
 /**
  * Rmdc
@@ -53,7 +54,7 @@ const Rmdc = new class {
   }
 
   render(element, {
-    rtl, elevation, theme, typography, ripple,
+    rtl, elevation, theme, typography, ripple, menu,
   }/* , elementType = null */) {
     const ps = { };
     let change = false;
@@ -86,6 +87,10 @@ const Rmdc = new class {
       ps.className = classes;
       return React.cloneElement(element, ps);
     }
+    if (menu) {
+      // Create Menu Anchor
+      return React.createElement(MenuAnchor, { menu, anchor: element });
+    }
     return element;
   }
 
@@ -99,6 +104,16 @@ const Rmdc = new class {
     this.dialog = null;
     // TODO close current dialog
     DialogManager.closeCurrentDialog();
+  }
+
+  enableClickOutside(callback) {
+    this.outsideCallback = callback;
+    document.addEventListener("click", callback, true);
+  }
+
+  disableClickOutside(callback) {
+    this.outsideCallback = null;
+    document.removeEventListener("click", callback, true);
   }
 }();
 

@@ -13,31 +13,23 @@ See:
 https://material.io/components/web/catalog/menus/
 https://material-components-web.appspot.com/simple-menu.html
 
-TODO : all
-
 */
 export default class Menu extends Component {
   render() {
     const {
-      className, disabled, ...props
+      children, className, open, ...props
     } = this.props;
     let classes = "mdc-simple-menu";
+    if (open) {
+      classes += " mdc-simple-menu--open";
+    }
     if (className) {
       classes += ` ${className}`;
     }
-    const d = {};
-    if (disabled) {
-      d.disabled = "disabled";
-    }
     const element = (
-      <div className={classes} tabIndex="-1" {...d} >
+      <div className={classes} tabIndex="-1" ref={(c) => { this.innerRef = c; }} >
         <ul className="mdc-simple-menu__items mdc-list" role="menu" aria-hidden="true">
-          <li className="mdc-list-item" role="menuitem" tabIndex="0">
-            A Menu Item
-          </li>
-          <li className="mdc-list-item" role="menuitem" tabIndex="0">
-            Another Menu Item
-          </li>
+          {children}
         </ul>
       </div>);
     return Rmdc.render(element, props);
@@ -46,11 +38,12 @@ export default class Menu extends Component {
 
 Menu.defaultProps = {
   className: null,
-  disabled: false,
+  open: false,
 };
 
 Menu.propTypes = {
 // React component props
+  children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  disabled: PropTypes.bool,
+  open: PropTypes.bool,
 };
