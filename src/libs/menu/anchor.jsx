@@ -66,7 +66,11 @@ export default class MenuAnchor extends Component {
     // change menu open based on onClick event
     const menuElement = React.cloneElement(
       menu,
-      { open: this.state.open, ref: (c) => { this.menuRef = c; } },
+      {
+        open: this.state.open,
+        ref: (c) => { this.menuRef = c; },
+        onClose: () => { this.setState({ open: false }); },
+      },
     );
     const element = (
       <div className={classes}>

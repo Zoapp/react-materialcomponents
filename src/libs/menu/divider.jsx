@@ -28,11 +28,13 @@ const MenuDivider = ({
 
 MenuDivider.defaultProps = {
   className: null,
+  isDivider: false,
 };
 
 MenuDivider.propTypes = {
 // React component props
   className: PropTypes.string,
+  isDivider: PropTypes.bool,
 };
 
 export default MenuDivider;
