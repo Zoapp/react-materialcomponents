@@ -21,8 +21,8 @@ export default class App extends Component {
 
   handleDialog = () => {
     const dialog = (
-      <Dialog header="Are you happy?" actions={["Cancel", "Continue"]}>
-        Please check the left and right side of this element for fun.
+      <Dialog header="Are you happy?" actions={[{ name: "Cancel" }, { name: "Continue" }]}>
+        <div>Please check the left and right side of this element for fun.</div>
       </Dialog>);
     Rmdc.showDialog(dialog);
   }

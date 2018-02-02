@@ -51,7 +51,7 @@ const DialogManager = {
       currentDialog = r;
     };
     if (dialog) {
-      component = React.cloneElement(dialog, { ref }, { ...dialog.props });
+      component = React.cloneElement(dialog, { ref });
     }
     const modals = getModals();
     modals.push(component);

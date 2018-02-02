@@ -15,9 +15,12 @@ https://material.io/components/web/catalog/dialogs/
 
 */
 const DialogBody = ({
-  children, className, ...props
+  children, className, scrollable, ...props
 }) => {
   let classes = "mdc-dialog__body";
+  if (scrollable) {
+    classes += " mdc-dialog__body--scrollable";
+  }
   if (className) {
     classes += ` ${className}`;
   }
@@ -27,6 +30,7 @@ const DialogBody = ({
 DialogBody.defaultProps = {
   children: null,
   className: null,
+  scrollable: false,
 };
 
 DialogBody.propTypes = {
@@ -34,6 +38,7 @@ DialogBody.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node), PropTypes.node, PropTypes.string]),
   className: PropTypes.string,
+  scrollable: PropTypes.bool,
 };
 
 export default DialogBody;

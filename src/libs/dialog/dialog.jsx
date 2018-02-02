@@ -4,13 +4,12 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import React, { Component } from "react";
+import React, { Component, Children } from "react";
 import PropTypes from "prop-types";
 import DialogManager from "./manager";
 import DialogHeader from "./header";
 import DialogBody from "./body";
 import DialogFooter from "./footer";
-import Button from "../components/button";
 import Rmdc from "../";
 
 /**
@@ -72,17 +71,25 @@ export default class Dialog extends Component {
     this.dialogRef.removeEventListener("cancel", this.props.onCancel);
   }
 
-  handleClick = () => {
+  handleClick = (action = "close") => {
+    if (this.props.onAction) {
+      if (!this.props.onAction(action)) {
+        return;
+      }
+    }
     DialogManager.close();
   }
 
   render() {
     const {
-      className, open, header, children, actions, onClose, style, ...props
+      className, open, header, children, actions, onClose, style, darkTheme, ...props
     } = this.props;
     let classes = "rmdc-dialog mdc-dialog";
     if (open) {
       classes += " mdc-dialog--open";
+    }
+    if (darkTheme) {
+      classes += " mdc-dialog--theme-dark";
     }
     if (className) {
       classes = ` ${className}`;
@@ -92,25 +99,38 @@ export default class Dialog extends Component {
       s.width = style.width;
     }
     let headerElement = header;
-    let ch = children;
+    let footerElement;
+    let bodyElement = Children.map(children, (child) => {
+      let cs = "";
+      if (child.props && child.props.className) {
+        cs = child.props.className;
+      }
+      if (cs.startsWith("mdc-dialog__header")) {
+        headerElement = child;
+        return null;
+      }
+      if (cs.startsWith("mdc-dialog__footer")) {
+        footerElement = child;
+        return null;
+      }
+      return child;
+    });
     // TODO check if children contains Header / Footer
-    if (!(children.props &&
-      children.props.className &&
-      children.props.className.startsWith("mdc-dialog__body"))) {
-      ch = <DialogBody>Okok</DialogBody>;
+    if (!(bodyElement.props &&
+      bodyElement.props.className &&
+      bodyElement.props.className.startsWith("mdc-dialog__body"))) {
+      bodyElement = <DialogBody>{bodyElement}</DialogBody>;
     }
-    if (!(header && header.props &&
-      header.props.className &&
-      header.props.className.startsWith("mdc-dialog__header__title"))) {
+    if (!(headerElement && headerElement.props &&
+      headerElement.props.className &&
+      headerElement.props.className.startsWith("mdc-dialog__header"))) {
       headerElement = <DialogHeader>{header}</DialogHeader>;
     }
-    // TODO footer
-    const footer = (
-      <DialogFooter>
-        <Button className="mdc-dialog__footer__button mdc-dialog__footer__button--cancel" onClick={this.handleClick} >Decline</Button>
-        <Button className="mdc-dialog__footer__button mdc-dialog__footer__button--accept" onClick={this.handleClick} >Accept</Button>
-      </DialogFooter>
-    );
+    if (!(footerElement && footerElement.props &&
+      footerElement.props.className &&
+      footerElement.props.className.startsWith("mdc-dialog__footer"))) {
+      footerElement = <DialogFooter actions={actions} handleAction={this.handleClick} />;
+    }
     const d = (
       <dialog
         role="presentation"
@@ -128,8 +148,8 @@ export default class Dialog extends Component {
           onClick={(e) => { e.stopPropagation(); }}
         >
           {headerElement}
-          {ch}
-          {footer}
+          {bodyElement}
+          {footerElement}
         </div>
       </dialog>
     );
@@ -140,23 +160,25 @@ export default class Dialog extends Component {
 Dialog.defaultProps = {
   className: null,
   header: null,
-  actions: ["Ok"],
+  actions: [{ name: "Ok" }],
   style: null,
   open: true,
   onClose: () => { DialogManager.close(); },
   onCancel: null,
+  onAction: null,
+  darkTheme: false,
 };
 
 Dialog.propTypes = {
   className: PropTypes.string,
   header: PropTypes.oneOfType([
     PropTypes.node, PropTypes.string]),
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node), PropTypes.node, PropTypes.string]).isRequired,
-  actions: PropTypes.arrayOf(PropTypes.oneOfType([
-    PropTypes.element, PropTypes.string])),
+  children: PropTypes.node.isRequired,
+  actions: PropTypes.arrayOf(PropTypes.shape({})),
   style: PropTypes.objectOf(PropTypes.string),
   open: PropTypes.bool,
   onClose: PropTypes.func,
   onCancel: PropTypes.func,
+  onAction: PropTypes.func,
+  darkTheme: PropTypes.bool,
 };
