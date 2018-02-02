@@ -179,7 +179,7 @@ export default class App extends Component {
             <section>
               <div style={{ padding: "16px" }}>
                 <Tabbar>
-                  <Tab text="tab1" active />
+                  <Tab text="tab1" />
                   <Tab text="tab2" />
                   <Tab text="tab3" />
                 </Tabbar>

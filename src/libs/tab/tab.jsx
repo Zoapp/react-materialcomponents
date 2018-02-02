@@ -20,7 +20,7 @@ TODO:
 - Mixins
 */
 const Tab = ({
-  className, active, text, icon, href, ...props
+  className, active, text, icon, href, tabId, onTabSelect, ...props
 }) => {
   let classes = "mdc-tab";
   if (active) {
@@ -33,7 +33,9 @@ const Tab = ({
   if (icon) {
     i = (<Icon name={icon} className="mdc-tab__icon" aria-hidden="true" />);
   }
-  return Rmdc.render(<a className={classes} href={href} >{i}{text}</a>, props);
+  const element = (
+    <a className={classes} href={href} onClick={() => { onTabSelect(tabId); }}>{i}{text}</a>);
+  return Rmdc.render(element, props);
 };
 
 Tab.defaultProps = {
@@ -42,7 +44,9 @@ Tab.defaultProps = {
   active: false,
   text: null,
   icon: null,
-  href: "#",
+  href: null,
+  tabId: 0,
+  onTabSelect: null,
 };
 
 Tab.propTypes = {
@@ -53,6 +57,8 @@ Tab.propTypes = {
   text: PropTypes.string,
   icon: PropTypes.string,
   href: PropTypes.string,
+  tabId: PropTypes.number,
+  onTabSelect: PropTypes.func,
 };
 
 export default Tab;
