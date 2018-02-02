@@ -43,7 +43,7 @@ export default class Tabbar extends Component {
 
   render() {
     const {
-      children, className, onChange, ...props
+      children, className, darkTheme, onChange, ...props
     } = this.props;
     let classes = "mdc-tab-bar";
     let text = false;
@@ -62,6 +62,9 @@ export default class Tabbar extends Component {
       classes += " mdc-tab--with-icon-and-text";
     } else if (icon) {
       classes += " mdc-tab-bar--icon-tab-bar";
+    }
+    if (darkTheme) {
+      classes += " mdc-tab-bar--theme-dark";
     }
     if (className) {
       classes += ` ${className}`;
@@ -86,6 +89,7 @@ Tabbar.defaultProps = {
   className: null,
   activeTab: 0,
   onChange: null,
+  darkTheme: false,
 };
 
 Tabbar.propTypes = {
@@ -94,4 +98,5 @@ Tabbar.propTypes = {
   className: PropTypes.string,
   activeTab: PropTypes.number,
   onChange: PropTypes.func,
+  darkTheme: PropTypes.bool,
 };

@@ -24,10 +24,10 @@ import DialogManager from "./dialog/manager";
  */
 const Rmdc = new class {
   init(root, {
-    rtl, theme, typography, ripple,
+    rtl, darkTheme, style, typography, ripple,
   }) {
     this.rtl = rtl;
-    this.changeTheme(theme);
+    this.changeTheme(darkTheme, style);
     this.typography = typography;
     if (rtl) {
       const html = document.getElementsByTagName("html")[0];
@@ -35,7 +35,7 @@ const Rmdc = new class {
     }
 
     if (typography) {
-      document.body.className += "mdc-typography";
+      document.body.className += " mdc-typography";
     }
 
     if (ripple) {
@@ -44,11 +44,12 @@ const Rmdc = new class {
     DialogManager.init();
   }
 
-  changeTheme(theme) {
-    this.theme = theme;
-    if (theme) {
-      // TODO
+  changeTheme(darkTheme, style) {
+    this.darkTheme = darkTheme;
+    if (darkTheme) {
+      document.body.className += " mdc-theme--dark";
     }
+    this.style = style; // TODO style
   }
 
   render(element, {
