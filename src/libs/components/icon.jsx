@@ -15,15 +15,21 @@ https://material.io/components/web/catalog/
 
 */
 const Icon = ({
-  name, componentName, className, ...props
+  name, componentName, className, color, label, ...props
 }) => {
   let classes = "material-icons";
   if (className) {
     classes += ` ${className}`;
   }
+  const style = {};
+  if (color) {
+    style.color = color;
+  }
   // TODO Font Awesome handling
   const element = React.createElement(componentName, {
     className: classes,
+    style,
+    "aria-label": label,
     ...props,
   }, name);
   return Rmdc.render(element, props);
@@ -32,6 +38,8 @@ const Icon = ({
 Icon.defaultProps = {
   className: null,
   componentName: "i",
+  color: null,
+  label: null,
 };
 
 Icon.propTypes = {
@@ -39,6 +47,8 @@ Icon.propTypes = {
   className: PropTypes.string,
   componentName: PropTypes.string,
   name: PropTypes.string.isRequired,
+  color: PropTypes.string,
+  label: PropTypes.string,
 };
 
 export default Icon;

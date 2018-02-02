@@ -12,14 +12,14 @@ mdc-list-divider
 See:
 https://material.io/components/web/catalog/lists/
 
-TODO:
-- Ripple effect
-- Mixins
 */
 const ListDivider = ({
-  className, type,
+  className, type, inset,
 }) => {
   let classes = "mdc-list-divider";
+  if (inset) {
+    classes += " mdc-list-divider--inset";
+  }
   if (className) {
     classes += ` ${className}`;
   }
@@ -33,6 +33,7 @@ ListDivider.defaultProps = {
   className: null,
 
   type: "li",
+  inset: false,
 };
 
 ListDivider.propTypes = {
@@ -40,6 +41,7 @@ ListDivider.propTypes = {
   className: PropTypes.string,
 
   type: PropTypes.string,
+  inset: PropTypes.bool,
 };
 
 export default ListDivider;

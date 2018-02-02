@@ -6,7 +6,7 @@ import Rmdc, {
   LinearProgress, Switch, Slider, IconToggle,
   Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon,
   Drawer, DrawerContent,
-  List, ListItem, ListDivider, ListGroup, ListGroupSubheader,
+  List, ListItem, ListItemMeta, ListDivider, ListGroup, ListGroupSubheader,
   Grid, Inner, Cell,
   Card, CardText, CardActions, CardMedia,
   Tab, Tabbar,
@@ -101,6 +101,42 @@ export default class App extends Component {
                 </Cell>
               </Inner>
             </Grid>
+            <section>
+              <div style={{ padding: "16px" }}>
+                <List avatar>
+                  <ListItem imgSrc="https://material-components-web.appspot.com/images/animal3.svg" imgSize={56} imgLabel="Brown Bear">
+                    Brown Bear
+                    <ListItemMeta icon="favorite" color="#ff4081" />
+                  </ListItem>
+                  <ListItem imgSrc="https://material-components-web.appspot.com/images/animal1.svg" imgSize={56} imgLabel="Panda">
+                    Panda
+                    <ListItemMeta icon="favorite_border" color="#ff4081" />
+                  </ListItem>
+                  <ListItem imgSrc="https://material-components-web.appspot.com/images/animal2.svg" imgSize={56} imgLabel="Sloth">
+                    Sloth
+                    <ListItemMeta icon="favorite_border" color="#ff4081" />
+                  </ListItem>
+                </List>
+              </div>
+            </section>
+            <section>
+              <div style={{ padding: "16px" }}>
+                <List twoLine>
+                  <ListItem secondaryText="Secondary text">
+                    Two-line item
+                    <ListItemMeta>$10.00</ListItemMeta>
+                  </ListItem>
+                  <ListItem secondaryText="Secondary text">
+                    Two-line item
+                    <ListItemMeta>$20.00</ListItemMeta>
+                  </ListItem>
+                  <ListItem secondaryText="Secondary text">
+                    Two-line item
+                    <ListItemMeta>$30.00</ListItemMeta>
+                  </ListItem>
+                </List>
+              </div>
+            </section>
             <section>
               <div>
                 <div style={{ padding: "16px" }}>

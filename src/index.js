@@ -22,7 +22,7 @@ import Slider from "./libs/components/slider";
 import IconToggle from "./libs/components/iconToggle";
 import { Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon } from "./libs/toolbar";
 import { Drawer, DrawerContent, DrawerHeader } from "./libs/drawer";
-import { List, ListItem, ListDivider, ListGroup, ListGroupSubheader } from "./libs/list";
+import { List, ListItem, ListItemMeta, ListDivider, ListGroup, ListGroupSubheader } from "./libs/list";
 import { Grid, Inner, Cell } from "./libs/layoutGrid";
 import { Card, CardActions, CardMedia, CardText, CardPrimary, CardTitle, CardSubtitle, } from "./libs/cards";
 import { Tabbar, Tab } from "./libs/tab";
@@ -34,7 +34,7 @@ export {
   LinearProgress, Switch, Slider, IconToggle,
   Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon,
   Drawer, DrawerContent, DrawerHeader,
-  List, ListItem, ListDivider, ListGroup, ListGroupSubheader,
+  List, ListItem, ListItemMeta, ListDivider, ListGroup, ListGroupSubheader,
   Grid, Inner, Cell,
   Card, CardActions, CardMedia, CardText, CardPrimary, CardTitle, CardSubtitle,
   Tabbar, Tab,

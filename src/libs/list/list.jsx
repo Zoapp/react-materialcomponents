@@ -17,14 +17,20 @@ TODO:
 - Mixins
 */
 const List = ({
-  children, className, dense, twoLine, ...props
+  children, className, dense, avatar, twoLine, darkTheme, ...props
 }) => {
   let classes = "mdc-list";
   if (dense) {
     classes += " mdc-list--dense";
   }
+  if (avatar) {
+    classes += " mdc-list--avatar-list";
+  }
   if (twoLine) {
     classes += " mdc-list--two-line";
+  }
+  if (darkTheme) {
+    classes += " mdc-list--theme-dark";
   }
   if (className) {
     classes += ` ${className}`;
@@ -38,7 +44,9 @@ List.defaultProps = {
   className: null,
 
   dense: false,
+  avatar: false,
   twoLine: false,
+  darkTheme: false,
 };
 
 List.propTypes = {
@@ -47,7 +55,9 @@ List.propTypes = {
   className: PropTypes.string,
 
   dense: PropTypes.bool,
+  avatar: PropTypes.bool,
   twoLine: PropTypes.bool,
+  darkTheme: PropTypes.bool,
 };
 
 export default List;
