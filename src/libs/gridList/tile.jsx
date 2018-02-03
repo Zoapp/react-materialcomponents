@@ -8,23 +8,22 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-grid-tile
-See:
-https://material.io/components/web/catalog/grid-lists/
-https://material-components-web.appspot.com/grid-list.html
+/**
+ * mdc-grid-tile
+ * See:
+ * https://material.io/components/web/catalog/grid-lists/
+ * https://material-components-web.appspot.com/grid-list.html
+ *
+ * TODO:
+ * - span, order, align
+ */
 
-TODO:
-- span, order, align
-- Mixins
-*/
+const MDC_GRIDTILE = "mdc-grid-tile";
+
 const Tile = ({
-  className, background, width, ...props
+  background, width, ...props
 }) => {
-  let classes = "mdc-grid-tile";
-  if (className) {
-    classes += ` ${className}`;
-  }
+  const classes = MDC_GRIDTILE;
   const style = {};
   if (width) {
     style.width = width;
@@ -34,20 +33,19 @@ const Tile = ({
     primaryStyle.background = background;
   }
   return Rmdc.render((
-    <ul className={classes} style={style} {...props} >
+    <ul className={classes} style={style} >
       <div className="mdc-grid-tile__primary" style={primaryStyle} />
     </ul>), props);
 };
 
 Tile.defaultProps = {
-  className: null,
+  mdcElement: MDC_GRIDTILE,
   background: null,
   width: null,
 };
 
 Tile.propTypes = {
-// React component props
-  className: PropTypes.string,
+  mdcElement: PropTypes.string,
   background: PropTypes.string,
   width: PropTypes.string,
 };

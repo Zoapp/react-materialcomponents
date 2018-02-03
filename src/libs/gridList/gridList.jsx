@@ -8,22 +8,20 @@ import React, { Children } from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-grid-list
-See:
-https://material.io/components/web/catalog/grid-lists/
-https://material-components-web.appspot.com/grid-list.html
+/**
+ * mdc-grid-list
+ * See:
+ * https://material.io/components/web/catalog/grid-lists/
+ * https://material-components-web.appspot.com/grid-list.html
+ *
+ */
 
-TODO:
-- Mixins
-*/
+const MDC_GRIDLIST = "mdc-grid-list";
+
 const GridList = ({
-  children, className, width, tileWidth, tileBackground, ...props
+  children, width, tileWidth, tileBackground, ...props
 }) => {
-  let classes = "mdc-grid-list";
-  if (className) {
-    classes += ` ${className}`;
-  }
+  const classes = MDC_GRIDLIST;
   const style = {};
   if (width) {
     style.width = width;
@@ -51,17 +49,16 @@ const GridList = ({
 };
 
 GridList.defaultProps = {
+  mdcElement: MDC_GRIDLIST,
   children: null,
-  className: null,
   width: null,
   tileWidth: null,
   tileBackground: null,
 };
 
 GridList.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
   width: PropTypes.string,
   tileWidth: PropTypes.string,
   tileBackground: PropTypes.string,

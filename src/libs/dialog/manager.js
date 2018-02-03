@@ -7,8 +7,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-// Inspiration
-// https://github.com/xue2han/react-dynamic-modal/blob/master/src/Modal.js
+/**
+ * Dialog management to display close using a stack
+ * Inspiration
+ * https://github.com/xue2han/react-dynamic-modal/blob/master/src/Modal.js
+ */
+
 let node;
 let modalsArray;
 let currentDialog;

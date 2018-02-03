@@ -8,41 +8,38 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-See:
-https://material.io/components/web/catalog/toolbar/
-https://material-components-web.appspot.com/toolbar/index.html
+/**
+ * mdc-toolbar__section
+ * See:
+ * https://material.io/components/web/catalog/toolbar/
+ * https://material-components-web.appspot.com/toolbar/index.html
+ *
+ * TODO:
+ * - All
+ */
 
-TODO:
-- All
-- Mixins
-*/
+const MDC_TBSECTION = "mdc-toolbar__section";
+
 const Section = ({
-  children, className, alignStart, ...props
+  children, alignStart, ...props
 }) => {
-  let classes = "mdc-toolbar__section";
+  let classes = MDC_TBSECTION;
   if (alignStart) {
     classes += " mdc-toolbar__section--align-start";
-  }
-  if (className) {
-    classes += ` ${className}`;
   }
   // TODO all
   return Rmdc.render(<section className={classes}>{children}</section>, props);
 };
 
 Section.defaultProps = {
+  mdcElement: MDC_TBSECTION,
   children: null,
-  className: null,
-
   alignStart: false,
 };
 
 Section.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
-
   alignStart: PropTypes.bool,
 };
 

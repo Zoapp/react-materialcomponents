@@ -8,21 +8,21 @@ import React, { Children } from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-card__actions
-See
-https://material.io/components/web/catalog/cards/
+/**
+ * mdc-card__actions
+ * See
+ * https://material.io/components/web/catalog/cards/
+ *
+ */
 
-*/
+const MDC_CARD_ACTIONS = "mdc-card__actions";
+
 const CardActions = ({
-  children, className, vertical, ...props
+  children, vertical, ...props
 }) => {
-  let classes = "mdc-card__actions";
+  let classes = MDC_CARD_ACTIONS;
   if (vertical) {
     classes += " mdc-card__actions--vertical";
-  }
-  if (className) {
-    classes += ` ${className}`;
   }
   // Iterate through children and set 'mdc-card__action'
   const ch = Children.map(children, child =>
@@ -31,20 +31,18 @@ const CardActions = ({
 };
 
 CardActions.defaultProps = {
+  mdcElement: MDC_CARD_ACTIONS,
   children: null,
-  className: null,
 
   vertical: false,
   isactions: "true",
 };
 
 CardActions.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
 
   vertical: PropTypes.bool,
-
   // Don't modify it
   isactions: PropTypes.string,
 };

@@ -8,32 +8,31 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-dialog__header
-See:
-https://material.io/components/web/catalog/dialogs/
+/**
+ * mdc-dialog__header
+ * See:
+ * https://material.io/components/web/catalog/dialogs/
+ *
+ */
 
-*/
+const MDC_DIALOGHEADER = "mdc-dialog__header";
+
 const DialogHeader = ({
-  children, className, ...props
+  children, ...props
 }) => {
-  let classes = "mdc-dialog__header";
-  if (className) {
-    classes += ` ${className}`;
-  }
+  const classes = MDC_DIALOGHEADER;
   return Rmdc.render(<header className={classes}>{children}</header>, props);
 };
 
 DialogHeader.defaultProps = {
+  mdcElement: MDC_DIALOGHEADER,
   children: null,
-  className: null,
 };
 
 DialogHeader.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.node, PropTypes.string]),
-  className: PropTypes.string,
 };
 
 export default DialogHeader;

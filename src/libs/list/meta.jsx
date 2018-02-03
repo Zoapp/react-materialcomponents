@@ -8,19 +8,20 @@ import React from "react";
 import PropTypes from "prop-types";
 import Icon from "../components/icon";
 import Rmdc from "../";
-/*
-mdc-list-item__meta
-See:
-https://material.io/components/web/catalog/lists/
 
-*/
+/**
+ * mdc-list-item__meta
+ * See:
+ * https://material.io/components/web/catalog/lists/
+ *
+ */
+
+const MDC_LISTITEMMETA = "mdc-list-item__meta";
+
 const ListItemMeta = ({
-  children, className, icon, href, color, label, ...props
+  children, icon, href, color, label, ...props
 }) => {
-  let classes = "mdc-list-item__meta";
-  if (className) {
-    classes += ` ${className}`;
-  }
+  const classes = MDC_LISTITEMMETA;
   let element;
   if (icon) {
     element = (
@@ -33,18 +34,16 @@ const ListItemMeta = ({
 };
 
 ListItemMeta.defaultProps = {
+  mdcElement: MDC_LISTITEMMETA,
   children: null,
-  className: null,
-
   icon: null,
   href: null,
   color: null,
   label: null,
-  elementType: "ListItemMeta",
 };
 
 ListItemMeta.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.string,
 
@@ -52,7 +51,6 @@ ListItemMeta.propTypes = {
   href: PropTypes.string,
   color: PropTypes.string,
   label: PropTypes.string,
-  elementType: PropTypes.string,
 };
 
 export default ListItemMeta;

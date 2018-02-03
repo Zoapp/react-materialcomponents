@@ -8,37 +8,34 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-card__title
-See
-https://material.io/components/web/catalog/cards/
+/**
+ * mdc-card__title
+ * See
+ * https://material.io/components/web/catalog/cards/
+ *
+ */
 
-*/
+const MDC_CARD_TITLE = "mdc-card__title";
+
 const CardTitle = ({
-  children, className, large, ...props
+  children, large, ...props
 }) => {
-  let classes = "mdc-card__title";
+  let classes = MDC_CARD_TITLE;
   if (large) {
     classes += " mdc-card__title--large";
-  }
-  if (className) {
-    classes += ` ${className}`;
   }
   return Rmdc.render(<h1 className={classes}>{children}</h1>, props);
 };
 
 CardTitle.defaultProps = {
+  mdcElement: MDC_CARD_TITLE,
   children: null,
-  className: null,
-
   large: false,
 };
 
 CardTitle.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
-
   large: PropTypes.bool,
 };
 

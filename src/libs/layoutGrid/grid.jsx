@@ -8,34 +8,28 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-layout-grid
-See:
-https://material.io/components/web/catalog/layout-grid/
+/**
+ * mdc-layout-grid
+ * See:
+ * https://material.io/components/web/catalog/layout-grid/
+ *
+ */
 
-TODO:
-- Ripple effect
-- Mixins
-*/
-const Grid = ({
-  children, className, ...props
-}) => {
-  let classes = "mdc-layout-grid";
-  if (className) {
-    classes += ` ${className}`;
-  }
-  return Rmdc.render(<div className={classes} {...props}>{children}</div>, props);
+const MDC_GRID = "mdc-layout-grid";
+
+const Grid = ({ children, ...props }) => {
+  const classes = MDC_GRID;
+  return Rmdc.render(<div className={classes} >{children}</div>, props);
 };
 
 Grid.defaultProps = {
+  mdcElement: MDC_GRID,
   children: null,
-  className: null,
 };
 
 Grid.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
 };
 
 export default Grid;

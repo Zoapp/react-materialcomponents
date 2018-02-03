@@ -9,21 +9,22 @@ import PropTypes from "prop-types";
 import FormField from "./formField";
 import Rmdc from "../";
 
-/*
-mdc-radio
-See:
-https://material.io/components/web/catalog/input-controls/radio-buttons/
-https://material-components-web.appspot.com/radio.html
-*/
+/**
+ * mdc-radio
+ *
+ * See:
+ * https://material.io/components/web/catalog/input-controls/radio-buttons/
+ * https://material-components-web.appspot.com/radio.html
+ */
+
+const MDC_RADIO = "mdc-radio";
+
 export default class Radio extends Component {
   render() {
     const {
-      className, id, name, label, checked, disabled, ...props
+      id, name, label, checked, disabled, ...props
     } = this.props;
-    let classes = "mdc-radio";
-    if (className) {
-      classes += ` ${className}`;
-    }
+    const classes = MDC_RADIO;
     // TODO better cid generator
     const cid = id || Math.random().toString(36);
     let l = "";
@@ -62,7 +63,7 @@ export default class Radio extends Component {
 }
 
 Radio.defaultProps = {
-  className: null,
+  mdcElement: MDC_RADIO,
   id: null,
   label: null,
   disabled: false,
@@ -71,8 +72,7 @@ Radio.defaultProps = {
 };
 
 Radio.propTypes = {
-// React component props
-  className: PropTypes.string,
+  mdcElement: PropTypes.string,
   id: PropTypes.string,
   label: PropTypes.string,
   disabled: PropTypes.bool,

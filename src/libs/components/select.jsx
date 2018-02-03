@@ -8,24 +8,25 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-select
-See:
-https://material.io/components/web/catalog/input-controls/select-menus/
-https://material-components-web.appspot.com/select.html
+/**
+ * mdc-select
+ *
+ * See:
+ * https://material.io/components/web/catalog/input-controls/select-menus/
+ * https://material-components-web.appspot.com/select.html
+ *
+ * TODO : all
+ *
+ */
 
-TODO : all
+const MDC_SELECT = "mdc-select";
 
-*/
 export default class Select extends Component {
   render() {
     const {
-      className, disabled, ...props
+      disabled, ...props
     } = this.props;
-    let classes = "mdc-select";
-    if (className) {
-      classes += ` ${className}`;
-    }
+    const classes = MDC_SELECT;
     const d = {};
     if (disabled) {
       d.disabled = "disabled";
@@ -67,12 +68,11 @@ export default class Select extends Component {
 }
 
 Select.defaultProps = {
-  className: null,
+  mdcElement: MDC_SELECT,
   disabled: false,
 };
 
 Select.propTypes = {
-// React component props
-  className: PropTypes.string,
+  mdcElement: PropTypes.string,
   disabled: PropTypes.bool,
 };

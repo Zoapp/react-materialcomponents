@@ -25,10 +25,10 @@ import MenuAnchor from "./menu/anchor";
  */
 const Rmdc = new class {
   init(root, {
-    rtl, darkTheme, style, typography, ripple,
+    rtl, themeDark, style, typography, ripple,
   }) {
     this.rtl = rtl;
-    this.changeTheme(darkTheme, style);
+    this.changeTheme(themeDark, style);
     this.typography = typography;
     if (rtl) {
       const html = document.getElementsByTagName("html")[0];
@@ -45,20 +45,25 @@ const Rmdc = new class {
     DialogManager.init();
   }
 
-  changeTheme(darkTheme, style) {
-    this.darkTheme = darkTheme;
-    if (darkTheme) {
+  changeTheme(themeDark, style) {
+    this.themeDark = themeDark;
+    if (themeDark) {
       document.body.className += " mdc-theme--dark";
     }
     this.style = style; // TODO style
   }
 
   render(element, {
-    rtl, elevation, theme, typography, ripple, menu,
-  }/* , elementType = null */) {
+    rtl, elevation, themeDark, style, typography, ripple, menu, className,
+  }) {
+    const name = element.props.mdcElement;
     const ps = { };
     let change = false;
     let classes = element.props.className || "";
+    if (className) {
+      classes = `${className} ${classes}`;
+      change = true;
+    }
     if (rtl && (!this.rtl)) {
       ps.dir = "rtl";
       change = true;
@@ -70,8 +75,13 @@ const Rmdc = new class {
         change = true;
       }
     }
-    if (theme) {
-      // TODO
+    if (themeDark) {
+      classes += ` ${name}--theme-dark`;
+      change = true;
+    }
+    if (style) {
+      // TODO check style
+      ps.style = style;
       change = true;
     }
     if (typography) {

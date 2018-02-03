@@ -21,6 +21,9 @@ import Rmdc from "../";
  * https://material-components-web.appspot.com/dialog.html
  *
  */
+
+const MDC_DIALOG = "mdc-dialog";
+
 export default class Dialog extends Component {
   constructor(props) {
     super(props);
@@ -82,17 +85,11 @@ export default class Dialog extends Component {
 
   render() {
     const {
-      className, open, header, children, actions, onClose, style, darkTheme, ...props
+      open, header, children, actions, onClose, style, ...props
     } = this.props;
-    let classes = "rmdc-dialog mdc-dialog";
+    let classes = `rmdc-dialog ${MDC_DIALOG}`;
     if (open) {
       classes += " mdc-dialog--open";
-    }
-    if (darkTheme) {
-      classes += " mdc-dialog--theme-dark";
-    }
-    if (className) {
-      classes = ` ${className}`;
     }
     const s = {};
     if (style && style.width) {
@@ -158,7 +155,7 @@ export default class Dialog extends Component {
 }
 
 Dialog.defaultProps = {
-  className: null,
+  mdcElement: MDC_DIALOG,
   header: null,
   actions: [{ name: "Ok" }],
   style: null,
@@ -166,11 +163,10 @@ Dialog.defaultProps = {
   onClose: () => { DialogManager.close(); },
   onCancel: null,
   onAction: null,
-  darkTheme: false,
 };
 
 Dialog.propTypes = {
-  className: PropTypes.string,
+  mdcElement: PropTypes.string,
   header: PropTypes.oneOfType([
     PropTypes.node, PropTypes.string]),
   children: PropTypes.node.isRequired,
@@ -180,5 +176,4 @@ Dialog.propTypes = {
   onClose: PropTypes.func,
   onCancel: PropTypes.func,
   onAction: PropTypes.func,
-  darkTheme: PropTypes.bool,
 };

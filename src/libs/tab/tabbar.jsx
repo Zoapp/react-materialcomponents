@@ -8,16 +8,16 @@ import React, { Children, Component } from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-tab-bar
-See:
-https://material.io/components/web/catalog/tabs/
-http://material-components-web.appspot.com/tabs.html
+/**
+ * mdc-tab-bar
+ * See:
+ * https://material.io/components/web/catalog/tabs/
+ * http://material-components-web.appspot.com/tabs.html
+ *
+ */
 
-TODO:
-- dynamic, actions
-- Mixins
-*/
+const MDC_TABBAR = "mdc-tab-bar";
+
 export default class Tabbar extends Component {
   constructor(props) {
     super(props);
@@ -43,9 +43,9 @@ export default class Tabbar extends Component {
 
   render() {
     const {
-      children, className, darkTheme, onChange, ...props
+      children, onChange, ...props
     } = this.props;
-    let classes = "mdc-tab-bar";
+    let classes = MDC_TABBAR;
     let text = false;
     let icon = false;
     const { activeTab } = this.state;
@@ -63,12 +63,6 @@ export default class Tabbar extends Component {
     } else if (icon) {
       classes += " mdc-tab-bar--icon-tab-bar";
     }
-    if (darkTheme) {
-      classes += " mdc-tab-bar--theme-dark";
-    }
-    if (className) {
-      classes += ` ${className}`;
-    }
 
     const element = (
       <nav className={classes}>
@@ -85,18 +79,15 @@ export default class Tabbar extends Component {
 }
 
 Tabbar.defaultProps = {
+  mdcElement: MDC_TABBAR,
   children: null,
-  className: null,
   activeTab: 0,
   onChange: null,
-  darkTheme: false,
 };
 
 Tabbar.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
   activeTab: PropTypes.number,
   onChange: PropTypes.func,
-  darkTheme: PropTypes.bool,
 };

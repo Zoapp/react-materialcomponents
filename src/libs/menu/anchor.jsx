@@ -7,13 +7,17 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
-/*
-mdc-menu-anchor
-See:
-https://material.io/components/web/catalog/menus/
-https://material-components-web.appspot.com/simple-menu.html
 
-*/
+/**
+ * mdc-menu-anchor
+ * See:
+ * https://material.io/components/web/catalog/menus/
+ * https://material-components-web.appspot.com/simple-menu.html
+ *
+ */
+
+const MDC_MENU_ANCHOR = "mdc-menu-anchor";
+
 export default class MenuAnchor extends Component {
   constructor(props) {
     super(props);
@@ -52,12 +56,10 @@ export default class MenuAnchor extends Component {
 
   render() {
     const {
-      className, menu, anchor, ...props
+      menu, anchor, ...props
     } = this.props;
-    let classes = "mdc-menu-anchor";
-    if (className) {
-      classes += ` ${className}`;
-    }
+    const classes = MDC_MENU_ANCHOR;
+
     // change onClick event for anchor
     const anchorElement = React.cloneElement(
       anchor,
@@ -82,12 +84,11 @@ export default class MenuAnchor extends Component {
 }
 
 MenuAnchor.defaultProps = {
-  className: null,
+  mdcElement: MDC_MENU_ANCHOR,
 };
 
 MenuAnchor.propTypes = {
-// React component props
-  className: PropTypes.string,
+  mdcElement: PropTypes.string,
   menu: PropTypes.element.isRequired,
   anchor: PropTypes.element.isRequired,
 };

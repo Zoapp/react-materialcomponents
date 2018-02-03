@@ -8,16 +8,20 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-Helper container for mdc-toolbar-fixed-adjust
-See
-https://material.io/components/web/catalog/toolbar/
+/**
+ * rmdc-content
+ * Helper container for mdc-toolbar-fixed-adjust
+ * See
+ * https://material.io/components/web/catalog/toolbar/
+ *
+ */
 
-*/
+const MDC_CONTENT = "rmdc-content";
+
 const Content = ({
-  children, className, fixed, toolbarAdjust, ...props
+  children, fixed, toolbarAdjust, ...props
 }) => {
-  let classes = "rmdc-content";
+  let classes = MDC_CONTENT;
   if (fixed) {
     classes += " rmdc-content-fixed-adjust";
   } else {
@@ -26,26 +30,20 @@ const Content = ({
   if (toolbarAdjust) {
     classes += " mdc-toolbar-fixed-adjust";
   }
-  if (className) {
-    classes += ` ${className}`;
-  }
-  const element = (<div className={classes} {...props}>{children}</div>);
+  const element = (<div className={classes}>{children}</div>);
   return Rmdc.render(element, props);
 };
 
 Content.defaultProps = {
+  mdcElement: MDC_CONTENT,
   children: null,
-  className: null,
-
   fixed: false,
   toolbarAdjust: false,
 };
 
 Content.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
-
   fixed: PropTypes.bool,
   toolbarAdjust: PropTypes.bool,
 };

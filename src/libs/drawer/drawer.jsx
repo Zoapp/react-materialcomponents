@@ -8,35 +8,30 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-See:
-https://material.io/components/web/catalog/drawers/
-https://material-components-web.appspot.com/drawer/persistent-drawer.html
+/**
+ * See:
+ * https://material.io/components/web/catalog/drawers/
+ * https://material-components-web.appspot.com/drawer/persistent-drawer.html
+ *
+ * TODO:
+ * - temporary, permanent, persistent
+ */
 
-TODO:
-- temporary, permanent, persistent
-- Mixins
-*/
+const MDC_DRAWER = "mdc-drawer";
+
 export default class Drawer extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.todo = {};
-  }
-
   render() {
     const {
-      children, className, type, ...props
+      children, type, ...props
     } = this.props;
-    let classes = `mdc-drawer mdc-drawer--${type} mdc-typography`;
-    if (className) {
-      classes += ` ${className}`;
-    }
+    const classes = `${MDC_DRAWER} mdc-drawer--${type} mdc-typography`;
+
     if (type === "permanent") {
-      return Rmdc.render(<nav className={classes} {...props}>{children}</nav>, props);
+      return Rmdc.render(<nav className={classes}>{children}</nav>, props);
     }
     return Rmdc.render(
       (
-        <aside className={classes} {...props}>
+        <aside className={classes}>
           <nav className="mdc-drawer__drawer">{children}</nav>
         </aside>),
       props,
@@ -45,16 +40,13 @@ export default class Drawer extends PureComponent {
 }
 
 Drawer.defaultProps = {
+  mdcElement: MDC_DRAWER,
   children: null,
-  className: null,
-
   type: "permanent",
 };
 
 Drawer.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
-
   type: PropTypes.string,
 };

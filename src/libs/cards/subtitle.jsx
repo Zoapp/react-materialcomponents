@@ -8,31 +8,30 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-card__subtitle
-See
-https://material.io/components/web/catalog/cards/
+/**
+ * mdc-card__subtitle
+ * See
+ * https://material.io/components/web/catalog/cards/
+ *
+ */
 
-*/
+const MDC_CARD_SUBTITLE = "mdc-card__subtitle";
+
 const CardSubtitle = ({
   children, className, ...props
 }) => {
-  let classes = "mdc-card__subtitle";
-  if (className) {
-    classes += ` ${className}`;
-  }
-  return Rmdc.render(<h2 className={classes} {...props}>{children}</h2>, props);
+  const classes = MDC_CARD_SUBTITLE;
+  return Rmdc.render(<h2 className={classes} >{children}</h2>, props);
 };
 
 CardSubtitle.defaultProps = {
+  mdcElement: MDC_CARD_SUBTITLE,
   children: null,
-  className: null,
 };
 
 CardSubtitle.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
 };
 
 export default CardSubtitle;

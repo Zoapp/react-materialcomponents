@@ -8,31 +8,31 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-form-field
-See:
-https://material.io/components/web/catalog/input-controls/form-fields/
-*/
+/**
+ * mdc-form-field
+ *
+ * See:
+ * https://material.io/components/web/catalog/input-controls/form-fields/
+ */
+
+const MDC_FORMFIELD = "mdc-form-field";
+
 const FormField = ({
-  children, className, ...props
+  children, ...props
 }) => {
-  let classes = "mdc-form-field";
-  if (className) {
-    classes += ` ${className}`;
-  }
-  const element = (<div className={classes} {...props}>{children}</div>);
+  const classes = MDC_FORMFIELD;
+  const element = (<div className={classes} >{children}</div>);
   return Rmdc.render(element, props);
 };
 
 FormField.defaultProps = {
+  mdcElement: MDC_FORMFIELD,
   children: null,
-  className: null,
 };
 
 FormField.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
 };
 
 export default FormField;

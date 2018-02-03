@@ -8,34 +8,28 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-list-group
-See:
-https://material.io/components/web/catalog/lists/
+/**
+ * mdc-list-group
+ * See:
+ * https://material.io/components/web/catalog/lists/
+ *
+ */
 
-TODO:
-- Ripple effect
-- Mixins
-*/
-const ListGroup = ({
-  children, className, ...props
-}) => {
-  let classes = "mdc-list-group";
-  if (className) {
-    classes += ` ${className}`;
-  }
-  return Rmdc.render(<div className={classes} {...props}>{children}</div>, props);
+const MDC_LISTGROUP = "mdc-list-group";
+
+const ListGroup = ({ children, ...props }) => {
+  const classes = MDC_LISTGROUP;
+  return Rmdc.render(<div className={classes}>{children}</div>, props);
 };
 
 ListGroup.defaultProps = {
+  mdcElement: MDC_LISTGROUP,
   children: null,
-  className: null,
 };
 
 ListGroup.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
 };
 
 export default ListGroup;

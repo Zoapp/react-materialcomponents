@@ -8,18 +8,22 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-text-field
-See
-https://material.io/components/web/catalog/input-controls/text-field/
-https://material-components-web.appspot.com/text-field.html
-// TODO
-- Fullwidth
-- TextArea
-- Outlined
-- Helper
-- Leading and Trailing icons
-*/
+/**
+ * mdc-text-field
+ * See
+ * https://material.io/components/web/catalog/input-controls/text-field/
+ * https://material-components-web.appspot.com/text-field.html
+ *
+ *  TODO
+ * - Fullwidth
+ * - TextArea
+ * - Outlined
+ * - Helper
+ * - Leading and Trailing icons
+ */
+
+const MDC_TEXTFIELD = "mdc-text-field";
+
 export default class Textfield extends Component {
   constructor(props) {
     super(props);
@@ -36,10 +40,10 @@ export default class Textfield extends Component {
 
   render() {
     const {
-      children, className, label, id, type, disabled, onChange, ...props
+      mdcElement, label, id, type, disabled, onChange, ...props
     } = this.props;
     const { focused } = this.state;
-    let classes = "mdc-text-field mdc-text-field--upgraded";
+    let classes = `${MDC_TEXTFIELD} mdc-text-field--upgraded`;
     let lc = "mdc-text-field__label";
     let bc = "mdc-text-field__bottom-line";
     if (focused) {
@@ -63,9 +67,6 @@ export default class Textfield extends Component {
     if ((!focused) &&
         (value && value.trim().length > 0)) {
       lc += " mdc-text-field__label--float-above";
-    }
-    if (className) {
-      classes += ` ${className}`;
     }
     // TODO better cid generator
     const cid = id || Math.random().toString(36);
@@ -91,9 +92,7 @@ export default class Textfield extends Component {
 }
 
 Textfield.defaultProps = {
-  children: null,
-  className: null,
-
+  mdcElement: MDC_TEXTFIELD,
   label: null,
   id: null,
   type: "text",
@@ -102,10 +101,7 @@ Textfield.defaultProps = {
 };
 
 Textfield.propTypes = {
-// React component props
-  children: PropTypes.node,
-  className: PropTypes.string,
-
+  mdcElement: PropTypes.string,
   label: PropTypes.string,
   id: PropTypes.string,
   type: PropTypes.string,

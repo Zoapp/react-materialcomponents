@@ -8,28 +8,28 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-dialog__body
-See:
-https://material.io/components/web/catalog/dialogs/
+/**
+ * mdc-dialog__body
+ * See:
+ * https://material.io/components/web/catalog/dialogs/
+ *
+ */
 
-*/
+const MDC_DIALOGBODY = "mdc-dialog__body";
+
 const DialogBody = ({
-  children, className, scrollable, ...props
+  children, scrollable, ...props
 }) => {
-  let classes = "mdc-dialog__body";
+  let classes = MDC_DIALOGBODY;
   if (scrollable) {
     classes += " mdc-dialog__body--scrollable";
-  }
-  if (className) {
-    classes += ` ${className}`;
   }
   return Rmdc.render(<section className={classes}>{children}</section>, props);
 };
 
 DialogBody.defaultProps = {
   children: null,
-  className: null,
+  mdcElement: MDC_DIALOGBODY,
   scrollable: false,
 };
 
@@ -37,7 +37,7 @@ DialogBody.propTypes = {
 // React component props
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node), PropTypes.node, PropTypes.string]),
-  className: PropTypes.string,
+  mdcElement: PropTypes.string,
   scrollable: PropTypes.bool,
 };
 

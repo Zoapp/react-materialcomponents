@@ -9,25 +9,22 @@ import PropTypes from "prop-types";
 import Icon from "../components/icon";
 import Rmdc from "../";
 
-/*
-mdc-tab
-See:
-https://material.io/components/web/catalog/tabs/
-http://material-components-web.appspot.com/tabs.html
+/**
+ * mdc-tab
+ * See:
+ * https://material.io/components/web/catalog/tabs/
+ * http://material-components-web.appspot.com/tabs.html
+ *
+ */
 
-TODO:
-- dynamic, actions
-- Mixins
-*/
+const MDC_TAB = "mdc-tab";
+
 const Tab = ({
-  className, active, text, icon, href, tabId, onTabSelect, ...props
+  active, text, icon, href, tabId, onTabSelect, ...props
 }) => {
-  let classes = "mdc-tab";
+  let classes = MDC_TAB;
   if (active) {
     classes += " mdc-tab--active";
-  }
-  if (className) {
-    classes += ` ${className}`;
   }
   let i = "";
   if (icon) {
@@ -39,8 +36,7 @@ const Tab = ({
 };
 
 Tab.defaultProps = {
-  className: null,
-
+  mdcElement: MDC_TAB,
   active: false,
   text: null,
   icon: null,
@@ -50,9 +46,7 @@ Tab.defaultProps = {
 };
 
 Tab.propTypes = {
-// React component props
-  className: PropTypes.string,
-
+  mdcElement: PropTypes.string,
   active: PropTypes.bool,
   text: PropTypes.string,
   icon: PropTypes.string,

@@ -9,20 +9,25 @@ import PropTypes from "prop-types";
 import FormField from "./formField";
 import Rmdc from "../";
 
-/*
-mdc-switch
-See:
-https://material.io/components/web/catalog/input-controls/switches/
-https://material-components-web.appspot.com/switch.html
-TODO:
-- All
-*/
+/**
+ * mdc-switch
+ *
+ * See:
+ * https://material.io/components/web/catalog/input-controls/switches/
+ * https://material-components-web.appspot.com/switch.html
+ *
+ * TODO:
+ * - All
+ */
+
+const MDC_SWITCH = "mdc-switch";
+
 export default class Switch extends Component {
   render() {
     const {
-      className, id, label, checked, disabled, formField, ...props
+      id, label, checked, disabled, formField, ...props
     } = this.props;
-    const classes = "mdc-switch";
+    const classes = MDC_SWITCH;
     // TODO better cid generator
     const cid = id || Math.random().toString(36);
     let l = "";
@@ -52,12 +57,9 @@ export default class Switch extends Component {
       </div>);
     if (label) {
       if (formField) {
-        element = (<FormField className={className}>{element}{l}</FormField>);
+        element = (<FormField>{element}{l}</FormField>);
       } else {
-        let cn = "rmdc-switch-wrapper";
-        if (className) {
-          cn += ` ${className}`;
-        }
+        const cn = "rmdc-switch-wrapper";
         element = (<div className={cn}>{element}{l}</div>);
       }
     }
@@ -66,7 +68,7 @@ export default class Switch extends Component {
 }
 
 Switch.defaultProps = {
-  className: null,
+  mdcElement: MDC_SWITCH,
   id: null,
   label: null,
   checked: false,
@@ -75,8 +77,7 @@ Switch.defaultProps = {
 };
 
 Switch.propTypes = {
-// React component props
-  className: PropTypes.string,
+  mdcElement: PropTypes.string,
   id: PropTypes.string,
   label: PropTypes.string,
   checked: PropTypes.bool,

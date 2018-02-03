@@ -8,31 +8,28 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-card__supporting-text
-See
-https://material.io/components/web/catalog/cards/
+/**
+ * mdc-card__supporting-text
+ * See
+ * https://material.io/components/web/catalog/cards/
+ *
+ */
 
-*/
-const CardText = ({
-  children, className, ...props
-}) => {
-  let classes = "mdc-card__supporting-text";
-  if (className) {
-    classes += ` ${className}`;
-  }
+const MDC_CARD_TEXT = "mdc-card__supporting-text";
+
+const CardText = ({ children, ...props }) => {
+  const classes = MDC_CARD_TEXT;
   return Rmdc.render(<section className={classes}>{children}</section>, props);
 };
 
 CardText.defaultProps = {
+  mdcElement: MDC_CARD_TEXT,
   children: null,
-  className: null,
 };
 
 CardText.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
 };
 
 export default CardText;

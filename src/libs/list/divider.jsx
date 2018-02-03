@@ -6,40 +6,36 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Rmdc from "../";
 
-/*
-mdc-list-divider
-See:
-https://material.io/components/web/catalog/lists/
+/**
+ * mdc-list-divider
+ * See:
+ * https://material.io/components/web/catalog/lists/
+ *
+ */
 
-*/
-const ListDivider = ({
-  className, type, inset,
-}) => {
-  let classes = "mdc-list-divider";
+const MDC_LISTDIVIDER = "mdc-list-divider";
+
+const ListDivider = ({ type, inset, ...props }) => {
+  let classes = MDC_LISTDIVIDER;
   if (inset) {
     classes += " mdc-list-divider--inset";
   }
-  if (className) {
-    classes += ` ${className}`;
-  }
   if (type === "hr") {
-    return (<hr className={classes} />);
+    return Rmdc.render(<hr className={classes} />, props);
   }
-  return (<li className={classes} role="separator" />);
+  return Rmdc.render(<li className={classes} role="separator" />, props);
 };
 
 ListDivider.defaultProps = {
-  className: null,
-
+  mdcElement: MDC_LISTDIVIDER,
   type: "li",
   inset: false,
 };
 
 ListDivider.propTypes = {
-// React component props
-  className: PropTypes.string,
-
+  mdcElement: PropTypes.string,
   type: PropTypes.string,
   inset: PropTypes.bool,
 };

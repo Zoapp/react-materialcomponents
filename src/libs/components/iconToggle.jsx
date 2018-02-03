@@ -8,13 +8,16 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-icon-toggle
-See:
-https://material.io/components/web/catalog/buttons/icon-toggle-buttons/
-https://material-components-web.appspot.com/icon-toggle.html
+/**
+ * mdc-icon-toggle
+ *
+ * See:
+ * https://material.io/components/web/catalog/buttons/icon-toggle-buttons/
+ * https://material-components-web.appspot.com/icon-toggle.html
+ *
+ */
 
-*/
+const MDC_ICONTOGGLE = "mdc-icon-toggle";
 
 export default class IconToggle extends Component {
   constructor(props) {
@@ -33,7 +36,6 @@ export default class IconToggle extends Component {
 
   render() {
     const {
-      className,
       pressed,
       disabled,
       name,
@@ -42,19 +44,12 @@ export default class IconToggle extends Component {
       labelOff,
       onChange,
       color,
-      darkTheme,
       ...props
     } = this.props;
     // TODO Font Awesome
-    let classes = "mdc-icon-toggle material-icons";
-    if (darkTheme) {
-      classes += " mdc-theme--dark";
-    }
+    let classes = `${MDC_ICONTOGGLE} material-icons`;
     if (disabled) {
       classes += " mdc-icon-toggle--disabled";
-    }
-    if (className) {
-      classes += ` ${className}`;
     }
     const style = {};
     if (color) {
@@ -84,19 +79,17 @@ export default class IconToggle extends Component {
 }
 
 IconToggle.defaultProps = {
-  className: null,
+  mdcElement: MDC_ICONTOGGLE,
   pressed: false,
   disabled: false,
   label: null,
   labelOff: null,
   onChange: null,
   color: null,
-  darkTheme: null,
 };
 
 IconToggle.propTypes = {
-// React component props
-  className: PropTypes.string,
+  mdcElement: PropTypes.string,
   pressed: PropTypes.bool,
   disabled: PropTypes.bool,
   name: PropTypes.string.isRequired,
@@ -105,5 +98,4 @@ IconToggle.propTypes = {
   labelOff: PropTypes.string,
   onChange: PropTypes.func,
   color: PropTypes.string,
-  darkTheme: PropTypes.string,
 };

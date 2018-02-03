@@ -8,32 +8,26 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-See:
-https://material.io/components/web/catalog/toolbar/
-https://material-components-web.appspot.com/toolbar/index.html
+/**
+ * See:
+ * https://material.io/components/web/catalog/toolbar/
+ * https://material-components-web.appspot.com/toolbar/index.html
+ *
+ * TODO:
+ * - waterfall, flexible, fixedlastrow
+ *
+ */
 
-TODO:
-- waterfall, flexible, fixedlastrow
-- Mixins
-*/
+const MDC_TOOLBAR = "mdc-toolbar";
+
 export default class Toolbar extends PureComponent {
-  constructor(props) {
-    super(props);
-    // TODO
-    this.todo = {};
-  }
-
   render() {
     const {
-      children, className, fixed, ...otherProps
+      children, fixed, ...otherProps
     } = this.props;
-    let classes = "mdc-toolbar";
+    let classes = MDC_TOOLBAR;
     if (fixed) {
       classes += " mdc-toolbar--fixed";
-    }
-    if (className) {
-      classes += ` ${className}`;
     }
     const element = (
       <header className={classes} >{children}</header>
@@ -43,16 +37,13 @@ export default class Toolbar extends PureComponent {
 }
 
 Toolbar.defaultProps = {
+  mdcElement: MDC_TOOLBAR,
   children: null,
-  className: null,
-
   fixed: false,
 };
 
 Toolbar.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
-
   fixed: PropTypes.bool,
 };

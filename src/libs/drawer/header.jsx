@@ -8,22 +8,22 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-drawer__header
-See
-https://material.io/components/web/catalog/drawer/
+/**
+ * mdc-drawer__header
+ * See
+ * https://material.io/components/web/catalog/drawer/
+ *
+ */
 
-*/
+const MDC_DRAWERHEADER = "mdc-drawer__header";
+
 const DrawerHeader = ({
-  children, className, list, ...props
+  children, list, ...props
 }) => {
-  let classes = "mdc-drawer__header";
-  if (className) {
-    classes += ` ${className}`;
-  }
+  const classes = MDC_DRAWERHEADER;
   return Rmdc.render(
     (
-      <header className={classes} {...props}>
+      <header className={classes} >
         <div className="mdc-drawer__header-content">{children}</div>
       </header>
     ),
@@ -32,17 +32,14 @@ const DrawerHeader = ({
 };
 
 DrawerHeader.defaultProps = {
+  mdcElement: MDC_DRAWERHEADER,
   children: null,
-  className: null,
-
   list: false,
 };
 
 DrawerHeader.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
-
   list: PropTypes.bool,
 };
 

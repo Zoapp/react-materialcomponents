@@ -8,19 +8,23 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-slider
-See:
-https://material.io/components/web/catalog/input-controls/sliders/
-https://material-components-web.appspot.com/slider.html
+/**
+ * mdc-slider
+ *
+ * See:
+ * https://material.io/components/web/catalog/input-controls/sliders/
+ * https://material-components-web.appspot.com/slider.html
+ *
+ * TODO:
+ * - move cursor, onchange
+ */
 
-TODO:
-- move cursor, onchange
-*/
+const MDC_SLIDER = "mdc-slider";
+
 const Slider = ({
-  className, discrete, disabled, valueMin, valueMax, valueNow, label, ...props
+  discrete, disabled, valueMin, valueMax, valueNow, label, ...props
 }) => {
-  let classes = "mdc-slider";
+  let classes = MDC_SLIDER;
   let container;
   if (discrete) {
     classes += " mdc-slider--discrete";
@@ -46,9 +50,6 @@ const Slider = ({
   if (disabled) {
     classes += " mdc-slider--disabled";
   }
-  if (className) {
-    classes += ` ${className}`;
-  }
   return Rmdc.render((
     <div
       className={classes}
@@ -58,7 +59,6 @@ const Slider = ({
       aria-valuemax={valueMax}
       aria-valuenow={valueNow}
       aria-label={label}
-      {...props}
     >
       <div className="mdc-slider__track-container">
         <div className="mdc-slider__track" />
@@ -68,7 +68,7 @@ const Slider = ({
 };
 
 Slider.defaultProps = {
-  className: null,
+  mdcElement: MDC_SLIDER,
   discrete: false,
   disabled: false,
   valueMin: 0,
@@ -78,8 +78,7 @@ Slider.defaultProps = {
 };
 
 Slider.propTypes = {
-// React component props
-  className: PropTypes.string,
+  mdcElement: PropTypes.string,
   discrete: PropTypes.bool,
   disabled: PropTypes.bool,
   valueMin: PropTypes.number,

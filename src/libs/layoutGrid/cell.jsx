@@ -8,34 +8,30 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-layout-grid__cell
-See:
-https://material.io/components/web/catalog/layout-grid/
+/**
+ * mdc-layout-grid__cell
+ * See:
+ * https://material.io/components/web/catalog/layout-grid/
+ *
+ * TODO:
+ * - span, order, align
+ */
 
-TODO:
-- span, order, align
-- Mixins
-*/
-const Cell = ({
-  children, className, ...props
-}) => {
-  let classes = "mdc-layout-grid__cell";
-  if (className) {
-    classes += ` ${className}`;
-  }
-  return Rmdc.render(<div className={classes} {...props}>{children}</div>, props);
+const MDC_GRIDCELL = "mdc-layout-grid__cell";
+
+const Cell = ({ children, ...props }) => {
+  const classes = MDC_GRIDCELL;
+  return Rmdc.render(<div className={classes} >{children}</div>, props);
 };
 
 Cell.defaultProps = {
+  mdcElement: MDC_GRIDCELL,
   children: null,
-  className: null,
 };
 
 Cell.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
 };
 
 export default Cell;

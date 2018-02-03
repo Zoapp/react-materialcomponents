@@ -8,35 +8,33 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-See:
-https://material.io/components/web/catalog/toolbar/
-https://material-components-web.appspot.com/toolbar/index.html
+/**
+ * See:
+ * https://material.io/components/web/catalog/toolbar/
+ * https://material-components-web.appspot.com/toolbar/index.html
+ *
+ * TODO:
+ * - All
+ */
 
-TODO:
-- All
-- Mixins
-*/
+const MDC_TBROW = "mdc-toolbar__row";
+
 const Row = ({
-  children, className, ...props
+  children, ...props
 }) => {
-  let classes = "mdc-toolbar__row";
-  if (className) {
-    classes += ` ${className}`;
-  }
+  const classes = MDC_TBROW;
   // TODO all
   return Rmdc.render(<div className={classes}>{children}</div>, props);
 };
 
 Row.defaultProps = {
+  mdcElement: MDC_TBROW,
   children: null,
-  className: null,
 };
 
 Row.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
 };
 
 export default Row;

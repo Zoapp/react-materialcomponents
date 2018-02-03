@@ -8,42 +8,42 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-fab
-See
-https://material.io/components/web/catalog/buttons/floating-action-buttons/
+/**
+ * mdc-fab
+ *
+ * See
+ * https://material.io/components/web/catalog/buttons/floating-action-buttons/
+ *
+ */
 
-*/
+const MDC_FAB = "mdc-fab";
+
 const Fab = ({
-  children, className, icon, label, ...props
+  children, icon, label, onClick, ...props
 }) => {
-  let classes = "mdc-fab material-icons rmdc-fab--absolute";
-  if (className) {
-    classes += ` ${className}`;
-  }
+  const classes = "mdc-fab material-icons rmdc-fab--absolute";
   let ch = children;
   if (icon) {
     ch = (<span className="mdc-fab__icon">{icon}</span>);
   }
-  const element = (<button className={classes} {...props} aria-label={label} >{ch}</button>);
+  const element = (<button className={classes} onClick={onClick} aria-label={label} >{ch}</button>);
   return Rmdc.render(element, props);
 };
 
 Fab.defaultProps = {
+  mdcElement: MDC_FAB,
   children: null,
-  className: null,
-
   icon: null,
   label: null,
+  onClick: null,
 };
 
 Fab.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
-
   icon: PropTypes.string,
   label: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default Fab;

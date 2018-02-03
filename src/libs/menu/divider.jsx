@@ -8,33 +8,28 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-list-divider
-See:
-https://material.io/components/web/catalog/menus/
-https://material-components-web.appspot.com/simple-menu.html
+/**
+ * mdc-list-divider
+ * See:
+ * https://material.io/components/web/catalog/menus/
+ * https://material-components-web.appspot.com/simple-menu.html
+ *
+ */
 
-*/
-const MenuDivider = ({
-  children, className, tabIndex, disabled, ...props
-}) => {
-  let classes = "mdc-list-divider";
-  if (className) {
-    classes += ` ${className}`;
-  }
+const MDC_LIST_DIVIDER = "mdc-list-divider";
+
+const MenuDivider = ({ ...props }) => {
+  const classes = MDC_LIST_DIVIDER;
   return Rmdc.render((
     <li className={classes} role="separator" />), props);
 };
 
 MenuDivider.defaultProps = {
-  className: null,
-  isDivider: false,
+  mdcElement: MDC_LIST_DIVIDER,
 };
 
 MenuDivider.propTypes = {
-// React component props
-  className: PropTypes.string,
-  isDivider: PropTypes.bool,
+  mdcElement: PropTypes.string,
 };
 
 export default MenuDivider;

@@ -8,37 +8,34 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-drawer__content
-See
-https://material.io/components/web/catalog/drawer/
+/**
+ * mdc-drawer__content
+ * See
+ * https://material.io/components/web/catalog/drawer/
+ *
+ */
 
-*/
+const MDC_DRAWERCONTENT = "mdc-drawer__content";
+
 const DrawerContent = ({
-  children, className, list, ...props
+  children, list, ...props
 }) => {
-  let classes = "mdc-drawer__content";
+  let classes = MDC_DRAWERCONTENT;
   if (list) {
     classes += " mdc-list";
   }
-  if (className) {
-    classes += ` ${className}`;
-  }
-  return Rmdc.render(<nav className={classes} {...props}>{children}</nav>, props);
+  return Rmdc.render(<nav className={classes} >{children}</nav>, props);
 };
 
 DrawerContent.defaultProps = {
+  mdcElement: MDC_DRAWERCONTENT,
   children: null,
-  className: null,
-
   list: false,
 };
 
 DrawerContent.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
-
   list: PropTypes.bool,
 };
 

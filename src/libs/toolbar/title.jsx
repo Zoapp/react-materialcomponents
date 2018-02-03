@@ -8,35 +8,33 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-See:
-https://material.io/components/web/catalog/toolbar/
-https://material-components-web.appspot.com/toolbar/index.html
+/**
+ * See:
+ * https://material.io/components/web/catalog/toolbar/
+ * https://material-components-web.appspot.com/toolbar/index.html
+ *
+ * TODO:
+ * - All
+ */
 
-TODO:
-- All
-- Mixins
-*/
+const MDC_TBTITLE = "mdc-toolbar__title";
+
 const Title = ({
   children, className, ...props
 }) => {
-  let classes = "mdc-toolbar__title";
-  if (className) {
-    classes += ` ${className}`;
-  }
+  const classes = MDC_TBTITLE;
   // TODO all
   return Rmdc.render(<span className={classes}>{children}</span>, props);
 };
 
 Title.defaultProps = {
+  mdcElement: MDC_TBTITLE,
   children: null,
-  className: null,
 };
 
 Title.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
 };
 
 export default Title;

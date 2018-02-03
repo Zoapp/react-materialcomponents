@@ -7,33 +7,29 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
-/*
-mdc-layout-grid__inner
-See:
-https://material.io/components/web/catalog/layout-grid/
 
-TODO:
-- Mixins
-*/
-const Inner = ({
-  children, className, ...props
-}) => {
-  let classes = "mdc-layout-grid__inner";
-  if (className) {
-    classes += ` ${className}`;
-  }
-  return Rmdc.render(<div className={classes} {...props}>{children}</div>, props);
+/**
+ * mdc-layout-grid__inner
+ * See:
+ * https://material.io/components/web/catalog/layout-grid/
+ *
+ */
+
+const MDC_GRIDINNER = "mdc-layout-grid__inner";
+
+const Inner = ({ children, ...props }) => {
+  const classes = MDC_GRIDINNER;
+  return Rmdc.render(<div className={classes} >{children}</div>, props);
 };
 
 Inner.defaultProps = {
+  mdcElement: MDC_GRIDINNER,
   children: null,
-  className: null,
 };
 
 Inner.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
 };
 
 export default Inner;

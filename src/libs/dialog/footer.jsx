@@ -8,19 +8,20 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 import Button from "../components/button";
-/*
-mdc-dialog__footer
-See:
-https://material.io/components/web/catalog/dialogs/
 
-*/
+/**
+ * mdc-dialog__footer
+ * See:
+ * https://material.io/components/web/catalog/dialogs/
+ *
+ */
+
+const MDC_DIALOGFOOTER = "mdc-dialog__footer";
+
 const DialogFooter = ({
-  children, className, actions, handleAction, ...props
+  children, actions, handleAction, ...props
 }) => {
-  let classes = "mdc-dialog__footer";
-  if (className) {
-    classes += ` ${className}`;
-  }
+  const classes = MDC_DIALOGFOOTER;
   let raw = children;
   let a = [];
   if (actions) {
@@ -49,15 +50,14 @@ const DialogFooter = ({
 };
 
 DialogFooter.defaultProps = {
+  mdcElement: MDC_DIALOGFOOTER,
   children: null,
-  className: null,
   actions: null,
 };
 
 DialogFooter.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
   actions: PropTypes.arrayOf(PropTypes.shape({})),
   handleAction: PropTypes.func.isRequired,
 };

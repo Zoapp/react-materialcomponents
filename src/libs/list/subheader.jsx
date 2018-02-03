@@ -8,22 +8,19 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-list-group__subheader
-See:
-https://material.io/components/web/catalog/lists/
+/**
+ * mdc-list-group__subheader
+ * See:
+ * https://material.io/components/web/catalog/lists/
+ *
+ */
 
-TODO:
-- Ripple effect
-- Mixins
-*/
+const MDC_LISTSUBHEADER = "mdc-list-group__subheader";
+
 const ListGroupSubheader = ({
-  children, className, type, ...props
+  children, type, ...props
 }) => {
-  let classes = "mdc-list-group__subheader";
-  if (className) {
-    classes += ` ${className}`;
-  }
+  const classes = MDC_LISTSUBHEADER;
   // TODO type
   let element;
   if (type !== "h3") {
@@ -35,17 +32,14 @@ const ListGroupSubheader = ({
 };
 
 ListGroupSubheader.defaultProps = {
+  mdcElement: MDC_LISTSUBHEADER,
   children: null,
-  className: null,
-
   type: "h3",
 };
 
 ListGroupSubheader.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
-
   type: PropTypes.string,
 };
 

@@ -7,10 +7,16 @@
 import React from "react";
 import Icon from "../components/icon";
 
-/*
-See:
-https://material.io/components/web/catalog/toolbar/
-https://material-components-web.appspot.com/toolbar/index.html
+/**
+ *
+ * mdc-toolbar__menu-icon
+ *
+ * See:
+ * https://material.io/components/web/catalog/toolbar/
+ * https://material-components-web.appspot.com/toolbar/index.html
+ *
+ */
 
-*/
-export default props => <Icon className="mdc-toolbar__menu-icon" componentName="a" {...props} />;
+const MDC_TBICON = "mdc-toolbar__menu-icon";
+
+export default props => <Icon className={MDC_TBICON} mdcElement={MDC_TBICON} componentName="a" {...props} />;

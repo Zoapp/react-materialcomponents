@@ -9,13 +9,15 @@ import PropTypes from "prop-types";
 import FormField from "./formField";
 import Rmdc from "../";
 
-/*
-mdc-checkbox
-See:
-https://material.io/components/web/catalog/input-controls/checkboxes/
-https://material-components-web.appspot.com/checkbox.html
+/**
+ * mdc-checkbox
+ * See:
+ * https://material.io/components/web/catalog/input-controls/checkboxes/
+ * https://material-components-web.appspot.com/checkbox.html
+ */
 
-*/
+const MDC_CHECKBOX = "mdc-checkbox";
+
 export default class Checkbox extends Component {
   componentDidMount() {
     this.inputRef.indeterminate = this.props.indeterminate;
@@ -29,15 +31,13 @@ export default class Checkbox extends Component {
 
   render() {
     const {
-      className, id, label, disabled, checked, indeterminate, onChange, ...props
+      id, label, disabled, checked, indeterminate, onChange, ...props
     } = this.props;
-    let classes = "mdc-checkbox";
+    let classes = MDC_CHECKBOX;
     if (disabled) {
       classes += " mdc-checkbox--disabled";
     }
-    if (className) {
-      classes += ` ${className}`;
-    }
+
     // TODO better cid generator
     const cid = id || Math.random().toString(36);
     let l = "";
@@ -54,7 +54,7 @@ export default class Checkbox extends Component {
       d.defaultChecked = "checked";
     }
     let element = (
-      <div className={classes} {...props}>
+      <div className={classes}>
         <input
           id={cid}
           type="checkbox"
@@ -83,7 +83,7 @@ export default class Checkbox extends Component {
 }
 
 Checkbox.defaultProps = {
-  className: null,
+  mdcElement: MDC_CHECKBOX,
   label: null,
   id: null,
   disabled: false,
@@ -93,8 +93,7 @@ Checkbox.defaultProps = {
 };
 
 Checkbox.propTypes = {
-// React component props
-  className: PropTypes.string,
+  mdcElement: PropTypes.string,
   label: PropTypes.string,
   id: PropTypes.string,
   disabled: PropTypes.bool,

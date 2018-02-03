@@ -10,19 +10,20 @@ import CardTitle from "./title";
 import CardSubtitle from "./subtitle";
 import Rmdc from "../";
 
-/*
-mdc-card__primary
-See
-https://material.io/components/web/catalog/cards/
+/**
+ * mdc-card__primary
+ * See
+ * https://material.io/components/web/catalog/cards/
+ *
+ */
 
-*/
+const MDC_CARD_PRIMARY = "mdc-card__primary";
+
 const CardPrimary = ({
-  children, className, title, subTitle, largeTitle, isTitlingSecond, ...props
+  children, title, subTitle, largeTitle, isTitlingSecond, ...props
 }) => {
-  let classes = "mdc-card__primary";
-  if (className) {
-    classes += ` ${className}`;
-  }
+  const classes = MDC_CARD_PRIMARY;
+
   let t = "";
   let s = "";
   if (title) {
@@ -42,13 +43,12 @@ const CardPrimary = ({
       return child;
     });
   }
-  return Rmdc.render(<section className={classes} {...props}>{first}{t}{s}{ch}</section>, props);
+  return Rmdc.render(<section className={classes} >{first}{t}{s}{ch}</section>, props);
 };
 
 CardPrimary.defaultProps = {
+  mdcElement: MDC_CARD_PRIMARY,
   children: null,
-  className: null,
-
   title: null,
   subTitle: null,
   largeTitle: false,
@@ -56,10 +56,8 @@ CardPrimary.defaultProps = {
 };
 
 CardPrimary.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
-
   title: PropTypes.string,
   subTitle: PropTypes.string,
   largeTitle: PropTypes.bool,

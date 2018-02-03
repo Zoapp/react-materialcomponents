@@ -8,13 +8,16 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-list-item
-See:
-https://material.io/components/web/catalog/menus/
-https://material-components-web.appspot.com/simple-menu.html
+/**
+ * mdc-list-item
+ * See:
+ * https://material.io/components/web/catalog/menus/
+ * https://material-components-web.appspot.com/simple-menu.html
+ *
+ */
 
-*/
+const MDC_LIST_ITEM = "mdc-list-item";
+
 export default class MenuItem extends Component {
   handleClick = (e) => {
     e.preventDefault();
@@ -25,12 +28,10 @@ export default class MenuItem extends Component {
 
   render() {
     const {
-      children, className, tabIndex, disabled, ...props
+      children, tabIndex, disabled, ...props
     } = this.props;
-    let classes = "mdc-list-item";
-    if (className) {
-      classes += ` ${className}`;
-    }
+    const classes = MDC_LIST_ITEM;
+
     const p = {};
     if (disabled) {
       p.disabled = "disabled";
@@ -53,16 +54,15 @@ export default class MenuItem extends Component {
 }
 
 MenuItem.defaultProps = {
-  className: null,
+  mdcElement: MDC_LIST_ITEM,
   tabIndex: 0,
   disabled: false,
   onSelected: null,
 };
 
 MenuItem.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.string.isRequired,
-  className: PropTypes.string,
   tabIndex: PropTypes.number,
   disabled: PropTypes.bool,
   onSelected: PropTypes.func,

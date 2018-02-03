@@ -9,23 +9,20 @@ import PropTypes from "prop-types";
 import CardPrimary from "./primary";
 import Rmdc from "../";
 
-/*
-mdc-card
-See
-https://material.io/components/web/catalog/cards/
-https://material-components-web.appspot.com/card.html
+/**
+ * mdc-card
+ * See
+ * https://material.io/components/web/catalog/cards/
+ * https://material-components-web.appspot.com/card.html
+ *
+ */
 
-*/
+const MDC_CARD = "mdc-card";
+
 const Card = ({
-  children, className, title, subTitle, largeTitle, horizontalBlock, darkTheme, ...props
+  children, title, subTitle, largeTitle, horizontalBlock, ...props
 }) => {
-  let classes = "mdc-card";
-  if (darkTheme) {
-    classes += " mdc-card--theme-dark";
-  }
-  if (className) {
-    classes += ` ${className}`;
-  }
+  const classes = MDC_CARD;
   let primary = "";
   if (title || subTitle) {
     primary = (<CardPrimary title={title} subTitle={subTitle} largeTitle={largeTitle} />);
@@ -42,30 +39,25 @@ const Card = ({
     });
     primary = (<div className="mdc-card__horizontal-block">{primary}{sections}</div>);
   }
-  return Rmdc.render(<div className={classes} {...props}>{primary}{ca}</div>, props);
+  return Rmdc.render(<div className={classes} >{primary}{ca}</div>, props);
 };
 
 Card.defaultProps = {
+  mdcElement: MDC_CARD,
   children: null,
-  className: null,
-
   title: null,
   subTitle: null,
   largeTitle: false,
   horizontalBlock: false,
-  darkTheme: false,
 };
 
 Card.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
-
   title: PropTypes.string,
   subTitle: PropTypes.string,
   largeTitle: PropTypes.bool,
   horizontalBlock: PropTypes.bool,
-  darkTheme: PropTypes.bool,
 };
 
 export default Card;

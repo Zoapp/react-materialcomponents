@@ -9,19 +9,22 @@ import PropTypes from "prop-types";
 import Icon from "./icon";
 import Rmdc from "../";
 
-/*
-See:
-https://material.io/components/web/catalog/buttons/
-http://material-components-web.appspot.com/button.html
+/**
+ * mdc-button
+ *
+ * See:
+ * https://material.io/components/web/catalog/buttons/
+ * http://material-components-web.appspot.com/button.html
+ *
+ * TODO:
+ * - secondary no related css in mdc.css
+ *
+ */
 
-TODO:
-- secondary no related css in mdc.css
-- Ripple effect
-- Mixins
-*/
+const MDC_BUTTON = "mdc-button";
+
 const Button = ({
   children,
-  className,
   raised,
   unelevated,
   stroked,
@@ -35,7 +38,7 @@ const Button = ({
   onClick,
   ...props
 }) => {
-  let classes = "mdc-button";
+  let classes = MDC_BUTTON;
   // Special case for inner buttons of CardActions
   if (cardAction) {
     classes += " mdc-button--compact mdc-card__action";
@@ -59,9 +62,6 @@ const Button = ({
       classes += " secondary-filled-button";
     }
   }
-  if (className) {
-    classes += ` ${className}`;
-  }
   let i = "";
   if (icon) {
     i = (<Icon className="mdc-button__icon" name={icon} />);
@@ -76,9 +76,8 @@ const Button = ({
 };
 
 Button.defaultProps = {
+  mdcElement: MDC_BUTTON,
   children: null,
-  className: null,
-
   raised: false,
   unelevated: false,
   stroked: false,
@@ -95,10 +94,8 @@ Button.defaultProps = {
 };
 
 Button.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
-
   raised: PropTypes.bool,
   unelevated: PropTypes.bool,
   stroked: PropTypes.bool,

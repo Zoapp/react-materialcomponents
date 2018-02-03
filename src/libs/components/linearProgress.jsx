@@ -8,17 +8,21 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-linear-progress
-See:
-https://material.io/components/web/catalog/linear-progress/
-https://material-components-web.appspot.com/linear-progress.html
+/**
+ * mdc-linear-progress
+ *
+ * See:
+ * https://material.io/components/web/catalog/linear-progress/
+ * https://material-components-web.appspot.com/linear-progress.html
+ *
+ */
 
-*/
+const MDC_LINEARPROGRESS = "mdc-linear-progress";
+
 const LinearProgress = ({
-  className, indeterminate, reversed, closed, progress, buffer, ...props
+  indeterminate, reversed, closed, progress, buffer, ...props
 }) => {
-  let classes = "mdc-linear-progress";
+  let classes = MDC_LINEARPROGRESS;
   const progressStyle = {};
   const bufferStyle = {};
   if (indeterminate) {
@@ -49,11 +53,8 @@ const LinearProgress = ({
   if (closed) {
     classes += " mdc-linear-progress--closed";
   }
-  if (className) {
-    classes += ` ${className}`;
-  }
   const element = (
-    <div role="progressbar" className={classes} {...props}>
+    <div role="progressbar" className={classes} >
       <div className="mdc-linear-progress__buffering-dots" />
       <div className="mdc-linear-progress__buffer" style={bufferStyle} />
       <div className="mdc-linear-progress__bar mdc-linear-progress__primary-bar" style={progressStyle}>
@@ -67,7 +68,7 @@ const LinearProgress = ({
 };
 
 LinearProgress.defaultProps = {
-  className: null,
+  mdcElement: MDC_LINEARPROGRESS,
   indeterminate: false,
   reversed: false,
   closed: false,
@@ -76,8 +77,7 @@ LinearProgress.defaultProps = {
 };
 
 LinearProgress.propTypes = {
-// React component props
-  className: PropTypes.string,
+  mdcElement: PropTypes.string,
   indeterminate: PropTypes.bool,
   closed: PropTypes.bool,
   reversed: PropTypes.bool,

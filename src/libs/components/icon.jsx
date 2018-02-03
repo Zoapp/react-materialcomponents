@@ -8,19 +8,21 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-material-icons
-See:
-https://material.io/components/web/catalog/
+/**
+ * material-icons
+ * See:
+ * https://material.io/components/web/catalog/
+ *
+ * TODO
+ * Font Awesome handling
+ */
 
-*/
+const MDC_ICON = "material-icons";
+
 const Icon = ({
-  name, componentName, className, color, label, ...props
+  name, componentName, color, label, ...props
 }) => {
-  let classes = "material-icons";
-  if (className) {
-    classes += ` ${className}`;
-  }
+  const classes = MDC_ICON;
   const style = {};
   if (color) {
     style.color = color;
@@ -30,21 +32,19 @@ const Icon = ({
     className: classes,
     style,
     "aria-label": label,
-    ...props,
   }, name);
   return Rmdc.render(element, props);
 };
 
 Icon.defaultProps = {
-  className: null,
+  mdcElement: MDC_ICON,
   componentName: "i",
   color: null,
   label: null,
 };
 
 Icon.propTypes = {
-// React component props
-  className: PropTypes.string,
+  mdcElement: PropTypes.string,
   componentName: PropTypes.string,
   name: PropTypes.string.isRequired,
   color: PropTypes.string,

@@ -7,13 +7,23 @@
 import React, { Component, Children } from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
-/*
-mdc-simple-menu
-See:
-https://material.io/components/web/catalog/menus/
-https://material-components-web.appspot.com/simple-menu.html
 
-*/
+/**
+ * mdc-simple-menu
+ * See:
+ * https://material.io/components/web/catalog/menus/
+ * https://material-components-web.appspot.com/simple-menu.html
+ *
+ * TODO:
+ * - animation
+ * - autoposition
+ * - autofocus
+ * see https://github.com/material-components/material-components-web/blob/master/packages/mdc-menu/foundation.js
+ *
+ */
+
+const MDC_SIMPLE_MENU = "mdc-simple-menu";
+
 export default class Menu extends Component {
   handleOnSelected = (child, index) => {
     if (this.props.onSelected) {
@@ -26,20 +36,17 @@ export default class Menu extends Component {
 
   render() {
     const {
-      children, className, open, ...props
+      children, open, ...props
     } = this.props;
-    let classes = "mdc-simple-menu";
+    let classes = MDC_SIMPLE_MENU;
     if (open) {
-      classes += " mdc-simple-menu--open";
-    }
-    if (className) {
-      classes += ` ${className}`;
+      classes += ` ${MDC_SIMPLE_MENU}--open`;
     }
     const element = (
       <div className={classes} tabIndex="-1" ref={(c) => { this.innerRef = c; }} >
-        <ul className="mdc-simple-menu__items mdc-list" role="menu" aria-hidden="true">
+        <ul className={`${MDC_SIMPLE_MENU}__items mdc-list`} role="menu" aria-hidden="true">
           {Children.map(children, (child) => {
-            if (!child.props.isDivider) {
+            if (child.props.mdcElement === "mdc-list-item") {
               const { tabIndex } = child.props;
               if (tabIndex > -1) {
                 return React.cloneElement(child, { onSelected: this.handleOnSelected });
@@ -54,17 +61,25 @@ export default class Menu extends Component {
 }
 
 Menu.defaultProps = {
-  className: null,
+  mdcElement: MDC_SIMPLE_MENU,
   open: false,
   onSelected: null,
   onClose: null,
+  anchorCorner: null,
+  anchorMargin: null,
 };
 
 Menu.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node.isRequired,
-  className: PropTypes.string,
   open: PropTypes.bool,
   onSelected: PropTypes.func,
   onClose: PropTypes.func,
+  anchorCorner: PropTypes.oneOf(["top_start", "top_end", "bottom_start", "bottom_end"]),
+  anchorMargin: PropTypes.shape({
+    top: PropTypes.string,
+    left: PropTypes.string,
+    bottom: PropTypes.string,
+    right: PropTypes.string,
+  }),
 };

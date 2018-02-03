@@ -8,18 +8,19 @@ import React from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-list-item
-See:
-https://material.io/components/web/catalog/lists/
+/**
+ * mdc-list-item
+ * See:
+ * https://material.io/components/web/catalog/lists/
+ *
+ */
 
-TODO:
-- Mixins
-*/
+const MDC_LIST = "mdc-list";
+
 const List = ({
-  children, className, dense, avatar, twoLine, darkTheme, ...props
+  children, dense, avatar, twoLine, ...props
 }) => {
-  let classes = "mdc-list";
+  let classes = MDC_LIST;
   if (dense) {
     classes += " mdc-list--dense";
   }
@@ -29,35 +30,24 @@ const List = ({
   if (twoLine) {
     classes += " mdc-list--two-line";
   }
-  if (darkTheme) {
-    classes += " mdc-list--theme-dark";
-  }
-  if (className) {
-    classes += ` ${className}`;
-  }
   // TODO iterate througth children to check and set type
-  return Rmdc.render(<ul className={classes} {...props}>{children}</ul>, props);
+  return Rmdc.render(<ul className={classes} >{children}</ul>, props);
 };
 
 List.defaultProps = {
+  mdcElement: MDC_LIST,
   children: null,
-  className: null,
-
   dense: false,
   avatar: false,
   twoLine: false,
-  darkTheme: false,
 };
 
 List.propTypes = {
-// React component props
+  mdcElement: PropTypes.string,
   children: PropTypes.node,
-  className: PropTypes.string,
-
   dense: PropTypes.bool,
   avatar: PropTypes.bool,
   twoLine: PropTypes.bool,
-  darkTheme: PropTypes.bool,
 };
 
 export default List;

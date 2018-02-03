@@ -8,15 +8,17 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
 
-/*
-mdc-layout-grid__cell
-See:
-https://material.io/components/web/catalog/snackbars/
-https://material-components-web.appspot.com/snackbar.html
+/**
+ * mdc-layout-grid__cell
+ *
+ * See:
+ * https://material.io/components/web/catalog/snackbars/
+ * https://material-components-web.appspot.com/snackbar.html
+ *
+ */
 
-TODO:
-- display, timeout
-*/
+const MDC_SNACKBAR = "mdc-snackbar";
+
 export default class Snackbar extends Component {
   constructor(props) {
     super(props);
@@ -67,7 +69,6 @@ export default class Snackbar extends Component {
 
   render() {
     const {
-      className,
       active,
       message,
       timeout,
@@ -80,7 +81,7 @@ export default class Snackbar extends Component {
       ...props
     } = this.props;
     const sactive = this.state.active;
-    let classes = "mdc-snackbar";
+    let classes = MDC_SNACKBAR;
     if (sactive) {
       classes += " mdc-snackbar--active";
     }
@@ -95,9 +96,6 @@ export default class Snackbar extends Component {
     }
     if (startAligned) {
       classes += " mdc-snackbar--align-start";
-    }
-    if (className) {
-      classes += ` ${className}`;
     }
     let actionWrapper = "";
     if (onAction && actionText) {
@@ -125,8 +123,7 @@ export default class Snackbar extends Component {
 }
 
 Snackbar.defaultProps = {
-  className: null,
-
+  mdcElement: MDC_SNACKBAR,
   active: true,
   timeout: 2750,
   onAction: null,
@@ -138,9 +135,7 @@ Snackbar.defaultProps = {
 };
 
 Snackbar.propTypes = {
-// React component props
-  className: PropTypes.string,
-
+  mdcElement: PropTypes.string,
   active: PropTypes.bool,
   message: PropTypes.string.isRequired,
   timeout: PropTypes.number,
