@@ -37,7 +37,7 @@ const Tile = ({
   if (children) {
     ch = Children.only(children);
     const c = `mdc-grid-tile__primary-content  ${ch.props.className})`;
-    ch = React.cloneElement(ch, { className: c });  
+    ch = React.cloneElement(ch, { className: c });
   }
   let secondary;
   if (title) {
