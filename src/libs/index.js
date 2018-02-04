@@ -53,6 +53,21 @@ const Rmdc = new class {
     this.style = style; // TODO style
   }
 
+  /* eslint-disable class-methods-use-this */
+  generateId(id) {
+    // TODO better cid generator
+    const cid = id || Math.random().toString(36);
+    return cid;
+  }
+
+  sanitizeProps(props) {
+    const {
+      rtl, elevation, themeDark, style, typography, ripple, menu, className, ...p
+    } = props;
+    return p;
+  }
+  /* eslint-enable class-methods-use-this */
+
   render(element, {
     rtl, elevation, themeDark, style, typography, ripple, menu, className,
   }) {

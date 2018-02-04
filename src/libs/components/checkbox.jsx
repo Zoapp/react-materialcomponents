@@ -38,8 +38,7 @@ export default class Checkbox extends Component {
       classes += " mdc-checkbox--disabled";
     }
 
-    // TODO better cid generator
-    const cid = id || Math.random().toString(36);
+    const cid = Rmdc.generateId(id);
     let l = "";
     if (label) {
       /* eslint-disable jsx-a11y/label-has-for */

@@ -25,8 +25,7 @@ export default class Radio extends Component {
       id, name, label, checked, disabled, ...props
     } = this.props;
     const classes = MDC_RADIO;
-    // TODO better cid generator
-    const cid = id || Math.random().toString(36);
+    const cid = Rmdc.generateId(id);
     let l = "";
     if (label) {
       /* eslint-disable jsx-a11y/label-has-for */

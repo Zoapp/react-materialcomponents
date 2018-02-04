@@ -68,8 +68,9 @@ export default class Textfield extends Component {
         (value && value.trim().length > 0)) {
       lc += " mdc-text-field__label--float-above";
     }
-    // TODO better cid generator
-    const cid = id || Math.random().toString(36);
+
+    const cid = Rmdc.generateId(id);
+    const p = Rmdc.sanitizeProps(props);
     /* eslint-disable jsx-a11y/label-has-for */
     return Rmdc.render((
       <div className={classes} >
@@ -81,7 +82,7 @@ export default class Textfield extends Component {
           onFocus={this.onFocus}
           onChange={onChange}
           ref={(c) => { this.inputRef = c; }}
-          {...props}
+          {...p}
           {...d}
         />
         <label focused={focused.toString()} className={lc} htmlFor={cid} >{label}</label>

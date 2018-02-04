@@ -28,8 +28,7 @@ export default class Switch extends Component {
       id, label, checked, disabled, formField, ...props
     } = this.props;
     const classes = MDC_SWITCH;
-    // TODO better cid generator
-    const cid = id || Math.random().toString(36);
+    const cid = Rmdc.generateId(id);
     let l = "";
     if (label) {
       /* eslint-disable jsx-a11y/label-has-for */
