@@ -224,14 +224,14 @@ export default class App extends Component {
             </section>
             <section>
               <GridList width="320px" tileWidth="76px" tileBackground="#212121" >
-                <Tile />
-                <Tile />
-                <Tile />
-                <Tile />
-                <Tile />
-                <Tile />
-                <Tile />
-                <Tile />
+                <Tile title="text" />
+                <Tile title="text" />
+                <Tile title="text" />
+                <Tile title="text" />
+                <Tile title="text" />
+                <Tile title="text" />
+                <Tile title="text" />
+                <Tile title="text" />
               </GridList>
             </section>
             <section>

@@ -19,9 +19,35 @@ import Rmdc from "../";
 const MDC_GRIDLIST = "mdc-grid-list";
 
 const GridList = ({
-  children, width, tileWidth, tileBackground, ...props
+  children,
+  width,
+  tileWidth,
+  tileBackground,
+  gutter,
+  headerCaption,
+  twolineCaption,
+  iconAlign,
+  aspectRatio,
+  ...props
 }) => {
-  const classes = MDC_GRIDLIST;
+  let classes = MDC_GRIDLIST;
+  if (gutter === 1) {
+    classes += " mdc-grid-list--tile-gutter-1";
+  }
+  if (headerCaption) {
+    classes += " mdc-grid-list--header-caption";
+  }
+  if (twolineCaption) {
+    classes += " mdc-grid-list--twoline-caption";
+  }
+  if (iconAlign === "start") {
+    classes += " mdc-grid-list--with-icon-align-start";
+  } else if (iconAlign === "end") {
+    classes += " mdc-grid-list--with-icon-align-end";
+  }
+  if (aspectRatio) {
+    classes += ` mdc-grid-list--tile-aspect-${aspectRatio}`;
+  }
   const style = {};
   if (width) {
     style.width = width;
@@ -54,6 +80,12 @@ GridList.defaultProps = {
   width: null,
   tileWidth: null,
   tileBackground: null,
+  gutter: 0,
+  headerCaption: false,
+  twolineCaption: false,
+  iconAlign: null,
+  aspectRatio: null,
+
 };
 
 GridList.propTypes = {
@@ -62,6 +94,11 @@ GridList.propTypes = {
   width: PropTypes.string,
   tileWidth: PropTypes.string,
   tileBackground: PropTypes.string,
+  gutter: PropTypes.number,
+  headerCaption: PropTypes.bool,
+  twolineCaption: PropTypes.bool,
+  iconAlign: PropTypes.oneOf(["start", "end"]),
+  aspectRatio: PropTypes.oneOf(["1x1", "16x9", "2x3", "3x2", "4x3", "4x3"]),
 };
 
 export default GridList;

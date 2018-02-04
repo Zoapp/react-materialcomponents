@@ -144,7 +144,7 @@ export default class Textfield extends Component {
 
     const cid = Rmdc.generateId(id);
     if (helperText) {
-      p["aria-control"] = `${cid}-helper-text`;
+      p["aria-controls"] = `${cid}-helper-text`;
     }
     let input;
     p.type = type;
