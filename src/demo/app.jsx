@@ -258,6 +258,32 @@ export default class App extends Component {
                 </Button>
               </div>
             </section>
+            <section>
+              <div style={{ padding: "16px" }}>
+                <TextField label="Demo1" dense />
+              </div>
+              <div style={{ padding: "16px" }}>
+                <TextField label="Demo2" defaultValue="Hello" leadingIcon="event" />
+              </div>
+              <div style={{ padding: "16px" }}>  
+                <TextField label="Demo2" defaultValue="Hello" trailingIcon="delete" disabled />
+              </div>
+              <div style={{ padding: "16px" }}>  
+                <TextField label="Demo2" defaultValue="Hello" trailingIcon="delete" isTextarea />
+              </div>
+              <div style={{ padding: "16px" }}>                  
+                <TextField label="Demo2" defaultValue="Hello" trailingIcon="delete" isTextarea fullwidth />
+              </div>
+              <div style={{ padding: "16px" }}>  
+                <TextField label="Demo2" required pattern=".{8,}" helperText="Must be at least 8 characters" />
+              </div>
+              <div style={{ padding: "16px" }}>  
+                <TextField label="Demo1" dense outlined />
+              </div>
+              <div style={{ padding: "16px" }}>                
+                <TextField label="Demo2" required pattern=".{8,}" helperText="Must be at least 8 characters" isBoxed />
+              </div>
+            </section>
             <section style={{ height: "200px" }} />
           </main>
         </Content>

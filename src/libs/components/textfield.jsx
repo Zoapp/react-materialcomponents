@@ -7,6 +7,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
+import Icon from "./icon";
 
 /**
  * mdc-text-field
@@ -40,7 +41,25 @@ export default class Textfield extends Component {
 
   render() {
     const {
-      mdcElement, label, id, type, disabled, onChange, ...props
+      mdcElement,
+      label,
+      id,
+      type,
+      disabled,
+      onChange,
+      dense,
+      helperText,
+      htPersistent,
+      htValidationMsg,
+      fullwidth,
+      isTextarea,
+      isBoxed,
+      outlined,
+      leadingIcon,
+      trailingIcon,
+      onClickLI,
+      onClickTI,
+      ...props
     } = this.props;
     const { focused } = this.state;
     let classes = `${MDC_TEXTFIELD} mdc-text-field--upgraded`;
@@ -51,10 +70,64 @@ export default class Textfield extends Component {
       lc += " mdc-text-field__label--float-above";
       bc += " mdc-text-field__bottom-line--active";
     }
-    const d = {};
+    if (outlined) {
+      classes += " mdc-text-field--outlined";
+    }
+    let li;
+    let ti;
+    let tabIndex = null;
+    if (leadingIcon) {
+      classes += " mdc-text-field--with-leading-icon";
+      if (onClickLI) {
+        tabIndex = "0";
+      }
+      li = (
+        <Icon
+          className="mdc-text-field__icon"
+          name={leadingIcon}
+          tabIndex={tabIndex}
+          onClick={(e) => {
+            e.prenventDefault();
+            if (onClickLI) {
+              onClickLI();
+            }
+          }}
+        />);
+    }
+    tabIndex = null;
+    if (trailingIcon) {
+      classes += " mdc-text-field--with-trailing-icon";
+      if (onClickTI) {
+        tabIndex = "0";
+      }
+      ti = (
+        <Icon
+          className="mdc-text-field__icon"
+          name={trailingIcon}
+          tabIndex={tabIndex}
+          onClick={(e) => {
+            e.prenventDefault();
+            if (onClickTI) {
+              onClickTI();
+            }
+          }}
+        />);
+    }
+    const p = Rmdc.sanitizeProps(props);
     if (disabled) {
       classes += " mdc-text-field--disabled";
-      d.disabled = "disabled";
+      p.disabled = "disabled";
+    }
+    if (dense) {
+      classes += " mdc-text-field--dense";
+    }
+    if (fullwidth) {
+      classes += " mdc-text-field--fullwidth";
+      p.placeholder = label;
+      p["aria-label"] = label;
+    }
+    if (isBoxed) {
+      classes += " mdc-text-field--box";
     }
     let value;
     if (this.inputRef) {
@@ -70,25 +143,71 @@ export default class Textfield extends Component {
     }
 
     const cid = Rmdc.generateId(id);
-    const p = Rmdc.sanitizeProps(props);
+    if (helperText) {
+      p["aria-control"] = `${cid}-helper-text`;
+    }
+    let input;
+    p.type = type;
+    p.id = cid;
+    p.className = "mdc-text-field__input";
+    p.onBlur = this.onBlur;
+    p.onFocus = this.onFocus;
+    p.onChange = onChange;
+    p.ref = (c) => { this.inputRef = c; };
+    if (isTextarea) {
+      classes += " mdc-text-field--textarea";
+      input = (<textarea {...p} />);
+    } else {
+      input = (<input {...p} />);
+    }
+    let labelElement;
     /* eslint-disable jsx-a11y/label-has-for */
-    return Rmdc.render((
+    if (!fullwidth) {
+      labelElement = (
+        <label focused={focused.toString()} className={lc} htmlFor={cid} >{label}</label>);
+    }
+    let bcElement1;
+    let bcElement2;
+    if (outlined) {
+      bcElement1 = (
+        <div className="mdc-text-field__outline">
+          <svg>
+            <path className="mdc-text-field__outline-path" />
+          </svg>
+        </div>);
+      bcElement2 = (<div className="mdc-text-field__idle-outline" />);
+    } else {
+      bcElement1 = <div className={bc} />;
+    }
+
+    let element = Rmdc.render((
       <div className={classes} >
-        <input
-          type={type}
-          id={cid}
-          className="mdc-text-field__input"
-          onBlur={this.onBlur}
-          onFocus={this.onFocus}
-          onChange={onChange}
-          ref={(c) => { this.inputRef = c; }}
-          {...p}
-          {...d}
-        />
-        <label focused={focused.toString()} className={lc} htmlFor={cid} >{label}</label>
-        <div className={bc} />
+        {li}
+        {input}
+        {labelElement}
+        {ti}
+        {bcElement1}
+        {bcElement2}
       </div>), props);
     /* eslint-enable jsx-a11y/label-has-for */
+    if (helperText) {
+      let cht = "mdc-text-field-helper-text";
+      if (htPersistent) {
+        cht += " mdc-text-field-helper-text--persistent";
+      }
+      if (htValidationMsg) {
+        cht += " mdc-text-field-helper-text--validation-msg";
+      }
+      element = (
+        <div className="rmdc-text-field-wrapper">
+          {element}
+          <p className={cht} aria-hidden="true">
+            {helperText}
+          </p>
+        </div>
+      );
+    }
+    return element;
   }
 }
 
@@ -99,6 +218,18 @@ Textfield.defaultProps = {
   type: "text",
   disabled: false,
   onChange: () => {},
+  dense: false,
+  helperText: null,
+  htPersistent: false,
+  htValidationMsg: false,
+  fullwidth: false,
+  isTextarea: false,
+  isBoxed: false,
+  outlined: false,
+  leadingIcon: null,
+  trailingIcon: null,
+  onClickLI: null,
+  onClickTI: null,
 };
 
 Textfield.propTypes = {
@@ -108,4 +239,16 @@ Textfield.propTypes = {
   type: PropTypes.string,
   disabled: PropTypes.bool,
   onChange: PropTypes.func,
+  dense: PropTypes.bool,
+  helperText: PropTypes.string,
+  htPersistent: PropTypes.bool,
+  htValidationMsg: PropTypes.bool,
+  fullwidth: PropTypes.bool,
+  isTextarea: PropTypes.bool,
+  isBoxed: PropTypes.bool,
+  outlined: PropTypes.bool,
+  leadingIcon: PropTypes.string,
+  trailingIcon: PropTypes.string,
+  onClickLI: PropTypes.func,
+  onClickTI: PropTypes.func,
 };
