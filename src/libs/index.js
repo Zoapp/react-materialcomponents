@@ -53,6 +53,10 @@ const Rmdc = new class {
     this.style = style; // TODO style
   }
 
+  isRtl(element) {
+    return Boolean(this.rtl || element.props.rtl);
+  }
+
   /* eslint-disable class-methods-use-this */
   generateId(id) {
     // TODO better cid generator

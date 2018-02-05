@@ -7,6 +7,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Rmdc from "../";
+import RMDCMenuFoundation from "./foundation";
 
 /**
  * mdc-menu-anchor
@@ -27,6 +28,11 @@ export default class MenuAnchor extends Component {
 
   componentDidMount() {
     Rmdc.enableClickOutside(this.onClickOutsideHandler);
+    this.updateContent();
+  }
+
+  componentDidUpdate() {
+    this.updateContent();
   }
 
   componentWillUnmount() {
@@ -51,6 +57,13 @@ export default class MenuAnchor extends Component {
     const prevOnClick = this.props.anchor.props.onClick;
     if (prevOnClick) {
       prevOnClick(e);
+    }
+  }
+
+  updateContent() {
+    if (this.anchorRef && this.menuRef && this.state.open) {
+      const style = RMDCMenuFoundation.autoPosition(this);
+      this.menuRef.innerRef.style = style;
     }
   }
 
