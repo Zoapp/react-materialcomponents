@@ -239,7 +239,14 @@ export default class App extends Component {
             </section>
             <section>
               <div style={{ padding: "16px" }}>
-                <Select />
+                <Select label="Pick a Food Group" >
+                  <MenuItem>read, Cereal, Rice, and Pasta</MenuItem>
+                  <MenuItem>Vegetables</MenuItem>
+                  <MenuItem>Fruit</MenuItem>
+                  <MenuItem>Milk, Yogurt, and Cheese</MenuItem>
+                  <MenuItem>Meat, Poultry, Fish, Dry Beans, Eggs, and Nuts</MenuItem>
+                  <MenuItem>Fats, Oils, and Sweets</MenuItem>
+                </Select>
               </div>
             </section>
             <section>

@@ -45,7 +45,7 @@ class RMDCMenuFoundation {
   }
 
   static getAnchorMargin(adapter) {
-    const margin = adapter.props.anchor.margin || { };
+    const margin = (adapter.props.anchor && adapter.props.anchor.margin) || { };
     return {
       top: margin.top || 0,
       bottom: margin.bottom || 0,
@@ -205,14 +205,10 @@ class RMDCMenuFoundation {
       verticalAlignment = `${Math.round(originPercent * 100) / 100}%`;
     }
 
-    /* this.adapter_.setTransformOrigin(`${horizontalAlignment} ${verticalAlignment}`);
-    this.adapter_.setPosition(position);
-    this.adapter_.setMaxHeight(maxMenuHeight ? maxMenuHeight + 'px' : ''); */
     const maxHeight = `maxHeight: ${maxMenuHeight}`;
     const transform = `transform-origin: ${horizontalAlignment} ${verticalAlignment};`;
     return `position: absolute; ${transform} ${position} ${maxHeight}`;
   }
 }
-
 
 export default RMDCMenuFoundation;

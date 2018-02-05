@@ -25,6 +25,19 @@ import Rmdc from "../";
 const MDC_SIMPLE_MENU = "mdc-simple-menu";
 
 export default class Menu extends Component {
+  constructor(props) {
+    super(props);
+    this.selectedRef = null;
+  }
+
+  componentDidMount() {
+    this.updateFocus();
+  }
+
+  componentDidUpdate() {
+    this.updateFocus();
+  }
+
   handleOnSelected = (child, index) => {
     if (this.props.onSelected) {
       this.props.onSelected(child, index);
@@ -34,22 +47,34 @@ export default class Menu extends Component {
     }
   };
 
+  updateFocus() {
+    if (this.selectedRef && this.selectedRef.innerRef) {
+      this.selectedRef.innerRef.focus();
+    }
+  }
+
   render() {
     const {
-      children, open, ...props
+      children, open, focusedIndex, ...props
     } = this.props;
     let classes = MDC_SIMPLE_MENU;
+    this.selectedRef = null;
     if (open) {
       classes += ` ${MDC_SIMPLE_MENU}--open`;
     }
     const element = (
       <div className={classes} tabIndex="-1" ref={(c) => { this.innerRef = c; }} >
         <ul className={`${MDC_SIMPLE_MENU}__items mdc-list`} role="menu" aria-hidden="true">
-          {Children.map(children, (child) => {
+          {Children.map(children, (child, index) => {
             if (child.props.mdcElement === "mdc-list-item") {
               const { tabIndex } = child.props;
+              const p = { onSelected: (c) => { this.handleOnSelected(c, index); } };
+              if (focusedIndex === index) {
+                p.selected = true;
+                p.ref = (c) => { this.selectedRef = c; };
+              }
               if (tabIndex > -1) {
-                return React.cloneElement(child, { onSelected: this.handleOnSelected });
+                return React.cloneElement(child, p);
               }
             }
             return child;
@@ -67,6 +92,7 @@ Menu.defaultProps = {
   onClose: null,
   anchorCorner: null,
   anchorMargin: null,
+  focusedIndex: -1,
 };
 
 Menu.propTypes = {
@@ -82,4 +108,5 @@ Menu.propTypes = {
     bottom: PropTypes.string,
     right: PropTypes.string,
   }),
+  focusedIndex: PropTypes.number,
 };

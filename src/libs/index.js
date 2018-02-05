@@ -144,6 +144,21 @@ const Rmdc = new class {
     this.outsideCallback = null;
     document.removeEventListener("click", callback, true);
   }
+
+  getComputedStyleValue(element, name) {
+    this.name = name;
+    return window.getComputedStyle(element).getPropertyValue(name);
+  }
+
+  getFontStyle(element) {
+    let font = this.getComputedStyleValue(element, "font");
+    if (!font) {
+      const primaryFontFamily = this.getComputedStyleValue("font-family").split(",")[0];
+      const fontSize = this.getComputedStyleValue("font-size");
+      font = `${fontSize} ${primaryFontFamily}`;
+    }
+    return font;
+  }
 }();
 
 export default Rmdc;

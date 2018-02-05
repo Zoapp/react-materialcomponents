@@ -205,8 +205,8 @@ export default class Slider extends Component {
       classes += " mdc-slider--display-markers";
       const markers = [];
       for (let i = 0; i < max; i += 1) {
-        let key = `marker_${i}`;
-        markers.push(<div className="mdc-slider__track-marker" key={key}/>);
+        const key = `marker_${i}`;
+        markers.push(<div className="mdc-slider__track-marker" key={key} />);
       }
       marker = (<div className="mdc-slider__track-marker-container" >{markers}</div>);
     }

@@ -19,6 +19,11 @@ import Rmdc from "../";
 const MDC_LIST_ITEM = "mdc-list-item";
 
 export default class MenuItem extends Component {
+  constructor(props) {
+    super(props);
+    this.innerRef = null;
+  }
+
   handleClick = (e) => {
     e.preventDefault();
     if (this.props.onSelected && this.props.tabIndex > -1) {
@@ -28,7 +33,7 @@ export default class MenuItem extends Component {
 
   render() {
     const {
-      children, tabIndex, disabled, ...props
+      children, tabIndex, disabled, selected, role, ...props
     } = this.props;
     const classes = MDC_LIST_ITEM;
 
@@ -39,17 +44,23 @@ export default class MenuItem extends Component {
       p.tabIndex = "-1";
     } else {
       p.tabIndex = Number(tabIndex).toString();
+      if (selected) {
+        p["aria-selected"] = "true";
+      }
     }
+    /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
     return Rmdc.render((
       <li
         className={classes}
-        role="menuitem"
+        role={role}
         {...p}
         onKeyUp={() => {}}
         onClick={this.handleClick}
+        ref={(c) => { this.innerRef = c; }}
       >
         {children}
       </li>), props);
+    /* eslint-enable jsx-a11y/no-noninteractive-element-interactions */
   }
 }
 
@@ -57,7 +68,9 @@ MenuItem.defaultProps = {
   mdcElement: MDC_LIST_ITEM,
   tabIndex: 0,
   disabled: false,
+  selected: false,
   onSelected: null,
+  role: "menuitem",
 };
 
 MenuItem.propTypes = {
@@ -65,6 +78,8 @@ MenuItem.propTypes = {
   children: PropTypes.string.isRequired,
   tabIndex: PropTypes.number,
   disabled: PropTypes.bool,
+  selected: PropTypes.bool,
   onSelected: PropTypes.func,
+  role: PropTypes.string,
 };
 
