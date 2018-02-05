@@ -207,7 +207,7 @@ export default class App extends Component {
                 <Slider label="slider 2" discrete disabled />
               </div>
               <div style={{ padding: "16px" }}>
-                <Slider label="slider 3" discrete valueMax={256} valueNow={20} />
+                <Slider label="slider 3" discrete max={256} value={20} displayMarker />
               </div>
             </section>
             <section>

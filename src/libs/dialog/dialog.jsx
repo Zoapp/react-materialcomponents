@@ -64,9 +64,9 @@ export default class Dialog extends Component {
           this.dialogRef.style.top = `${(windowHeight - dialogHeight) / 2}px`;
           // this.dialogRef.style.left = `${(windowWidth - dialogWidth) / 2}px`;
         }
-      } else {
+      } /* else {
         this.dialogRef.close();
-      }
+      } */
     }
   }
 
