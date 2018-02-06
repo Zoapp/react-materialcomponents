@@ -33,7 +33,7 @@ export default class App extends Component {
       <Content fixed>
         <Toolbar fixed>
           <ToolbarRow>
-            <ToolbarSection alignStart>
+            <ToolbarSection align="start" >
               <ToolbarIcon name="menu" />
               <ToolbarTitle>Title</ToolbarTitle>
             </ToolbarSection>
