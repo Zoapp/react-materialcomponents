@@ -27,6 +27,7 @@ const Rmdc = new class {
   init(root, {
     rtl, themeDark, style, typography, ripple,
   }) {
+    this.isLockScroll = false;
     this.rtl = rtl;
     this.changeTheme(themeDark, style);
     this.typography = typography;
@@ -168,6 +169,20 @@ const Rmdc = new class {
       font = `${fontSize} ${primaryFontFamily}`;
     }
     return font;
+  }
+
+  lockScroll() {
+    if (!this.isLockScroll) {
+      this.isLockScroll = true;
+      document.body.classList.add("rmdc-scroll-lock");
+    }
+  }
+
+  unlockScroll() {
+    if (this.isLockScroll) {
+      this.isLockScroll = false;
+      document.body.classList.remove("rmdc-scroll-lock");
+    }
   }
 }();
 

@@ -46,24 +46,34 @@ export default class MenuAnchor extends Component {
       ((!this.menuRef) ||
       (!this.menuRef.innerRef) || (!this.menuRef.innerRef.contains(e.target)))) {
       e.preventDefault();
-      this.setState({ open: false });
+      this.onClose();
     }
   }
 
   onClickHandler = (e) => {
-    const open = !this.state.open;
     e.preventDefault();
-    this.setState({ open });
+    if (this.state.open) {
+      this.onClose();
+    } else {
+      this.setState({ open: true });
+      Rmdc.lockScroll();
+    }
     const prevOnClick = this.props.anchor.props.onClick;
     if (prevOnClick) {
       prevOnClick(e);
     }
   }
 
+  onClose = () => {
+    this.setState({ open: false });
+    Rmdc.unlockScroll();
+  }
+
   updateContent() {
     if (this.anchorRef && this.menuRef && this.state.open) {
       const style = RMDCMenuFoundation.autoPosition(this);
       this.menuRef.innerRef.style = style;
+      Rmdc.lockScroll();
     }
   }
 
@@ -84,7 +94,7 @@ export default class MenuAnchor extends Component {
       {
         open: this.state.open,
         ref: (c) => { this.menuRef = c; },
-        onClose: () => { this.setState({ open: false }); },
+        onClose: this.onClose,
       },
     );
     const element = (

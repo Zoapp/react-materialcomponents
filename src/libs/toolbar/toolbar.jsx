@@ -15,6 +15,8 @@ import Rmdc from "../";
  *
  * TODO:
  * - waterfall, flexible, fixedlastrow
+ * See:
+ * https://github.com/material-components/material-components-web/blob/master/packages/mdc-toolbar/foundation.js
  *
  */
 

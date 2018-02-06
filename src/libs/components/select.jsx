@@ -65,18 +65,23 @@ export default class Select extends Component {
       ((!this.menuRef) ||
       (!this.menuRef.innerRef) || (!this.menuRef.innerRef.contains(e.target)))) {
       e.preventDefault();
-      this.setState({ open: false });
+      this.onClose();
     }
   }
 
   onClickHandler = (e) => {
-    const open = !this.state.open;
     e.preventDefault();
-    this.setState({ open });
+    if (this.state.open) {
+      this.onClose();
+    } else {
+      this.setState({ open: true });
+      Rmdc.lockScroll();
+    }
   }
 
   onClose = () => {
     this.setState({ open: false }, () => {
+      Rmdc.unlockScroll();
       if (this.focusRef) {
         this.focusRef.focus();
       }
@@ -183,7 +188,7 @@ export default class Select extends Component {
           className="mdc-select__menu"
           ref={(c) => { this.menuRef = c; }}
           onSelected={this.onSelected}
-          onClose={() => { this.onClose(); }}
+          onClose={this.onClose}
         >
           {Children.map(children, child => React.cloneElement(child, { role: "option" }))}
         </Menu>

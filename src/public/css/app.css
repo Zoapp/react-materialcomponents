@@ -58,6 +58,10 @@ body > div {
   border: transparent;
 }
 
+.rmdc-scroll-lock {
+  overflow: hidden;
+}
+
 main {
   padding: 24px;
 }
