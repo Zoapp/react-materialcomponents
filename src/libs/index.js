@@ -72,10 +72,20 @@ const Rmdc = new class {
   }
   /* eslint-enable class-methods-use-this */
 
+  attachDrawer() {
+    if (this.menu && this.drawer) {
+      // TODO attach drawer
+    }
+  }
+
   render(element, {
     rtl, elevation, themeDark, style, typography, ripple, menu, className,
   }) {
     const name = element.props.mdcElement;
+    if (name === "mdc-toolbar__menu-icon") {
+      this.menu = element;
+      this.attachDrawer();
+    }
     const ps = { };
     let change = false;
     let classes = element.props.className || "";

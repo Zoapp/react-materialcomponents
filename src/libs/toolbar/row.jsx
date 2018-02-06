@@ -9,12 +9,11 @@ import PropTypes from "prop-types";
 import Rmdc from "../";
 
 /**
+ * mdc-toolbar__row
  * See:
  * https://material.io/components/web/catalog/toolbar/
  * https://material-components-web.appspot.com/toolbar/index.html
  *
- * TODO:
- * - All
  */
 
 const MDC_TBROW = "mdc-toolbar__row";
@@ -23,7 +22,6 @@ const Row = ({
   children, ...props
 }) => {
   const classes = MDC_TBROW;
-  // TODO all
   return Rmdc.render(<div className={classes}>{children}</div>, props);
 };
 

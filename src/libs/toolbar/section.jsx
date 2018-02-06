@@ -14,33 +14,37 @@ import Rmdc from "../";
  * https://material.io/components/web/catalog/toolbar/
  * https://material-components-web.appspot.com/toolbar/index.html
  *
- * TODO:
- * - All
  */
 
 const MDC_TBSECTION = "mdc-toolbar__section";
 
 const Section = ({
-  children, alignStart, ...props
+  children, align, shrinkToFit, ...props
 }) => {
   let classes = MDC_TBSECTION;
-  if (alignStart) {
+  if (align === "start") {
     classes += " mdc-toolbar__section--align-start";
+  } else if (align === "end") {
+    classes += " mdc-toolbar__section--align-end";
   }
-  // TODO all
+  if (shrinkToFit) {
+    classes += " mdc-toolbar__section--shrink-to-fit";
+  }
   return Rmdc.render(<section className={classes}>{children}</section>, props);
 };
 
 Section.defaultProps = {
   mdcElement: MDC_TBSECTION,
   children: null,
-  alignStart: false,
+  align: null,
+  shrinkToFit: false,
 };
 
 Section.propTypes = {
   mdcElement: PropTypes.string,
   children: PropTypes.node,
-  alignStart: PropTypes.bool,
+  align: PropTypes.oneOf(["start", "end"]),
+  shrinkToFit: PropTypes.bool,
 };
 
 export default Section;

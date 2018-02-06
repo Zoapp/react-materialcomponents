@@ -5,11 +5,12 @@
  * LICENSE file in the root directory of this source tree.
  */
 import React from "react";
+import PropTypes from "prop-types";
 import Icon from "../components/icon";
 
 /**
  *
- * mdc-toolbar__menu-icon
+ * mdc-toolbar__icon | mdc-toolbar__menu-icon
  *
  * See:
  * https://material.io/components/web/catalog/toolbar/
@@ -18,5 +19,26 @@ import Icon from "../components/icon";
  */
 
 const MDC_TBICON = "mdc-toolbar__menu-icon";
+const MDC_TBMENUICON = "mdc-toolbar__menu-icon";
 
-export default props => <Icon className={MDC_TBICON} mdcElement={MDC_TBICON} componentName="a" {...props} />;
+const ToolbarIcon = (menu, ...props) => {
+  let classes = MDC_TBICON;
+  const { name } = props;
+  if (menu || name === "menu") {
+    classes = MDC_TBMENUICON;
+  }
+  return <Icon className={classes} mdcElement={classes} componentName="a" {...props} />;
+};
+
+ToolbarIcon.defaultProps = {
+  mdcElement: MDC_TBICON,
+  menu: false,
+};
+
+ToolbarIcon.propTypes = {
+  mdcElement: PropTypes.string,
+  menu: PropTypes.bool,
+  name: PropTypes.string.isRequired,
+};
+
+export default ToolbarIcon;
