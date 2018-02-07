@@ -5,7 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 import React from "react";
-import ReactDom from "react-dom";
-import App from "./app";
+import {
+  LinearProgress,
+} from "../../../src";
 
-ReactDom.render(<App />, document.getElementById("app"));
+export default () => (
+  <section>
+    <h1>LinearProgress examples </h1>
+    <LinearProgress progress={0.2} buffer={0.5} />
+  </section>
+);
