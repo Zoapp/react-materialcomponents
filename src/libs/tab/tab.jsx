@@ -31,7 +31,7 @@ const Tab = ({
     i = (<Icon name={icon} className="mdc-tab__icon" aria-hidden="true" />);
   }
   const element = (
-    <a className={classes} href={href} onClick={() => { onTabSelect(tabId); }}>{i}{text}</a>);
+    <a className={classes} href={href} onClick={() => { onTabSelect(text, tabId); }}>{i}{text}</a>);
   return Rmdc.render(element, props);
 };
 

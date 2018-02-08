@@ -32,10 +32,10 @@ export default class Tabbar extends Component {
     }
   }
 
-  handleTabSelect = (tabId) => {
+  handleTabSelect = (text, tabId) => {
     if (this.state.activeTab !== tabId) {
       if (this.props.onChange) {
-        this.props.onChange(tabId);
+        this.props.onChange(text, tabId);
       }
       this.setState({ activeTab: tabId });
     }

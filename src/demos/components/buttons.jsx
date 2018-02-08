@@ -6,8 +6,7 @@
  */
 import React from "react";
 import {
-  Grid, Inner, Cell, Button,
-  Card, CardText, CardActions, CardMedia,
+  Button,
 } from "../../../src";
 
 export default () => (

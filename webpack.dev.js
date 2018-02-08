@@ -9,7 +9,7 @@ module.exports = merge(commonConfig, {
     "react-hot-loader/patch",
     "webpack-dev-server/client?http://localhost:3032",
     "webpack/hot/only-dev-server",
-    "./demo/index.jsx"
+    "./demos/index.jsx"
   ],
   devtool: "inline-source-map",
   devServer: {

@@ -25,11 +25,15 @@ const MDC_TOOLBAR = "mdc-toolbar";
 export default class Toolbar extends PureComponent {
   render() {
     const {
-      children, fixed, ...otherProps
+      children, fixed, drawerAbove, ...otherProps
     } = this.props;
     let classes = MDC_TOOLBAR;
     if (fixed) {
       classes += " mdc-toolbar--fixed";
+    }
+    if (drawerAbove) {
+      // TODO rtl
+      classes += " rmdc-content-drawer";
     }
     const element = (
       <header className={classes} >{children}</header>
@@ -42,10 +46,13 @@ Toolbar.defaultProps = {
   mdcElement: MDC_TOOLBAR,
   children: null,
   fixed: false,
+  drawerAbove: false,
 };
 
 Toolbar.propTypes = {
   mdcElement: PropTypes.string,
   children: PropTypes.node,
+  /* DO not set manually this props computed auto */
   fixed: PropTypes.bool,
+  drawerAbove: PropTypes.bool,
 };

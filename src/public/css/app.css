@@ -36,6 +36,26 @@ body > div {
   box-sizing: border-box;
 }
 
+.rmdc-drawer {
+  position: fixed;
+  top: 0;
+  left: 0; /* TODO rtl */
+  height: 100%;
+}
+
+.rmdc-drawer--toolbar {
+  top: 64px;
+}
+
+.rmdc-content-drawer {
+  margin-left: 240px;
+}
+
+.rmdc-content-drawer-rtl {
+  margin-left: 0px;
+  margin-right: 240px;  
+}
+
 .rmdc-fab--absolute {
   position: fixed;
   bottom: 1rem;

@@ -20,19 +20,49 @@ import Rmdc from "../";
 const MDC_DRAWER = "mdc-drawer";
 
 export default class Drawer extends PureComponent {
+  constructor(props) {
+    super(props);
+    this.ref = null;
+  }
+
+  onClick = (event) => {
+    if (this.props.type === "temporary" && this.props.open &&
+        event.target === this.ref) {
+      event.preventDefault();
+      this.props.onClose();
+    }
+  }
+
   render() {
     const {
-      children, type, ...props
+      children, type, open, onClose, above, toolbarSpacer, ...props
     } = this.props;
-    const classes = `${MDC_DRAWER} mdc-drawer--${type} mdc-typography`;
+    let classes = `${MDC_DRAWER} mdc-drawer--${type} rmdc-drawer`;
 
-    if (type === "permanent") {
-      return Rmdc.render(<nav className={classes}>{children}</nav>, props);
+    if ((!above) && (!toolbarSpacer) && type === "permanent") {
+      classes += " rmdc-drawer--toolbar";
     }
+    let spacer;
+    if (toolbarSpacer) {
+      spacer = <div className="mdc-drawer__toolbar-spacer" />;
+    }
+    if (type === "permanent") {
+      return Rmdc.render(<nav className={classes}>{spacer}{children}</nav>, props);
+    }
+    if (open) {
+      classes += " mdc-drawer--open";
+    }
+
     return Rmdc.render(
       (
-        <aside className={classes}>
-          <nav className="mdc-drawer__drawer">{children}</nav>
+        <aside
+          className={classes}
+          role="presentation"
+          onKeyUp={() => { }}
+          onClick={this.onClick}
+          ref={(c) => { this.ref = c; }}
+        >
+          <nav className="mdc-drawer__drawer">{spacer}{children}</nav>
         </aside>),
       props,
     );
@@ -43,10 +73,18 @@ Drawer.defaultProps = {
   mdcElement: MDC_DRAWER,
   children: null,
   type: "permanent",
+  open: false,
+  toolbarSpacer: false,
+  above: false,
+  onClose: () => {},
 };
 
 Drawer.propTypes = {
   mdcElement: PropTypes.string,
   children: PropTypes.node,
-  type: PropTypes.string,
+  type: PropTypes.oneOf(["permanent", "persistent", "temporary"]),
+  open: PropTypes.bool,
+  toolbarSpacer: PropTypes.bool,
+  above: PropTypes.bool,
+  onClose: PropTypes.func,
 };

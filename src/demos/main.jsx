@@ -5,6 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 import React from "react";
+import PropTypes from "prop-types";
 import Cards from "./components/cards";
 import Buttons from "./components/buttons";
 import Checkboxes from "./components/checkboxes";
@@ -21,8 +22,9 @@ import Tabbars from "./components/tabbars";
 import Textfields from "./components/textfields";
 
 
-export default () => (
+const Main = ({ children }) => (
   <main>
+    {children}
     <Cards />
     <Buttons />
     <Checkboxes />
@@ -40,3 +42,9 @@ export default () => (
     <section style={{ height: "200px" }} />
   </main>
 );
+
+Main.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Main;

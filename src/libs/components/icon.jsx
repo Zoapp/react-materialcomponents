@@ -23,16 +23,17 @@ const Icon = ({
   name, componentName, color, label, ...props
 }) => {
   const classes = MDC_ICON;
-  const style = {};
+  const p = Rmdc.sanitizeProps(props);
   if (color) {
-    style.color = color;
+    p.style = {};
+    p.style.color = color;
+  }
+  p.className = classes;
+  if (label) {
+    p["aria-label"] = label;
   }
   // TODO Font Awesome handling
-  const element = React.createElement(componentName, {
-    className: classes,
-    style,
-    "aria-label": label,
-  }, name);
+  const element = React.createElement(componentName, p, name);
   return Rmdc.render(element, props);
 };
 

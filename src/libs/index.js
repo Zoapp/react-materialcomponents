@@ -55,7 +55,7 @@ const Rmdc = new class {
   }
 
   isRtl(element) {
-    return Boolean(this.rtl || element.props.rtl);
+    return Boolean(this.rtl || (element && element.props.rtl));
   }
 
   /* eslint-disable class-methods-use-this */
@@ -67,7 +67,7 @@ const Rmdc = new class {
 
   sanitizeProps(props) {
     const {
-      rtl, elevation, themeDark, style, typography, ripple, menu, className, ...p
+      mdcElement, rtl, elevation, themeDark, style, typography, ripple, menu, className, ...p
     } = props;
     return p;
   }
