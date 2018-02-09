@@ -7,7 +7,7 @@
 import React from "react";
 import {
   Checkbox,
-} from "../../../src";
+} from "../../../src/libs";
 
 export default () => (
   <section>

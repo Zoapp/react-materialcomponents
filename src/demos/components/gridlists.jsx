@@ -7,7 +7,7 @@
 import React from "react";
 import {
   GridList, Tile,
-} from "../../../src";
+} from "../../../src/libs";
 
 export default () => (
   <section>

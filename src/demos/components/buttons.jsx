@@ -7,7 +7,7 @@
 import React from "react";
 import {
   Button,
-} from "../../../src";
+} from "../../../src/libs";
 
 export default () => (
   <section>

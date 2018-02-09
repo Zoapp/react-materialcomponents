@@ -7,7 +7,7 @@
 import React from "react";
 import {
   ListGroup, ListGroupSubheader, List, ListItem, ListDivider, ListItemMeta,
-} from "../../../src";
+} from "../../../src/libs";
 
 export default () => (
   <section>

@@ -7,7 +7,7 @@
 import React from "react";
 import {
   Switch,
-} from "../../../src";
+} from "../../../src/libs";
 
 export default () => (
   <section>

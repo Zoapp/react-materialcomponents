@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 import React, { Component } from "react";
-import "material-components-web/dist/material-components-web.css";
+/* import "material-components-web/dist/material-components-web.css"; */
 /* import "material-design-icons/iconfont/material-icons.css"; */
 import Rmdc, {
   Content, Fab, Snackbar, Tabbar, Tab,
@@ -13,13 +13,15 @@ import Rmdc, {
   Drawer, DrawerContent,
   ListItem,
   Dialog,
-} from "../../src";
+} from "../../src/libs";
 import Main from "./main";
 
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { activeTab: 0, drawer: "permanent", drawerOpen: false, aboveToolbar: false, };
+    this.state = {
+      activeTab: 0, drawer: "permanent", drawerOpen: false, aboveToolbar: false,
+    };
   }
 
   componentWillMount() {
@@ -40,7 +42,6 @@ export default class App extends Component {
   }
 
   handleDrawerChange = (name, index) => {
-    console.log("drawer change=", name, index);
     let drawer = name;
     let aboveToolbar = false;
     const drawerOpen = false;

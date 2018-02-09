@@ -7,7 +7,7 @@
 import React from "react";
 import {
   Button , Menu, MenuItem, MenuDivider,
-} from "../../../src";
+} from "../../../src/libs";
 
 export default () => (
   <section>

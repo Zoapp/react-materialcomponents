@@ -7,7 +7,7 @@
 import React from "react";
 import {
   Tabbar, Tab,
-} from "../../../src";
+} from "../../../src/libs";
 
 export default () => (
   <section>

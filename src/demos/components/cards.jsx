@@ -8,7 +8,7 @@ import React from "react";
 import {
   Grid, Inner, Cell, Button,
   Card, CardText, CardActions, CardMedia,
-} from "../../../src";
+} from "../../../src/libs";
 
 export default () => (
   <section>

@@ -7,7 +7,7 @@
 import React from "react";
 import {
   Radio,
-} from "../../../src";
+} from "../../../src/libs";
 
 export default () => (
   <section>

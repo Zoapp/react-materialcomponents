@@ -7,7 +7,7 @@
 import React from "react";
 import {
   Select, MenuItem,
-} from "../../../src";
+} from "../../../src/libs";
 
 export default () => (
   <section>
