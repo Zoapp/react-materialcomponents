@@ -74,6 +74,9 @@ export default class App extends Component {
               {icon}
               <ToolbarTitle>Title</ToolbarTitle>
             </ToolbarSection>
+            <ToolbarSection align="end" shrinkToFit >
+              <ToolbarIcon name="search" />
+            </ToolbarSection>
           </ToolbarRow>
         </Toolbar>
         <Drawer
