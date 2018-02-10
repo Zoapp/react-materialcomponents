@@ -80,9 +80,9 @@ const Rmdc = new class {
   }
 
   render(element, {
-    rtl, elevation, themeDark, style, typography, ripple, menu, className,
+    rtl, elevation, themeDark, style, typography, ripple, menu, className, ...props
   }) {
-    const name = element.props.mdcElement;
+    const name = props.mdcElement;
     if (name === "mdc-toolbar__menu-icon") {
       this.menu = element;
       this.attachDrawer();

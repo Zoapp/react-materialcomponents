@@ -18,7 +18,7 @@ import Icon from "../components/icon";
  *
  */
 
-const MDC_TBICON = "mdc-toolbar__menu-icon";
+const MDC_TBICON = "mdc-toolbar__icon";
 const MDC_TBMENUICON = "mdc-toolbar__menu-icon";
 
 const ToolbarIcon = ({ menu, ...props }) => {
