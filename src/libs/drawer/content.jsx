@@ -37,7 +37,7 @@ const DrawerContent = ({
       ps.key = `d_${index}`;
       let c = "";
       if (icon) {
-        c = (<Icon className="mdc-list-item__graphic" aria-hidden="true" name={icon} />);
+        c = (<Icon key={index} className="mdc-list-item__graphic" aria-hidden="true" name={icon} />);
       }
       return React.createElement(child.type, ps, [c, chn]);
     }
