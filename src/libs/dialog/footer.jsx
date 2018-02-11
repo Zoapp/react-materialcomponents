@@ -22,15 +22,38 @@ const DialogFooter = ({
   children, actions, handleAction, ...props
 }) => {
   const classes = MDC_DIALOGFOOTER;
-  let raw = children;
+  let buttons = children;
   let a = [];
-  if (actions) {
-    raw = "";
+  if ((!buttons) && actions) {
+    buttons = [];
     a = actions;
+  } else if (!buttons) {
+    a = [{ name: "Ok" }];
   }
   const element = (
     <footer className={classes}>
-      {raw}
+      {buttons.map((child, index) => {
+        if (child.props && child.props.mdcElement === "mdc-button") {
+          const p = {};
+          let cs = "mdc-dialog__footer__button";
+          if (child.props.type === "accept") {
+            cs += " mdc-dialog__footer__button--accept";
+          } else {
+            cs += " mdc-dialog__footer__button--cancel";
+          }
+          p.className = cs;
+          p.key = `f_${index}`;
+          /* p.onClick = (e) => {
+            e.preventDefault();
+            handleAction(child.props.children);
+            if (child.props.onClick) {
+              child.props.onCLick(e);
+            }
+          }; */
+          return React.cloneElement(child, p);
+        }
+        return null;
+      })}
       {a.map((action, index) => {
         const title = action.title || action.name;
         let cs = "mdc-dialog__footer__button";
@@ -53,13 +76,14 @@ DialogFooter.defaultProps = {
   mdcElement: MDC_DIALOGFOOTER,
   children: null,
   actions: null,
+  handleAction: null,
 };
 
 DialogFooter.propTypes = {
   mdcElement: PropTypes.string,
   children: PropTypes.node,
   actions: PropTypes.arrayOf(PropTypes.shape({})),
-  handleAction: PropTypes.func.isRequired,
+  handleAction: PropTypes.func,
 };
 
 export default DialogFooter;

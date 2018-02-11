@@ -11,7 +11,7 @@ import {
 
 export default () => (
   <section>
-    <h1>Textfield examples</h1>
+    <h1>TextField examples</h1>
     <div>
       <TextField label="Demo1" />
     </div>
@@ -27,22 +27,22 @@ export default () => (
     <div style={{ padding: "16px" }}>
       <TextField label="Demo2" defaultValue="Hello" leadingIcon="event" />
     </div>
-    <div style={{ padding: "16px" }}>  
+    <div style={{ padding: "16px" }}>
       <TextField label="Demo2" defaultValue="Hello" trailingIcon="delete" disabled />
     </div>
-    <div style={{ padding: "16px" }}>  
+    <div style={{ padding: "16px" }}>
       <TextField label="Demo2" defaultValue="Hello" trailingIcon="delete" isTextarea />
     </div>
-    <div style={{ padding: "16px" }}>                  
+    <div style={{ padding: "16px" }}>
       <TextField label="Demo2" defaultValue="Hello" trailingIcon="delete" isTextarea fullwidth />
     </div>
-    <div style={{ padding: "16px" }}>  
+    <div style={{ padding: "16px" }}>
       <TextField label="Demo2" required pattern=".{8,}" helperText="Must be at least 8 characters" />
     </div>
-    <div style={{ padding: "16px" }}>  
+    <div style={{ padding: "16px" }}>
       <TextField label="Demo1" dense outlined />
     </div>
-    <div style={{ padding: "16px" }}>                
+    <div style={{ padding: "16px" }}>
       <TextField label="Demo2" required pattern=".{8,}" helperText="Must be at least 8 characters" isBoxed />
     </div>
   </section>

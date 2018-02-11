@@ -33,7 +33,7 @@ export default class MenuItem extends Component {
 
   render() {
     const {
-      children, tabIndex, disabled, selected, role, ...props
+      children, tabIndex, disabled, selected, role, onSelected, ...props
     } = this.props;
     const classes = MDC_LIST_ITEM;
 

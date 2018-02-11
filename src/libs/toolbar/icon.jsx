@@ -21,10 +21,10 @@ import Icon from "../components/icon";
 const MDC_TBICON = "mdc-toolbar__icon";
 const MDC_TBMENUICON = "mdc-toolbar__menu-icon";
 
-const ToolbarIcon = ({ menu, ...props }) => {
+const ToolbarIcon = ({ isMenu, ...props }) => {
   let classes = MDC_TBICON;
   const { name } = props;
-  if (menu || name === "menu") {
+  if (isMenu || name === "menu") {
     classes = MDC_TBMENUICON;
   }
   return <Icon className={classes} mdcElement={classes} componentName="a" {...props} />;
@@ -32,12 +32,12 @@ const ToolbarIcon = ({ menu, ...props }) => {
 
 ToolbarIcon.defaultProps = {
   mdcElement: MDC_TBICON,
-  menu: false,
+  isMenu: false,
 };
 
 ToolbarIcon.propTypes = {
   mdcElement: PropTypes.string,
-  menu: PropTypes.bool,
+  isMenu: PropTypes.bool,
   name: PropTypes.string.isRequired,
 };
 

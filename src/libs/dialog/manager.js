@@ -64,7 +64,7 @@ const DialogManager = {
     renderModal();
   },
 
-  closeCurrentDialog() {
+  willCloseCurrentDialog() {
     if (currentDialog && currentDialog.onClose) {
       currentDialog.onClose();
     }

@@ -85,28 +85,28 @@ export default class Dialog extends Component {
 
   render() {
     const {
-      open, header, children, actions, onClose, style, ...props
+      open, header, children, actions, onClose, width, ...props
     } = this.props;
     let classes = `rmdc-dialog ${MDC_DIALOG}`;
     if (open) {
       classes += " mdc-dialog--open";
     }
     const s = {};
-    if (style && style.width) {
-      s.width = style.width;
+    if (width) {
+      s.width = width;
+      s.minWidth = width;
     }
     let headerElement = header;
     let footerElement;
     let bodyElement = Children.map(children, (child) => {
-      let cs = "";
-      if (child.props && child.props.className) {
-        cs = child.props.className;
+      let e = "";
+      if (child.props && child.props.mdcElement) {
+        e = child.props.mdcElement;
       }
-      if (cs.startsWith("mdc-dialog__header")) {
+      if (e === "mdc-dialog__header") {
         headerElement = child;
         return null;
-      }
-      if (cs.startsWith("mdc-dialog__footer")) {
+      } else if (e === "mdc-dialog__footer") {
         footerElement = child;
         return null;
       }
@@ -114,24 +114,23 @@ export default class Dialog extends Component {
     });
     // TODO check if children contains Header / Footer
     if (!(bodyElement.props &&
-      bodyElement.props.className &&
-      bodyElement.props.className.startsWith("mdc-dialog__body"))) {
+      bodyElement.props.mdcElement &&
+      bodyElement.props.mdcElement === "mdc-dialog__body")) {
       bodyElement = <DialogBody>{bodyElement}</DialogBody>;
     }
     if (!(headerElement && headerElement.props &&
-      headerElement.props.className &&
-      headerElement.props.className.startsWith("mdc-dialog__header"))) {
+      headerElement.props.mdcElement &&
+      headerElement.props.mdcElement === "mdc-dialog__header")) {
       headerElement = <DialogHeader>{header}</DialogHeader>;
     }
     if (!(footerElement && footerElement.props &&
-      footerElement.props.className &&
-      footerElement.props.className.startsWith("mdc-dialog__footer"))) {
+      footerElement.props.mdcElement &&
+      footerElement.props.mdcElement === "mdc-dialog__footer")) {
       footerElement = <DialogFooter actions={actions} handleAction={this.handleClick} />;
     }
     const d = (
       <dialog
         role="presentation"
-        style={s}
         ref={(c) => { this.dialogRef = c; }}
         className={classes}
         onKeyUp={() => { }}
@@ -141,7 +140,7 @@ export default class Dialog extends Component {
           className="mdc-dialog__surface"
           role="presentation"
           onKeyUp={() => { }}
-          style={style}
+          style={s}
           onClick={(e) => { e.stopPropagation(); }}
         >
           {headerElement}
@@ -157,8 +156,8 @@ export default class Dialog extends Component {
 Dialog.defaultProps = {
   mdcElement: MDC_DIALOG,
   header: null,
-  actions: [{ name: "Ok" }],
-  style: null,
+  actions: null,
+  width: null,
   open: true,
   onClose: () => { DialogManager.close(); },
   onCancel: null,
@@ -171,7 +170,7 @@ Dialog.propTypes = {
     PropTypes.node, PropTypes.string]),
   children: PropTypes.node.isRequired,
   actions: PropTypes.arrayOf(PropTypes.shape({})),
-  style: PropTypes.objectOf(PropTypes.string),
+  width: PropTypes.string,
   open: PropTypes.bool,
   onClose: PropTypes.func,
   onCancel: PropTypes.func,

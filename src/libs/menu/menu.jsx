@@ -68,7 +68,14 @@ export default class Menu extends Component {
           {Children.map(children, (child, index) => {
             if (child.props.mdcElement === "mdc-list-item") {
               const { tabIndex } = child.props;
-              const p = { onSelected: (c) => { this.handleOnSelected(c, index); } };
+              const p = {};
+              p.onSelected = (c, i) => {
+                this.handleOnSelected(c, index);
+                if (child.props.onSelected) {
+                  child.props.onSelected(c, i);
+                }
+              };
+
               if (focusedIndex === index) {
                 p.selected = true;
                 p.ref = (c) => { this.selectedRef = c; };

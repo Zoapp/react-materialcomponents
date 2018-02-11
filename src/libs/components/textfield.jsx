@@ -25,7 +25,7 @@ import Icon from "./icon";
 
 const MDC_TEXTFIELD = "mdc-text-field";
 
-export default class Textfield extends Component {
+export default class TextField extends Component {
   constructor(props) {
     super(props);
     this.state = { focused: false };
@@ -211,7 +211,7 @@ export default class Textfield extends Component {
   }
 }
 
-Textfield.defaultProps = {
+TextField.defaultProps = {
   mdcElement: MDC_TEXTFIELD,
   label: null,
   id: null,
@@ -232,7 +232,7 @@ Textfield.defaultProps = {
   onClickTI: null,
 };
 
-Textfield.propTypes = {
+TextField.propTypes = {
   mdcElement: PropTypes.string,
   label: PropTypes.string,
   id: PropTypes.string,

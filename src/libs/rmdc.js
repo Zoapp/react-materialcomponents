@@ -123,27 +123,28 @@ const Rmdc = new class {
       // TODO
       change = true;
     }
+    let el = element;
     if (change) {
       ps.className = classes;
-      return React.cloneElement(element, ps);
+      el = React.cloneElement(element, ps);
     }
     if (menu) {
       // Create Menu Anchor
-      return React.createElement(MenuAnchor, { menu, anchor: element });
+      return React.createElement(MenuAnchor, { menu, anchor: el });
     }
-    return element;
+    return el;
   }
 
   showDialog(dialog) {
     this.dialog = dialog;
-    // TODO openDialog
+    // openDialog
     DialogManager.open(dialog);
   }
 
   closeDialog() {
     this.dialog = null;
-    // TODO close current dialog
-    DialogManager.closeCurrentDialog();
+    // close current dialog
+    DialogManager.close();
   }
 
   enableClickOutside(callback) {

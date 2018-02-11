@@ -19,7 +19,7 @@ import Selects from "./components/selects";
 import Sliders from "./components/sliders";
 import Switchs from "./components/switchs";
 import Tabbars from "./components/tabbars";
-import Textfields from "./components/textfields";
+import TextFields from "./components/textfields";
 
 
 const Main = ({ children }) => (
@@ -38,7 +38,7 @@ const Main = ({ children }) => (
     <Sliders />
     <Switchs />
     <Tabbars />
-    <Textfields />
+    <TextFields />
     <section style={{ height: "200px" }} />
   </main>
 );
