@@ -4,12 +4,13 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+import React from "react";
 import { assert } from "chai";
-import { DialogManager } from "../src";
+import { Dialog } from "../src/libs/dialog";
 
 describe("Components", () => {
   it("DialogManager", () => {
-    DialogManager.init();
-    assert.isObject(DialogManager, "DialogManager is null");
+    const dialog = React.createElement(Dialog, {}, "content");
+    assert.isObject(dialog, "Dialog is null");
   });
 });
