@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Icon from "../components/icon";
 import Rmdc from "../";
@@ -19,24 +19,43 @@ import Rmdc from "../";
 
 const MDC_TAB = "mdc-tab";
 
-const Tab = ({
-  active, text, icon, href, tabId, onTabSelect, ...props
-}) => {
-  let classes = MDC_TAB;
-  if (active) {
-    classes += " mdc-tab--active";
+class Tab extends Component {
+  constructor(props) {
+    super(props);
+    this.ref = null;
   }
-  let i = "";
-  if (icon) {
-    i = (<Icon name={icon} className="mdc-tab__icon" aria-hidden="true" />);
+
+  render() {
+    const {
+      children, active, text, icon, href, tabId, onTabSelect, ...props
+    } = this.props;
+    let classes = MDC_TAB;
+    if (active) {
+      classes += " mdc-tab--active";
+    }
+    let i = "";
+    if (icon) {
+      i = (<Icon name={icon} className="mdc-tab__icon" aria-hidden="true" />);
+    }
+    let txt = text;
+    if (!text) {
+      txt = children;
+    }
+    const element = (
+      <a
+        className={classes}
+        href={href}
+        onClick={() => { onTabSelect(text, tabId); }}
+        ref={(c) => { this.ref = c; }}
+      >{i}{txt}
+      </a>);
+    return Rmdc.render(element, props);
   }
-  const element = (
-    <a className={classes} href={href} onClick={() => { onTabSelect(text, tabId); }}>{i}{text}</a>);
-  return Rmdc.render(element, props);
-};
+}
 
 Tab.defaultProps = {
   mdcElement: MDC_TAB,
+  children: null,
   active: false,
   text: null,
   icon: null,
@@ -47,6 +66,7 @@ Tab.defaultProps = {
 
 Tab.propTypes = {
   mdcElement: PropTypes.string,
+  children: PropTypes.string,
   active: PropTypes.bool,
   text: PropTypes.string,
   icon: PropTypes.string,

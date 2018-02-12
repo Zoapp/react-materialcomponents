@@ -23,6 +23,13 @@ export default class Tabbar extends Component {
     super(props);
     const { activeTab } = props;
     this.state = { activeTab };
+    this.ref = null;
+    this.activeRef = null;
+    this.indicatorRef = null;
+  }
+
+  componentDidMount() {
+    this.updateIndicator();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -30,6 +37,10 @@ export default class Tabbar extends Component {
     if (activeTab !== nextProps.activeTab) {
       this.setState({ activeTab: nextProps.activeTab });
     }
+  }
+
+  componentDidUpdate() {
+    this.updateIndicator();
   }
 
   handleTabSelect = (text, tabId) => {
@@ -40,6 +51,20 @@ export default class Tabbar extends Component {
       this.setState({ activeTab: tabId });
     }
   }
+
+  updateIndicator() {
+    if (this.activeRef && this.ref) {
+      const r = this.ref.getBoundingClientRect();
+      const rect = this.activeRef.ref.getBoundingClientRect();
+      const width = this.ref.clientWidth;
+      const tabWidth = rect.width;
+      const tabLeft = rect.left - r.left;
+      const scaledWidth = (tabWidth / width);
+      this.indicatorRef.style =
+        `transform: translateX(${tabLeft}px) scale(${scaledWidth}, 1); visibility: visible;`;
+    }
+  }
+
 
   render() {
     const {
@@ -63,16 +88,16 @@ export default class Tabbar extends Component {
     } else if (icon) {
       classes += " mdc-tab-bar--icon-tab-bar";
     }
-
     const element = (
-      <nav className={classes}>
+      <nav className={classes} ref={(c) => { this.ref = c; }}>
         {Children.map(children, (child, tabId) =>
           React.cloneElement(child, {
             tabId,
             active: tabId === activeTab,
+            ref: (c) => { if (tabId === activeTab) { this.activeRef = c; } },
             onTabSelect: this.handleTabSelect,
           }))}
-        <span className="mdc-tab-bar__indicator" />
+        <span className="mdc-tab-bar__indicator" ref={(c) => { this.indicatorRef = c; }} />
       </nav>);
     return Rmdc.render(element, props);
   }
