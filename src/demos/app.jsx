@@ -86,8 +86,21 @@ export default class App extends Component {
           onClose={this.toggleDrawer}
         >
           <DrawerContent list>
-            <ListItem type="a" icon="inbox" activated>Inbox</ListItem>
-            <ListItem type="a" icon="star">Star</ListItem>
+            <ListItem type="a" icon="inbox" activated>Drawer</ListItem>
+            <ListItem icon="account_circle">Cards</ListItem>
+            <ListItem type="a" icon="panorama_wide_angle">Buttons</ListItem>
+            <ListItem type="a" icon="check_box">Checkboxes</ListItem>
+            <ListItem type="a" icon="grid_on">Grid</ListItem>
+            <ListItem type="a" icon="hdr_strong">Icons Toogles</ListItem>
+            <ListItem type="a" icon="linear_scale">Linear Progress</ListItem>
+            <ListItem type="a" icon="list">List</ListItem>
+            <ListItem type="a" icon="menu">Menus</ListItem>
+            <ListItem type="a" icon="radio_button_checked">Radio</ListItem>
+            <ListItem type="a" icon="arrow_drop_down_circle">Select</ListItem>
+            <ListItem type="a" icon="sort">Sliders</ListItem>
+            <ListItem type="a" icon="dns">Switchs</ListItem>
+            <ListItem type="a" icon="tab">Tabbar</ListItem>
+            <ListItem type="a" icon="textsms">TextFields</ListItem>
           </DrawerContent>
         </Drawer>
         <Content>
