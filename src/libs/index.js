@@ -28,6 +28,7 @@ import { Card, CardActions, CardMedia, CardText, CardPrimary, CardTitle, CardSub
 import { Tabbar, Tab } from "./tab";
 import { GridList, Tile } from "./gridList";
 import { Dialog, DialogHeader, DialogBody, DialogFooter } from "./dialog";
+import Classnames from "./classnames";
 
 export {
   Button, Content, Fab, TextField, Checkbox, Radio, FormField, Select, Snackbar,
@@ -41,6 +42,7 @@ export {
   GridList, Tile,
   Dialog, DialogHeader, DialogBody, DialogFooter,
   Menu, MenuAnchor, MenuItem, MenuDivider,
+  Classnames,
 };
 
 export default Rmdc;
