@@ -84,7 +84,6 @@ export default class App extends Component {
           open={this.state.drawerOpen}
           above={this.state.aboveToolbar}
           onClose={this.toggleDrawer}
-          onClick={this.state.activated}
         >
           <DrawerContent list>
             <ListItem type="a" icon="inbox" activated>Drawer</ListItem>
