@@ -40,6 +40,8 @@ const DrawerContent = ({
         c = (<Icon key={index} className="mdc-list-item__graphic" aria-hidden="true" name={icon} />);
       }
       return React.createElement(child.type, ps, [c, chn]);
+    } else if ((!child.props.type) || child.props.type !== "a") {
+      return React.cloneElement(child, { type: "a", ...child.props.type });
     }
     return child;
   });
