@@ -6,7 +6,7 @@
  */
 import React from "react";
 import {
-  Button,GridLists
+  Button,Grid,Inner,Cell
 } from "../../../src/libs";
 
   const head = [
@@ -35,15 +35,6 @@ import {
     ["style","object",`Override the inline-styles of the root element.`]
   ];
 
-  const styles = {
-    gridList: {
-      width: 500,
-      height: 450,
-      overflowY: 'auto',
-    },
-  };
-
-
 export default () => (
   <section>
     <h1>Button examples</h1>
@@ -71,19 +62,20 @@ export default () => (
       </div>
     </div>
     <h2>Properties:</h2>
-    <div class="mdc-layout-grid">
-      <div class="mdc-layout-grid__inner">
-      {head.map(title=>
-          <div class="mdc-layout-grid__cell">{title}</div>
+    <Grid>
+      <Inner>
+      {head.map((title,i)=>
+          <Cell key={i}>{title}</Cell>
       )}
-      </div>
-      <div class="mdc-layout-grid__inner">
-          {body.map(row =>
-            row.map(col => 
-            <div class="mdc-layout-grid__cell">{col}</div>)
+      </Inner>
+        {body.map((row,i) =>
+          <Inner key={i} style={{ paddingBottom: "16px" }}>
+          {row.map((col,j) =>
+            <Cell key={j}> {col} </Cell>
           )}
-      </div>      
-    </div>
+          </Inner>
+        )}   
+    </Grid>
 
   </section> 
 );
