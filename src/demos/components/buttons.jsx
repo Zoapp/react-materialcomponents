@@ -6,14 +6,14 @@
  */
 import React from "react";
 import {
-  Button,
+  Button,GridLists
 } from "../../../src/libs";
 
-  var head = [
+  const head = [
       'Name', 'Type', 'Desc'
   ];
 
-  var body = [
+  const body = [
     ["backgroundColor","string","Color of button when mouse is not hovering over it."],
     ["children","node",`This is what will be displayed inside the button. If a label is specified, the text within the label prop will be displayed. Otherwise, the component will expect children which will then be displayed. (In our example, we are nesting an <input type="file" /> and a span that acts as our label to be displayed.) This only applies to flat and raised buttons.`],
     ["className","string",`The CSS class name of the root element.`],
@@ -34,6 +34,15 @@ import {
     ["secondary",  "bool",`If true, colors button according to secondaryTextColor from the theme. The primary prop has precendent if set to true.`],
     ["style","object",`Override the inline-styles of the root element.`]
   ];
+
+  const styles = {
+    gridList: {
+      width: 500,
+      height: 450,
+      overflowY: 'auto',
+    },
+  };
+
 
 export default () => (
   <section>
@@ -62,24 +71,19 @@ export default () => (
       </div>
     </div>
     <h2>Properties:</h2>
-    <table className="MyClassName">
-      <thead>
-        <tr>
-          {head.map(title =>
-            <th key={title}>{title}</th>
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+      {head.map(title=>
+          <div class="mdc-layout-grid__cell">{title}</div>
+      )}
+      </div>
+      <div class="mdc-layout-grid__inner">
+          {body.map(row =>
+            row.map(col => 
+            <div class="mdc-layout-grid__cell">{col}</div>)
           )}
-        </tr>
-      </thead>
-      <tbody>
-        {body.map((row, i) =>
-          <tr key={i}>
-            {row.map((col, j) =>          
-              <td key={j} className={row}>{col}</td>
-            )}
-            <p>{<br/>}</p>
-          </tr>
-        )}
-      </tbody>
-    </table>
+      </div>      
+    </div>
+
   </section> 
 );
