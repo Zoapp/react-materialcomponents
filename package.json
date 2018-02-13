@@ -7,6 +7,7 @@
   "main": "index.js",
   "scripts": {
     "clean-dist": "rm -r -f dist && mkdir dist",
+    "start" : "yarn compile:dev && yarn start:dev",
     "compile": "yarn clean-dist && babel src/libs -d dist && cp -f ./package.json ./dist/package.json && cp -f ./LICENSE ./dist/LICENSE && cp -f ./README.md ./dist/README.md",
     "lint": "eslint src/libs --ext=js --ext=jsx && eslint src/demos --ext=js --ext=jsx",
     "test": "cross-env NODE_ENV=test eslint test && ./node_modules/.bin/mocha --require babel-core/register --exit",
