@@ -12,7 +12,7 @@
     "dev": "yarn compile:dev && yarn start:dev",
     "lint": "eslint src/libs --ext=js --ext=jsx && eslint src/demos --ext=js --ext=jsx",
     "test": "cross-env NODE_ENV=test eslint test && ./node_modules/.bin/mocha --require babel-core/register --exit",
-    "compile:dev": "webpack --env=dev --progress --profile --colors",
+    "compile:dev": "yarn compile:css && webpack --env=dev --progress --profile --colors",
     "start:dev": "webpack-dev-server --env=dev --inline",
     "willPublish": "yarn run lint && yarn run test && yarn run compile",
     "distribute": "yarn willPublish && npm publish ./dist"
