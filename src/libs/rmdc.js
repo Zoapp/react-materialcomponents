@@ -165,8 +165,8 @@ const Rmdc = new class {
   getFontStyle(element) {
     let font = this.getComputedStyleValue(element, "font");
     if (!font) {
-      const primaryFontFamily = this.getComputedStyleValue("font-family").split(",")[0];
-      const fontSize = this.getComputedStyleValue("font-size");
+      const primaryFontFamily = this.getComputedStyleValue(element, "font-family").split(",")[0];
+      const fontSize = this.getComputedStyleValue(element, "font-size");
       font = `${fontSize} ${primaryFontFamily}`;
     }
     return font;
