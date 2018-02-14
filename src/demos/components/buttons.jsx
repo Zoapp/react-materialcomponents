@@ -38,6 +38,7 @@ const body = [
 export default () => (
   <section>
     <h1>Button examples</h1>
+
     <div>
       <div style={{ padding: "16px" }}>
         <Button>Hello</Button>
@@ -61,18 +62,23 @@ export default () => (
         <Button raised link="#">Hello</Button>
       </div>
     </div>
+
     <h2>Properties:</h2>
+
     <Grid>
       <Inner>
-        {head.map((title, i) =>
-          <Cell key={i}>{title}</Cell>)}
+        {head.map(title => (
+          <Cell key={title}>{title}</Cell>
+        ))}
       </Inner>
-      {body.map((row, i) =>
-        (<Inner key={i} style={{ paddingBottom: "16px" }}>
-          {row.map((col, j) =>
-            <Cell key={j}> {col} </Cell>)}
-        </Inner>))}
+      {body.map((row, idx) => (
+        // eslint-disable-next-line
+        <Inner key={idx} style={{ paddingBottom: "16px" }}>
+          {row.map(col => (
+            <Cell key={col}> {col} </Cell>
+          ))}
+        </Inner>
+      ))}
     </Grid>
-
   </section>
 );
