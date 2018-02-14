@@ -58,6 +58,11 @@ module.exports = {
         force: true
       },
       {
+        from: "../dist/compressed.css",
+        to: path.resolve(__dirname, "./dist/public/css/compressed.css"),
+        force: true
+      },
+      {
         from: "./server",
         to: path.resolve(__dirname, "./dist"),
         force: true
