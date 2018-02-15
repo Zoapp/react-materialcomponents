@@ -78,6 +78,7 @@
   },
   "jest": {
     "moduleNameMapper": {
+      "@demos/(.*)": "<rootDir>/src/demos/$1",
       "@libs/(.*)": "<rootDir>/src/libs/$1"
     }
   }

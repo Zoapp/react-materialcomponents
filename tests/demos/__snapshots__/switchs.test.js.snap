@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`demos/components/switchs renders correctly 1`] = `
+<section>
+  <h1>
+    Switch examples 
+  </h1>
+  <div
+    style={
+      Object {
+        "padding": "16px",
+      }
+    }
+  >
+    <div
+      className="rmdc-switch-wrapper"
+    >
+      <div
+        className="mdc-switch"
+      >
+        <input
+          className="mdc-switch__native-control"
+          defaultChecked="checked"
+          type="checkbox"
+        />
+        <div
+          className="mdc-switch__background"
+        >
+          <div
+            className="mdc-switch__knob"
+          />
+        </div>
+      </div>
+      <label
+        className="mdc-switch-label"
+        htmlFor="1"
+      >
+        switch 1
+      </label>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "padding": "16px",
+      }
+    }
+  >
+    <div
+      className="rmdc-switch-wrapper"
+    >
+      <div
+        className="mdc-switch"
+      >
+        <input
+          className="mdc-switch__native-control"
+          defaultChecked="checked"
+          disabled="disabled"
+          type="checkbox"
+        />
+        <div
+          className="mdc-switch__background"
+        >
+          <div
+            className="mdc-switch__knob"
+          />
+        </div>
+      </div>
+      <label
+        className="mdc-switch-label"
+        htmlFor="2"
+      >
+        switch 2
+      </label>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "padding": "16px",
+      }
+    }
+  >
+    <div
+      className="rmdc-switch-wrapper"
+    >
+      <div
+        className="mdc-switch"
+      >
+        <input
+          className="mdc-switch__native-control"
+          type="checkbox"
+        />
+        <div
+          className="mdc-switch__background"
+        >
+          <div
+            className="mdc-switch__knob"
+          />
+        </div>
+      </div>
+      <label
+        className="mdc-switch-label"
+        htmlFor="3"
+      >
+        switch 3
+      </label>
+    </div>
+  </div>
+</section>
+`;
