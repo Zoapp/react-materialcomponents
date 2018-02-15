@@ -6,6 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
+import Ripples from "./components/ripples";
 import Cards from "./components/cards";
 import Buttons from "./components/buttons";
 import Checkboxes from "./components/checkboxes";
@@ -25,6 +26,7 @@ import TextFields from "./components/textfields";
 const Main = ({ children }) => (
   <main>
     {children}
+    <Ripples />
     <Cards />
     <Buttons />
     <Checkboxes />

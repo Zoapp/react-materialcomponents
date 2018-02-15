@@ -70,7 +70,7 @@ export default class Ripple extends Component {
     }
   }
 
-  getFgTranslationCoordinates_() {
+  getFgTranslationCoordinates() {
     // Center the element around the start point.
     const startPoint = {
       x: (this.frame.width - this.initialSize) / 2,
@@ -141,7 +141,7 @@ export default class Ripple extends Component {
   }
 
   animateActivation() {
-    if (this.state.activated) {
+    if (this.state.isActivated) {
       let translateStart = "";
       let translateEnd = "";
 
@@ -197,7 +197,7 @@ export default class Ripple extends Component {
     const {
       unbounded, children,
     } = this.props;
-    const { ...props } = children;
+    const { ...props } = children.props;
     if (props.className) {
       props.className += " mdc-ripple-surface";
     } else {
@@ -206,17 +206,18 @@ export default class Ripple extends Component {
     props.className += " mdc-ripple-upgraded";
     if (unbounded) {
       props.className += " mdc-ripple-upgraded--unbounded";
+      props["data-mdc-ripple-is-unbounded"] = true;
     }
     if (this.state.focused) {
       props.className += ` ${BG_FOCUSED}`;
     }
     props.ref = (c) => { this.ref = c; };
-    props.onTouchStart = (e) => { this.handleActivation(e, children.props.onTouchStart); };
-    props.onPointerDown = (e) => { this.handleActivation(e, children.props.onPointerDown); };
-    props.onMouseDown = (e) => { this.handleActivation(e, children.props.onMouseDown); };
-    props.onKeyDown = (e) => { this.handleActivation(e, children.props.onKeyDown); };
+    props.onTouchStart = (e) => { this.handleActivate(e, children.props.onTouchStart); };
+    /* props.onPointerDown = (e) => { this.handleActivation(e, children.props.onPointerDown); }; */
+    props.onMouseDown = (e) => { this.handleActivate(e, children.props.onMouseDown); };
+    props.onKeyDown = (e) => { this.handleActivate(e, children.props.onKeyDown); };
     props.onTouchEnd = (e) => { this.handleDeactivate(e, children.props.onTouchEnd); };
-    props.onPointerUp = (e) => { this.handleDeactivate(e, children.props.onPointerUp); };
+    /* props.onPointerUp = (e) => { this.handleDeactivate(e, children.props.onPointerUp); }; */
     props.onMouseUp = (e) => { this.handleDeactivate(e, children.props.onMouseUp); };
     props.onKeyUp = (e) => { this.handleDeactivate(e, children.props.onKeyUp); };
     props.onBlur = (e) => { this.onBlur(e, children.props.onBlur); };

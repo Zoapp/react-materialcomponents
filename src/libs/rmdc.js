@@ -127,7 +127,8 @@ const Rmdc = new class {
     }
     if (ripple && this.ripple) {
       // TODO check if element could get ripple effect
-      el = React.createElement(Ripple, { ripple }, el);
+      const unbounded = ripple === "unbounded";
+      el = React.createElement(Ripple, { unbounded }, el);
     }
     if (menu) {
       // Create Menu Anchor
