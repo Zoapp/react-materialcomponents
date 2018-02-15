@@ -28,20 +28,6 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
-          options: {
-            presets: ["es2015", "react", "stage-1"],
-            plugins: [
-              ["transform-runtime", { "polyfill": false }],
-              "transform-regenerator",
-              "react-hot-loader/babel",
-              "transform-decorators-legacy"
-            ],
-            env: {
-              start: {
-                presets: ["react-hmre"]
-              }
-            }
-          }
         }
       }
     ]
@@ -55,6 +41,11 @@ module.exports = {
       {
         from: "./public",
         to: path.resolve(__dirname, "./dist/public"),
+        force: true
+      },
+      {
+        from: "../dist/compressed.css",
+        to: path.resolve(__dirname, "./dist/public/css/compressed.css"),
         force: true
       },
       {

@@ -1,8 +1,9 @@
-dist
-node_modules
 *.DS_Store
 .vscode
-yarn.lock
-package-lock.json
 config
+coverage/
+dist
+node_modules
+package-lock.json
 yarn-error.log
+yarn.lock
