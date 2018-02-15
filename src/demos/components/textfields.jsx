@@ -49,37 +49,37 @@ export default () => (
   <section>
     <h1>TextField examples</h1>
     <div>
-      <TextField label="Demo1" />
+      <TextField id="1" label="Demo1" />
     </div>
     <div style={{ padding: "16px" }}>
-      <TextField label="Demo2" defaultValue="Hello" />
+      <TextField id="2" label="Demo2" defaultValue="Hello" />
     </div>
     <div style={{ padding: "16px" }}>
-      <TextField label="Demo2" defaultValue="Hello" disabled />
+      <TextField id="3" label="Demo2" defaultValue="Hello" disabled />
     </div>
     <div style={{ padding: "16px" }}>
-      <TextField label="Demo1" dense />
+      <TextField id="4" label="Demo1" dense />
     </div>
     <div style={{ padding: "16px" }}>
-      <TextField label="Demo2" defaultValue="Hello" leadingIcon="event" />
+      <TextField id="5" label="Demo2" defaultValue="Hello" leadingIcon="event" />
     </div>
     <div style={{ padding: "16px" }}>
-      <TextField label="Demo2" defaultValue="Hello" trailingIcon="delete" disabled />
+      <TextField id="6" label="Demo2" defaultValue="Hello" trailingIcon="delete" disabled />
     </div>
     <div style={{ padding: "16px" }}>
-      <TextField label="Demo2" defaultValue="Hello" trailingIcon="delete" isTextarea />
+      <TextField id="7" label="Demo2" defaultValue="Hello" trailingIcon="delete" isTextarea />
     </div>
     <div style={{ padding: "16px" }}>
-      <TextField label="Demo2" defaultValue="Hello" trailingIcon="delete" isTextarea fullwidth />
+      <TextField id="8" label="Demo2" defaultValue="Hello" trailingIcon="delete" isTextarea fullwidth />
     </div>
     <div style={{ padding: "16px" }}>
-      <TextField label="Demo2" required pattern=".{8,}" helperText="Must be at least 8 characters" />
+      <TextField id="9" label="Demo2" required pattern=".{8,}" helperText="Must be at least 8 characters" />
     </div>
     <div style={{ padding: "16px" }}>
-      <TextField label="Demo1" dense outlined />
+      <TextField id="10" label="Demo1" dense outlined />
     </div>
     <div style={{ padding: "16px" }}>
-      <TextField label="Demo2" required pattern=".{8,}" helperText="Must be at least 8 characters" isBoxed />
+      <TextField id="11" label="Demo2" required pattern=".{8,}" helperText="Must be at least 8 characters" isBoxed />
     </div>
     <h2>Textfield Properties</h2>
     <Grid>

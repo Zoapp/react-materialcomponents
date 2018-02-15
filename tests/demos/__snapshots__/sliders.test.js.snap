@@ -1,0 +1,1439 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`demos/components/sliders renders correctly 1`] = `
+<section>
+  <h1>
+    Slider examples 
+  </h1>
+  <div
+    style={
+      Object {
+        "padding": "16px",
+      }
+    }
+  >
+    <div
+      aria-label="slider 1"
+      aria-valuemax={100}
+      aria-valuemin={0}
+      aria-valuenow={0}
+      className="mdc-slider"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="slider"
+      tabIndex="0"
+    >
+      <div
+        className="mdc-slider__track-container"
+      >
+        <div
+          className="mdc-slider__track"
+          style={undefined}
+        />
+      </div>
+      <div
+        className="mdc-slider__thumb-container"
+      >
+        <svg
+          className="mdc-slider__thumb"
+          height="21"
+          width="21"
+        >
+          <circle
+            cx="10.5"
+            cy="10.5"
+            r="7.875"
+          />
+        </svg>
+        <div
+          className="mdc-slider__focus-ring"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "padding": "16px",
+      }
+    }
+  >
+    <div
+      aria-disabled="true"
+      aria-label="slider 2"
+      aria-valuemax={100}
+      aria-valuemin={0}
+      aria-valuenow={0}
+      className="mdc-slider mdc-slider--discrete mdc-slider--disabled"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="slider"
+      tabIndex="0"
+    >
+      <div
+        className="mdc-slider__track-container"
+      >
+        <div
+          className="mdc-slider__track"
+          style={undefined}
+        />
+      </div>
+      <div
+        className="mdc-slider__thumb-container"
+      >
+        <div
+          className="mdc-slider__pin"
+        >
+          <span
+            className="mdc-slider__pin-value-marker"
+          >
+            0
+          </span>
+        </div>
+        <svg
+          className="mdc-slider__thumb"
+          height="21"
+          width="21"
+        >
+          <circle
+            cx="10.5"
+            cy="10.5"
+            r="7.875"
+          />
+        </svg>
+        <div
+          className="mdc-slider__focus-ring"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "padding": "16px",
+      }
+    }
+  >
+    <div
+      aria-label="slider 3"
+      aria-valuemax={256}
+      aria-valuemin={0}
+      aria-valuenow={20}
+      className="mdc-slider mdc-slider--discrete mdc-slider--display-markers"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onMouseDown={[Function]}
+      onMouseMove={[Function]}
+      onMouseUp={[Function]}
+      onTouchCancel={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      role="slider"
+      tabIndex="0"
+    >
+      <div
+        className="mdc-slider__track-container"
+      >
+        <div
+          className="mdc-slider__track"
+          style={
+            Object {
+              "transform": "scaleX(0.078125)",
+            }
+          }
+        />
+        <div
+          className="mdc-slider__track-marker-container"
+        >
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+          <div
+            className="mdc-slider__track-marker"
+          />
+        </div>
+      </div>
+      <div
+        className="mdc-slider__thumb-container"
+      >
+        <div
+          className="mdc-slider__pin"
+        >
+          <span
+            className="mdc-slider__pin-value-marker"
+          >
+            20
+          </span>
+        </div>
+        <svg
+          className="mdc-slider__thumb"
+          height="21"
+          width="21"
+        >
+          <circle
+            cx="10.5"
+            cy="10.5"
+            r="7.875"
+          />
+        </svg>
+        <div
+          className="mdc-slider__focus-ring"
+        />
+      </div>
+    </div>
+  </div>
+  <h2>
+    Slider  Properties
+  </h2>
+  <div
+    className="mdc-layout-grid"
+  >
+    <div
+      className="mdc-layout-grid__inner"
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        Name
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        Type
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        Desc
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "paddingBottom": "16px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        axis
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        enum: 'x',  'x-reverse',  'y',  'y-reverse',  'x'
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        The axis on which the slider will slide.
+         
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "paddingBottom": "16px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        defaultValue
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        valueInRangePropType
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        The default value of the slider.
+         
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "paddingBottom": "16px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        disableFocusRipple
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        bool
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        Disables focus ripple if set to true.
+         
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "paddingBottom": "16px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        disabled
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        bool
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        If true,  the slider will not be interactable.
+         
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "paddingBottom": "16px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        max
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        minMaxPropType
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        The maximum value the slider can slide to on a scale from 0 to 1 inclusive. Cannot be equal to min.
+         
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "paddingBottom": "16px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        min
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        minMaxPropType
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        The minimum value the slider can slide to on a scale from 0 to 1 inclusive. Cannot be equal to max.
+         
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "paddingBottom": "16px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        name
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        string
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        The name of the slider. Behaves like the name attribute of an input element.
+         
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "paddingBottom": "16px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        onChange
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        function
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        Callback function that is fired when the slider's value changed. Signature: function(event: object,  newValue: number) =&gt; void event: KeyDown event targeting the slider. newValue: The new value of the slider.
+         
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "paddingBottom": "16px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        onDragStart
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        function
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        Callback function that is fired when the slider has begun to move. Signature: function(event: object) =&gt; void event: MouseDown or TouchStart event targeting the slider.
+         
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "paddingBottom": "16px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        onDragStop
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        function
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        Callback function that is fired when the slide has stopped moving. Signature: function(event: object) =&gt; void event: MouseEnd or TouchEnd event targeting the slider.
+         
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "paddingBottom": "16px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        required
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        bool
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        Whether or not the slider is required in a form.
+         
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "paddingBottom": "16px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        sliderStyle
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        object
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        Override the inline-styles of the inner slider element.
+         
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "paddingBottom": "16px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        step
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        number
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        The granularity the slider can step through values.
+         
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "paddingBottom": "16px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        style
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        object
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        Override the inline-styles of the root element.
+         
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "paddingBottom": "16px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        value
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        valueInRangePropType
+         
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+         
+        The value of the slider.
+         
+      </div>
+    </div>
+  </div>
+</section>
+`;
