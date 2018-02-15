@@ -6,6 +6,8 @@
  */
 import React, { Component, Children } from "react";
 import PropTypes from "prop-types";
+import dialogPolyfill from "dialog-polyfill";
+
 import DialogManager from "./manager";
 import DialogHeader from "./header";
 import DialogBody from "./body";
@@ -36,7 +38,7 @@ export default class Dialog extends Component {
 
     // avoid chrome warnings and update only on unsupported browsers
     if (!dialog.showModal) {
-      window.dialogPolyfill.registerDialog(dialog);
+      dialogPolyfill.registerDialog(dialog);
     }
     this.dialogRef.addEventListener("cancel", this.props.onCancel);
     if (this.props.open) {
