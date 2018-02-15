@@ -7,6 +7,7 @@
 import React from "react";
 import DialogManager from "./dialog/manager";
 import MenuAnchor from "./menu/anchor";
+import Ripple from "./animations/ripple";
 
 /**
  * Rmdc
@@ -25,7 +26,7 @@ import MenuAnchor from "./menu/anchor";
  */
 const Rmdc = new class {
   init(root, {
-    rtl, themeDark, style, typography, ripple,
+    rtl, themeDark, style, typography, ripple = true,
   }) {
     this.isLockScroll = false;
     this.rtl = rtl;
@@ -119,14 +120,15 @@ const Rmdc = new class {
       classes += ` mdc-typography--${typography}`;
       change = true;
     }
-    if (ripple && this.ripple) {
-      // TODO
-      change = true;
-    }
     let el = element;
     if (change) {
       ps.className = classes;
       el = React.cloneElement(element, ps);
+    }
+    if (ripple && this.ripple) {
+      // TODO check if element could get ripple effect
+      const unbounded = ripple === "unbounded";
+      el = React.createElement(Ripple, { unbounded }, el);
     }
     if (menu) {
       // Create Menu Anchor
