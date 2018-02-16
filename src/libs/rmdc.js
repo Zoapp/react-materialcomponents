@@ -6,6 +6,7 @@
  */
 import React from "react";
 import DialogManager from "./dialog/manager";
+import Dialog from "./dialog/dialog";
 import MenuAnchor from "./menu/anchor";
 import Ripple from "./animations/ripple";
 
@@ -138,9 +139,17 @@ const Rmdc = new class {
   }
 
   showDialog(dialog) {
-    this.dialog = dialog;
+    if (typeof dialog === "string") {
+      this.dialog = React.createElement(Dialog, {}, dialog);
+    } else if (dialog.body) {
+      const { body, ...props } = dialog;
+      this.dialog = React.createElement(Dialog, props, body);
+    } else {
+      // It should be a React Component
+      this.dialog = dialog;
+    }
     // openDialog
-    DialogManager.open(dialog);
+    DialogManager.open(this.dialog);
   }
 
   closeDialog() {
