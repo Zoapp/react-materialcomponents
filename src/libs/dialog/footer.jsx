@@ -13,7 +13,6 @@ import Button from "../components/button";
  * mdc-dialog__footer
  * See:
  * https://material.io/components/web/catalog/dialogs/
- *
  */
 
 const MDC_DIALOGFOOTER = "mdc-dialog__footer";
@@ -25,7 +24,11 @@ const DialogFooter = ({
 
   let buttons = children;
 
-  if (!buttons) {
+  if (buttons) {
+    // empty the array of actions because when we have buttons, we ignore the
+    // `actions` prop
+    actions = []; // eslint-disable-line no-param-reassign
+  } else {
     buttons = [];
 
     if (actions.length === 0) {
@@ -35,24 +38,29 @@ const DialogFooter = ({
 
   const element = (
     <footer className={classes}>
-      {buttons.map((child, index) => {
+      {React.Children.map(buttons, (child, index) => {
         if (child.props && child.props.mdcElement === "mdc-button") {
           const p = {};
+
           let cs = "mdc-dialog__footer__button";
           if (child.props.type === "accept") {
             cs += " mdc-dialog__footer__button--accept";
           } else {
             cs += " mdc-dialog__footer__button--cancel";
           }
+
           p.className = cs;
           p.key = `f_${index}`;
-          /* p.onClick = (e) => {
+          /*
+          p.onClick = (e) => {
             e.preventDefault();
             handleAction(child.props.children);
             if (child.props.onClick) {
               child.props.onCLick(e);
             }
-          }; */
+          };
+          */
+
           return React.cloneElement(child, p);
         }
         return null;
@@ -66,27 +74,35 @@ const DialogFooter = ({
           cs += " mdc-dialog__footer__button--cancel";
         }
         const key = `f_${index}`;
+
         return (
-          <Button key={key} className={cs} onClick={() => { handleAction(action.name); }} >
+          <Button
+            key={key}
+            className={cs}
+            onClick={() => { handleAction(action.name); }}
+          >
             {title}
-          </Button>);
+          </Button>
+        );
       })}
-    </footer>);
+    </footer>
+  );
+
   return Rmdc.render(element, props);
 };
 
 DialogFooter.defaultProps = {
-  mdcElement: MDC_DIALOGFOOTER,
-  children: null,
   actions: [],
+  children: null,
   handleAction: null,
+  mdcElement: MDC_DIALOGFOOTER,
 };
 
 DialogFooter.propTypes = {
-  mdcElement: PropTypes.string,
-  children: PropTypes.node,
   actions: PropTypes.arrayOf(PropTypes.shape({})),
+  children: PropTypes.node,
   handleAction: PropTypes.func,
+  mdcElement: PropTypes.string,
 };
 
 export default DialogFooter;
