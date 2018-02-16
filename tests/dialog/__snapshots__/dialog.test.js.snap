@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`dialog/Dialog renders a dialog without actions 1`] = `
+exports[`dialog/Dialog renders a dialog with no actions specified 1`] = `
 <dialog
   className="rmdc-dialog mdc-dialog mdc-dialog--open"
   onClick={[Function]}

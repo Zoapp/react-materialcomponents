@@ -66,7 +66,7 @@ describe("dialog/Dialog", () => {
     expect(dialogPolyfill.registerDialog).toHaveBeenCalled();
   });
 
-  it("renders a dialog without actions", () => {
+  it("renders a dialog with no actions specified", () => {
     // This represents the fake `dialogRef`
     const createNodeMock = () => ({
       addEventListener: jest.fn(),
