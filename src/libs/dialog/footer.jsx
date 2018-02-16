@@ -22,36 +22,23 @@ const DialogFooter = ({
 }) => {
   const classes = MDC_DIALOGFOOTER;
 
-  let buttons = children;
+  let buttonsOrActions;
 
-  if (buttons) {
-    // empty the array of actions because when we have buttons, we ignore the
-    // `actions` prop
-    actions = []; // eslint-disable-line no-param-reassign
-  } else {
-    buttons = [];
+  if (children) {
+    buttonsOrActions = React.Children.map(children, (child, index) => {
+      if (child.props && child.props.mdcElement === "mdc-button") {
+        const p = {};
 
-    if (actions.length === 0) {
-      actions.push({ name: "Ok" });
-    }
-  }
+        let cs = "mdc-dialog__footer__button";
+        if (child.props.type === "accept") {
+          cs += " mdc-dialog__footer__button--accept";
+        } else {
+          cs += " mdc-dialog__footer__button--cancel";
+        }
 
-  const element = (
-    <footer className={classes}>
-      {React.Children.map(buttons, (child, index) => {
-        if (child.props && child.props.mdcElement === "mdc-button") {
-          const p = {};
-
-          let cs = "mdc-dialog__footer__button";
-          if (child.props.type === "accept") {
-            cs += " mdc-dialog__footer__button--accept";
-          } else {
-            cs += " mdc-dialog__footer__button--cancel";
-          }
-
-          p.className = cs;
-          p.key = `f_${index}`;
-          /*
+        p.className = cs;
+        p.key = `f_${index}`;
+        /*
           p.onClick = (e) => {
             e.preventDefault();
             handleAction(child.props.children);
@@ -61,34 +48,43 @@ const DialogFooter = ({
           };
           */
 
-          return React.cloneElement(child, p);
-        }
-        return null;
-      })}
-      {actions.map((action, index) => {
-        const title = action.title || action.name;
-        let cs = "mdc-dialog__footer__button";
-        if ((!action.type) || action.type === "accept") {
-          cs += " mdc-dialog__footer__button--accept";
-        } else if (action.type === "cancel") {
-          cs += " mdc-dialog__footer__button--cancel";
-        }
-        const key = `f_${index}`;
+        return React.cloneElement(child, p);
+      }
+      return null;
+    });
+  } else {
+    if (actions.length === 0) {
+      actions.push({ name: "Ok" });
+    }
 
-        return (
-          <Button
-            key={key}
-            className={cs}
-            onClick={() => { handleAction(action.name); }}
-          >
-            {title}
-          </Button>
-        );
-      })}
-    </footer>
+    buttonsOrActions = actions.map((action, index) => {
+      const title = action.title || action.name;
+      let cs = "mdc-dialog__footer__button";
+      if ((!action.type) || action.type === "accept") {
+        cs += " mdc-dialog__footer__button--accept";
+      } else if (action.type === "cancel") {
+        cs += " mdc-dialog__footer__button--cancel";
+      }
+      const key = `f_${index}`;
+
+      return (
+        <Button
+          key={key}
+          className={cs}
+          onClick={() => { handleAction(action.name); }}
+        >
+          {title}
+        </Button>
+      );
+    });
+  }
+
+  return Rmdc.render(
+    <footer className={classes}>
+      {buttonsOrActions}
+    </footer>,
+    props,
   );
-
-  return Rmdc.render(element, props);
 };
 
 DialogFooter.defaultProps = {
