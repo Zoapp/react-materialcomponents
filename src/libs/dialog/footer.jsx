@@ -22,14 +22,17 @@ const DialogFooter = ({
   children, actions, handleAction, ...props
 }) => {
   const classes = MDC_DIALOGFOOTER;
+
   let buttons = children;
-  let a = [];
-  if ((!buttons) && actions) {
+
+  if (!buttons) {
     buttons = [];
-    a = actions;
-  } else if (!buttons) {
-    a = [{ name: "Ok" }];
+
+    if (actions.length === 0) {
+      actions.push({ name: "Ok" });
+    }
   }
+
   const element = (
     <footer className={classes}>
       {buttons.map((child, index) => {
@@ -54,7 +57,7 @@ const DialogFooter = ({
         }
         return null;
       })}
-      {a.map((action, index) => {
+      {actions.map((action, index) => {
         const title = action.title || action.name;
         let cs = "mdc-dialog__footer__button";
         if ((!action.type) || action.type === "accept") {
@@ -75,7 +78,7 @@ const DialogFooter = ({
 DialogFooter.defaultProps = {
   mdcElement: MDC_DIALOGFOOTER,
   children: null,
-  actions: null,
+  actions: [],
   handleAction: null,
 };
 

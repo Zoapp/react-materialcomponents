@@ -65,4 +65,24 @@ describe("dialog/Dialog", () => {
 
     expect(dialogPolyfill.registerDialog).toHaveBeenCalled();
   });
+
+  it("renders a dialog without actions", () => {
+    // This represents the fake `dialogRef`
+    const createNodeMock = () => ({
+      addEventListener: jest.fn(),
+      showModal: jest.fn(),
+    });
+
+    const component = renderer.create(
+      <Dialog
+        header="Are you happy?"
+      >
+        <div>Hello, here is some content</div>
+      </Dialog>,
+      { createNodeMock }
+    );
+
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
