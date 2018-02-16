@@ -128,7 +128,12 @@ export default class Dialog extends Component {
     if (!(footerElement && footerElement.props &&
       footerElement.props.mdcElement &&
       footerElement.props.mdcElement === "mdc-dialog__footer")) {
-      footerElement = <DialogFooter actions={actions} handleAction={this.handleClick} />;
+      footerElement = (
+        <DialogFooter
+          actions={actions}
+          handleAction={this.handleClick}
+        />
+      );
     }
     const d = (
       <dialog
@@ -158,7 +163,7 @@ export default class Dialog extends Component {
 Dialog.defaultProps = {
   mdcElement: MDC_DIALOG,
   header: null,
-  actions: null,
+  actions: [],
   width: null,
   open: true,
   onClose: () => { DialogManager.close(); },
@@ -171,7 +176,9 @@ Dialog.propTypes = {
   header: PropTypes.oneOfType([
     PropTypes.node, PropTypes.string]),
   children: PropTypes.node.isRequired,
-  actions: PropTypes.arrayOf(PropTypes.shape({})),
+  actions: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string,
+  })),
   width: PropTypes.string,
   open: PropTypes.bool,
   onClose: PropTypes.func,

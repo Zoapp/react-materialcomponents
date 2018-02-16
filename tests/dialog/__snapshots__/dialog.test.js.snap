@@ -1,5 +1,46 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`dialog/Dialog renders a dialog without actions 1`] = `
+<dialog
+  className="rmdc-dialog mdc-dialog mdc-dialog--open"
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="presentation"
+>
+  <div
+    className="mdc-dialog__surface"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    role="presentation"
+    style={Object {}}
+  >
+    <header
+      className="mdc-dialog__header"
+    >
+      Are you happy?
+    </header>
+    <section
+      className="mdc-dialog__body"
+    >
+      <div>
+        Hello, here is some content
+      </div>
+    </section>
+    <footer
+      className="mdc-dialog__footer"
+    >
+      <button
+        className="mdc-dialog__footer__button mdc-dialog__footer__button--accept mdc-button"
+        onClick={[Function]}
+      >
+        
+        Ok
+      </button>
+    </footer>
+  </div>
+</dialog>
+`;
+
 exports[`dialog/Dialog renders correctly 1`] = `
 <dialog
   className="rmdc-dialog mdc-dialog mdc-dialog--open"
