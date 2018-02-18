@@ -5,9 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 import React from "react";
-import {
-  LinearProgress, Grid, Inner, Cell,
-} from "../../../src/libs";
+import { LinearProgress, Grid, Inner, Cell } from "../../../src/libs";
 
 const head = [
   "Name", "Type", "Desc",

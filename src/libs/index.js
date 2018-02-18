@@ -27,7 +27,7 @@ import { Grid, Inner, Cell } from "./layoutGrid";
 import { Card, CardActions, CardMedia, CardText, CardPrimary, CardTitle, CardSubtitle } from "./cards";
 import { Tabbar, Tab } from "./tab";
 import { GridList, Tile } from "./gridList";
-import { Dialog, DialogHeader, DialogBody, DialogFooter } from "./dialog";
+import { Dialog, DialogHeader, DialogBody, DialogFooter, DialogManager } from "./dialog";
 import Classnames from "./classnames";
 
 export {
@@ -40,7 +40,7 @@ export {
   Card, CardActions, CardMedia, CardText, CardPrimary, CardTitle, CardSubtitle,
   Tabbar, Tab,
   GridList, Tile,
-  Dialog, DialogHeader, DialogBody, DialogFooter,
+  Dialog, DialogHeader, DialogBody, DialogFooter, DialogManager,
   Menu, MenuAnchor, MenuItem, MenuDivider,
   Classnames,
 };
