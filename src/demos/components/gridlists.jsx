@@ -5,9 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 import React from "react";
-import {
-  GridList, Tile, Grid, Inner, Cell,
-} from "../../../src/libs";
+import { GridList, Tile, Grid, Inner, Cell } from "../../../src/libs";
 
 const head = [
   "Name", "Type", "Desc",

@@ -5,9 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 import React from "react";
-import {
-  Button, Menu, MenuItem, MenuDivider,
-} from "../../../src/libs";
+import { Button, Menu, MenuItem, MenuDivider } from "../../../src/libs";
 
 export default () => (
   <section>
