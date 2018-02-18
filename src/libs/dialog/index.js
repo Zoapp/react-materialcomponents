@@ -8,5 +8,6 @@ import Dialog from "./dialog";
 import DialogBody from "./body";
 import DialogFooter from "./footer";
 import DialogHeader from "./header";
+import DialogManager from "./manager";
 
-export { Dialog, DialogBody, DialogFooter, DialogHeader };
+export { Dialog, DialogBody, DialogFooter, DialogHeader, DialogManager };
