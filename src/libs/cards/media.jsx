@@ -28,7 +28,7 @@ const CardMedia = ({
   // Check if src and set img instead
   let element;
   if (src) {
-    element = (<img className={classes} src={src} alt={alt} />);
+    element = (<img className={classes} src={src} alt={alt} style={props.style} />);
   } else {
     element = (<section className={classes}>{children}</section>);
   }

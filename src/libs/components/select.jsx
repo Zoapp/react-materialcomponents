@@ -113,8 +113,11 @@ export default class Select extends Component {
   updateContent() {
     if (this.anchorRef && this.menuRef) {
       const w = this.calculateWidth();
-      let style = `width: ${w}px;`;
-      this.anchorRef.style = style;
+      let style;
+      if (!(this.props.style && this.props.style.width)) {
+        style = `width: ${w}px;`;
+        this.anchorRef.style = style;
+      }
       if (this.state.open) {
         const { innerHeight } = window;
         const { left, top } = this.anchorRef.getBoundingClientRect();
@@ -204,6 +207,7 @@ Select.defaultProps = {
   label: null,
   onSelected: null,
   selectedIndex: -1,
+  style: {},
 };
 
 Select.propTypes = {
@@ -211,6 +215,7 @@ Select.propTypes = {
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
   label: PropTypes.string,
+  style: PropTypes.shape({ width: PropTypes.string }),
   onSelected: PropTypes.func,
   selectedIndex: PropTypes.number,
 };

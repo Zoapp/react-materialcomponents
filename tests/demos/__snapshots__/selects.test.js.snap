@@ -18,6 +18,7 @@ exports[`demos/components/selects renders correctly 1`] = `
       onClick={[Function]}
       onKeyUp={[Function]}
       role="listbox"
+      style={Object {}}
     >
       <div
         className="mdc-select__surface"
