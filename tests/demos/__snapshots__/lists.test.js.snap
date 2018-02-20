@@ -19,11 +19,15 @@ exports[`demos/components/lists renders itself correctly 1`] = `
       >
         <li
           className="mdc-list-item"
+          onKeyPress={[Function]}
+          role="menuitem"
         >
           item1
         </li>
         <li
           className="mdc-list-item"
+          onKeyPress={[Function]}
+          role="menuitem"
         >
           item2
         </li>
@@ -33,11 +37,15 @@ exports[`demos/components/lists renders itself correctly 1`] = `
         />
         <li
           className="mdc-list-item"
+          onKeyPress={[Function]}
+          role="menuitem"
         >
           item3
         </li>
         <li
           className="mdc-list-item"
+          onKeyPress={[Function]}
+          role="menuitem"
         >
           item4
         </li>
@@ -55,11 +63,15 @@ exports[`demos/components/lists renders itself correctly 1`] = `
       >
         <li
           className="mdc-list-item"
+          onKeyPress={[Function]}
+          role="menuitem"
         >
           item1
         </li>
         <li
           className="mdc-list-item"
+          onKeyPress={[Function]}
+          role="menuitem"
         >
           item2
         </li>
@@ -69,11 +81,15 @@ exports[`demos/components/lists renders itself correctly 1`] = `
         />
         <li
           className="mdc-list-item"
+          onKeyPress={[Function]}
+          role="menuitem"
         >
           item3
         </li>
         <li
           className="mdc-list-item"
+          onKeyPress={[Function]}
+          role="menuitem"
         >
           item4
         </li>
@@ -92,6 +108,8 @@ exports[`demos/components/lists renders itself correctly 1`] = `
     >
       <li
         className="mdc-list-item"
+        onKeyPress={[Function]}
+        role="menuitem"
       >
         <img
           alt="Brown Bear"
@@ -116,6 +134,8 @@ exports[`demos/components/lists renders itself correctly 1`] = `
       </li>
       <li
         className="mdc-list-item"
+        onKeyPress={[Function]}
+        role="menuitem"
       >
         <img
           alt="Panda"
@@ -140,6 +160,8 @@ exports[`demos/components/lists renders itself correctly 1`] = `
       </li>
       <li
         className="mdc-list-item"
+        onKeyPress={[Function]}
+        role="menuitem"
       >
         <img
           alt="Sloth"
@@ -176,6 +198,8 @@ exports[`demos/components/lists renders itself correctly 1`] = `
     >
       <li
         className="mdc-list-item"
+        onKeyPress={[Function]}
+        role="menuitem"
       >
         <span
           className="mdc-list-item__text"
@@ -195,6 +219,8 @@ exports[`demos/components/lists renders itself correctly 1`] = `
       </li>
       <li
         className="mdc-list-item"
+        onKeyPress={[Function]}
+        role="menuitem"
       >
         <span
           className="mdc-list-item__text"
@@ -214,6 +240,8 @@ exports[`demos/components/lists renders itself correctly 1`] = `
       </li>
       <li
         className="mdc-list-item"
+        onKeyPress={[Function]}
+        role="menuitem"
       >
         <span
           className="mdc-list-item__text"

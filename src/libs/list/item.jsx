@@ -44,7 +44,7 @@ const ListItem = ({
   }
   const p = {};
   if (onClick) {
-    p.onCLick = onClick;
+    p.onClick = onClick;
   }
   let el;
   if (type === "a" || href) {
