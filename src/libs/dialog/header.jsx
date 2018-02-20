@@ -31,8 +31,7 @@ DialogHeader.defaultProps = {
 
 DialogHeader.propTypes = {
   mdcElement: PropTypes.string,
-  children: PropTypes.oneOfType([
-    PropTypes.node, PropTypes.string]),
+  children: PropTypes.node,
 };
 
 export default DialogHeader;
