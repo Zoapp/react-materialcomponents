@@ -28,7 +28,8 @@ const MDC_TEXTFIELD = "mdc-text-field";
 export default class TextField extends Component {
   constructor(props) {
     super(props);
-    this.state = { focused: false };
+    const value = props.defaultValue || "";
+    this.state = { focused: false, value };
   }
 
   onBlur = () => {
@@ -37,6 +38,23 @@ export default class TextField extends Component {
 
   onFocus = () => {
     this.setState({ focused: true });
+  }
+
+  onChange = (e) => {
+    if (this.inputRef) {
+      const { value } = this.inputRef;
+      this.setState({ value });
+      if (this.props.noFloatingLabel) {
+        if (value && value.length > 0) {
+          this.labelRef.setAttribute("style", "display: none;");
+        } else {
+          this.labelRef.setAttribute("style", "");
+        }
+      }
+      if (this.props.onChange) {
+        this.props.onChange(e);
+      }
+    }
   }
 
   render() {
@@ -59,6 +77,7 @@ export default class TextField extends Component {
       trailingIcon,
       onClickLI,
       onClickTI,
+      noFloatingLabel,
       ...props
     } = this.props;
     const { focused } = this.state;
@@ -67,7 +86,9 @@ export default class TextField extends Component {
     let bc = "mdc-text-field__bottom-line";
     if (focused) {
       classes += " mdc-text-field--focused";
-      lc += " mdc-text-field__label--float-above";
+      if (!noFloatingLabel) {
+        lc += " mdc-text-field__label--float-above";
+      }
       bc += " mdc-text-field__bottom-line--active";
     }
     if (outlined) {
@@ -129,17 +150,15 @@ export default class TextField extends Component {
     if (isBoxed) {
       classes += " mdc-text-field--box";
     }
-    let value;
-    if (this.inputRef) {
-      ({ value } = this.inputRef);
-    } else if (props.value) {
-      ({ value } = props);
-    } else if (props.defaultValue) {
-      ({ defaultValue: value } = props);
-    }
-    if ((!focused) &&
-        (value && value.trim().length > 0)) {
-      lc += " mdc-text-field__label--float-above";
+    const { value } = this.state;
+    const sc = {};
+
+    if (value && value.trim().length > 0) {
+      if (noFloatingLabel) {
+        sc.display = "none";
+      } else if (!focused) {
+        lc += " mdc-text-field__label--float-above";
+      }
     }
 
     const cid = Rmdc.generateId(id);
@@ -152,7 +171,7 @@ export default class TextField extends Component {
     p.className = "mdc-text-field__input";
     p.onBlur = this.onBlur;
     p.onFocus = this.onFocus;
-    p.onChange = onChange;
+    p.onChange = this.onChange;
     p.ref = (c) => { this.inputRef = c; };
     if (isTextarea) {
       classes += " mdc-text-field--textarea";
@@ -164,7 +183,14 @@ export default class TextField extends Component {
     /* eslint-disable jsx-a11y/label-has-for */
     if (!fullwidth) {
       labelElement = (
-        <label focused={focused.toString()} className={lc} htmlFor={cid} >{label}</label>);
+        <label
+          focused={focused.toString()}
+          className={lc}
+          htmlFor={cid}
+          style={sc}
+          ref={(c) => { this.labelRef = c; }}
+        >{label}
+        </label>);
     }
     let bcElement1;
     let bcElement2;
@@ -230,6 +256,8 @@ TextField.defaultProps = {
   trailingIcon: null,
   onClickLI: null,
   onClickTI: null,
+  noFloatingLabel: false,
+  defaultValue: null,
 };
 
 TextField.propTypes = {
@@ -251,4 +279,6 @@ TextField.propTypes = {
   trailingIcon: PropTypes.string,
   onClickLI: PropTypes.func,
   onClickTI: PropTypes.func,
+  defaultValue: PropTypes.string,
+  noFloatingLabel: PropTypes.bool,
 };
