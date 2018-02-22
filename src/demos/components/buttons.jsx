@@ -5,8 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 import React from "react";
-import { Button, Grid, Inner, Cell } from "../../../src/libs";
-import { head, ButtonsProperties } from "./components_properties";
+import { Button } from "../../../src/libs";
+import GenProperties from "./test";
 
 export default () => (
   <section>
@@ -37,20 +37,6 @@ export default () => (
     </div>
 
     <h2>Properties:</h2>
-
-    <Grid>
-      <Inner>
-        {head.map(title => (
-          <Cell key={title}>{title}</Cell>
-        ))}
-      </Inner>
-      {ButtonsProperties.map(row => (
-        <Inner key={row} style={{ paddingBottom: "16px" }}>
-          {row.map(col => (
-            <Cell key={col}> {col} </Cell>
-          ))}
-        </Inner>
-      ))}
-    </Grid>
+    {GenProperties("Button")}
   </section>
 );
