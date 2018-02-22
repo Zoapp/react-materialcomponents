@@ -47,9 +47,8 @@ export default () => (
           <Cell key={title}>{title}</Cell>
         ))}
       </Inner>
-      {CardProperties.map((row, idx) => (
-        // eslint-disable-next-line
-        <Inner key={idx} style={{ paddingBottom: "16px" }}>
+      {CardProperties.map(row => (
+        <Inner key={row} style={{ paddingBottom: "16px" }}>
           {row.map(col => (
             <Cell key={col}> {col} </Cell>
           ))}
@@ -63,9 +62,8 @@ export default () => (
           <Cell key={title}>{title}</Cell>
         ))}
       </Inner>
-      {CardActionsProperties.map((row, idx) => (
-        // eslint-disable-next-line
-        <Inner key={idx} style={{ paddingBottom: "16px" }}>
+      {CardActionsProperties.map(row => (
+        <Inner key={row} style={{ paddingBottom: "16px" }}>
           {row.map(col => (
             <Cell key={col}> {col} </Cell>
           ))}
@@ -79,9 +77,8 @@ export default () => (
           <Cell key={title}>{title}</Cell>
         ))}
       </Inner>
-      {CardHeaderProperties.map((row, idx) => (
-        // eslint-disable-next-line
-        <Inner key={idx} style={{ paddingBottom: "16px" }}>
+      {CardHeaderProperties.map(row => (
+        <Inner key={row} style={{ paddingBottom: "16px" }}>
           {row.map(col => (
             <Cell key={col}> {col} </Cell>
           ))}
@@ -95,9 +92,8 @@ export default () => (
           <Cell key={title}>{title}</Cell>
         ))}
       </Inner>
-      {CardMediaProperties.map((row, idx) => (
-        // eslint-disable-next-line
-        <Inner key={idx} style={{ paddingBottom: "16px" }}>
+      {CardMediaProperties.map(row => (
+        <Inner key={row} style={{ paddingBottom: "16px" }}>
           {row.map(col => (
             <Cell key={col}> {col} </Cell>
           ))}
@@ -111,9 +107,8 @@ export default () => (
           <Cell key={title}>{title}</Cell>
         ))}
       </Inner>
-      {CardTextProperties.map((row, idx) => (
-        // eslint-disable-next-line
-        <Inner key={idx} style={{ paddingBottom: "16px" }}>
+      {CardTextProperties.map(row => (
+        <Inner key={row} style={{ paddingBottom: "16px" }}>
           {row.map(col => (
             <Cell key={col}> {col} </Cell>
           ))}
@@ -127,9 +122,8 @@ export default () => (
           <Cell key={title}>{title}</Cell>
         ))}
       </Inner>
-      {CardTitleProperties.map((row, idx) => (
-        // eslint-disable-next-line
-        <Inner key={idx} style={{ paddingBottom: "16px" }}>
+      {CardTitleProperties.map(row => (
+        <Inner key={row} style={{ paddingBottom: "16px" }}>
           {row.map(col => (
             <Cell key={col}> {col} </Cell>
           ))}

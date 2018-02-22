@@ -30,9 +30,8 @@ export default () => (
           <Cell key={title}>{title}</Cell>
         ))}
       </Inner>
-      {GridListProperties.map((row, idx) => (
-        // eslint-disable-next-line
-        <Inner key={idx} style={{ paddingBottom: "16px" }}>
+      {GridListProperties.map(row => (
+        <Inner key={row} style={{ paddingBottom: "16px" }}>
           {row.map(col => (
             <Cell key={col}> {col} </Cell>
           ))}
@@ -46,9 +45,8 @@ export default () => (
           <Cell key={title}>{title}</Cell>
         ))}
       </Inner>
-      {GridTileProperties.map((row, idx) => (
-        // eslint-disable-next-line
-        <Inner key={idx} style={{ paddingBottom: "16px" }}>
+      {GridTileProperties.map(row => (
+        <Inner key={row} style={{ paddingBottom: "16px" }}>
           {row.map(col => (
             <Cell key={col}> {col} </Cell>
           ))}

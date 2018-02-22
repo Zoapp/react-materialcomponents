@@ -44,9 +44,8 @@ export default () => (
           <Cell key={title}>{title}</Cell>
         ))}
       </Inner>
-      {ButtonsProperties.map((row, idx) => (
-        // eslint-disable-next-line
-        <Inner key={idx} style={{ paddingBottom: "16px" }}>
+      {ButtonsProperties.map(row => (
+        <Inner key={row} style={{ paddingBottom: "16px" }}>
           {row.map(col => (
             <Cell key={col}> {col} </Cell>
           ))}

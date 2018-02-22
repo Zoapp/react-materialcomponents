@@ -25,9 +25,8 @@ export default () => (
           <Cell key={title}>{title}</Cell>
         ))}
       </Inner>
-      {TabsProperties.map((row, idx) => (
-        // eslint-disable-next-line
-        <Inner key={idx} style={{ paddingBottom: "16px" }}>
+      {TabsProperties.map(row => (
+        <Inner key={row} style={{ paddingBottom: "16px" }}>
           {row.map(col => (
             <Cell key={col}> {col} </Cell>
           ))}
@@ -41,9 +40,8 @@ export default () => (
           <Cell key={title}>{title}</Cell>
         ))}
       </Inner>
-      {TabProperties.map((row, idx) => (
-        // eslint-disable-next-line
-        <Inner key={idx} style={{ paddingBottom: "16px" }}>
+      {TabProperties.map(row => (
+        <Inner key={row} style={{ paddingBottom: "16px" }}>
           {row.map(col => (
             <Cell key={col}> {col} </Cell>
           ))}

@@ -137,6 +137,26 @@ const GridTileProperties = [
   ["titleStyle", "object", "Override the inline-styles of the title element."],
 ];
 
+const ToogleProperties = [
+  ["defaultToggled", "bool", "Determines whether the Toggle is initially turned on. Warning: This cannot be used in conjunction with toggled. Decide between using a controlled or uncontrolled input element and remove one of these props."],
+  ["disabled", "bool", "Will disable the toggle if true."],
+  ["elementStyle", "object", "Overrides the inline-styles of the Toggle element."],
+  ["iconStyle", "object", "Overrides the inline-styles of the Icon element."],
+  ["inputStyle", "object", "Overrides the inline-styles of the input element."],
+  ["label", "node", "Label for toggle."],
+  ["labelPosition", "enum:'left', 'right', 'left'", "Where the label will be placed next to the toggle."],
+  ["labelStyle", "object", "Overrides the inline-styles of the Toggle element label."],
+  ["onToggle", "function", "Callback function that is fired when the toggle switch is toggled. Signature: function(event: object,  isInputChecked: bool) => void event: Change event targeting the toggle. isInputChecked: The new value of the toggle."],
+  ["rippleStyle", "object", "Override style of ripple."],
+  ["style", "object", "Override the inline-styles of the root element."],
+  ["thumbStyle", "object", "Override style for thumb."],
+  ["thumbSwitchedStyle", "object", "Override the inline styles for thumb when the toggle switch is toggled on."],
+  ["toggled", "bool", "Toggled if set to true."],
+  ["trackStyle", "object", "Override style for track."],
+  ["trackSwitchedStyle", "object", "Override the inline styles for track when the toggle switch is toggled on."],
+  ["valueLink", "object", "ValueLink prop for when using controlled toggle."],
+];
+
 const LinearProperties = [
   ["color", "string", "The color of the progress bar,  defaults to primary color of theme."],
   ["max", "number", "The max value of progress,  only works in determinate mode."],
@@ -323,6 +343,7 @@ export {
   CheckboxProperties,
   GridListProperties,
   GridTileProperties,
+  ToogleProperties,
   LinearProperties,
   ListProperties,
   ListItemProperties,
