@@ -37,12 +37,12 @@ exports[`demos/components/selects renders correctly 1`] = `
         />
       </div>
       <div
-        className="mdc-select__menu mdc-simple-menu"
+        className="mdc-select__menu mdc-menu"
         tabIndex="-1"
       >
         <ul
           aria-hidden="true"
-          className="mdc-simple-menu__items mdc-list"
+          className="mdc-menu__items mdc-list"
           role="menu"
         >
           <li
