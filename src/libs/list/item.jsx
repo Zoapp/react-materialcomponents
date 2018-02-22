@@ -80,7 +80,7 @@ ListItem.propTypes = {
   imgSrc: PropTypes.string,
   imgSize: PropTypes.number,
   imgLabel: PropTypes.string,
-  secondaryText: PropTypes.string,
+  secondaryText: PropTypes.node,
   href: PropTypes.string,
   onClick: PropTypes.func,
 };
