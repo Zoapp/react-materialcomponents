@@ -6,7 +6,8 @@
  */
 import React from "react";
 import { Button } from "../../../src/libs";
-import GenProperties from "./test";
+import { Property } from "./properties";
+
 
 export default () => (
   <section>
@@ -37,6 +38,6 @@ export default () => (
     </div>
 
     <h2>Properties:</h2>
-    {GenProperties("Button")}
+    {Property(Button)}
   </section>
 );
