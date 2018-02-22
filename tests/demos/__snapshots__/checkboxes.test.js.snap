@@ -22,7 +22,7 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
         <input
           className="mdc-checkbox__native-control"
           defaultChecked="checked"
-          id="0.ybuakm67078"
+          id="1"
           onChange={[Function]}
           type="checkbox"
         />
@@ -46,7 +46,7 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
         </div>
       </div>
       <label
-        htmlFor="0.ybuakm67078"
+        htmlFor="1"
       >
         label
       </label>
@@ -70,7 +70,7 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
           className="mdc-checkbox__native-control"
           defaultChecked="checked"
           disabled="disabled"
-          id="0.dshseln1mzj"
+          id="2"
           onChange={[Function]}
           type="checkbox"
         />
@@ -94,7 +94,7 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
         </div>
       </div>
       <label
-        htmlFor="0.dshseln1mzj"
+        htmlFor="2"
       >
         label
       </label>
@@ -116,7 +116,7 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
       >
         <input
           className="mdc-checkbox__native-control"
-          id="0.s86j9791b6s"
+          id="3"
           onChange={[Function]}
           type="checkbox"
         />
@@ -140,7 +140,7 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
         </div>
       </div>
       <label
-        htmlFor="0.s86j9791b6s"
+        htmlFor="3"
       >
         label
       </label>
