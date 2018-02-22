@@ -141,7 +141,7 @@ const Rmdc = new class {
   showDialog(dialog) {
     if (typeof dialog === "string") {
       this.dialog = React.createElement(Dialog, {}, dialog);
-    } else if (dialog.body) {
+    } else if (dialog.body || dialog.field) {
       const { body, ...props } = dialog;
       this.dialog = React.createElement(Dialog, props, body);
     } else {

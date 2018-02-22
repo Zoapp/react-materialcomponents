@@ -19,16 +19,31 @@ import Rmdc from "../";
 const MDC_LISTITEMMETA = "mdc-list-item__meta";
 
 const ListItemMeta = ({
-  children, icon, href, color, label, ...props
+  children, icon, href, color, label, onClick, ...props
 }) => {
   const classes = MDC_LISTITEMMETA;
   let element;
   if (icon) {
     element = (
-      <Icon href={href} className={classes} type="a" label={label} name={icon} color={color} />
+      <Icon
+        href={href}
+        className={classes}
+        label={label}
+        name={icon}
+        color={color}
+        onClick={onClick}
+      />
     );
   } else {
-    element = <span className={classes} >{children}</span>;
+    element = (
+      <span
+        role="button"
+        tabIndex="0"
+        onKeyUp={() => { }}
+        className={classes}
+        onClick={onClick}
+      >{children}
+      </span>);
   }
   return Rmdc.render(element, props);
 };
@@ -40,6 +55,7 @@ ListItemMeta.defaultProps = {
   href: null,
   color: null,
   label: null,
+  onClick: null,
 };
 
 ListItemMeta.propTypes = {
@@ -51,6 +67,7 @@ ListItemMeta.propTypes = {
   href: PropTypes.string,
   color: PropTypes.string,
   label: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default ListItemMeta;
