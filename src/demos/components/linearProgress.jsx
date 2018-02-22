@@ -6,19 +6,8 @@
  */
 import React from "react";
 import { LinearProgress, Grid, Inner, Cell } from "../../../src/libs";
+import { head, LinearProperties } from "./components_properties";
 
-const head = [
-  "Name", "Type", "Desc",
-];
-
-const LinearProperties = [
-  ["color", "string", "The color of the progress bar,  defaults to primary color of theme."],
-  ["max", "number", "The max value of progress,  only works in determinate mode."],
-  ["min", "number", "The min value of progress,  only works in determinate mode."],
-  ["mode", "enum:'determinate', 'indeterminate', 'indeterminate'", "The mode of show your progress,  indeterminate for when there is no value for progress."],
-  ["style", "object", "Override the inline-styles of the root element."],
-  ["value", "number", "The value of progress, only works in determinate mode."],
-];
 
 export default () => (
   <section>
