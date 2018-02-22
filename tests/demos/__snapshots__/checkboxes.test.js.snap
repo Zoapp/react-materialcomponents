@@ -6,7 +6,6 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
     Checkbox examples 
   </h1>
   <div
-    id="1"
     style={
       Object {
         "padding": "16px",
@@ -53,7 +52,6 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
     </div>
   </div>
   <div
-    id="2"
     style={
       Object {
         "padding": "16px",
@@ -101,7 +99,6 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
     </div>
   </div>
   <div
-    id="3"
     style={
       Object {
         "padding": "16px",
