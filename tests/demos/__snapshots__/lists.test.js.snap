@@ -127,7 +127,6 @@ exports[`demos/components/lists renders itself correctly 1`] = `
               "color": "#ff4081",
             }
           }
-          type="a"
         >
           favorite
         </i>
@@ -153,7 +152,6 @@ exports[`demos/components/lists renders itself correctly 1`] = `
               "color": "#ff4081",
             }
           }
-          type="a"
         >
           favorite_border
         </i>
@@ -179,7 +177,6 @@ exports[`demos/components/lists renders itself correctly 1`] = `
               "color": "#ff4081",
             }
           }
-          type="a"
         >
           favorite_border
         </i>
@@ -213,6 +210,10 @@ exports[`demos/components/lists renders itself correctly 1`] = `
         </span>
         <span
           className="mdc-list-item__meta"
+          onClick={null}
+          onKeyUp={[Function]}
+          role="button"
+          tabIndex="0"
         >
           $10.00
         </span>
@@ -234,6 +235,10 @@ exports[`demos/components/lists renders itself correctly 1`] = `
         </span>
         <span
           className="mdc-list-item__meta"
+          onClick={null}
+          onKeyUp={[Function]}
+          role="button"
+          tabIndex="0"
         >
           $20.00
         </span>
@@ -255,6 +260,10 @@ exports[`demos/components/lists renders itself correctly 1`] = `
         </span>
         <span
           className="mdc-list-item__meta"
+          onClick={null}
+          onKeyUp={[Function]}
+          role="button"
+          tabIndex="0"
         >
           $30.00
         </span>
