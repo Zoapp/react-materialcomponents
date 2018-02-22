@@ -6,6 +6,7 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
     Checkbox examples 
   </h1>
   <div
+    id="1"
     style={
       Object {
         "padding": "16px",
@@ -21,7 +22,7 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
         <input
           className="mdc-checkbox__native-control"
           defaultChecked="checked"
-          id="0.zhwmosrqqo"
+          id="0.ybuakm67078"
           onChange={[Function]}
           type="checkbox"
         />
@@ -45,13 +46,14 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
         </div>
       </div>
       <label
-        htmlFor="0.zhwmosrqqo"
+        htmlFor="0.ybuakm67078"
       >
         label
       </label>
     </div>
   </div>
   <div
+    id="2"
     style={
       Object {
         "padding": "16px",
@@ -68,7 +70,7 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
           className="mdc-checkbox__native-control"
           defaultChecked="checked"
           disabled="disabled"
-          id="0.rxlfary6iy8"
+          id="0.dshseln1mzj"
           onChange={[Function]}
           type="checkbox"
         />
@@ -92,13 +94,14 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
         </div>
       </div>
       <label
-        htmlFor="0.rxlfary6iy8"
+        htmlFor="0.dshseln1mzj"
       >
         label
       </label>
     </div>
   </div>
   <div
+    id="3"
     style={
       Object {
         "padding": "16px",
@@ -113,7 +116,7 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
       >
         <input
           className="mdc-checkbox__native-control"
-          id="0.dch6eroioi5"
+          id="0.s86j9791b6s"
           onChange={[Function]}
           type="checkbox"
         />
@@ -137,7 +140,7 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
         </div>
       </div>
       <label
-        htmlFor="0.dch6eroioi5"
+        htmlFor="0.s86j9791b6s"
       >
         label
       </label>

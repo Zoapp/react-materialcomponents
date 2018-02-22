@@ -11,13 +11,13 @@ import { head, CheckboxProperties } from "./components_properties";
 export default () => (
   <section>
     <h1>Checkbox examples </h1>
-    <div style={{ padding: "16px" }}>
+    <div id="1" style={{ padding: "16px" }}>
       <Checkbox label="label" checked />
     </div>
-    <div style={{ padding: "16px" }}>
+    <div id="2" style={{ padding: "16px" }}>
       <Checkbox label="label" checked disabled />
     </div>
-    <div style={{ padding: "16px" }}>
+    <div id="3" style={{ padding: "16px" }}>
       <Checkbox label="label" indeterminate />
     </div>
     <h2>Checkbox Properties</h2>
