@@ -32,6 +32,7 @@ export default class Dialog extends Component {
     super(props);
     this.dialogWidth = 0;
     this.dialogHeight = 0;
+    this.textfield = null;
   }
 
   componentDidMount() {
@@ -81,9 +82,15 @@ export default class Dialog extends Component {
     return this.fieldRef;
   }
 
+  invalidateField() {
+    if (this.textfield) {
+      this.textfield.setAsInvalid();
+    }
+  }
+
   handleClick = (action = "close") => {
     if (this.props.onAction) {
-      if (!this.props.onAction(this, action)) {
+      if (!this.props.onAction(this, action, this.props.data)) {
         return;
       }
     }
@@ -121,16 +128,19 @@ export default class Dialog extends Component {
     });
     // TODO check if children contains Header / Footer
     if (field) {
+      this.textfield = (
+        <TextField
+          defaultValue={field.defaultValue}
+          label={field.name}
+          pattern={field.pattern}
+          helperText={field.error}
+          style={{ width: "100%" }}
+          ref={(c) => { this.fieldRef = c; }}
+        />
+      );
       bodyElement = (
         <DialogBody>
-          <TextField
-            defaultValue={field.defaultValue}
-            label={field.name}
-            pattern={field.pattern}
-            helperText={field.error}
-            style={{ width: "100%" }}
-            ref={(c) => { this.fieldRef = c; }}
-          />
+          {this.textfield}
         </DialogBody>);
     } else if (!(bodyElement.props &&
       bodyElement.props.mdcElement &&
@@ -188,6 +198,7 @@ Dialog.defaultProps = {
   onAction: null,
   field: null,
   children: null,
+  data: null,
 };
 
 Dialog.propTypes = {
@@ -204,4 +215,5 @@ Dialog.propTypes = {
   onCancel: PropTypes.func,
   onAction: PropTypes.func,
   field: PropTypes.shape({}),
+  data: PropTypes.shape({}),
 };

@@ -141,7 +141,9 @@ exports[`demos/components/textfields renders correctly 1`] = `
       <i
         className="mdc-text-field__icon material-icons"
         onClick={[Function]}
-        tabIndex={null}
+        onKeyUp={[Function]}
+        role="button"
+        tabIndex="0"
       >
         event
       </i>
@@ -198,7 +200,9 @@ exports[`demos/components/textfields renders correctly 1`] = `
       <i
         className="mdc-text-field__icon material-icons"
         onClick={[Function]}
-        tabIndex={null}
+        onKeyUp={[Function]}
+        role="button"
+        tabIndex="0"
       >
         delete
       </i>
@@ -237,7 +241,9 @@ exports[`demos/components/textfields renders correctly 1`] = `
       <i
         className="mdc-text-field__icon material-icons"
         onClick={[Function]}
-        tabIndex={null}
+        onKeyUp={[Function]}
+        role="button"
+        tabIndex="0"
       >
         delete
       </i>
@@ -270,7 +276,9 @@ exports[`demos/components/textfields renders correctly 1`] = `
       <i
         className="mdc-text-field__icon material-icons"
         onClick={[Function]}
-        tabIndex={null}
+        onKeyUp={[Function]}
+        role="button"
+        tabIndex="0"
       >
         delete
       </i>

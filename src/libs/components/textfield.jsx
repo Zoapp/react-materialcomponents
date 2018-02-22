@@ -29,7 +29,7 @@ export default class TextField extends Component {
   constructor(props) {
     super(props);
     const value = props.defaultValue || "";
-    this.state = { focused: false, value };
+    this.state = { focused: false, value, isInvalid: false };
   }
 
   onBlur = () => {
@@ -57,6 +57,10 @@ export default class TextField extends Component {
     }
   }
 
+  setAsInvalid() {
+    this.setState({ isInvalid: true });
+  }
+
   render() {
     const {
       mdcElement,
@@ -80,7 +84,7 @@ export default class TextField extends Component {
       noFloatingLabel,
       ...props
     } = this.props;
-    const { focused } = this.state;
+    const { focused, isInvalid } = this.state;
     let classes = `${MDC_TEXTFIELD} mdc-text-field--upgraded`;
     let lc = "mdc-text-field__label";
     let bc = "mdc-text-field__bottom-line";
@@ -93,6 +97,10 @@ export default class TextField extends Component {
     }
     if (outlined) {
       classes += " mdc-text-field--outlined";
+    }
+    if (isInvalid) {
+      // TODO invalidate input
+      classes += " mdc-text-field--invalid";
     }
     let li;
     let ti;
