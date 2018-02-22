@@ -22,7 +22,7 @@ import Rmdc from "../";
  *
  */
 
-const MDC_SIMPLE_MENU = "mdc-simple-menu";
+const MDC_SIMPLE_MENU = "mdc-menu";
 
 export default class Menu extends Component {
   constructor(props) {
