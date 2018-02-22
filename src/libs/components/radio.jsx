@@ -20,6 +20,10 @@ import Rmdc from "../";
 const MDC_RADIO = "mdc-radio";
 
 export default class Radio extends Component {
+  setRef = (c) => {
+    this.inputRef = c;
+  }
+
   render() {
     const {
       id, name, label, checked, disabled, ...props
@@ -46,7 +50,7 @@ export default class Radio extends Component {
           type="radio"
           id={cid}
           name={name}
-          ref={(c) => { this.inputRef = c; }}
+          ref={this.setRef}
           {...d}
         />
         <div className="mdc-radio__background">

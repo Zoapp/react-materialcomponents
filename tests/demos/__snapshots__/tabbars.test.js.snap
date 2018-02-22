@@ -41,6 +41,7 @@ exports[`demos/components/tabbars renders correctly 1`] = `
       </a>
       <span
         className="mdc-tab-bar__indicator"
+        style={undefined}
       />
     </nav>
   </div>

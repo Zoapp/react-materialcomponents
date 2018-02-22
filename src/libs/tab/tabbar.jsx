@@ -53,22 +53,26 @@ export default class Tabbar extends Component {
   }
 
   updateIndicator() {
-    if (this.activeRef && this.ref) {
+    if (this.activeRef && this.activeRef.ref && this.ref) {
       const r = this.ref.getBoundingClientRect();
       const rect = this.activeRef.ref.getBoundingClientRect();
       const width = this.ref.clientWidth;
       const tabWidth = rect.width;
       const tabLeft = rect.left - r.left;
       const scaledWidth = (tabWidth / width);
-      this.indicatorRef.style =
-        `transform: translateX(${tabLeft}px) scale(${scaledWidth}, 1); visibility: visible;`;
+      let style =
+      `transform: translateX(${tabLeft}px) scale(${scaledWidth}, 1); visibility: visible;`;
+      if (this.props.activeColor) {
+        style += ` background-color:${this.props.activeColor}`;
+      }
+      this.indicatorRef.style = style;
     }
   }
 
 
   render() {
     const {
-      children, onChange, ...props
+      children, onChange, color, activeColor, ...props
     } = this.props;
     let classes = MDC_TABBAR;
     let text = false;
@@ -88,16 +92,25 @@ export default class Tabbar extends Component {
     } else if (icon) {
       classes += " mdc-tab-bar--icon-tab-bar";
     }
+    let style;
+    if (activeColor) {
+      style = { backgroundColor: activeColor };
+    }
     const element = (
       <nav className={classes} ref={(c) => { this.ref = c; }}>
         {Children.map(children, (child, tabId) =>
           React.cloneElement(child, {
             tabId,
             active: tabId === activeTab,
+            color: tabId === activeTab ? activeColor : color,
             ref: (c) => { if (tabId === activeTab) { this.activeRef = c; } },
             onTabSelect: this.handleTabSelect,
           }))}
-        <span className="mdc-tab-bar__indicator" ref={(c) => { this.indicatorRef = c; }} />
+        <span
+          className="mdc-tab-bar__indicator"
+          style={style}
+          ref={(c) => { this.indicatorRef = c; }}
+        />
       </nav>);
     return Rmdc.render(element, props);
   }
@@ -108,6 +121,8 @@ Tabbar.defaultProps = {
   children: null,
   activeTab: 0,
   onChange: null,
+  color: null,
+  activeColor: null,
 };
 
 Tabbar.propTypes = {
@@ -115,4 +130,6 @@ Tabbar.propTypes = {
   children: PropTypes.node,
   activeTab: PropTypes.number,
   onChange: PropTypes.func,
+  color: PropTypes.string,
+  activeColor: PropTypes.string,
 };
