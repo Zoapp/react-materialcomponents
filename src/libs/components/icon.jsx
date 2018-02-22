@@ -20,7 +20,7 @@ import Rmdc from "../";
 const MDC_ICON = "material-icons";
 
 const Icon = ({
-  name, componentName, color, label, ...props
+  name, componentName, color, label, onClick, ...props
 }) => {
   const classes = MDC_ICON;
   const p = Rmdc.sanitizeProps(props);
@@ -32,6 +32,12 @@ const Icon = ({
   if (label) {
     p["aria-label"] = label;
   }
+  if (onClick) {
+    p.role = "button";
+    p.tabIndex = "0";
+    p.onKeyUp = () => {};
+    p.onClick = onClick;
+  }
   // TODO Font Awesome handling
   const element = React.createElement(componentName, p, name);
   return Rmdc.render(element, props);
@@ -42,6 +48,7 @@ Icon.defaultProps = {
   componentName: "i",
   color: null,
   label: null,
+  onClick: null,
 };
 
 Icon.propTypes = {
@@ -50,6 +57,7 @@ Icon.propTypes = {
   name: PropTypes.string.isRequired,
   color: PropTypes.string,
   label: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default Icon;

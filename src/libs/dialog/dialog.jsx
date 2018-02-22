@@ -13,6 +13,7 @@ import DialogHeader from "./header";
 import DialogBody from "./body";
 import DialogFooter from "./footer";
 import Rmdc from "../";
+import TextField from "../components/textfield";
 
 /**
  * mdc-dialog
@@ -31,6 +32,7 @@ export default class Dialog extends Component {
     super(props);
     this.dialogWidth = 0;
     this.dialogHeight = 0;
+    this.textfield = null;
   }
 
   componentDidMount() {
@@ -76,9 +78,19 @@ export default class Dialog extends Component {
     this.dialogRef.removeEventListener("cancel", this.props.onCancel);
   }
 
+  getFieldValue() {
+    return this.fieldRef;
+  }
+
+  invalidateField() {
+    if (this.textfield) {
+      this.textfield.setAsInvalid();
+    }
+  }
+
   handleClick = (action = "close") => {
     if (this.props.onAction) {
-      if (!this.props.onAction(action)) {
+      if (!this.props.onAction(this, action, this.props.data)) {
         return;
       }
     }
@@ -87,7 +99,7 @@ export default class Dialog extends Component {
 
   render() {
     const {
-      open, header, children, actions, onClose, width, ...props
+      open, header, children, actions, onClose, width, field, ...props
     } = this.props;
     let classes = `rmdc-dialog ${MDC_DIALOG}`;
     if (open) {
@@ -115,7 +127,22 @@ export default class Dialog extends Component {
       return child;
     });
     // TODO check if children contains Header / Footer
-    if (!(bodyElement.props &&
+    if (field) {
+      this.textfield = (
+        <TextField
+          defaultValue={field.defaultValue}
+          label={field.name}
+          pattern={field.pattern}
+          helperText={field.error}
+          style={{ width: "100%" }}
+          ref={(c) => { this.fieldRef = c; }}
+        />
+      );
+      bodyElement = (
+        <DialogBody>
+          {this.textfield}
+        </DialogBody>);
+    } else if (!(bodyElement.props &&
       bodyElement.props.mdcElement &&
       bodyElement.props.mdcElement === "mdc-dialog__body")) {
       bodyElement = <DialogBody>{bodyElement}</DialogBody>;
@@ -169,13 +196,16 @@ Dialog.defaultProps = {
   onClose: () => { DialogManager.close(); },
   onCancel: null,
   onAction: null,
+  field: null,
+  children: null,
+  data: null,
 };
 
 Dialog.propTypes = {
   mdcElement: PropTypes.string,
   header: PropTypes.oneOfType([
     PropTypes.node, PropTypes.string]),
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   actions: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string,
   })),
@@ -184,4 +214,6 @@ Dialog.propTypes = {
   onClose: PropTypes.func,
   onCancel: PropTypes.func,
   onAction: PropTypes.func,
+  field: PropTypes.shape({}),
+  data: PropTypes.shape({}),
 };
