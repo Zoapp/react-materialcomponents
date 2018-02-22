@@ -88,6 +88,10 @@ export default class Select extends Component {
     });
   }
 
+  setRef = (c) => {
+    this.anchorRef = c;
+  }
+
   calculateWidth() {
     if (!this.ctx) {
       this.ctx = document.createElement("canvas").getContext("2d");
@@ -173,7 +177,7 @@ export default class Select extends Component {
         role="listbox"
         onKeyUp={() => {}}
         onClick={this.onClickHandler}
-        ref={(c) => { this.anchorRef = c; }}
+        ref={this.setRef}
         {...p}
       >
         <div

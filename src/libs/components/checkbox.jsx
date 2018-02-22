@@ -29,6 +29,10 @@ export default class Checkbox extends Component {
     }
   }
 
+  setRef = (c) => {
+    this.inputRef = c;
+  }
+
   render() {
     const {
       id, label, disabled, checked, indeterminate, onChange, ...props
@@ -58,7 +62,7 @@ export default class Checkbox extends Component {
           id={cid}
           type="checkbox"
           className="mdc-checkbox__native-control"
-          ref={(c) => { this.inputRef = c; }}
+          ref={this.setRef}
           onChange={onChange}
           {...d}
         />

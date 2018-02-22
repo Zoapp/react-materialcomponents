@@ -23,6 +23,10 @@ import Rmdc from "../";
 const MDC_SWITCH = "mdc-switch";
 
 export default class Switch extends Component {
+  setRef = (c) => {
+    this.inputRef = c;
+  }
+
   render() {
     const {
       id, label, checked, disabled, formField, ...props
@@ -47,7 +51,7 @@ export default class Switch extends Component {
         <input
           type="checkbox"
           className="mdc-switch__native-control"
-          ref={(c) => { this.inputRef = c; }}
+          ref={this.setRef}
           {...d}
         />
         <div className="mdc-switch__background">
