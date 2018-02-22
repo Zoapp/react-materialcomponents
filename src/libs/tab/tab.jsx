@@ -25,9 +25,13 @@ class Tab extends Component {
     this.ref = null;
   }
 
+  setRef = (c) => {
+    this.ref = c;
+  }
+
   render() {
     const {
-      children, active, text, icon, href, tabId, onTabSelect, ...props
+      children, active, text, icon, href, tabId, onTabSelect, color, ...props
     } = this.props;
     let classes = MDC_TAB;
     if (active) {
@@ -41,12 +45,18 @@ class Tab extends Component {
     if (!text) {
       txt = children;
     }
+    if (color) {
+      if (!props.style) {
+        props.style = {};
+      }
+      props.style.color = color;
+    }
     const element = (
       <a
         className={classes}
         href={href}
         onClick={() => { onTabSelect(text, tabId); }}
-        ref={(c) => { this.ref = c; }}
+        ref={this.setRef}
       >{i}{txt}
       </a>);
     return Rmdc.render(element, props);
@@ -62,6 +72,7 @@ Tab.defaultProps = {
   href: null,
   tabId: 0,
   onTabSelect: null,
+  color: null,
 };
 
 Tab.propTypes = {
@@ -73,6 +84,7 @@ Tab.propTypes = {
   href: PropTypes.string,
   tabId: PropTypes.number,
   onTabSelect: PropTypes.func,
+  color: PropTypes.string,
 };
 
 export default Tab;

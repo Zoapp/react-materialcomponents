@@ -46,6 +46,7 @@ export default class Ripple extends Component {
     this.fgScale = 0;
     this.activationTimer = 0;
     this.fgDeactivationRemovalTimer = 0;
+    this.ref = null;
   }
 
   componentDidMount() {
@@ -67,6 +68,13 @@ export default class Ripple extends Component {
     this.setState({ focused: true });
     if (previousOnFocus) {
       previousOnFocus(event);
+    }
+  }
+
+  setRef = (ref, previous) => {
+    this.ref = ref;
+    if (previous.ref) {
+      previous.ref(ref);
     }
   }
 
@@ -211,7 +219,7 @@ export default class Ripple extends Component {
     if (this.state.focused) {
       props.className += ` ${BG_FOCUSED}`;
     }
-    props.ref = (c) => { this.ref = c; };
+    props.ref = (c) => { this.setRef(c, children); };
     props.onTouchStart = (e) => { this.handleActivate(e, children.props.onTouchStart); };
     /* props.onPointerDown = (e) => { this.handleActivation(e, children.props.onPointerDown); }; */
     props.onMouseDown = (e) => { this.handleActivate(e, children.props.onMouseDown); };

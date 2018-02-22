@@ -61,6 +61,10 @@ export default class Slider extends Component {
     }
   }
 
+  setRef = (c) => {
+    this.thumbRef = c;
+  }
+
   setSliderThumbPosition(min, max, value) {
     let position = 0;
     if (this.contentWidth > 0 && max > 0 && max > min) {
@@ -149,7 +153,7 @@ export default class Slider extends Component {
     if (discrete) {
       classes += " mdc-slider--discrete";
       container = (
-        <div className="mdc-slider__thumb-container" ref={(c) => { this.thumbRef = c; }} >
+        <div className="mdc-slider__thumb-container" ref={this.setRef} >
           <div className="mdc-slider__pin">
             <span className="mdc-slider__pin-value-marker">{value}</span>
           </div>
@@ -160,7 +164,7 @@ export default class Slider extends Component {
         </div>);
     } else {
       container = (
-        <div className="mdc-slider__thumb-container" ref={(c) => { this.thumbRef = c; }} >
+        <div className="mdc-slider__thumb-container" ref={this.setRef} >
           <svg className="mdc-slider__thumb" width="21" height="21">
             <circle cx="10.5" cy="10.5" r="7.875" />
           </svg>

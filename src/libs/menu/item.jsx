@@ -24,6 +24,10 @@ export default class MenuItem extends Component {
     this.innerRef = null;
   }
 
+  setRef = (c) => {
+    this.innerRef = c;
+  }
+
   handleClick = (e) => {
     e.preventDefault();
     if (this.props.onSelected && this.props.tabIndex > -1) {
@@ -56,7 +60,7 @@ export default class MenuItem extends Component {
         {...p}
         onKeyUp={() => {}}
         onClick={this.handleClick}
-        ref={(c) => { this.innerRef = c; }}
+        ref={this.setRef}
       >
         {children}
       </li>), props);

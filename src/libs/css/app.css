@@ -98,3 +98,93 @@ main {
   /* @alternate */
   color: #6200ee;
   color: var(--mdc-theme-primary, #6200ee); }
+
+/* provide backward compatibility for Cards */
+.mdc-card__primary {
+    padding: 16px;
+}
+
+.mdc-card__title {
+  font-family: Roboto,sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: .875rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  text-decoration: inherit;
+  text-transform: inherit;
+  color: rgba(0,0,0,.87);
+  color: var(--mdc-theme-text-primary-on-light,rgba(0,0,0,.87));
+  margin: -.063rem 0;
+}
+
+.mdc-card__subtitle {
+  font-family: Roboto,sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  letter-spacing: .04em;
+  text-decoration: inherit;
+  text-transform: inherit;
+  color: rgba(0,0,0,.87);
+  color: var(--mdc-theme-text-primary-on-light,rgba(0,0,0,.87));
+  margin: -.063rem 0;
+}
+
+.mdc-card__primary+.mdc-card__supporting-text {
+  margin-top: -8px;
+  padding-top: 0;
+}
+
+.mdc-card__supporting-text {
+  font-family: Roboto,sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: .875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  letter-spacing: .04em;
+  text-decoration: inherit;
+  text-transform: inherit;
+  color: rgba(0,0,0,.87);
+  color: var(--mdc-theme-text-primary-on-light,rgba(0,0,0,.87));
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 8px 16px;
+}
+
+.mdc-card__media-item {
+  display: inline-block;
+  width: auto;
+  height: 80px;
+  margin: 16px 0 0;
+  padding: 0;
+}
+
+.mdc-card__horizontal-block {
+  padding-left: 0;
+  padding-right: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.mdc-card__horizontal-block .mdc-card__media-item {
+  margin-left: 16px;
+  margin-right: 0;
+}
