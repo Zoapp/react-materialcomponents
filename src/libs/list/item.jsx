@@ -19,7 +19,7 @@ import Rmdc from "../";
 const MDC_LISTITEM = "mdc-list-item";
 
 const ListItem = ({
-  children, type, icon, activated, imgSrc, imgSize, imgLabel, secondaryText, href, ...props
+  children, type, icon, activated, imgSrc, imgSize, imgLabel, secondaryText, href, onClick, ...props
 }) => {
   let classes = MDC_LISTITEM;
   let graphic;
@@ -42,10 +42,19 @@ const ListItem = ({
   if (secondaryText) {
     text = (<span className="mdc-list-item__text">{text}<span className="mdc-list-item__secondary-text">{secondaryText}</span></span>);
   }
-  if (type === "a") {
-    return Rmdc.render(<a className={classes} href={href} >{graphic}{text}{meta}</a>, props);
+  const p = {};
+  if (onClick) {
+    p.onClick = onClick;
   }
-  return Rmdc.render(<li className={classes} >{graphic}{text}{meta}</li>, props);
+  let el;
+  if (type === "a" || href) {
+    el = <a className={classes} href={href} {...p} >{graphic}{text}{meta}</a>;
+  } else {
+    p.role = "menuitem";
+    p.onKeyPress = () => {};
+    el = <li className={classes} {...p} >{graphic}{text}{meta}</li>;
+  }
+  return Rmdc.render(el, props);
 };
 
 ListItem.defaultProps = {
@@ -59,6 +68,7 @@ ListItem.defaultProps = {
   imgLabel: null,
   secondaryText: null,
   href: null,
+  onClick: null,
 };
 
 ListItem.propTypes = {
@@ -70,8 +80,9 @@ ListItem.propTypes = {
   imgSrc: PropTypes.string,
   imgSize: PropTypes.number,
   imgLabel: PropTypes.string,
-  secondaryText: PropTypes.string,
+  secondaryText: PropTypes.node,
   href: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default ListItem;

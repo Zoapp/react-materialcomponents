@@ -19,11 +19,15 @@ exports[`demos/components/lists renders itself correctly 1`] = `
       >
         <li
           className="mdc-list-item"
+          onKeyPress={[Function]}
+          role="menuitem"
         >
           item1
         </li>
         <li
           className="mdc-list-item"
+          onKeyPress={[Function]}
+          role="menuitem"
         >
           item2
         </li>
@@ -33,11 +37,15 @@ exports[`demos/components/lists renders itself correctly 1`] = `
         />
         <li
           className="mdc-list-item"
+          onKeyPress={[Function]}
+          role="menuitem"
         >
           item3
         </li>
         <li
           className="mdc-list-item"
+          onKeyPress={[Function]}
+          role="menuitem"
         >
           item4
         </li>
@@ -55,11 +63,15 @@ exports[`demos/components/lists renders itself correctly 1`] = `
       >
         <li
           className="mdc-list-item"
+          onKeyPress={[Function]}
+          role="menuitem"
         >
           item1
         </li>
         <li
           className="mdc-list-item"
+          onKeyPress={[Function]}
+          role="menuitem"
         >
           item2
         </li>
@@ -69,11 +81,15 @@ exports[`demos/components/lists renders itself correctly 1`] = `
         />
         <li
           className="mdc-list-item"
+          onKeyPress={[Function]}
+          role="menuitem"
         >
           item3
         </li>
         <li
           className="mdc-list-item"
+          onKeyPress={[Function]}
+          role="menuitem"
         >
           item4
         </li>
@@ -92,6 +108,8 @@ exports[`demos/components/lists renders itself correctly 1`] = `
     >
       <li
         className="mdc-list-item"
+        onKeyPress={[Function]}
+        role="menuitem"
       >
         <img
           alt="Brown Bear"
@@ -109,13 +127,14 @@ exports[`demos/components/lists renders itself correctly 1`] = `
               "color": "#ff4081",
             }
           }
-          type="a"
         >
           favorite
         </i>
       </li>
       <li
         className="mdc-list-item"
+        onKeyPress={[Function]}
+        role="menuitem"
       >
         <img
           alt="Panda"
@@ -133,13 +152,14 @@ exports[`demos/components/lists renders itself correctly 1`] = `
               "color": "#ff4081",
             }
           }
-          type="a"
         >
           favorite_border
         </i>
       </li>
       <li
         className="mdc-list-item"
+        onKeyPress={[Function]}
+        role="menuitem"
       >
         <img
           alt="Sloth"
@@ -157,7 +177,6 @@ exports[`demos/components/lists renders itself correctly 1`] = `
               "color": "#ff4081",
             }
           }
-          type="a"
         >
           favorite_border
         </i>
@@ -176,6 +195,8 @@ exports[`demos/components/lists renders itself correctly 1`] = `
     >
       <li
         className="mdc-list-item"
+        onKeyPress={[Function]}
+        role="menuitem"
       >
         <span
           className="mdc-list-item__text"
@@ -189,12 +210,18 @@ exports[`demos/components/lists renders itself correctly 1`] = `
         </span>
         <span
           className="mdc-list-item__meta"
+          onClick={null}
+          onKeyUp={[Function]}
+          role="button"
+          tabIndex="0"
         >
           $10.00
         </span>
       </li>
       <li
         className="mdc-list-item"
+        onKeyPress={[Function]}
+        role="menuitem"
       >
         <span
           className="mdc-list-item__text"
@@ -208,12 +235,18 @@ exports[`demos/components/lists renders itself correctly 1`] = `
         </span>
         <span
           className="mdc-list-item__meta"
+          onClick={null}
+          onKeyUp={[Function]}
+          role="button"
+          tabIndex="0"
         >
           $20.00
         </span>
       </li>
       <li
         className="mdc-list-item"
+        onKeyPress={[Function]}
+        role="menuitem"
       >
         <span
           className="mdc-list-item__text"
@@ -227,6 +260,10 @@ exports[`demos/components/lists renders itself correctly 1`] = `
         </span>
         <span
           className="mdc-list-item__meta"
+          onClick={null}
+          onKeyUp={[Function]}
+          role="button"
+          tabIndex="0"
         >
           $30.00
         </span>
