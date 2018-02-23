@@ -5,35 +5,47 @@ import { Grid, Inner, Cell } from "../../../src/libs";
 const Head = ["Name", "Type", "Desc"];
 
 function Property(Component) {
+  const Body = [];
+  const BodyMultipleProps = [];
+  const PropsValue = [];
+  {Object.keys(PropertyJson).forEach(props => {
+    if (props === "Card") {
+      if (PropertyJson[props].length === undefined) {
+        Object.keys(PropertyJson[props]).forEach((GeneralPropertyName) => {
+          BodyMultipleProps.push(PropertyJson[props][GeneralPropertyName])
+          PropsValue.push(GeneralPropertyName)
+        });
+      } else {
+        PropertyJson[props].forEach(element =>
+        (
+          element.forEach(value => Body.push(value))
+        ));
+      }
+    }
+  })}  
   return (
     <Grid>
       <Inner>
-        {Head.map(title => <Cell key={title}>{title}</Cell>)}
+        {Head.map((title,index) => <Cell key={index}>{title}</Cell>)}
       </Inner>
-      {Object.keys(PropertyJson).forEach(props => {
-        if (props === Component.name) {
-          if (PropertyJson[props].length === undefined) {
-            Object.keys(PropertyJson[props]).forEach((GeneralPropertyName) => {
-              PropertyJson[props][GeneralPropertyName].forEach(element =>
-                (
-                  <Inner style={{ paddingBottom: "16px" }}>
-                    {element.forEach(value => <Cell> {value} </Cell>)}
-                  </Inner>
-                ));
-            });
-          } else {
-            PropertyJson[props].forEach(element =>
-              (
-                <Inner style={{ paddingBottom: "16px" }}>
-                  {element.map(value => <Cell key={value}>{value}</Cell>)}
-                </Inner>
-              ));
-          }
-        }
-      })}
-      <div>Salut</div>
+      <h2>Properties:</h2>
+      { if (body === []) {
+        let counter = 0;
+        Body.forEach(e => { 
+          <h3>{head[counter]}</h3>
+          <Inner>
+          {Body.map((title,index) => <Cell key={index}>{title}</Cell>)}
+          {counter++}
+          <div style={{ borderBottom: "solid black 1px" }}></div>
+          </Inner>
+        })
+      } else { 
+        <Inner>{Body.map((title,index) => <Cell key={index}>{title}</Cell>,<div style={{ borderBottom: "solid black 1px" }}></div>)}</Inner>
+      }
+      };
     </Grid>
   )
 };
 
 export default Property;
+  
