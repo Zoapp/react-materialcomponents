@@ -36,6 +36,7 @@ export default () => (
         <Button raised link="#">Hello</Button>
       </div>
     </div>
+    <h2>Properties:</h2>
     <Property name="Button" />
   </section>
 );
