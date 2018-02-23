@@ -4,7 +4,7 @@ import { Grid, Inner, Cell } from "../../../src/libs";
 
 const Head = ["Name", "Type", "Desc"];
 
-const Property = ComponentName => (
+const Property = Component => (
   <Grid>
     <Inner>
       {Head.map(title => (
@@ -12,10 +12,10 @@ const Property = ComponentName => (
       ))}
     </Inner>
     {Object.keys(PropertyJson).forEach((props) => {
-      if (props === ComponentName) {
-        if (test[props].length === undefined) {
-          Object.keys(test[props]).forEach((GeneralPropertyName) => {
-            test[props][GeneralPropertyName].forEach(element =>
+      if (props === Component.name) {
+        if (PropertyJson[props].length === undefined) {
+          Object.keys(PropertyJson[props]).forEach((GeneralPropertyName) => {
+            PropertyJson[props][GeneralPropertyName].forEach(element =>
               (
                 <Inner style={{ paddingBottom: "16px" }}>
                   {element.forEach(PropertyType => <Cell> {PropertyType} </Cell>)}
@@ -23,7 +23,7 @@ const Property = ComponentName => (
               ));
           });
         } else {
-          test[props].forEach(element =>
+          PropertyJson[props].forEach(element =>
             (
               <Inner style={{ paddingBottom: "16px" }}>
                 {element.forEach(PropertyType => <Cell> {PropertyType} </Cell>)}

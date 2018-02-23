@@ -6,7 +6,7 @@
  */
 import React from "react";
 import { Button } from "../../../src/libs";
-import { Property } from "./properties";
+import Property from "./properties";
 
 
 export default () => (
@@ -38,6 +38,6 @@ export default () => (
     </div>
 
     <h2>Properties:</h2>
-    {Property(Button)}
+    <Property name="Button" />
   </section>
 );
