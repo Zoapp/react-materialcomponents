@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-linear-progress
@@ -64,7 +64,7 @@ const LinearProgress = ({
         <span className="mdc-linear-progress__bar-inner" />
       </div>
     </div>);
-  return Rmdc.render(element, props);
+  return Zrmc.render(element, props);
 };
 
 LinearProgress.defaultProps = {

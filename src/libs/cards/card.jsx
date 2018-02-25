@@ -7,7 +7,7 @@
 import React, { Children } from "react";
 import PropTypes from "prop-types";
 import CardPrimary from "./primary";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-card
@@ -39,7 +39,7 @@ const Card = ({
     });
     primary = (<div className="mdc-card__horizontal-block">{primary}{sections}</div>);
   }
-  return Rmdc.render(<div className={classes} >{primary}{ca}</div>, props);
+  return Zrmc.render(<div className={classes} >{primary}{ca}</div>, props);
 };
 
 Card.defaultProps = {

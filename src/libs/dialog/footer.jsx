@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 import Button from "../components/button";
 
 /**
@@ -79,7 +79,7 @@ const DialogFooter = ({
     });
   }
 
-  return Rmdc.render(
+  return Zrmc.render(
     <footer className={classes}>
       {buttonsOrActions}
     </footer>,

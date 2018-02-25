@@ -7,7 +7,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import FormField from "./formField";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-radio
@@ -29,7 +29,7 @@ export default class Radio extends Component {
       id, name, label, checked, disabled, ...props
     } = this.props;
     const classes = MDC_RADIO;
-    const cid = Rmdc.generateId(id);
+    const cid = Zrmc.generateId(id);
     let l = "";
     if (label) {
       /* eslint-disable jsx-a11y/label-has-for */
@@ -61,7 +61,7 @@ export default class Radio extends Component {
     if (label) {
       element = (<FormField>{element}{l}</FormField>);
     }
-    return Rmdc.render(element, props);
+    return Zrmc.render(element, props);
   }
 }
 

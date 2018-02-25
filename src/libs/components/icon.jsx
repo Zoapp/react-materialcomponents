@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * material-icons
@@ -23,7 +23,7 @@ const Icon = ({
   name, componentName, color, label, onClick, ...props
 }) => {
   const classes = MDC_ICON;
-  const p = Rmdc.sanitizeProps(props);
+  const p = Zrmc.sanitizeProps(props);
   if (color) {
     p.style = {};
     p.style.color = color;
@@ -40,7 +40,7 @@ const Icon = ({
   }
   // TODO Font Awesome handling
   const element = React.createElement(componentName, p, name);
-  return Rmdc.render(element, props);
+  return Zrmc.render(element, props);
 };
 
 Icon.defaultProps = {

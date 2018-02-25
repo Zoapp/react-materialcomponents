@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-dialog__header
@@ -21,7 +21,7 @@ const DialogHeader = ({
   children, ...props
 }) => {
   const classes = MDC_DIALOGHEADER;
-  return Rmdc.render(<header className={classes}>{children}</header>, props);
+  return Zrmc.render(<header className={classes}>{children}</header>, props);
 };
 
 DialogHeader.defaultProps = {

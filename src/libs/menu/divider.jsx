@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-list-divider
@@ -20,7 +20,7 @@ const MDC_LIST_DIVIDER = "mdc-list-divider";
 
 const MenuDivider = ({ ...props }) => {
   const classes = MDC_LIST_DIVIDER;
-  return Rmdc.render((
+  return Zrmc.render((
     <li className={classes} role="separator" />), props);
 };
 

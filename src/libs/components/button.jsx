@@ -7,7 +7,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Icon from "./icon";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-button
@@ -72,7 +72,7 @@ const Button = ({
   } else {
     element = (<button className={classes} onClick={onClick} >{i}{children}</button>);
   }
-  return Rmdc.render(element, props);
+  return Zrmc.render(element, props);
 };
 
 Button.defaultProps = {

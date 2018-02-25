@@ -5,7 +5,7 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import Rmdc from "../";
+import Zrmc from "../";
 
 // From https://github.com/material-components/material-components-web/blob/master/packages/mdc-menu/constants.js
 const ANCHOR_TO_MENU_WIDTH_RATIO = 0.67;
@@ -158,7 +158,7 @@ class RMDCMenuFoundation {
     const anchorMargin = RMDCMenuFoundation.getAnchorMargin(adapter);
     const anchorCorner = RMDCMenuFoundation.getAnchorCorner(adapter);
 
-    const isRtl = Rmdc.isRtl(adapter);
+    const isRtl = Zrmc.isRtl(adapter);
     const corner = RMDCMenuFoundation.getOriginCorner(
       CORNER_ORIGIN,
       anchorMargin,

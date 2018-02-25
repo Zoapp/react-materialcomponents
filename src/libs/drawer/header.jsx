@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-drawer__header
@@ -21,7 +21,7 @@ const DrawerHeader = ({
   children, list, ...props
 }) => {
   const classes = MDC_DRAWERHEADER;
-  return Rmdc.render(
+  return Zrmc.render(
     (
       <header className={classes} >
         <div className="mdc-drawer__header-content">{children}</div>

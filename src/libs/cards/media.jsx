@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-card__media
@@ -32,7 +32,7 @@ const CardMedia = ({
   } else {
     element = (<section className={classes}>{children}</section>);
   }
-  return Rmdc.render(element, props);
+  return Zrmc.render(element, props);
 };
 
 CardMedia.defaultProps = {

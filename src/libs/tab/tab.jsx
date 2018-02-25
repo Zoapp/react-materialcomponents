@@ -7,7 +7,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Icon from "../components/icon";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-tab
@@ -59,7 +59,7 @@ class Tab extends Component {
         ref={this.setRef}
       >{i}{txt}
       </a>);
-    return Rmdc.render(element, props);
+    return Zrmc.render(element, props);
   }
 }
 

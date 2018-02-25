@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-card__title
@@ -24,7 +24,7 @@ const CardTitle = ({
   if (large) {
     classes += " mdc-card__title--large";
   }
-  return Rmdc.render(<h1 className={classes}>{children}</h1>, props);
+  return Zrmc.render(<h1 className={classes}>{children}</h1>, props);
 };
 
 CardTitle.defaultProps = {

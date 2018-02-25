@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-import Rmdc from "./rmdc";
+import Zrmc from "./zrmc";
 import Button from "./components/button";
 import Icon from "./components/icon";
 import Content from "./components/content";
@@ -45,4 +45,4 @@ export {
   Classnames,
 };
 
-export default Rmdc;
+export default Zrmc;

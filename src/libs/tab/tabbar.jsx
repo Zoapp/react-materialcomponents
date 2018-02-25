@@ -6,7 +6,7 @@
  */
 import React, { Children, Component } from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-tab-bar
@@ -112,7 +112,7 @@ export default class Tabbar extends Component {
           ref={(c) => { this.indicatorRef = c; }}
         />
       </nav>);
-    return Rmdc.render(element, props);
+    return Zrmc.render(element, props);
   }
 }
 

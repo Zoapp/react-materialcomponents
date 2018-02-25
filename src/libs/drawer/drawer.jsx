@@ -6,7 +6,7 @@
  */
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * See:
@@ -47,13 +47,13 @@ export default class Drawer extends PureComponent {
       spacer = <div className="mdc-drawer__toolbar-spacer" />;
     }
     if (type === "permanent") {
-      return Rmdc.render(<nav className={classes}>{spacer}{children}</nav>, props);
+      return Zrmc.render(<nav className={classes}>{spacer}{children}</nav>, props);
     }
     if (open) {
       classes += " mdc-drawer--open";
     }
 
-    return Rmdc.render(
+    return Zrmc.render(
       (
         <aside
           className={classes}
