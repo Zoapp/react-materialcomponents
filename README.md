@@ -15,7 +15,7 @@ ZRMC is actually in Work In Progress. ZRMC was updated to MDC 0.31.0.
 Some features are missing:
 
 * Animations of Drawer / Menu / Select
-* Check all component's props to ZRMC ones
+* Check all component's props to MDC ones
 * Theming
 * Enhance Demos and publish them in github pages
 * Create a bootstrap example
@@ -27,7 +27,7 @@ Some features are missing:
 [https://material.io/components/web/](https://material.io/components/web/)
 * Based on MDC Web. ZRMC is using it's CSS library.
 [https://github.com/material-components/material-components-web/](https://github.com/material-components/material-components-web/)
-* ZRMC doesn't use MDC's javascript. ZRMC rewrite components in a complaint React code. But it follows MDC naming, props and usages.
+* ZRMC doesn't use MDC's javascript. ZRMC rewrite components in an ES7 React code. But it follows MDC naming, props and usages.
 * ZRMC try to be as much as possible well documented
 * Our main goal is to maintain it regulary. ZRMC is actually used in a much bigger project (see Zoapp-front).
 
