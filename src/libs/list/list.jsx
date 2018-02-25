@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-list-item
@@ -31,7 +31,7 @@ const List = ({
     classes += " mdc-list--two-line";
   }
   // TODO iterate througth children to check and set type
-  return Rmdc.render(<ul className={classes} >{children}</ul>, props);
+  return Zrmc.render(<ul className={classes} >{children}</ul>, props);
 };
 
 List.defaultProps = {

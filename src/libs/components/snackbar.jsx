@@ -6,7 +6,7 @@
  */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-layout-grid__cell
@@ -109,7 +109,7 @@ export default class Snackbar extends Component {
           </button>
         </div>);
     }
-    return Rmdc.render((
+    return Zrmc.render((
       <div
         className={classes}
         aria-live="assertive"

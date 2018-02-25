@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-list-divider
@@ -23,9 +23,9 @@ const ListDivider = ({ type, inset, ...props }) => {
     classes += " mdc-list-divider--inset";
   }
   if (type === "hr") {
-    return Rmdc.render(<hr className={classes} />, props);
+    return Zrmc.render(<hr className={classes} />, props);
   }
-  return Rmdc.render(<li className={classes} role="separator" />, props);
+  return Zrmc.render(<li className={classes} role="separator" />, props);
 };
 
 ListDivider.defaultProps = {

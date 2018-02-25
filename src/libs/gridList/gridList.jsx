@@ -6,7 +6,7 @@
  */
 import React, { Children } from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-grid-list
@@ -66,7 +66,7 @@ const GridList = ({
     });
   }
 
-  return Rmdc.render((
+  return Zrmc.render((
     <div className={classes}>
       <ul className="mdc-grid-list__tiles" style={style} >
         {ch}

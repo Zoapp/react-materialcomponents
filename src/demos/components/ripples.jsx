@@ -5,10 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 import React from "react";
-import Rmdc, { Icon } from "../../../src/libs";
+import Zrmc, { Icon } from "../../../src/libs";
 
 export default () => {
-  const ripple = Rmdc.render(
+  const ripple = Zrmc.render(
     <div
       style={
         {

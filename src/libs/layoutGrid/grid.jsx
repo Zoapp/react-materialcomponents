@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-layout-grid
@@ -60,7 +60,7 @@ const Grid = ({
     }
     p.style.maxWidth = maxWidth;
   }
-  return Rmdc.render(<div className={classes} {...p} >{children}</div>, props);
+  return Zrmc.render(<div className={classes} {...p} >{children}</div>, props);
 };
 
 Grid.defaultProps = {

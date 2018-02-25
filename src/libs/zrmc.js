@@ -11,10 +11,10 @@ import MenuAnchor from "./menu/anchor";
 import Ripple from "./animations/ripple";
 
 /**
- * Rmdc
+ * Zrmc
  * Global & helper class
  * It handle
- * ripple : TODO
+ * ripple : DONE
  * https://material.io/components/web/catalog/ripples/
  * rtl : DONE
  * https://material.io/components/web/catalog/rtl/
@@ -25,7 +25,7 @@ import Ripple from "./animations/ripple";
  * typography: DONE
  * https://material.io/components/web/catalog/typography/
  */
-const Rmdc = new class {
+const Zrmc = new class {
   init(root, {
     rtl, themeDark, style, typography, ripple = true,
   }) {
@@ -198,4 +198,4 @@ const Rmdc = new class {
   }
 }();
 
-export default Rmdc;
+export default Zrmc;

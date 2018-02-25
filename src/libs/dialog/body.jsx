@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-dialog__body
@@ -24,7 +24,7 @@ const DialogBody = ({
   if (scrollable) {
     classes += " mdc-dialog__body--scrollable";
   }
-  return Rmdc.render(<section className={classes}>{children}</section>, props);
+  return Zrmc.render(<section className={classes}>{children}</section>, props);
 };
 
 DialogBody.defaultProps = {

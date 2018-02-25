@@ -6,7 +6,7 @@
  */
 import React, { Component, Children } from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 import Menu from "../menu/menu";
 /**
  * mdc-select
@@ -29,7 +29,7 @@ export default class Select extends Component {
   }
 
   componentDidMount() {
-    Rmdc.enableClickOutside(this.onClickOutsideHandler);
+    Zrmc.enableClickOutside(this.onClickOutsideHandler);
     this.updateContent();
   }
 
@@ -38,7 +38,7 @@ export default class Select extends Component {
   }
 
   componentWillUnmount() {
-    Rmdc.disableClickOutside(this.onClickOutsideHandler);
+    Zrmc.disableClickOutside(this.onClickOutsideHandler);
     this.ctx = null;
   }
 
@@ -75,13 +75,13 @@ export default class Select extends Component {
       this.onClose();
     } else {
       this.setState({ open: true });
-      Rmdc.lockScroll();
+      Zrmc.lockScroll();
     }
   }
 
   onClose = () => {
     this.setState({ open: false }, () => {
-      Rmdc.unlockScroll();
+      Zrmc.unlockScroll();
       if (this.focusRef) {
         this.focusRef.focus();
       }
@@ -96,10 +96,10 @@ export default class Select extends Component {
     if (!this.ctx) {
       this.ctx = document.createElement("canvas").getContext("2d");
     }
-    this.ctx.font = Rmdc.getFontStyle(this.anchorRef);
-    const letterSpacing = parseFloat(Rmdc.getComputedStyleValue(this.anchorRef, "letter-spacing"));
-    const surfacePaddingRight = parseInt(Rmdc.getComputedStyleValue(this.anchorRef, "padding-right"), 10);
-    const surfacePaddingLeft = parseInt(Rmdc.getComputedStyleValue(this.anchorRef, "padding-left"), 10);
+    this.ctx.font = Zrmc.getFontStyle(this.anchorRef);
+    const letterSpacing = parseFloat(Zrmc.getComputedStyleValue(this.anchorRef, "letter-spacing"));
+    const surfacePaddingRight = parseInt(Zrmc.getComputedStyleValue(this.anchorRef, "padding-right"), 10);
+    const surfacePaddingLeft = parseInt(Zrmc.getComputedStyleValue(this.anchorRef, "padding-left"), 10);
     const selectBoxAddedPadding = surfacePaddingRight + surfacePaddingLeft;
     let maxTextLength = 0;
     Children.forEach(this.props.children, (child) => {
@@ -201,7 +201,7 @@ export default class Select extends Component {
         </Menu>
       </div>);
     /* eslint-enable jsx-a11y/no-noninteractive-tabindex */
-    return Rmdc.render(element, props);
+    return Zrmc.render(element, props);
   }
 }
 

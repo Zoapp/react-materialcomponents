@@ -7,7 +7,7 @@
 import React, { Component } from "react";
 /* import "material-components-web/dist/material-components-web.css"; */
 /* import "material-design-icons/iconfont/material-icons.css"; */
-import Rmdc, {
+import Zrmc, {
   Content, Fab, Snackbar, Tabbar, Tab,
   Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon,
   Drawer, DrawerContent,
@@ -25,7 +25,7 @@ export default class App extends Component {
   }
 
   componentWillMount() {
-    Rmdc.init(this, { typography: true });
+    Zrmc.init(this, { typography: true });
   }
 
   onMenuClick = (event) => {
@@ -38,7 +38,7 @@ export default class App extends Component {
       <Dialog header="Are you happy?" actions={[{ name: "Cancel" }, { name: "Continue" }]}>
         <div>Please check the left and right side of this element for fun.</div>
       </Dialog>);
-    Rmdc.showDialog(dialog);
+    Zrmc.showDialog(dialog);
   }
 
   handleDrawerChange = (name, index) => {

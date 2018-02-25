@@ -6,7 +6,7 @@
  */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 import Icon from "./icon";
 
 /**
@@ -142,7 +142,7 @@ export default class TextField extends Component {
           }}
         />);
     }
-    const p = Rmdc.sanitizeProps(props);
+    const p = Zrmc.sanitizeProps(props);
     if (disabled) {
       classes += " mdc-text-field--disabled";
       p.disabled = "disabled";
@@ -169,7 +169,7 @@ export default class TextField extends Component {
       }
     }
 
-    const cid = Rmdc.generateId(id);
+    const cid = Zrmc.generateId(id);
     if (helperText) {
       p["aria-controls"] = `${cid}-helper-text`;
     }
@@ -214,7 +214,7 @@ export default class TextField extends Component {
       bcElement1 = <div className={bc} />;
     }
 
-    let element = Rmdc.render((
+    let element = Zrmc.render((
       <div className={classes} >
         {li}
         {input}

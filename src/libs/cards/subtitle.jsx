@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-card__subtitle
@@ -21,7 +21,7 @@ const CardSubtitle = ({
   children, className, ...props
 }) => {
   const classes = MDC_CARD_SUBTITLE;
-  return Rmdc.render(<h2 className={classes} >{children}</h2>, props);
+  return Zrmc.render(<h2 className={classes} >{children}</h2>, props);
 };
 
 CardSubtitle.defaultProps = {

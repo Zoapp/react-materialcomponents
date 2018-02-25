@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-layout-grid__cell
@@ -40,7 +40,7 @@ const Cell = ({
   if (align) {
     classes += ` mdc-layout-grid__cell--align-${align}`;
   }
-  return Rmdc.render(<div className={classes} >{children}</div>, props);
+  return Zrmc.render(<div className={classes} >{children}</div>, props);
 };
 
 Cell.defaultProps = {

@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-toolbar__row
@@ -22,7 +22,7 @@ const Row = ({
   children, ...props
 }) => {
   const classes = MDC_TBROW;
-  return Rmdc.render(<div className={classes}>{children}</div>, props);
+  return Zrmc.render(<div className={classes}>{children}</div>, props);
 };
 
 Row.defaultProps = {

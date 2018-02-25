@@ -7,7 +7,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Icon from "../components/icon";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-list-item__meta
@@ -45,7 +45,7 @@ const ListItemMeta = ({
       >{children}
       </span>);
   }
-  return Rmdc.render(element, props);
+  return Zrmc.render(element, props);
 };
 
 ListItemMeta.defaultProps = {

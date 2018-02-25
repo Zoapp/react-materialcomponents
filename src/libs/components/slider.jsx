@@ -6,7 +6,7 @@
  */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-slider
@@ -214,7 +214,7 @@ export default class Slider extends Component {
       }
       marker = (<div className="mdc-slider__track-marker-container" >{markers}</div>);
     }
-    return Rmdc.render((
+    return Zrmc.render((
       <div
         className={classes}
         {...p}

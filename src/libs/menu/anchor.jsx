@@ -6,7 +6,7 @@
  */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 import RMDCMenuFoundation from "./foundation";
 
 /**
@@ -27,7 +27,7 @@ export default class MenuAnchor extends Component {
   }
 
   componentDidMount() {
-    Rmdc.enableClickOutside(this.onClickOutsideHandler);
+    Zrmc.enableClickOutside(this.onClickOutsideHandler);
     this.updateContent();
   }
 
@@ -36,7 +36,7 @@ export default class MenuAnchor extends Component {
   }
 
   componentWillUnmount() {
-    Rmdc.disableClickOutside(this.onClickOutsideHandler);
+    Zrmc.disableClickOutside(this.onClickOutsideHandler);
   }
 
   onClickOutsideHandler = (e) => {
@@ -56,7 +56,7 @@ export default class MenuAnchor extends Component {
       this.onClose();
     } else {
       this.setState({ open: true });
-      Rmdc.lockScroll();
+      Zrmc.lockScroll();
     }
     const prevOnClick = this.props.anchor.props.onClick;
     if (prevOnClick) {
@@ -66,14 +66,14 @@ export default class MenuAnchor extends Component {
 
   onClose = () => {
     this.setState({ open: false });
-    Rmdc.unlockScroll();
+    Zrmc.unlockScroll();
   }
 
   updateContent() {
     if (this.anchorRef && this.menuRef && this.state.open) {
       const style = RMDCMenuFoundation.autoPosition(this);
       this.menuRef.innerRef.style = style;
-      Rmdc.lockScroll();
+      Zrmc.lockScroll();
     }
   }
 
@@ -102,7 +102,7 @@ export default class MenuAnchor extends Component {
         {anchorElement}
         {menuElement}
       </div>);
-    return Rmdc.render(element, props);
+    return Zrmc.render(element, props);
   }
 }
 
