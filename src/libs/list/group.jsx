@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-list-group
@@ -19,7 +19,7 @@ const MDC_LISTGROUP = "mdc-list-group";
 
 const ListGroup = ({ children, ...props }) => {
   const classes = MDC_LISTGROUP;
-  return Rmdc.render(<div className={classes}>{children}</div>, props);
+  return Zrmc.render(<div className={classes}>{children}</div>, props);
 };
 
 ListGroup.defaultProps = {

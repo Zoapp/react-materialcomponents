@@ -6,7 +6,7 @@
  */
 import React, { Children } from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 import Icon from "../components/icon";
 
 /**
@@ -57,7 +57,7 @@ const Tile = ({
       </span>
     );
   }
-  return Rmdc.render((
+  return Zrmc.render((
     <ul className={classes} style={style} >
       <div className="mdc-grid-tile__primary" style={primaryStyle} >
         {ch}

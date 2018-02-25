@@ -7,7 +7,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import FormField from "./formField";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-switch
@@ -32,7 +32,7 @@ export default class Switch extends Component {
       id, label, checked, disabled, formField, ...props
     } = this.props;
     const classes = MDC_SWITCH;
-    const cid = Rmdc.generateId(id);
+    const cid = Zrmc.generateId(id);
     let l = "";
     if (label) {
       /* eslint-disable jsx-a11y/label-has-for */
@@ -66,7 +66,7 @@ export default class Switch extends Component {
         element = (<div className={cn}>{element}{l}</div>);
       }
     }
-    return Rmdc.render(element, props);
+    return Zrmc.render(element, props);
   }
 }
 

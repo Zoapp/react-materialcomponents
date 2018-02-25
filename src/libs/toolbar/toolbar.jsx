@@ -6,7 +6,7 @@
  */
 import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * See:
@@ -38,7 +38,7 @@ export default class Toolbar extends PureComponent {
     const element = (
       <header className={classes} >{children}</header>
     );
-    return Rmdc.render(element, otherProps);
+    return Zrmc.render(element, otherProps);
   }
 }
 

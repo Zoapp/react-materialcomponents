@@ -6,7 +6,7 @@
  */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-list-item
@@ -53,7 +53,7 @@ export default class MenuItem extends Component {
       }
     }
     /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-    return Rmdc.render((
+    return Zrmc.render((
       <li
         className={classes}
         role={role}

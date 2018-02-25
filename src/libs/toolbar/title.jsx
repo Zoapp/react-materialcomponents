@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-toolbar__title
@@ -22,7 +22,7 @@ const Title = ({
   children, ...props
 }) => {
   const classes = MDC_TBTITLE;
-  return Rmdc.render(<span className={classes}>{children}</span>, props);
+  return Zrmc.render(<span className={classes}>{children}</span>, props);
 };
 
 Title.defaultProps = {

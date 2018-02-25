@@ -6,7 +6,7 @@
  */
 import React, { Children } from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 import Icon from "../components/icon";
 
 /**
@@ -45,7 +45,7 @@ const DrawerContent = ({
     }
     return child;
   });
-  return Rmdc.render(<nav className={classes} >{ch}</nav>, props);
+  return Zrmc.render(<nav className={classes} >{ch}</nav>, props);
 };
 
 DrawerContent.defaultProps = {

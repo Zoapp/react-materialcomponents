@@ -7,7 +7,7 @@
 import React, { Children } from "react";
 import PropTypes from "prop-types";
 import Icon from "../components/icon";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-list-item
@@ -54,7 +54,7 @@ const ListItem = ({
     p.onKeyPress = () => {};
     el = <li className={classes} {...p} >{graphic}{text}{meta}</li>;
   }
-  return Rmdc.render(el, props);
+  return Zrmc.render(el, props);
 };
 
 ListItem.defaultProps = {

@@ -6,7 +6,7 @@
  */
 import React, { Component, Children } from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-simple-menu
@@ -88,7 +88,7 @@ export default class Menu extends Component {
           })}
         </ul>
       </div>);
-    return Rmdc.render(element, props);
+    return Zrmc.render(element, props);
   }
 }
 

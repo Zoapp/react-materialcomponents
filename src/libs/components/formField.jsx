@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-form-field
@@ -22,7 +22,7 @@ const FormField = ({
 }) => {
   const classes = MDC_FORMFIELD;
   const element = (<div className={classes} >{children}</div>);
-  return Rmdc.render(element, props);
+  return Zrmc.render(element, props);
 };
 
 FormField.defaultProps = {

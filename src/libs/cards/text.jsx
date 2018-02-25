@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-card__supporting-text
@@ -19,7 +19,7 @@ const MDC_CARD_TEXT = "mdc-card__supporting-text";
 
 const CardText = ({ children, ...props }) => {
   const classes = MDC_CARD_TEXT;
-  return Rmdc.render(<section className={classes}>{children}</section>, props);
+  return Zrmc.render(<section className={classes}>{children}</section>, props);
 };
 
 CardText.defaultProps = {

@@ -6,7 +6,7 @@
  */
 import React from "react";
 import ReactDOM from "react-dom";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * Dialog management to display close using a stack
@@ -40,7 +40,7 @@ const renderModal = () => {
     }
     currentDialog = null;
     ReactDOM.render(dialog, node);
-    Rmdc.lockScroll();
+    Zrmc.lockScroll();
   }
 };
 
@@ -72,7 +72,7 @@ const DialogManager = {
 
   close() {
     ReactDOM.unmountComponentAtNode(node);
-    Rmdc.unlockScroll();
+    Zrmc.unlockScroll();
     const modals = getModals();
     modals.pop();
     currentDialog = null;

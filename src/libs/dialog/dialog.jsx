@@ -12,7 +12,7 @@ import DialogManager from "./manager";
 import DialogHeader from "./header";
 import DialogBody from "./body";
 import DialogFooter from "./footer";
-import Rmdc from "../";
+import Zrmc from "../";
 import TextField from "../components/textfield";
 
 /**
@@ -183,7 +183,7 @@ export default class Dialog extends Component {
         </div>
       </dialog>
     );
-    return Rmdc.render(d, props);
+    return Zrmc.render(d, props);
   }
 }
 

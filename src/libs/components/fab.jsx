@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-fab
@@ -27,7 +27,7 @@ const Fab = ({
     ch = (<span className="mdc-fab__icon">{icon}</span>);
   }
   const element = (<button className={classes} onClick={onClick} aria-label={label} >{ch}</button>);
-  return Rmdc.render(element, props);
+  return Zrmc.render(element, props);
 };
 
 Fab.defaultProps = {

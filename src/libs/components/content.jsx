@@ -6,7 +6,7 @@
  */
 import React, { Children } from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * rmdc-content
@@ -26,7 +26,7 @@ const Content = ({
   let ta = false;
   let drawerAbove = false;
   let above = false;
-  const rtl = Rmdc.isRtl(this);
+  const rtl = Zrmc.isRtl(this);
   Children.forEach(children, (child) => {
     if (child && child.props) {
       const name = child.props.mdcElement;
@@ -79,7 +79,7 @@ const Content = ({
   }
 
   const element = (<div className={classes}>{ch}</div>);
-  return Rmdc.render(element, props);
+  return Zrmc.render(element, props);
 };
 
 Content.defaultProps = {

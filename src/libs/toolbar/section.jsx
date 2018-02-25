@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc-toolbar__section
@@ -30,7 +30,7 @@ const Section = ({
   if (shrinkToFit) {
     classes += " mdc-toolbar__section--shrink-to-fit";
   }
-  return Rmdc.render(<section className={classes}>{children}</section>, props);
+  return Zrmc.render(<section className={classes}>{children}</section>, props);
 };
 
 Section.defaultProps = {

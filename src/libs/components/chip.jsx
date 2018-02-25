@@ -6,7 +6,7 @@
  */
 import React from "react";
 import PropTypes from "prop-types";
-import Rmdc from "../";
+import Zrmc from "../";
 
 /**
  * mdc_chip
@@ -23,7 +23,7 @@ const Chip = ({
   color, children, ...props
 }) => {
   const classes = MDC_CHIP;
-  const p = Rmdc.sanitizeProps(props);
+  const p = Zrmc.sanitizeProps(props);
   if (color) {
     p.style = {};
     p.style.color = color;
@@ -34,7 +34,7 @@ const Chip = ({
     text = React.createElement("div", { className: "mdc-chip__text" });
   }
   const element = React.createElement("div", p, text);
-  return Rmdc.render(element, props);
+  return Zrmc.render(element, props);
 };
 
 Chip.defaultProps = {
