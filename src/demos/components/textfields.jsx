@@ -5,8 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 import React from "react";
-import { TextField, Grid, Inner, Cell } from "../../../src/libs";
-import { head, TextfieldProperties } from "./components_properties";
+import { TextField } from "../../../src/libs";
+import Property from "./properties";
 
 export default () => (
   <section>
@@ -44,20 +44,7 @@ export default () => (
     <div style={{ padding: "16px" }}>
       <TextField id="11" label="Demo2" required pattern=".{8,}" helperText="Must be at least 8 characters" isBoxed />
     </div>
-    <h2>Textfield Properties</h2>
-    <Grid>
-      <Inner>
-        {head.map(title => (
-          <Cell key={title}>{title}</Cell>
-        ))}
-      </Inner>
-      {TextfieldProperties.map(row => (
-        <Inner key={row} style={{ paddingBottom: "16px" }}>
-          {row.map(col => (
-            <Cell key={col}> {col} </Cell>
-          ))}
-        </Inner>
-      ))}
-    </Grid>
+    <h2>Properties:</h2>
+    <Property name="Textfield" />
   </section>
 );

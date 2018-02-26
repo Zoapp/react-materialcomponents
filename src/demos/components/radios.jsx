@@ -5,8 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 import React from "react";
-import { Radio, Grid, Inner, Cell } from "../../../src/libs";
-import { head, RadioButtonProperties, RadioButtonGroupProperties } from "./components_properties";
+import { Radio } from "../../../src/libs";
+import Property from "./properties";
 
 export default () => (
   <section>
@@ -23,35 +23,7 @@ export default () => (
       <Radio id="5" label="radio 1" name="r3" checked disabled />
       <Radio id="6" label="radio 2" name="r3" disabled />
     </div>
-    <h2>Radio Button Properties</h2>
-    <Grid>
-      <Inner>
-        {head.map(title => (
-          <Cell key={title}>{title}</Cell>
-        ))}
-      </Inner>
-      {RadioButtonProperties.map(row => (
-        <Inner key={row} style={{ paddingBottom: "16px" }}>
-          {row.map(col => (
-            <Cell key={col}> {col} </Cell>
-          ))}
-        </Inner>
-      ))}
-    </Grid>
-    <h2>Radio Button Group Properties</h2>
-    <Grid>
-      <Inner>
-        {head.map(title => (
-          <Cell key={title}>{title}</Cell>
-        ))}
-      </Inner>
-      {RadioButtonGroupProperties.map(row => (
-        <Inner key={row} style={{ paddingBottom: "16px" }}>
-          {row.map(col => (
-            <Cell key={col}> {col} </Cell>
-          ))}
-        </Inner>
-      ))}
-    </Grid>
+    <h2>Properties:</h2>
+    <Property name="Radio" />
   </section>
 );

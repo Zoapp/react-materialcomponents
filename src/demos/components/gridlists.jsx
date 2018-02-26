@@ -5,8 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 import React from "react";
-import { GridList, Tile, Grid, Inner, Cell } from "../../../src/libs";
-import { head, GridListProperties, GridTileProperties } from "./components_properties";
+import { GridList, Tile } from "../../../src/libs";
+import Property from "./properties";
 
 export default () => (
   <section>
@@ -23,35 +23,7 @@ export default () => (
         <Tile title="text" />
       </GridList>
     </div>
-    <h2>Grid List Properties</h2>
-    <Grid>
-      <Inner>
-        {head.map(title => (
-          <Cell key={title}>{title}</Cell>
-        ))}
-      </Inner>
-      {GridListProperties.map(row => (
-        <Inner key={row} style={{ paddingBottom: "16px" }}>
-          {row.map(col => (
-            <Cell key={col}> {col} </Cell>
-          ))}
-        </Inner>
-      ))}
-    </Grid>
-    <h2>Grid Tile Properties</h2>
-    <Grid>
-      <Inner>
-        {head.map(title => (
-          <Cell key={title}>{title}</Cell>
-        ))}
-      </Inner>
-      {GridTileProperties.map(row => (
-        <Inner key={row} style={{ paddingBottom: "16px" }}>
-          {row.map(col => (
-            <Cell key={col}> {col} </Cell>
-          ))}
-        </Inner>
-      ))}
-    </Grid>
+    <h2>Properties:</h2>
+    <Property name="Grid" />
   </section>
 );

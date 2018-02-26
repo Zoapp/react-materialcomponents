@@ -5,28 +5,14 @@
  * LICENSE file in the root directory of this source tree.
  */
 import React from "react";
-import { LinearProgress, Grid, Inner, Cell } from "../../../src/libs";
-import { head, LinearProperties } from "./components_properties";
-
+import { LinearProgress } from "../../../src/libs";
+import Property from "./properties";
 
 export default () => (
   <section>
     <h1>LinearProgress examples </h1>
     <LinearProgress progress={0.2} buffer={0.5} />
-    <h2>Linear Properties</h2>
-    <Grid>
-      <Inner>
-        {head.map(title => (
-          <Cell key={title}>{title}</Cell>
-        ))}
-      </Inner>
-      {LinearProperties.map(row => (
-        <Inner key={row} style={{ paddingBottom: "16px" }}>
-          {row.map(col => (
-            <Cell key={col}> {col} </Cell>
-          ))}
-        </Inner>
-      ))}
-    </Grid>
+    <h2>Properties:</h2>
+    <Property name="Linear" />
   </section>
 );

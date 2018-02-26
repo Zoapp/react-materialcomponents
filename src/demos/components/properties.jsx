@@ -18,7 +18,7 @@ function Property(Component) {
             bodyMultipleProps[count].push(element)
           ));
           PropsValue.push(GeneralPropertyName);
-          count++;
+          count += 1;
         });
       } else {
         PropertyJson[props].forEach(element =>
@@ -28,39 +28,35 @@ function Property(Component) {
       }
     }
   });
-  console.log(bodyMultipleProps);
-  console.log(bodySingle);
-  console.log(bodySingle.length === undefined);
+  count = -1;
   return (
-    <Grid>
-      <Inner>
-        {Head.map(title => <Cell key={title.id}>{title}</Cell>)}
-      </Inner>
-      { (bodySingle.length === undefined) ?
-        (
-        console.log('salut'),
-        PropsValue.map(element => (
-          <h3>{element}</h3>,
-          console.log(element),
-          bodyMultipleProps.map(e => (
-            console.log(e),
-            <Inner>
-              {e.map(title =>(
-                console.log(title),
-                <Cell key={title.id}>{title}</Cell>))}
-            </Inner>,
-              <div style={{ borderBottom: "solid black 1px" }} />
-          ))
-        ))
-        )
-        : (bodySingle.map(e => (
-            <Inner>
-              {e.map(value =><Cell key={value.id}>{value}</Cell>)}
-            </Inner>,
-            <div style={{ borderBottom: "solid black 1px" }} />
-          )))
-      }
-    </Grid>
+    (bodySingle.length === 0) ?
+      (bodyMultipleProps.map(element => (
+        <Grid>
+          <Inner>
+            <Cell style={{ fontSize: "20px", fontWeight: "bold" }}>{(count += 1), PropsValue[count]}</Cell>
+          </Inner>
+          <Inner>
+            {Head.map(title => <Cell key={title.id}>{title}</Cell>)}
+          </Inner>
+          {element.map(e => (
+            <Inner style={{ borderBottom: "solid black 1px", marginBottom: "16px", paddingTop: "5px" }}>
+              {e.map(value => <Cell key={value.id}>{value}</Cell>)}
+            </Inner>
+          ))}
+        </Grid>
+      )))
+      :
+      <Grid>
+        <Inner>
+          {Head.map(title => <Cell key={title.id}>{title}</Cell>)}
+        </Inner>
+        {bodySingle.map(e => (
+          <Inner style={{ borderBottom: "solid black 1px", marginBottom: "16px", paddingTop: "5px" }}>
+            {e.map(value => <Cell key={value.id}>{value}</Cell>)}
+          </Inner>
+        ))}
+      </Grid>
   );
 }
 

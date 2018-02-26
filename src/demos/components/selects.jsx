@@ -5,8 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 import React from "react";
-import { Select, MenuItem, Grid, Inner, Cell } from "../../../src/libs";
-import { head, SelectfieldProperties } from "./components_properties";
+import { Select, MenuItem } from "../../../src/libs";
+import Property from "./properties";
 
 export default () => (
   <section>
@@ -21,20 +21,7 @@ export default () => (
         <MenuItem>Fats, Oils, and Sweets</MenuItem>
       </Select>
     </div>
-    <h2>SelectField Properties</h2>
-    <Grid>
-      <Inner>
-        {head.map(title => (
-          <Cell key={title}>{title}</Cell>
-        ))}
-      </Inner>
-      {SelectfieldProperties.map(row => (
-        <Inner key={row} style={{ paddingBottom: "16px" }}>
-          {row.map(col => (
-            <Cell key={col}> {col} </Cell>
-          ))}
-        </Inner>
-      ))}
-    </Grid>
+    <h2>Properties:</h2>
+    <Property name="Select" />
   </section>
 );

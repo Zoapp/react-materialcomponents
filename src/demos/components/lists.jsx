@@ -12,11 +12,8 @@ import {
   ListItem,
   ListDivider,
   ListItemMeta,
-  Grid,
-  Inner,
-  Cell,
 } from "../../../src/libs";
-import { head, ListProperties, ListItemProperties } from "./components_properties";
+import Property from "./properties";
 
 export default () => (
   <section>
@@ -74,35 +71,7 @@ export default () => (
         </ListItem>
       </List>
     </div>
-    <h2>List Properties</h2>
-    <Grid>
-      <Inner>
-        {head.map(title => (
-          <Cell key={title}>{title}</Cell>
-        ))}
-      </Inner>
-      {ListProperties.map(row => (
-        <Inner key={row} style={{ paddingBottom: "16px" }}>
-          {row.map(col => (
-            <Cell key={col}> {col} </Cell>
-          ))}
-        </Inner>
-      ))}
-    </Grid>
-    <h2>List Item Properties</h2>
-    <Grid>
-      <Inner>
-        {head.map(title => (
-          <Cell key={title}>{title}</Cell>
-        ))}
-      </Inner>
-      {ListItemProperties.map(row => (
-        <Inner key={row} style={{ paddingBottom: "16px" }}>
-          {row.map(col => (
-            <Cell key={col}> {col} </Cell>
-          ))}
-        </Inner>
-      ))}
-    </Grid>
+    <h2>Properties:</h2>
+    <Property name="List" />
   </section>
 );
