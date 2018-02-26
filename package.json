@@ -11,6 +11,7 @@
     "compile:css": "yarn clean-dist && cleancss -o dist/compressed.css node_modules/material-components-web/dist/material-components-web.css node_modules/dialog-polyfill/dialog-polyfill.css src/libs/css/app.css",
     "dev": "yarn compile:dev && yarn start:dev",
     "lint": "eslint src/libs --ext=js --ext=jsx && eslint src/demos --ext=js --ext=jsx",
+    "check": "yarn lint && yarn test",
     "test": "jest",
     "compile:dev": "yarn compile:css && webpack --env=dev --progress --profile --colors",
     "start:dev": "webpack-dev-server --env=dev --inline",

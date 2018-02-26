@@ -20,7 +20,9 @@ const MDC_CHECKBOX = "mdc-checkbox";
 
 export default class Checkbox extends Component {
   componentDidMount() {
-    this.inputRef.indeterminate = this.props.indeterminate;
+    if ((this.inputRef.indeterminate !== null) || (this.props.indeterminate !== null)) {
+      this.inputRef.indeterminate = this.props.indeterminate;
+    }
   }
 
   componentDidUpdate(prevProps) {

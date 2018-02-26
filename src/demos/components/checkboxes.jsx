@@ -30,13 +30,13 @@ export default () => (
   <section>
     <h1>Checkbox examples </h1>
     <div style={{ padding: "16px" }}>
-      <Checkbox label="label" checked />
+      <Checkbox id="1" label="label" checked />
     </div>
     <div style={{ padding: "16px" }}>
-      <Checkbox label="label" checked disabled />
+      <Checkbox id="2" label="label" checked disabled />
     </div>
     <div style={{ padding: "16px" }}>
-      <Checkbox label="label" indeterminate />
+      <Checkbox id="3" label="label" indeterminate />
     </div>
     <h2>Checkbox Properties</h2>
     <Grid>
