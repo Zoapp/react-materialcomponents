@@ -419,7 +419,7 @@ exports[`demos/components/textfields renders correctly 1`] = `
     </div>
   </div>
   <h2>
-    Textfield Properties
+    Properties:
   </h2>
   <div
     className="mdc-layout-grid"
@@ -447,870 +447,754 @@ exports[`demos/components/textfields renders correctly 1`] = `
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         children
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         node
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         The textfield extended by this.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         className
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         string
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         The css class name of the root element.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         defaultValue
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         any
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         The text string to use for the default value.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         disabled
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         bool
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Disables the text field if set to true.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         errorStyle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         The style object to use to override error styles.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         errorText
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         node
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         The error content to display.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         floatingLabelFixed
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         bool
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         If true,  the floating label will float even when there is no value.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         floatingLabelFocusStyle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         The style object to use to override floating label styles when focused.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         floatingLabelShrinkStyle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         The style object to use to override floating label styles when shrunk.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         floatingLabelStyle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         The style object to use to override floating label styles.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         floatingLabelText
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         node
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         The content to use for the floating label element.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         fullWidth
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         bool
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         If true,  the field receives the property width 100%.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         hintStyle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Override the inline-styles of the TextField's hint text element.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         hintText
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         node
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         The hint content to display.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         id
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         string
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         The id prop for the text field.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         inputStyle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Override the inline-styles of the TextField's input element. When multiLine is false: define the style of the input element. When multiLine is true: define the style of the container of the textarea.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         multiLine
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         bool
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         If true,  a textarea element will be rendered. The textarea also grows and shrinks according to the number of lines.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         name
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         string
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Name applied to the input.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         onChange
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         function
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Callback function that is fired when the textfield's value changes. Signature: function(event: object,  newValue: string) =&gt; void event: Change event targeting the text field. newValue: The new value of the text field.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         rows
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         number
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Number of rows to display when multiLine option is set to true.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         rowsMax
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         number
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Maximum number of rows to display when multiLine option is set to true.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         style
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Override the inline-styles of the root element.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         textareaStyle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Override the inline-styles of the TextField's textarea element. The TextField use either a textarea or an input,  this property has effects only when multiLine is true.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         type
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         string
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Specifies the type of input to display such as 'password' or 'text'.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         underlineDisabledStyle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Override the inline-styles of the TextField's underline element when disabled.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         underlineFocusStyle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Override the inline-styles of the TextField's underline element when focussed.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         underlineShow
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         bool
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         If true,  shows the underline for the text field.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         underlineStyle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Override the inline-styles of the TextField's underline element.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         value
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         any
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         The value of the text field.
-         
       </div>
     </div>
   </div>
