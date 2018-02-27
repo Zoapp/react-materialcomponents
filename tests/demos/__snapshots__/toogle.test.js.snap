@@ -26,7 +26,7 @@ exports[`demos/components/iconToggles renders correctly 1`] = `
     </i>
   </div>
   <h2>
-    Toogle properties
+    Properties:
   </h2>
   <div
     className="mdc-layout-grid"
@@ -54,510 +54,442 @@ exports[`demos/components/iconToggles renders correctly 1`] = `
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         defaultToggled
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         bool
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Determines whether the Toggle is initially turned on. Warning: This cannot be used in conjunction with toggled. Decide between using a controlled or uncontrolled input element and remove one of these props.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         disabled
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         bool
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Will disable the toggle if true.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         elementStyle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Overrides the inline-styles of the Toggle element.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         iconStyle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Overrides the inline-styles of the Icon element.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         inputStyle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Overrides the inline-styles of the input element.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         label
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         node
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Label for toggle.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         labelPosition
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         enum:'left', 'right', 'left'
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Where the label will be placed next to the toggle.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         labelStyle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Overrides the inline-styles of the Toggle element label.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         onToggle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         function
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Callback function that is fired when the toggle switch is toggled. Signature: function(event: object,  isInputChecked: bool) =&gt; void event: Change event targeting the toggle. isInputChecked: The new value of the toggle.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         rippleStyle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Override style of ripple.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         style
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Override the inline-styles of the root element.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         thumbStyle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Override style for thumb.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         thumbSwitchedStyle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Override the inline styles for thumb when the toggle switch is toggled on.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         toggled
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         bool
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Toggled if set to true.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         trackStyle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Override style for track.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         trackSwitchedStyle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Override the inline styles for track when the toggle switch is toggled on.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         valueLink
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         ValueLink prop for when using controlled toggle.
-         
       </div>
     </div>
   </div>
