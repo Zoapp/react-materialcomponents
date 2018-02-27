@@ -35,7 +35,7 @@ function Property(Component) {
         <Grid>
           <Inner>
             {/* eslint-disable-next-line */}
-            <Cell style={{ fontSize: "20px", fontWeight: "bold" }}>{PropsValue[++count]}</Cell>
+            <Cell style={{ fontSize: "20px", fontWeight: "bold" }}>{ PropsValue[++count] }</Cell>
           </Inner>
           <Inner>
             {Head.map(title => <Cell key={title.id}>{title}</Cell>)}
