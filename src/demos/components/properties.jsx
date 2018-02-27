@@ -2,7 +2,7 @@ import React from "react";
 import PropertyJson from "./components_properties.json";
 import { Grid, Inner, Cell } from "../../../src/libs";
 
-const Head = ["Name", "Type", "Desc"];
+const Head = ["Name", "Default", "Type"];
 
 function Property(Component) {
   const bodySingle = [];
