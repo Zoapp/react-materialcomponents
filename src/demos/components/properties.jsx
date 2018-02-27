@@ -34,7 +34,8 @@ function Property(Component) {
       (bodyMultipleProps.map(element => (
         <Grid>
           <Inner>
-            <Cell style={{ fontSize: "20px", fontWeight: "bold" }}>{(count += 1), PropsValue[count]}</Cell>
+            {/* eslint-disable-next-line */}
+            <Cell style={{ fontSize: "20px", fontWeight: "bold" }}>{PropsValue[++count]}</Cell>
           </Inner>
           <Inner>
             {Head.map(title => <Cell key={title.id}>{title}</Cell>)}
