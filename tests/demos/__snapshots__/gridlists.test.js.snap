@@ -245,174 +245,166 @@ exports[`demos/components/gridlists renders itself correctly 1`] = `
     >
       <div
         className="mdc-layout-grid__cell"
+        style={
+          Object {
+            "fontSize": "20px",
+            "fontWeight": "bold",
+          }
+        }
+      >
+        GridListProperties
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+    >
+      <div
+        className="mdc-layout-grid__cell"
       >
         Name
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
+        Default
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
         Type
       </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Desc
-      </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         cellHeight
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         union:number
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Number of px for one cell height. You can set 'auto' if you want to let the children determine the height.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         children
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         node
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Grid Tiles that will be in Grid List.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         cols
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         number
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Number of columns.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         padding
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         number
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Number of px for the padding/spacing between items.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         style
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Override the inline-styles of the root element.
-         
       </div>
     </div>
   </div>
-  <h2>
-    Grid Tile Properties
-  </h2>
   <div
     className="mdc-layout-grid"
   >
@@ -421,408 +413,371 @@ exports[`demos/components/gridlists renders itself correctly 1`] = `
     >
       <div
         className="mdc-layout-grid__cell"
+        style={
+          Object {
+            "fontSize": "20px",
+            "fontWeight": "bold",
+          }
+        }
+      >
+        GridTileProperties
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+    >
+      <div
+        className="mdc-layout-grid__cell"
       >
         Name
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
+        Default
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
         Type
       </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Desc
-      </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         actionIcon
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         element
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         An IconButton element to be used as secondary action target (primary action target is the tile itself).
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         actionPosition
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         enum:'left', 'right', 'right'
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Position of secondary action IconButton.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         children
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         node
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Theoretically you can pass any node as children,  but the main use case is to pass an img,  in whichcase GridTile takes care of making the image 'cover' available space (similar to background-size: cover or to object-fit:cover).
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         cols
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         number
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Width of the tile in number of grid cells.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         containerElement
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         union:string, element, 'div'
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Either a string used as tag name for the tile root element,  or a ReactElement. This is useful when you have,  for example,  a custom implementation of a navigation link (that knows about your routes) and you want to use it as the primary tile action. In case you pass a ReactElement,  please ensure that it passes all props,  accepts styles overrides and render it's children.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         rows
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         number
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Height of the tile in number of grid cells.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         style
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Override the inline-styles of the root element.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         subtitle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         node
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         String or element serving as subtitle (support text).
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         subtitleStyle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Override the inline-styles of the subtitle element.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         title
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         node
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Title to be displayed on tile.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         titleBackground
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         string
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Style used for title bar background. Useful for setting custom gradients for example
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         titlePosition
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         enum: 'top', 'bottom', 'bottom'
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Position of the title bar (container of title,  subtitle and action icon).
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         titleStyle
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         object
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
         Override the inline-styles of the title element.
-         
       </div>
     </div>
   </div>
