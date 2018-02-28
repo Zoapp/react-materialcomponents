@@ -84,7 +84,7 @@
     ]
   },
   "Checkbox": [
-  	["mdcElement", "MDC_CHECKBOX" , "string"],
+  	["mdcElement", "MDC_CHECKBOX", "string"],
   	["label", "null", "string"],
   	["id", "null", "string"],
   	["disabled", "false", "bool"],
@@ -125,8 +125,9 @@
   	["label", "null", "string"],
   	["labelOff", "null", "string"],
   	["onChange", "null", "func"],
-  	["color", "null", "string"],
+  	["color", "null", "string"]
   ],
+  
   "Linear": [
   	["mdcElement", "MDC_LINEARPROGRESS", "string"],
   	["indeterminate", "false", "bool"],
@@ -196,23 +197,23 @@
   },
   "Select": [
   	["children", "*", "string"],
-  	["mdcElement","MDC_SELECT","string"],
-  	["disabled","false","bool"],
-  	["label","null","string"],
-  	["onSelected","null","function"],
-  	["selectedIndex","-1","number"],
+  	["mdcElement", "MDC_SELECT", "string"],
+  	["disabled", "false", "bool"],
+  	["label", "null", "string"],
+  	["onSelected", "null", "function"],
+  	["selectedIndex", "-1", "number"],
   	["style", "{}", "shape"]
   ],
   "Slider": [
   	["mdcElement", "MDC_SLIDER", "string"],
   	["discrete", "false", "bool"],
   	["disabled", "false", "bool"],
-  	["min","0","number"],
-  	["max","100","number"],
-  	["value","0","number"],
-  	["displayMarker","false","bool"],
-  	["onInput","null","func"],
-  	["onChange","null","func"]
+  	["min", "0", "number"],
+  	["max", "100", "number"],
+  	["value", "0", "number"],
+  	["displayMarker", "false", "bool"],
+  	["onInput", "null", "func"],
+  	["onChange", "null", "func"]
   ],
   "Tab": {
     "TabsProperties": [
@@ -240,9 +241,9 @@
     ]
   },
   "Textfield": [
-  	["mdcElement","MDC_TEXTFIELD","string"],
+  	["mdcElement", "MDC_TEXTFIELD", "string"],
   	["label", "null", "string"],
-  	["id", "null" ,"string"],
+  	["id", "null", "string"],
   	["type", "text", "string"],
   	["disabled", "false", "bool"],
   	["onChange", "() => {}", "function"],
@@ -259,6 +260,6 @@
   	["onClickLI", "null", "function"],
   	["onClickTI", "null", "function"],
   	["noFloatingLabel", "false", "bool"],
-  	["defaultValue", "null", "string"],
+  	["defaultValue", "null", "string"]
   ]
 }
