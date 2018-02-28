@@ -160,12 +160,38 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
+        Default
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
         Type
       </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
       <div
         className="mdc-layout-grid__cell"
       >
-        Desc
+        mdcElement
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        MDC_CHECKBOX
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
       </div>
     </div>
     <div
@@ -181,43 +207,17 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        checked
+        label
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        bool
+        null
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        Checkbox is checked if true.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        checkedIcon
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        element
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        The SvgIcon to use for the checked state. This is useful to create icon toggles.
+        string
       </div>
     </div>
     <div
@@ -233,17 +233,17 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        defaultChecked
+        id
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        bool
+        null
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        The default state of our checkbox component. Warning: This cannot be used in conjunction with checked. Decide between using a controlled or uncontrolled input element and remove one of these props.
+        string
       </div>
     </div>
     <div
@@ -264,12 +264,38 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
+        false
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
         bool
       </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
       <div
         className="mdc-layout-grid__cell"
       >
-        Disabled if true.
+        checked
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        false
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        bool
       </div>
     </div>
     <div
@@ -285,43 +311,17 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        iconStyle
+        indeterminate
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        object
+        false
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        Overrides the inline-styles of the icon element.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        inputStyle
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        object
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Overrides the inline-styles of the input element.
+        bool
       </div>
     </div>
     <div
@@ -337,147 +337,17 @@ exports[`demos/components/checkboxes renders itself correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        labelPosition
+        onChange
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        enum:'left', 'right', 'right'
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Where the label will be placed next to the checkbox.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        labelStyle
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        object
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Overrides the inline-styles of the Checkbox element label.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        onCheck
+        () =&gt; {}
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
         function
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Callback function that is fired when the checkbox is checked.Signature: function(event: object,  isInputChecked: boolean) =&gt; void event: change event targeting the underlying checkbox input. isInputChecked: The checked value of the underlying checkbox input.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        style
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        object
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Override the inline-styles of the root element.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        uncheckedIcon
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        element
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        The SvgIcon to use for the unchecked state. This is useful to create icon toggles.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        valueLink
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        object
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        ValueLink for when using controlled checkbox.
       </div>
     </div>
   </div>

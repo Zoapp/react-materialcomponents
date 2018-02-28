@@ -120,38 +120,12 @@ exports[`demos/components/selects renders correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
+        Default
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
         Type
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Desc
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        autoWidth
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        bool
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        If true,  the width will automatically be set according to the items inside the menu. To control the width in CSS instead,  leave this prop set to false.
       </div>
     </div>
     <div
@@ -172,12 +146,38 @@ exports[`demos/components/selects renders correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        node
+        *
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        The MenuItem elements to populate the select field with. If the menu items have a label prop,  that value will represent the selected menu item in the rendered select field.
+        string
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        mdcElement
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        MDC_SELECT
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
       </div>
     </div>
     <div
@@ -198,117 +198,13 @@ exports[`demos/components/selects renders correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        bool
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        If true,  the select field will be disabled.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        dropDownMenuProps
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        object
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Object that can handle and override any property of component DropDownMenu.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        errorStyle
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        object
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Override the inline-styles of the error element.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        errorText
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        node
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        The error content to display.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        floatingLabelFixed
+        false
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
         bool
       </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        If true,  the floating label will float even when no value is selected.
-      </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
@@ -323,173 +219,43 @@ exports[`demos/components/selects renders correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        floatingLabelStyle
+        label
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        object
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Override the inline-styles of the floating label.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        floatingLabelText
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        node
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        The content of the floating label.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        fullWidth
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        bool
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        If true,  the select field will take up the full width of its container.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        hintStyle
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        object
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Override the inline-styles of the hint element.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        hintText
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        node
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        The hint content to display.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        iconStyle
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        object
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Override the inline-styles of the icon element.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        id
+        null
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
         string
       </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
       <div
         className="mdc-layout-grid__cell"
       >
-        The id prop for the text field.
+        onSelected
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        function
       </div>
     </div>
     <div
@@ -505,225 +271,17 @@ exports[`demos/components/selects renders correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        labelStyle
+        selectedIndex
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        object
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Override the label style when the select field is inactive.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        listStyle
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        object
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Override the inline-styles of the underlying List element.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        maxHeight
+        -1
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
         number
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Override the default max-height of the underlying DropDownMenu element.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        menuItemStyle
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        object
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Override the inline-styles of menu items.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        menuStyle
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        object
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Override the inline-styles of the underlying DropDownMenu element.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        multiple
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        bool
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        If true,  value must be an array and the menu will support multiple selections.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        onChange
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        function
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Callback function fired when a menu item is selected. Signature: function(event: object,  key: number,  payload: any) =&gt; void event: Click event targeting the menu item that was selected. key: The index of the selected menu item,  or undefined if multiple is true. payload: If multiple is true,  the menu's value array with either the menu item's value added (if it wasn't already selected) or omitted (if it was already selected). Otherwise,  the value of the menu item.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        selectedMenuItemStyle
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        object
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Override the inline-styles of selected menu items.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        selectionRenderer
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        function
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Customize the rendering of the selected item. Signature: function(value: any,  menuItem: any) =&gt; void value: If multiple is true,  the menu's value array with either the menu item's value added (if it wasn't already selected) or omitted (if it was already selected). Otherwise,  the value of the menu item. menuItem: The selected MenuItem. If multiple is true,  this will be an array with the MenuItems matching the values parameter.
       </div>
     </div>
     <div
@@ -744,116 +302,12 @@ exports[`demos/components/selects renders correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        object
+        {}
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        Override the inline-styles of the root element.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        underlineDisabledStyle
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        object
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Override the inline-styles of the underline element when the select field is disabled.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        underlineFocusStyle
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        object
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Override the inline-styles of the underline element when the select field is focused.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        underlineStyle
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        object
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Override the inline-styles of the underline element.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        value
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        any
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        If multiple is true, an array of the values of the selected menu items. Otherwise, the value of the selected menu item. If provided, the menu will be a controlled component.
+        shape
       </div>
     </div>
   </div>

@@ -240,12 +240,12 @@ exports[`demos/components/radios renders correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        Type
+        Default
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        Desc
+        Type
       </div>
     </div>
     <div
@@ -486,12 +486,12 @@ exports[`demos/components/radios renders correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        Type
+        Default
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        Desc
+        Type
       </div>
     </div>
     <div
