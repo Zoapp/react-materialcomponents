@@ -976,462 +976,246 @@ exports[`demos/components/sliders renders correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
+        Default
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
         Type
       </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Desc
-      </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
-        axis
-         
+        mdcElement
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
-        enum: 'x',  'x-reverse',  'y',  'y-reverse',  'x'
-         
+        MDC_SLIDER
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
-        The axis on which the slider will slide.
-         
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "paddingBottom": "16px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        defaultValue
-         
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        valueInRangePropType
-         
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        The default value of the slider.
-         
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "paddingBottom": "16px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        disableFocusRipple
-         
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        bool
-         
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        Disables focus ripple if set to true.
-         
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "paddingBottom": "16px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        disabled
-         
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        bool
-         
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        If true,  the slider will not be interactable.
-         
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "paddingBottom": "16px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        max
-         
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        minMaxPropType
-         
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        The maximum value the slider can slide to on a scale from 0 to 1 inclusive. Cannot be equal to min.
-         
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "paddingBottom": "16px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        min
-         
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        minMaxPropType
-         
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        The minimum value the slider can slide to on a scale from 0 to 1 inclusive. Cannot be equal to max.
-         
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "paddingBottom": "16px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        name
-         
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
         string
-         
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        The name of the slider. Behaves like the name attribute of an input element.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
-        onChange
-         
+        discrete
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
-        function
-         
+        false
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
-        Callback function that is fired when the slider's value changed. Signature: function(event: object,  newValue: number) =&gt; void event: KeyDown event targeting the slider. newValue: The new value of the slider.
-         
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "paddingBottom": "16px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        onDragStart
-         
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        function
-         
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        Callback function that is fired when the slider has begun to move. Signature: function(event: object) =&gt; void event: MouseDown or TouchStart event targeting the slider.
-         
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "paddingBottom": "16px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        onDragStop
-         
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        function
-         
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        Callback function that is fired when the slide has stopped moving. Signature: function(event: object) =&gt; void event: MouseEnd or TouchEnd event targeting the slider.
-         
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "paddingBottom": "16px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        required
-         
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
         bool
-         
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        Whether or not the slider is required in a form.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
-        sliderStyle
-         
+        disabled
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
-        object
-         
+        false
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
-        Override the inline-styles of the inner slider element.
-         
+        bool
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
-        step
-         
+        min
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
+        0
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
         number
-         
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-         
-        The granularity the slider can step through values.
-         
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
-        style
-         
+        max
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
-        object
-         
+        100
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
-        Override the inline-styles of the root element.
-         
+        number
       </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
       style={
         Object {
-          "paddingBottom": "16px",
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
         }
       }
     >
       <div
         className="mdc-layout-grid__cell"
       >
-         
         value
-         
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
-        valueInRangePropType
-         
+        0
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-         
-        The value of the slider.
-         
+        number
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        displayMarker
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        false
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        bool
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        onInput
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        func
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        onChange
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        func
       </div>
     </div>
   </div>
