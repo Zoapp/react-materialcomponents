@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Button can be compact 1`] = `
+<button
+  className="mdc-button mdc-button--compact"
+  onClick={null}
+>
+  
+</button>
+`;
+
+exports[`components/Button can be dense 1`] = `
+<button
+  className="mdc-button mdc-button--dense"
+  onClick={null}
+>
+  
+</button>
+`;
+
+exports[`components/Button can be raised 1`] = `
+<button
+  className="mdc-button mdc-button--raised"
+  onClick={null}
+>
+  
+</button>
+`;
+
+exports[`components/Button can be rippled 1`] = `
+<button
+  className="mdc-button"
+  onClick={null}
+>
+  
+</button>
+`;
+
+exports[`components/Button can be stroked 1`] = `
+<button
+  className="mdc-button mdc-button--stroked"
+  onClick={null}
+>
+  
+</button>
+`;
+
+exports[`components/Button can be unelevated 1`] = `
+<button
+  className="mdc-button mdc-button--unelevated"
+  onClick={null}
+>
+  
+</button>
+`;
+
+exports[`components/Button can have children 1`] = `
+<button
+  className="mdc-button"
+  onClick={null}
+>
+  
+  Children are here!
+</button>
+`;
+
+exports[`components/Button can render a link if supplied 1`] = `
+<a
+  className="mdc-button"
+  href="#"
+>
+  
+</a>
+`;
+
+exports[`components/Button can render an icon if supplied 1`] = `
+<button
+  className="mdc-button"
+  onClick={null}
+>
+  <i
+    className="mdc-button__icon material-icons"
+  >
+    favorite
+  </i>
+</button>
+`;
+
+exports[`components/Button renders a secondary button 1`] = `
+<button
+  className="mdc-button secondary-filled-button"
+  onClick={null}
+>
+  
+</button>
+`;
