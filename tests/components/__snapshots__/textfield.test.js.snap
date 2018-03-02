@@ -1,0 +1,413 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/TextField can be Boxed 1`] = `
+<div
+  className="mdc-text-field mdc-text-field--upgraded mdc-text-field--box"
+>
+  <input
+    className="mdc-text-field__input"
+    defaultValue={null}
+    id="1"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+  />
+  <label
+    className="mdc-text-field__label"
+    focused="false"
+    htmlFor="1"
+    style={Object {}}
+  />
+  <div
+    className="mdc-text-field__bottom-line"
+  />
+</div>
+`;
+
+exports[`components/TextField can be Textarea 1`] = `
+<div
+  className="mdc-text-field mdc-text-field--upgraded mdc-text-field--textarea"
+>
+  <textarea
+    className="mdc-text-field__input"
+    defaultValue={null}
+    id="1"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+  />
+  <label
+    className="mdc-text-field__label"
+    focused="false"
+    htmlFor="1"
+    style={Object {}}
+  />
+  <div
+    className="mdc-text-field__bottom-line"
+  />
+</div>
+`;
+
+exports[`components/TextField can be dense 1`] = `
+<div
+  className="mdc-text-field mdc-text-field--upgraded mdc-text-field--dense"
+>
+  <input
+    className="mdc-text-field__input"
+    defaultValue={null}
+    id="1"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+  />
+  <label
+    className="mdc-text-field__label"
+    focused="false"
+    htmlFor="1"
+    style={Object {}}
+  />
+  <div
+    className="mdc-text-field__bottom-line"
+  />
+</div>
+`;
+
+exports[`components/TextField can be disabled 1`] = `
+<div
+  className="mdc-text-field mdc-text-field--upgraded mdc-text-field--disabled"
+>
+  <input
+    className="mdc-text-field__input"
+    defaultValue={null}
+    disabled="disabled"
+    id="1"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+  />
+  <label
+    className="mdc-text-field__label"
+    focused="false"
+    htmlFor="1"
+    style={Object {}}
+  />
+  <div
+    className="mdc-text-field__bottom-line"
+  />
+</div>
+`;
+
+exports[`components/TextField can be fullwidth 1`] = `
+<div
+  className="mdc-text-field mdc-text-field--upgraded mdc-text-field--fullwidth"
+>
+  <input
+    aria-label={null}
+    className="mdc-text-field__input"
+    defaultValue={null}
+    id="1"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    placeholder={null}
+    type="text"
+  />
+  <div
+    className="mdc-text-field__bottom-line"
+  />
+</div>
+`;
+
+exports[`components/TextField can be htPersistent 1`] = `
+<div
+  className="mdc-text-field mdc-text-field--upgraded"
+>
+  <input
+    className="mdc-text-field__input"
+    defaultValue={null}
+    id="1"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+  />
+  <label
+    className="mdc-text-field__label"
+    focused="false"
+    htmlFor="1"
+    style={Object {}}
+  />
+  <div
+    className="mdc-text-field__bottom-line"
+  />
+</div>
+`;
+
+exports[`components/TextField can be htValidationMsg 1`] = `
+<div
+  className="mdc-text-field mdc-text-field--upgraded"
+>
+  <input
+    className="mdc-text-field__input"
+    defaultValue={null}
+    id="1"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+  />
+  <label
+    className="mdc-text-field__label"
+    focused="false"
+    htmlFor="1"
+    style={Object {}}
+  />
+  <div
+    className="mdc-text-field__bottom-line"
+  />
+</div>
+`;
+
+exports[`components/TextField can be outlined 1`] = `
+<div
+  className="mdc-text-field mdc-text-field--upgraded mdc-text-field--outlined"
+>
+  <input
+    className="mdc-text-field__input"
+    defaultValue={null}
+    id="1"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+  />
+  <label
+    className="mdc-text-field__label"
+    focused="false"
+    htmlFor="1"
+    style={Object {}}
+  />
+  <div
+    className="mdc-text-field__outline"
+  >
+    <svg>
+      <path
+        className="mdc-text-field__outline-path"
+      />
+    </svg>
+  </div>
+  <div
+    className="mdc-text-field__idle-outline"
+  />
+</div>
+`;
+
+exports[`components/TextField can have a defaultValue 1`] = `
+<div
+  className="mdc-text-field mdc-text-field--upgraded"
+>
+  <input
+    className="mdc-text-field__input"
+    defaultValue="favorite"
+    id="1"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+  />
+  <label
+    className="mdc-text-field__label mdc-text-field__label--float-above"
+    focused="false"
+    htmlFor="1"
+    style={Object {}}
+  />
+  <div
+    className="mdc-text-field__bottom-line"
+  />
+</div>
+`;
+
+exports[`components/TextField can have a label 1`] = `
+<div
+  className="mdc-text-field mdc-text-field--upgraded"
+>
+  <input
+    className="mdc-text-field__input"
+    defaultValue={null}
+    id="1"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+  />
+  <label
+    className="mdc-text-field__label"
+    focused="false"
+    htmlFor="1"
+    style={Object {}}
+  >
+    foo
+  </label>
+  <div
+    className="mdc-text-field__bottom-line"
+  />
+</div>
+`;
+
+exports[`components/TextField can have a leadingIcon 1`] = `
+<div
+  className="mdc-text-field mdc-text-field--upgraded mdc-text-field--with-leading-icon"
+>
+  <i
+    className="mdc-text-field__icon material-icons"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    role="button"
+    tabIndex="0"
+  >
+    favorite
+  </i>
+  <input
+    className="mdc-text-field__input"
+    defaultValue={null}
+    id="1"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+  />
+  <label
+    className="mdc-text-field__label"
+    focused="false"
+    htmlFor="1"
+    style={Object {}}
+  />
+  <div
+    className="mdc-text-field__bottom-line"
+  />
+</div>
+`;
+
+exports[`components/TextField can have a no floating label 1`] = `
+<div
+  className="mdc-text-field mdc-text-field--upgraded"
+>
+  <input
+    className="mdc-text-field__input"
+    defaultValue={null}
+    id="1"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+  />
+  <label
+    className="mdc-text-field__label"
+    focused="false"
+    htmlFor="1"
+    style={Object {}}
+  />
+  <div
+    className="mdc-text-field__bottom-line"
+  />
+</div>
+`;
+
+exports[`components/TextField can have a trailingIcon 1`] = `
+<div
+  className="mdc-text-field mdc-text-field--upgraded mdc-text-field--with-trailing-icon"
+>
+  <input
+    className="mdc-text-field__input"
+    defaultValue={null}
+    id="1"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+  />
+  <label
+    className="mdc-text-field__label"
+    focused="false"
+    htmlFor="1"
+    style={Object {}}
+  />
+  <i
+    className="mdc-text-field__icon material-icons"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    role="button"
+    tabIndex="0"
+  >
+    favorite
+  </i>
+  <div
+    className="mdc-text-field__bottom-line"
+  />
+</div>
+`;
+
+exports[`components/TextField can have a type 1`] = `
+<div
+  className="mdc-text-field mdc-text-field--upgraded"
+>
+  <input
+    className="mdc-text-field__input"
+    defaultValue={null}
+    id="1"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="bar"
+  />
+  <label
+    className="mdc-text-field__label"
+    focused="false"
+    htmlFor="1"
+    style={Object {}}
+  />
+  <div
+    className="mdc-text-field__bottom-line"
+  />
+</div>
+`;
+
+exports[`components/TextField can have an helperText 1`] = `
+<div
+  className="rmdc-text-field-wrapper"
+>
+  <div
+    className="mdc-text-field mdc-text-field--upgraded"
+  >
+    <input
+      aria-controls="1-helper-text"
+      className="mdc-text-field__input"
+      defaultValue={null}
+      id="1"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      type="text"
+    />
+    <label
+      className="mdc-text-field__label"
+      focused="false"
+      htmlFor="1"
+      style={Object {}}
+    />
+    <div
+      className="mdc-text-field__bottom-line"
+    />
+  </div>
+  <p
+    aria-hidden="true"
+    className="mdc-text-field-helper-text"
+  >
+    foobar
+  </p>
+</div>
+`;
