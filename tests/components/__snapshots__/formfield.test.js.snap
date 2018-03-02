@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/FormField can have children 1`] = `
+<div
+  className="mdc-form-field"
+>
+  Children is here!
+</div>
+`;
