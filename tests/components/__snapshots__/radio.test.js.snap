@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Radio can be checked 1`] = `
+<div
+  className="mdc-radio"
+>
+  <input
+    className="mdc-radio__native-control"
+    defaultChecked="checked"
+    id="0.bg7tlkk6zla"
+    name={null}
+    type="radio"
+  />
+  <div
+    className="mdc-radio__background"
+  >
+    <div
+      className="mdc-radio__outer-circle"
+    />
+    <div
+      className="mdc-radio__inner-circle"
+    />
+  </div>
+</div>
+`;
+
+exports[`components/Radio can have a label 1`] = `
+<div
+  className="mdc-form-field"
+>
+  <div
+    className="mdc-radio"
+  >
+    <input
+      className="mdc-radio__native-control"
+      id="0.6mbaxsc48ru"
+      name={null}
+      type="radio"
+    />
+    <div
+      className="mdc-radio__background"
+    >
+      <div
+        className="mdc-radio__outer-circle"
+      />
+      <div
+        className="mdc-radio__inner-circle"
+      />
+    </div>
+  </div>
+  <label
+    htmlFor="0.6mbaxsc48ru"
+  >
+    foo
+  </label>
+</div>
+`;
+
+exports[`components/Radio can have a name 1`] = `
+<div
+  className="mdc-radio"
+>
+  <input
+    className="mdc-radio__native-control"
+    id="0.k9842a5l1es"
+    name="bar"
+    type="radio"
+  />
+  <div
+    className="mdc-radio__background"
+  >
+    <div
+      className="mdc-radio__outer-circle"
+    />
+    <div
+      className="mdc-radio__inner-circle"
+    />
+  </div>
+</div>
+`;
+
+exports[`components/Radio can have an id 1`] = `
+<div
+  className="mdc-radio"
+>
+  <input
+    className="mdc-radio__native-control"
+    id="1"
+    name={null}
+    type="radio"
+  />
+  <div
+    className="mdc-radio__background"
+  >
+    <div
+      className="mdc-radio__outer-circle"
+    />
+    <div
+      className="mdc-radio__inner-circle"
+    />
+  </div>
+</div>
+`;
+
+exports[`components/Radio can have be disabled 1`] = `
+<div
+  className="mdc-radio"
+>
+  <input
+    className="mdc-radio__native-control"
+    disabled="disabled"
+    id="0.89mvvclrkgt"
+    name={null}
+    type="radio"
+  />
+  <div
+    className="mdc-radio__background"
+  >
+    <div
+      className="mdc-radio__outer-circle"
+    />
+    <div
+      className="mdc-radio__inner-circle"
+    />
+  </div>
+</div>
+`;
