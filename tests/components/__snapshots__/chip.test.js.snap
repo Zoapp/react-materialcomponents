@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Chip can be colored 1`] = `
+<div
+  className="mdc-chip"
+  name="Chip"
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  <div
+    className="mdc-chip__text"
+  />
+</div>
+`;
+
+exports[`components/Chip renders itself correctly 1`] = `
+<div
+  className="mdc-chip"
+  name="Chip"
+>
+  <div
+    className="mdc-chip__text"
+  />
+</div>
+`;
