@@ -32,7 +32,6 @@ export default class Dialog extends Component {
     super(props);
     this.dialogWidth = 0;
     this.dialogHeight = 0;
-    this.textfield = null;
   }
 
   componentDidMount() {
@@ -83,8 +82,8 @@ export default class Dialog extends Component {
   }
 
   invalidateField() {
-    if (this.textfield) {
-      this.textfield.setAsInvalid();
+    if (this.fieldRef) {
+      this.fieldRef.setAsInvalid();
     }
   }
 
@@ -128,20 +127,19 @@ export default class Dialog extends Component {
     });
     // TODO check if children contains Header / Footer
     if (field) {
-      this.textfield = (
-        <TextField
-          defaultValue={field.defaultValue}
-          label={field.name}
-          pattern={field.pattern}
-          helperText={field.error}
-          style={{ width: "100%" }}
-          ref={(c) => { this.fieldRef = c; }}
-        />
-      );
       bodyElement = (
         <DialogBody>
-          {this.textfield}
-        </DialogBody>);
+          <TextField
+            defaultValue={field.defaultValue}
+            label={field.name}
+            pattern={field.pattern}
+            helperText={field.error}
+            cid={field.cid}
+            style={{ width: "100%" }}
+            ref={(c) => { this.fieldRef = c; }}
+          />
+        </DialogBody>
+      );
     } else if (!(bodyElement.props &&
       bodyElement.props.mdcElement &&
       bodyElement.props.mdcElement === "mdc-dialog__body")) {
