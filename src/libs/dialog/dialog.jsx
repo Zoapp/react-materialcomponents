@@ -78,7 +78,11 @@ export default class Dialog extends Component {
   }
 
   getFieldValue() {
-    return this.fieldRef;
+    if (!this.fieldRef) {
+      return null;
+    }
+
+    return this.fieldRef.getValue();
   }
 
   invalidateField() {

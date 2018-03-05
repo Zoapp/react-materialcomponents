@@ -29,4 +29,21 @@ describe("components/TextField", () => {
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  describe("getValue()", () => {
+    it("returns the input value", () => {
+      const component = renderer.create(
+        <TextField
+          cid="unique-component-id"
+          defaultValue="hello"
+        />
+      );
+
+      let tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+
+      const value = component.getInstance().getValue();
+      expect(value).toEqual("hello");
+    });
+  });
 });
