@@ -20,7 +20,8 @@ exports[`demos/components/switchs renders correctly 1`] = `
       >
         <input
           className="mdc-switch__native-control"
-          defaultChecked="checked"
+          defaultChecked={true}
+          disabled={false}
           id="1"
           onChange={null}
           type="checkbox"
@@ -56,8 +57,8 @@ exports[`demos/components/switchs renders correctly 1`] = `
       >
         <input
           className="mdc-switch__native-control"
-          defaultChecked="checked"
-          disabled="disabled"
+          defaultChecked={true}
+          disabled={true}
           id="2"
           onChange={null}
           type="checkbox"
@@ -93,6 +94,8 @@ exports[`demos/components/switchs renders correctly 1`] = `
       >
         <input
           className="mdc-switch__native-control"
+          defaultChecked={false}
+          disabled={false}
           id="3"
           onChange={null}
           type="checkbox"

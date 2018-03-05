@@ -48,14 +48,10 @@ export default class Switch extends Component {
       /* eslint-enable jsx-a11y/label-has-for */
     }
 
-    const d = {};
-    if (disabled) {
-      d.disabled = "disabled";
-    }
-
-    if (checked) {
-      d.defaultChecked = "checked";
-    }
+    const inputProps = {
+      defaultChecked: checked,
+      disabled,
+    };
 
     let element = (
       <div className={classes}>
@@ -65,7 +61,7 @@ export default class Switch extends Component {
           className="mdc-switch__native-control"
           ref={this.setRef}
           onChange={onChange}
-          {...d}
+          {...inputProps}
         />
         <div className="mdc-switch__background">
           <div className="mdc-switch__knob" />
