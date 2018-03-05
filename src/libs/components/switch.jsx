@@ -22,11 +22,7 @@ import Zrmc from "../";
 
 const MDC_SWITCH = "mdc-switch";
 
-export default class Switch extends Component {
-  setRef = (c) => {
-    this.inputRef = c;
-  }
-
+class Switch extends Component {
   render() {
     const {
       checked,
@@ -49,9 +45,14 @@ export default class Switch extends Component {
     }
 
     const inputProps = {
-      defaultChecked: checked,
       disabled,
     };
+
+    if (onChange) {
+      inputProps.checked = checked;
+    } else {
+      inputProps.defaultChecked = checked;
+    }
 
     let element = (
       <div className={classes}>
@@ -59,7 +60,6 @@ export default class Switch extends Component {
           id={cid}
           type="checkbox"
           className="mdc-switch__native-control"
-          ref={this.setRef}
           onChange={onChange}
           {...inputProps}
         />
@@ -104,3 +104,4 @@ Switch.propTypes = {
   onChange: PropTypes.func,
 };
 
+export default Switch;
