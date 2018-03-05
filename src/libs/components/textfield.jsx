@@ -57,6 +57,10 @@ export default class TextField extends Component {
     }
   }
 
+  getValue() {
+    return this.state.value;
+  }
+
   setAsInvalid() {
     this.setState({ isInvalid: true });
   }
