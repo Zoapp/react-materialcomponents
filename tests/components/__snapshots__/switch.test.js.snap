@@ -9,6 +9,8 @@ exports[`components/Switch renders correctly 1`] = `
   >
     <input
       className="mdc-switch__native-control"
+      defaultChecked={false}
+      disabled={false}
       id="unique-component-id"
       onChange={null}
       type="checkbox"
