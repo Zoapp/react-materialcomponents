@@ -1,5 +1,159 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`dialog/Dialog can render a TextField if \`field\` prop is supplied 1`] = `
+<dialog
+  className="rmdc-dialog mdc-dialog mdc-dialog--open"
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="presentation"
+>
+  <div
+    className="mdc-dialog__surface"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    role="presentation"
+    style={Object {}}
+  >
+    <header
+      className="mdc-dialog__header"
+    />
+    <section
+      className="mdc-dialog__body"
+    >
+      <div
+        className="rmdc-text-field-wrapper"
+      >
+        <div
+          className="mdc-text-field mdc-text-field--upgraded"
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+        >
+          <input
+            aria-controls="unique-component-id-helper-text"
+            className="mdc-text-field__input"
+            defaultValue=""
+            id="unique-component-id"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            pattern=""
+            type="text"
+          />
+          <label
+            className="mdc-text-field__label"
+            focused="false"
+            htmlFor="unique-component-id"
+            style={Object {}}
+          >
+            field-1
+          </label>
+          <div
+            className="mdc-text-field__bottom-line"
+          />
+        </div>
+        <p
+          aria-hidden="true"
+          className="mdc-text-field-helper-text"
+        >
+          error message
+        </p>
+      </div>
+    </section>
+    <footer
+      className="mdc-dialog__footer"
+    >
+      <button
+        className="mdc-dialog__footer__button mdc-dialog__footer__button--accept mdc-button"
+        onClick={[Function]}
+      >
+        
+        Ok
+      </button>
+    </footer>
+  </div>
+</dialog>
+`;
+
+exports[`dialog/Dialog can render a TextField if \`field\` prop is supplied 2`] = `
+<dialog
+  className="rmdc-dialog mdc-dialog mdc-dialog--open"
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="presentation"
+>
+  <div
+    className="mdc-dialog__surface"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    role="presentation"
+    style={Object {}}
+  >
+    <header
+      className="mdc-dialog__header"
+    />
+    <section
+      className="mdc-dialog__body"
+    >
+      <div
+        className="rmdc-text-field-wrapper"
+      >
+        <div
+          className="mdc-text-field mdc-text-field--upgraded mdc-text-field--invalid"
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+        >
+          <input
+            aria-controls="unique-component-id-helper-text"
+            className="mdc-text-field__input"
+            defaultValue=""
+            id="unique-component-id"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            pattern=""
+            type="text"
+          />
+          <label
+            className="mdc-text-field__label"
+            focused="false"
+            htmlFor="unique-component-id"
+            style={Object {}}
+          >
+            field-1
+          </label>
+          <div
+            className="mdc-text-field__bottom-line"
+          />
+        </div>
+        <p
+          aria-hidden="true"
+          className="mdc-text-field-helper-text"
+        >
+          error message
+        </p>
+      </div>
+    </section>
+    <footer
+      className="mdc-dialog__footer"
+    >
+      <button
+        className="mdc-dialog__footer__button mdc-dialog__footer__button--accept mdc-button"
+        onClick={[Function]}
+      >
+        
+        Ok
+      </button>
+    </footer>
+  </div>
+</dialog>
+`;
+
 exports[`dialog/Dialog renders a dialog with no actions specified 1`] = `
 <dialog
   className="rmdc-dialog mdc-dialog mdc-dialog--open"

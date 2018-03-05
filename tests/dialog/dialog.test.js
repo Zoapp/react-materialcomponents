@@ -85,4 +85,37 @@ describe("dialog/Dialog", () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  it("can render a TextField if `field` prop is supplied", () => {
+    // This represents the fake `dialogRef`
+    const createNodeMock = () => ({
+      addEventListener: jest.fn(),
+      showModal: jest.fn(),
+    });
+
+    const field = {
+      defaultValue: "",
+      error: "error message",
+      name: "field-1",
+      pattern: "",
+      cid: "unique-component-id", // avoid random id generation
+    };
+
+    const component = renderer.create(
+      <Dialog
+        field={field}
+      >
+        <div>Hello, you should see a TextField</div>
+      </Dialog>,
+      { createNodeMock }
+    );
+
+    let tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+
+    component.getInstance().invalidateField();
+
+    tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
