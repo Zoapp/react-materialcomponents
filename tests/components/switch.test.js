@@ -50,4 +50,33 @@ describe("components/Switch", () => {
       `<input type="checkbox" id="unique-component-id" class="mdc-switch__native-control" disabled=""/>`
     );
   });
+
+  it("can be controlled when onChange is passed", () => {
+    const wrapper = shallow(
+      <Switch
+        cid="unique-component-id"
+        label="label switch"
+        checked
+        onChange={jest.fn()}
+      />
+    );
+
+    expect(wrapper.find("input").prop("checked")).toEqual(true);
+  });
+
+  it("updates the input attributs when the checked prop changes", () => {
+    const wrapper = shallow(
+      <Switch
+        cid="unique-component-id"
+        label="label switch"
+        onChange={jest.fn()}
+      />
+    );
+
+    expect(wrapper.find("input").prop("checked")).toEqual(false);
+
+    wrapper.setProps({ checked: true });
+
+    expect(wrapper.find("input").prop("checked")).toEqual(true);
+  });
 });
