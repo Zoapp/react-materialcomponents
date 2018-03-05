@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Switch renders correctly 1`] = `
+<div
+  className="rmdc-switch-wrapper"
+>
+  <div
+    className="mdc-switch"
+  >
+    <input
+      className="mdc-switch__native-control"
+      id="unique-component-id"
+      onChange={null}
+      type="checkbox"
+    />
+    <div
+      className="mdc-switch__background"
+    >
+      <div
+        className="mdc-switch__knob"
+      />
+    </div>
+  </div>
+  <label
+    className="mdc-switch-label"
+    htmlFor="unique-component-id"
+  >
+    label switch
+  </label>
+</div>
+`;

@@ -29,35 +29,50 @@ export default class Switch extends Component {
 
   render() {
     const {
-      id, label, checked, disabled, formField, ...props
+      checked,
+      disabled,
+      formField,
+      id,
+      label,
+      onChange,
+      ...props
     } = this.props;
+
     const classes = MDC_SWITCH;
-    const cid = Zrmc.generateId(id);
+    const cid = this.props.cid || Zrmc.generateId(id);
+
     let l = "";
     if (label) {
       /* eslint-disable jsx-a11y/label-has-for */
       l = (<label htmlFor={cid} className="mdc-switch-label">{label}</label>);
       /* eslint-enable jsx-a11y/label-has-for */
     }
+
     const d = {};
     if (disabled) {
       d.disabled = "disabled";
     }
+
     if (checked) {
       d.defaultChecked = "checked";
     }
+
     let element = (
       <div className={classes}>
         <input
+          id={cid}
           type="checkbox"
           className="mdc-switch__native-control"
           ref={this.setRef}
+          onChange={onChange}
           {...d}
         />
         <div className="mdc-switch__background">
           <div className="mdc-switch__knob" />
         </div>
-      </div>);
+      </div>
+    );
+
     if (label) {
       if (formField) {
         element = (<FormField>{element}{l}</FormField>);
@@ -66,25 +81,30 @@ export default class Switch extends Component {
         element = (<div className={cn}>{element}{l}</div>);
       }
     }
+
     return Zrmc.render(element, props);
   }
 }
 
 Switch.defaultProps = {
-  mdcElement: MDC_SWITCH,
-  id: null,
-  label: null,
   checked: false,
+  cid: null,
   disabled: false,
   formField: false,
+  id: null,
+  label: null,
+  mdcElement: MDC_SWITCH,
+  onChange: null,
 };
 
 Switch.propTypes = {
-  mdcElement: PropTypes.string,
-  id: PropTypes.string,
-  label: PropTypes.string,
   checked: PropTypes.bool,
+  cid: PropTypes.string,
   disabled: PropTypes.bool,
   formField: PropTypes.bool,
+  id: PropTypes.string,
+  label: PropTypes.string,
+  mdcElement: PropTypes.string,
+  onChange: PropTypes.func,
 };
 
