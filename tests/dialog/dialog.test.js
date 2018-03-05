@@ -118,4 +118,52 @@ describe("dialog/Dialog", () => {
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
+
+  describe("getFieldValue()", () => {
+    it("returns null if tere is no input", () => {
+      // This represents the fake `dialogRef`
+      const createNodeMock = () => ({
+        addEventListener: jest.fn(),
+        showModal: jest.fn(),
+      });
+
+      const component = renderer.create(
+        <Dialog>
+          <div>Hello, you should NOT see a TextField</div>
+        </Dialog>,
+        { createNodeMock }
+      );
+
+      const value = component.getInstance().getFieldValue();
+      expect(value).toEqual(null);
+    });
+
+    it("returns the input value", () => {
+      // This represents the fake `dialogRef`
+      const createNodeMock = () => ({
+        addEventListener: jest.fn(),
+        showModal: jest.fn(),
+      });
+
+      const field = {
+        defaultValue: "hello",
+        error: "error message",
+        name: "field-1",
+        pattern: "",
+        cid: "unique-component-id", // avoid random id generation
+      };
+
+      const component = renderer.create(
+        <Dialog
+          field={field}
+        >
+          <div>Hello, you should see a TextField</div>
+        </Dialog>,
+        { createNodeMock }
+      );
+
+      const value = component.getInstance().getFieldValue();
+      expect(value).toEqual(field.defaultValue);
+    });
+  });
 });
