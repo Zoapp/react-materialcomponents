@@ -15,7 +15,8 @@
     "test": "jest",
     "compile:dev": "yarn compile:css && webpack --env=dev --progress --profile --colors",
     "start:dev": "webpack-dev-server --env=dev --inline",
-    "willPublish": "yarn run lint && yarn run test && yarn run compile",
+    "willPublish": "yarn lint && yarn test && yarn compile",
+    "distribute:dev": "yarn compile && cd ./dist && yarn pack",
     "distribute": "yarn willPublish && npm publish ./dist"
   },
   "repository": {
