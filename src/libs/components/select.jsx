@@ -8,6 +8,7 @@ import React, { Component, Children } from "react";
 import PropTypes from "prop-types";
 import Zrmc from "../";
 import Menu from "../menu/menu";
+
 /**
  * mdc-select
  *
@@ -21,7 +22,7 @@ import Menu from "../menu/menu";
 
 const MDC_SELECT = "mdc-select";
 
-export default class Select extends Component {
+class Select extends Component {
   constructor(props) {
     super(props);
     this.state = { open: false, focused: false, selectedIndex: this.props.selectedIndex };
@@ -151,24 +152,30 @@ export default class Select extends Component {
     const {
       children, disabled, label, ...props
     } = this.props;
+
     const {
       open, focused, selected, selectedIndex,
     } = this.state;
+
     const classes = MDC_SELECT;
     const p = {};
+
     let tabIndex = "0";
     if (disabled) {
       p["aria-disabled"] = true;
       tabIndex = "-1";
     }
+
     let lc = "mdc-select__label";
     if (selected) {
       lc += " mdc-select__label--float-above";
     }
+
     let bc = "mdc-select__bottom-line";
     if (focused) {
       bc += " mdc-select__bottom-line--active";
     }
+
     /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
     const element = (
       <div
@@ -197,9 +204,12 @@ export default class Select extends Component {
           onSelected={this.onSelected}
           onClose={this.onClose}
         >
-          {Children.map(children, child => React.cloneElement(child, { role: "option" }))}
+          {Children.map(children, (child) => {
+            React.cloneElement(child, { role: "option" });
+          })}
         </Menu>
       </div>);
+
     /* eslint-enable jsx-a11y/no-noninteractive-tabindex */
     return Zrmc.render(element, props);
   }
@@ -214,12 +224,32 @@ Select.defaultProps = {
   style: {},
 };
 
+const propTypeForSelectChildren = (componentName, child) => {
+  let displayName;
+  if (child.type) {
+    displayName = child.type.displayName || child.type.name || child.type;
+  }
+
+  if (!/MenuItem/.test(displayName)) {
+    return new Error(`Invalid child '${displayName}' supplied to ${componentName}.`);
+  }
+
+  displayName = displayName || typeof child;
+  return displayName;
+};
+
 Select.propTypes = {
+  children: PropTypes.oneOfType([
+    (props, propName, componentName) => propTypeForSelectChildren(componentName, props[propName]),
+    PropTypes.arrayOf((propValue, key, componentName) =>
+      propTypeForSelectChildren(componentName, propValue[key])),
+  ]).isRequired,
   mdcElement: PropTypes.string,
-  children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
   label: PropTypes.string,
   style: PropTypes.shape({ width: PropTypes.string }),
   onSelected: PropTypes.func,
   selectedIndex: PropTypes.number,
 };
+
+export default Select;
