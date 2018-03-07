@@ -98,7 +98,7 @@ describe("dialog/Dialog", () => {
       error: "error message",
       name: "field-1",
       pattern: "",
-      cid: "unique-component-id", // avoid random id generation
+      id: "unique-component-id", // avoid random id generation
     };
 
     const component = renderer.create(
@@ -150,7 +150,7 @@ describe("dialog/Dialog", () => {
         error: "error message",
         name: "field-1",
         pattern: "",
-        cid: "unique-component-id", // avoid random id generation
+        id: "unique-component-id", // avoid random id generation
       };
 
       const component = renderer.create(

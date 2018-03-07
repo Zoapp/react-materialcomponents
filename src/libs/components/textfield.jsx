@@ -148,7 +148,6 @@ export default class TextField extends Component {
     }
 
     const p = Zrmc.sanitizeProps(props);
-    delete p.cid; // we do not need to pass this prop
 
     if (disabled) {
       classes += " mdc-text-field--disabled";
@@ -176,7 +175,7 @@ export default class TextField extends Component {
       }
     }
 
-    const cid = this.props.cid || Zrmc.generateId(id);
+    const cid = Zrmc.generateId(id);
 
     if (helperText) {
       p["aria-controls"] = `${cid}-helper-text`;
@@ -258,7 +257,6 @@ TextField.defaultProps = {
   mdcElement: MDC_TEXTFIELD,
   label: null,
   id: null,
-  cid: null,
   type: "text",
   disabled: false,
   onChange: () => {},
@@ -282,7 +280,6 @@ TextField.propTypes = {
   mdcElement: PropTypes.string,
   label: PropTypes.string,
   id: PropTypes.string,
-  cid: PropTypes.string,
   type: PropTypes.string,
   disabled: PropTypes.bool,
   onChange: PropTypes.func,
