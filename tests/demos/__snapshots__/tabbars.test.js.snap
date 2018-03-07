@@ -63,7 +63,7 @@ exports[`demos/components/tabbars renders correctly 1`] = `
           }
         }
       >
-        TabsProperties
+        Tab Properties
       </div>
     </div>
     <div
@@ -83,6 +83,32 @@ exports[`demos/components/tabbars renders correctly 1`] = `
         className="mdc-layout-grid__cell"
       >
         Type
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        mdcElement
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        MDC_TAB
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
       </div>
     </div>
     <div
@@ -103,38 +129,38 @@ exports[`demos/components/tabbars renders correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        node
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Should be used to pass Tab components.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        className
+        null
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
         string
       </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
       <div
         className="mdc-layout-grid__cell"
       >
-        The css class name of the root element.
+        active
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        false
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        bool
       </div>
     </div>
     <div
@@ -150,17 +176,43 @@ exports[`demos/components/tabbars renders correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        contentContainerClassName
+        text
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
         string
       </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
       <div
         className="mdc-layout-grid__cell"
       >
-        The css class name of the content's container.
+        icon
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
       </div>
     </div>
     <div
@@ -176,17 +228,17 @@ exports[`demos/components/tabbars renders correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        contentContainerStyle
+        href
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        object
+        null
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        Override the inline-styles of the content's container.
+        string
       </div>
     </div>
     <div
@@ -202,17 +254,43 @@ exports[`demos/components/tabbars renders correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        initialSelectedIndex
+        tabId
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        0
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
         number
       </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
       <div
         className="mdc-layout-grid__cell"
       >
-        Specify initial visible tab index. If initialSelectedIndex is set but larger than the total amount of specified tabs,  initialSelectedIndex will revert back to default. If initialSelectedIndex is set to any negative value,  no tab will be selected intially.
+        onTabSelect
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        func
       </div>
     </div>
     <div
@@ -228,173 +306,17 @@ exports[`demos/components/tabbars renders correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        inkBarStyle
+        color
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        object
+        null
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        Override the inline-styles of the InkBar.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        onChange
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        function
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Called when the selected value change.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        style
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        object
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Override the inline-styles of the root element.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        tabItemContainerStyle
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        object
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Override the inline-styles of the tab-labels container.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        tabTemplate
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        function
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Override the default tab template used to wrap the content of each tab element.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        tabTemplateStyle
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        object
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Override the inline-styles of the tab template.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        value
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        any
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Makes Tabs controllable and selects the tab whose value prop matches this prop.
+        string
       </div>
     </div>
   </div>
@@ -413,7 +335,7 @@ exports[`demos/components/tabbars renders correctly 1`] = `
           }
         }
       >
-        TabProperties
+        Tabbar Properties
       </div>
     </div>
     <div
@@ -448,44 +370,18 @@ exports[`demos/components/tabbars renders correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        buttonStyle
+        mdcElement
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        object
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Override the inline-styles of the button element.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        className
+        MDC_TABBAR
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
         string
       </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        The css class name of the root element.
-      </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
@@ -500,17 +396,43 @@ exports[`demos/components/tabbars renders correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        icon
+        children
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
         node
       </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
       <div
         className="mdc-layout-grid__cell"
       >
-        Sets the icon of the tab,  you can pass FontIcon or SvgIcon elements.
+        activeTab
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        0
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        number
       </div>
     </div>
     <div
@@ -526,43 +448,17 @@ exports[`demos/components/tabbars renders correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        label
+        onChange
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        node
+        null
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        Sets the text value of the tab item to the string specified.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        onActive
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        function
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Fired when the active tab changes by touch or tap. Use this event to specify any functionality when an active tab changes. For example - we are using this to route to home when the third tab becomes active. This function will always recieve the active tab as it's first argument.
+        string
       </div>
     </div>
     <div
@@ -578,17 +474,17 @@ exports[`demos/components/tabbars renders correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        style
+        color
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        object
+        null
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        Override the inline-styles of the root element.
+        string
       </div>
     </div>
     <div
@@ -604,17 +500,17 @@ exports[`demos/components/tabbars renders correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        value
+        activeColor
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        any
+        null
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        If value prop passed to Tabs component, this value prop is also required. It assigns a value to the tab so that it can be selected by the Tabs.
+        string
       </div>
     </div>
   </div>

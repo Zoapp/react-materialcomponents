@@ -1,5 +1,9 @@
 {
-  "Button": [
+  "Ripple": [
+    ["unbounded", "false", "bool"],
+    ["children", "*" , "node"]
+  ],
+  "Button ": [
     ["children","null", "node"],
     ["mdcElement","MDC_BUTTON", "string"],
     ["raised", "false", "bool"],
@@ -15,251 +19,214 @@
     ["onClick", "null", "function"]
   ],
   "Card":{
-    "CardProperties": [
-      ["children", "node", "Can be used to render elements inside the Card."],
-      ["containerStyle", "object", "Override the inline-styles of the container element."],
-      ["expandable", "bool", "If true,  this card component is expandable. Can be set on any child of the Card component."],
-      ["expanded", "bool", "Whether this card is expanded. If true or false the component is controlled. if null the component is uncontrolled."],
-      ["initiallyExpanded", "bool", "Whether this card is initially expanded."],
-      ["onExpandChange", "function", "Callback function fired when the expandable state of the card has changed. Signature: function(newExpandedState: boolean) => void  newewExpandedState: Represents the new expanded state of the card."],
-      ["showExpandableButton", "bool", "If true,  this card component will include a button to expand the card. CardTitle,  CardHeader and CardActions implement showExpandableButton. Any child component of Card can implements showExpandableButton or forwards the property to a child component supporting it."],
-      ["style", "object", "Override the inline-styles of the root element."]
+    "Card Properties": [
+      ["mdcElement","MDC_CARD","string"],
+      ["children", "null", "node"],
+      ["title", "null", "string"],
+      ["subtitle", "null", "largeTitle"],
+      ["horizontalBlock","false","bool"]
     ],
-    "CardActionsProperties": [
-      ["actAsExpander", "bool", "If true,  a click on this card component expands the card."],
-      ["children", "node", "Can be used to render elements inside the Card Action."],
-      ["expandable", "bool", "If true,  this card component is expandable."],
-      ["showExpandableButton", "bool", "If true,  this card component will include a button to expand the card."],
-      ["style", "object", "Override the inline-styles of the root element."]
+    "Card Actions Properties": [
+      ["mdcElement","MDC_CARD_ACTIONS","string"],
+      ["children", "null", "node"],
+      ["vertical", "false", "bool"]
     ],
-    "CardHeaderProperties": [
-      ["actAsExpander", "bool", "If true,  a click on this card component expands the card."],
-      ["avatar", "node", "This is the Avatar element to be displayed on the Card Header. If avatar is an Avatar or other element,  it will be rendered. If avatar is a string,  it will be used as the image src for an Avatar."],
-      ["children", "node", "Can be used to render elements inside the Card Header."],
-      ["closeIcon", "node", "Can be used to pass a closeIcon if you don't like the default expandable close Icon."],
-      ["expandable", "bool", "If true,  this card component is expandable."],
-      ["iconStyle", "object", "Override the iconStyle of the Icon Button."],
-      ["openIcon", "node", "Can be used to pass a openIcon if you don't like the default expandable open Icon."],
-      ["showExpandableButton", "bool", "If true,  this card component will include a button to expand the card."],
-      ["style", "object", "Override the inline-styles of the root element."],
-      ["subtitle", "node", "Can be used to render a subtitle in Card Header."],
-      ["subtitleColor", "string", "Override the subtitle color."],
-      ["subtitleStyle", "object", "Override the inline-styles of the subtitle."],
-      ["textStyle", "object", "Override the inline-styles of the text."],
-      ["title", "node", "an be used to render a title in Card Header."],
-      ["titleColor", "string", "Override the title color."],
-      ["titleStyle", "object", "Override the inline-styles of the title."]
+    "Card Title Properties": [
+      ["mdcElement","MDC_CARD_TITLE","string"],
+      ["children", "null", "node"],
+      ["large", "false", "bool"]
     ],
-    "CardMediaProperties": [
-      ["actAsExpander", "bool", "If true,  a click on this card component expands the card."],
-      ["children", "node", "Can be used to render elements inside the Card Media."],
-      ["expandable", "bool", "If true,  this card component is expandable."],
-      ["mediaStyle", "object", "Override the inline-styles of the Card Media."],
-      ["overlay", "node", "Can be used to render overlay element in Card Media."],
-      ["overlayContainerStyle", "object", "Override the inline-styles of the overlay container."],
-      ["overlayContentStyle", "object", "Override the inline-styles of the overlay content."],
-      ["overlayStyle", "object", "Override the inline-styles of the overlay element."],
-      ["style", "object", "Override the inline-styles of the root element."]
+    "Card Subtitle Properties": [
+      ["mdcElement","MDC_CARD_SUBTITLE","string"],
+      ["children", "null", "node"]
     ],
-    "CardTextProperties": [
-      ["actAsExpander", "bool", "If true,  a click on this card component expands the card."],
-      ["children", "node", "Can be used to render elements inside the Card Text."],
-      ["color", "string", "Override the CardText color."],
-      ["expandable", "bool", "If true,  this card component is expandable."],
-      ["style", "object", "Override the inline-styles of the root element."]
+    "Card Media Properties": [
+      ["mdcElement","MDC_CARD_MEDIA","string"],
+      ["children", "null", "node"],
+      ["title", "null", "string"],
+      ["subTitle", "null", "string"],
+      ["largeTitle", "false", "bool"],
+      ["horizontalBlock", "false", "bool"]
     ],
-    "CardTitleProperties": [
-      ["actAsExpander", "bool", "If true,  a click on this card component expands the card."],
-      ["children", "node", "Can be used to render elements inside the Card Title."],
-      ["closeIcon", "node", "Can be used to pass a closeIcon if you don't like the default expandable close Icon."],
-      ["expandable", "bool", "If true,  this card component is expandable."],
-      ["showExpandableButton", "bool", "If true,  this card component will include a button to expand the card."],
-      ["style", "object", "Override the inline-styles of the root element."],
-      ["subtitle", "node", "Can be used to render a subtitle in the Card Title."],
-      ["subtitleColor", "string", "Override the subtitle color."],
-      ["subtitleStyle", "object", "Override the inline-styles of the subtitle."],
-      ["title", "node", "Can be used to render a title in the Card Title."],
-      ["titleColor", "string", "Override the title color."],
-      ["titleStyle", "object", "Override the inline-styles of the title."]
+    "Card Text Properties": [
+      ["mdcElement","MDC_CARD_TEXT","string"],
+      ["children", "null", "node"]
+    ],
+    "Card Primary Properties": [
+      ["mdcElement","MDC_CARD_PRIMARY","string"],
+      ["children", "null", "node"],
+      ["title", "null", "string"],
+      ["subtitle", "null", "string"],
+      ["largeTitle", "false", "bool"],
+      ["isTitlingSecond", "false", "bool"]
     ]
   },
   "Checkbox": [
-  	["mdcElement", "MDC_CHECKBOX", "string"],
-  	["label", "null", "string"],
-  	["id", "null", "string"],
-  	["disabled", "false", "bool"],
-  	["checked", "false", "bool"],
-  	["indeterminate", "false", "bool"],
-  	["onChange", "() => {}", "function"]
+    ["mdcElement", "MDC_CHECKBOX", "string"],
+    ["label", "null", "string"],
+    ["id", "null", "string"],
+    ["disabled", "false", "bool"],
+    ["checked", "false", "bool"],
+    ["indeterminate", "false", "bool"],
+    ["onChange", "() => {}", "function"]
   ],
-  "Grid": {
-    "GridListProperties": [
-      ["cellHeight", "union:number", "Number of px for one cell height. You can set 'auto' if you want to let the children determine the height."],
-      ["children", "node", "Grid Tiles that will be in Grid List."],
-      ["cols", "number", "Number of columns."],
-      ["padding", "number", "Number of px for the padding/spacing between items."],
-      ["style", "object", "Override the inline-styles of the root element."]
+  "GridList": {
+    "GridList Properties": [
+      ["mdcElement", "MDC_GRIDLIST", "string"],
+      ["children", "null", "node"],
+      ["width", "null", "string"],
+      ["titleWith", "null", "string"],
+      ["tileBackground", "null", "string"],
+      ["gutter", "0", "number"],
+      ["headerCaption", "false", "bool"],
+      ["twolineCaption", "false", "bool"],
+      ["iconAlign", "null", "oneOf(['start','end'])"],
+      ["aspectRatio", "null","oneOf(['1x1', '16x9', '2x3', '3x2', '4x3', '4x3'])"]
     ],
-    "GridTileProperties": [
-      ["actionIcon", "element", "An IconButton element to be used as secondary action target (primary action target is the tile itself)."],
-      ["actionPosition", "enum:'left', 'right', 'right'", "Position of secondary action IconButton."],
-      ["children", "node", "Theoretically you can pass any node as children,  but the main use case is to pass an img,  in whichcase GridTile takes care of making the image 'cover' available space (similar to background-size: cover or to object-fit:cover)."],
-      ["cols", "number", "Width of the tile in number of grid cells."],
-      ["containerElement", "union:string, element, 'div'", "Either a string used as tag name for the tile root element,  or a ReactElement. This is useful when you have,  for example,  a custom implementation of a navigation link (that knows about your routes) and you want to use it as the primary tile action. In case you pass a ReactElement,  please ensure that it passes all props,  accepts styles overrides and render it's children."],
-      ["rows", "number", "Height of the tile in number of grid cells."],
-      ["style", "object", "Override the inline-styles of the root element."],
-      ["subtitle", "node", "String or element serving as subtitle (support text)."],
-      ["subtitleStyle", "object", "Override the inline-styles of the subtitle element."],
-      ["title", "node", "Title to be displayed on tile."],
-      ["titleBackground", "string", "Style used for title bar background. Useful for setting custom gradients for example"],
-      ["titlePosition", "enum: 'top', 'bottom', 'bottom'", "Position of the title bar (container of title,  subtitle and action icon)."],
-      ["titleStyle", "object", "Override the inline-styles of the title element."]
+    "GridList Tile Properties": [
+      ["mdcElement", "MDC_GRIDLIST", "string"],
+      ["children", "null", "node"],
+      ["background", "null", "string"],
+      ["width", "null", "string"],
+      ["title", "null", "string"],
+      ["text", "null", "string"],
+      ["icon", "null", "string"]
     ]
   },
   "Toogle": [
-  	["name", "*", "string"],
-  	["nameOff", "*", "string"],
-  	["mdcElement", "MDC_ICONTOGGLE", "string"],
-  	["pressed", "false", "bool"],
-  	["disabled", "false", "bool"],
-  	["label", "null", "string"],
-  	["labelOff", "null", "string"],
-  	["onChange", "null", "func"],
-  	["color", "null", "string"]
+    ["name", "*", "string"],
+    ["nameOff", "*", "string"],
+    ["mdcElement", "MDC_ICONTOGGLE", "string"],
+    ["pressed", "false", "bool"],
+    ["disabled", "false", "bool"],
+    ["label", "null", "string"],
+    ["labelOff", "null", "string"],
+    ["onChange", "null", "func"],
+    ["color", "null", "string"]
   ],
   
   "Linear": [
-  	["mdcElement", "MDC_LINEARPROGRESS", "string"],
-  	["indeterminate", "false", "bool"],
-  	["reversed", "false", "bool"],
-  	["closed", "false", "bool"],
-  	["progress", "0", "number"],
-  	["buffer", "0", "number"]
+    ["mdcElement", "MDC_LINEARPROGRESS", "string"],
+    ["indeterminate", "false", "bool"],
+    ["reversed", "false", "bool"],
+    ["closed", "false", "bool"],
+    ["progress", "0", "number"],
+    ["buffer", "0", "number"]
   ],
   "List": {
-    "ListProperties": [
-      ["children", "node", "These are usually ListItems that are passed to be part of the list."],
-      ["style", "object", "Override the inline-styles of the root element."]
+    "List Properties": [
+      ["mdcElement", "MDC_LIST" , "string"],
+      ["children", "null", "node"],
+      ["dense", "false", "bool"],
+      ["avatar", "false", "bool"],
+      ["twoLine", "false", "bool"]
     ],
-    "ListItemProperties": [
-      ["autoGenerateNestedIndicator", "bool", "If true,  generate a nested-list-indicator icon when nested list items are detected. Note that an indicator will not be created if a rightIcon or rightIconButton has been provided to the element."],
-      ["children", "node", "Children passed into the ListItem."],
-      ["containerElement", "union:stringelement'span'", "The element to use as the container for the ListItem. Either a string to use a DOM element or a ReactElement. This is useful for wrapping the ListItem in a custom Link component. If a ReactElement is given,  ensure that it passes all of its given props through to the underlying DOM element and renders its children prop for proper integration."],
-      ["disableKeyboardFocus", "bool", "If true,  the element will not be able to be focused by the keyboard."],
-      ["disabled", "bool", "If true,  the element will not be clickable and will not display hover effects. This is automatically disabled if either leftCheckbox or rightToggle is set."],
-      ["hoverColor", "string", "Override the hover background color."],
-      ["initiallyOpen", "bool", "If true,  the nested ListItems are initially displayed."],
-      ["innerDivStyle", "object", "Override the inline-styles of the inner div element."],
-      ["insetChildren", "bool", "If true,  the children will be indented by 72px. This is useful if there is no left avatar or left icon."],
-      ["isKeyboardFocused", "bool", "Use to control if the list item should render as keyboard focused. If undefined (default),  this will be automatically managed. If provided,  it will change the components style. Note that this will not change the actual focus - and should only be used when you want to simulate keyboard focus (eg. in a rich text input autocomplete)."],
-      ["leftAvatar", "element", "This is the Avatar element to be displayed on the left side."],
-      ["leftCheckbox", "element", "This is the Checkbox element to be displayed on the left side."],
-      ["leftIcon", "element", "This is the SvgIcon or FontIcon to be displayed on the left side."],
-      ["nestedItems", "arrayOf", "An array of ListItems to nest underneath the current ListItem."],
-      ["nestedLevel", "number", "Controls how deep a ListItem appears. This property is automatically managed,  so modify at your own risk."],
-      ["nestedListStyle", "object", "Override the inline-styles of the nested items' NestedList."],
-      ["onClick", "function", "Callback function fired when the list item is clicked.Signature: function(event: object) => void event: Click event targeting the list item."],
-      ["onKeyboardFocus", "function", "Callback function fired when the ListItem is focused or blurred by the keyboard. Signature: function(event: object,  isKeyboardFocused: boolean) => void event: focus or blur event targeting the ListItem. isKeyboardFocused: If true,  the ListItem is focused."],
-      ["onNestedListToggle", "function", "Callback function fired when the ListItem toggles its nested list.Signature: function(listItem: object) => voidlistItem: The ListItem."],
-      ["open", "bool", "Control toggle state of nested list."],
-      ["primaryText", "node", "This is the block element that contains the primary text. If a string is passed in,  a div tag will be rendered."],
-      ["primaryTogglesNestedList", "bool", "If true,  clicking or tapping the primary text of the ListItem toggles the nested list."],
-      ["rightAvatar", "element", "This is the Avatar element to be displayed on the right side."],
-      ["rightIcon", "element", "This is the SvgIcon or FontIcon to be displayed on the right side."],
-      ["rightIconButton", "element", "This is the IconButton to be displayed on the right side. Hovering over this button will remove the ListItem hover. Also,  clicking on this button will not trigger a ripple on the ListItem; the event will be stopped and prevented from bubbling up to cause a ListItem click."],
-      ["rightToggle", "element", "This is the Toggle element to display on the right side."],
-      ["secondaryText", "node", "This is the block element that contains the secondary text. If a string is passed in,  a div tag will be rendered."],
-      ["secondaryTextLines", "enum:1, 2", "Can be 1 or 2. This is the number of secondary text lines before ellipsis will show."],
-      ["style", "object", "Override the inline-styles of the root element."]
+    "List Item Properties": [
+      ["mdcElement", "MDC_LISTITEM", "string"],
+      ["children", "null", "node"],
+      ["type", "li", "string"],
+      ["activated", "false", "bool"],
+      ["icon", "null", "string"],
+      ["imgSrc", "null", "string"],
+      ["imgSize", "56", "number"],
+      ["imgLabel", "null", "string"],
+      ["secondaryText", "null", "node"],
+      ["href", "null", "string"],
+      ["onClick", "null", "function"]
+    ],
+    "List Group Properties": [
+      ["mdcElement", "MDC_LISTGROUP", "string"],
+      ["children", "null", "node"]
+    ],
+    "List Divider Properties": [
+      ["mdcElement", "MDC_LISTDIVIDER", "string"],
+      ["type", "li", "string"],
+      ["inset", "false", "bool"]
+    ],
+    "List Meta Properties": [
+      ["mdcElement", "MDC_LISTITEMMETA", "string"],
+      ["children", "null", "node"],
+      ["icon", "null", "string"],
+      ["href", "null", "string"],
+      ["color", "null", "string"],
+      ["label", "null", "string"],
+      ["onClick", "null", "function"]
+    ],
+    "List Subheaders Properties": [
+      ["mdcElement", "MDC_LISTSUBHEADER", "string"],
+      ["children", "null", "node"],
+      ["type", "h3", "string"]
     ]
   },
-  "Radio": {
-    "RadioButtonProperties": [
-      ["checkedIcon", "element", "The icon element to show when the radio button is checked."],
-      ["disabled", "bool", "If true,  the radio button is disabled."],
-      ["iconStyle", "object", "Override the inline-styles of the icon element."],
-      ["inputStyle", "object", "Override the inline-styles of the input element."],
-      ["labelStyle", "object", "Override the inline-styles of the label element."],
-      ["style", "object", "Override the inline-styles of the root element."],
-      ["uncheckedIcon", "element", "The icon element to show when the radio button is unchecked."],
-      ["value", "any", "The value of the radio button."]
-    ],
-    "RadioButtonGroupProperties": [
-      ["children", "node", "Should be used to pass RadioButton components."],
-      ["className", "string", "The CSS class name of the root element."],
-      ["defaultSelected", "any", "The value property of the radio button that will be selected by default. This takes precedence over the checked property of the RadioButton elements."],
-      ["labelPosition", "enum:'left', 'right'", "Where the label will be placed for all child radio buttons. This takes precedence over the labelPosition property of the RadioButton elements."],
-      ["name", "string", "The name that will be applied to all child radio buttons."],
-      ["onChange", "function", "Callback function that is fired when a radio button has been checked.Signature: function(event: object,  value: undefined) => void event: change event targeting the selected radio button. value: The value of the selected radio button."],
-      ["style", "object", "Override the inline-styles of the root element."],
-      ["valueSelected", "any", "The value of the currently selected radio button."]
-    ]
-  },
+  "Radio": [
+    ["mdcElement", "MDC_RADIO", "string"],
+    ["id", "null", "string"],
+    ["label", "null", "string"],
+    ["disabled", "false", "bool"],
+    ["checked", "false", "bool"],
+    ["name", "null", "string"]
+  ],
   "Select": [
-  	["children", "*", "string"],
-  	["mdcElement", "MDC_SELECT", "string"],
-  	["disabled", "false", "bool"],
-  	["label", "null", "string"],
-  	["onSelected", "null", "function"],
-  	["selectedIndex", "-1", "number"],
-  	["style", "{}", "shape"]
+    ["children", "*", "string"],
+    ["mdcElement", "MDC_SELECT", "string"],
+    ["disabled", "false", "bool"],
+    ["label", "null", "string"],
+    ["onSelected", "null", "function"],
+    ["selectedIndex", "-1", "number"],
+    ["style", "{}", "shape"]
   ],
   "Slider": [
-  	["mdcElement", "MDC_SLIDER", "string"],
-  	["discrete", "false", "bool"],
-  	["disabled", "false", "bool"],
-  	["min", "0", "number"],
-  	["max", "100", "number"],
-  	["value", "0", "number"],
-  	["displayMarker", "false", "bool"],
-  	["onInput", "null", "func"],
-  	["onChange", "null", "func"]
+    ["mdcElement", "MDC_SLIDER", "string"],
+    ["discrete", "false", "bool"],
+    ["disabled", "false", "bool"],
+    ["min", "0", "number"],
+    ["max", "100", "number"],
+    ["value", "0", "number"],
+    ["displayMarker", "false", "bool"],
+    ["onInput", "null", "func"],
+    ["onChange", "null", "func"]
   ],
   "Tab": {
-    "TabsProperties": [
-      ["children", "node", "Should be used to pass Tab components."],
-      ["className", "string", "The css class name of the root element."],
-      ["contentContainerClassName", "string", "The css class name of the content's container."],
-      ["contentContainerStyle", "object", "Override the inline-styles of the content's container."],
-      ["initialSelectedIndex", "number", "Specify initial visible tab index. If initialSelectedIndex is set but larger than the total amount of specified tabs,  initialSelectedIndex will revert back to default. If initialSelectedIndex is set to any negative value,  no tab will be selected intially."],
-      ["inkBarStyle", "object", "Override the inline-styles of the InkBar."],
-      ["onChange", "function", "Called when the selected value change."],
-      ["style", "object", "Override the inline-styles of the root element."],
-      ["tabItemContainerStyle", "object", "Override the inline-styles of the tab-labels container."],
-      ["tabTemplate", "function", "Override the default tab template used to wrap the content of each tab element."],
-      ["tabTemplateStyle", "object", "Override the inline-styles of the tab template."],
-      ["value", "any", "Makes Tabs controllable and selects the tab whose value prop matches this prop."]
+    "Tab Properties": [
+      ["mdcElement", "MDC_TAB", "string"],
+      ["children", "null", "string"],
+      ["active", "false", "bool"],
+      ["text", "null", "string"],
+      ["icon", "null", "string"],
+      ["href", "null", "string"],
+      ["tabId", "0", "number"],
+      ["onTabSelect", "null", "func"],
+      ["color", "null", "string"]
     ],
-    "TabProperties": [
-      ["buttonStyle", "object", "Override the inline-styles of the button element."],
-      ["className", "string", "The css class name of the root element."],
-      ["icon", "node", "Sets the icon of the tab,  you can pass FontIcon or SvgIcon elements."],
-      ["label", "node", "Sets the text value of the tab item to the string specified."],
-      ["onActive", "function", "Fired when the active tab changes by touch or tap. Use this event to specify any functionality when an active tab changes. For example - we are using this to route to home when the third tab becomes active. This function will always recieve the active tab as it's first argument."],
-      ["style", "object", "Override the inline-styles of the root element."],
-      ["value", "any", "If value prop passed to Tabs component, this value prop is also required. It assigns a value to the tab so that it can be selected by the Tabs."]
+    "Tabbar Properties": [
+      ["mdcElement", "MDC_TABBAR", "string"],
+      ["children", "null", "node"],
+      ["activeTab", "0", "number"],
+      ["onChange", "null", "string"],
+      ["color", "null", "string"],
+      ["activeColor", "null", "string"]
     ]
   },
   "Textfield": [
-  	["mdcElement", "MDC_TEXTFIELD", "string"],
-  	["label", "null", "string"],
-  	["id", "null", "string"],
-  	["type", "text", "string"],
-  	["disabled", "false", "bool"],
-  	["onChange", "() => {}", "function"],
-  	["dense", "false", "bool"],
-  	["helperText", "null", "string"],
-  	["htPersistent", "false", "bool"],
-  	["htValidationMsg", "false", "bool"],
-  	["fullwidth", "false", "bool"],
-  	["isTextarea", "false", "bool"],
-  	["isBoxed", "false", "bool"],
-  	["outlined", "false", "bool"],
-  	["leadingIcon", "null", "string"],
-  	["trailingIcon", "null", "string"],
-  	["onClickLI", "null", "function"],
-  	["onClickTI", "null", "function"],
-  	["noFloatingLabel", "false", "bool"],
-  	["defaultValue", "null", "string"]
+    ["mdcElement", "MDC_TEXTFIELD", "string"],
+    ["label", "null", "string"],
+    ["id", "null", "string"],
+    ["type", "text", "string"],
+    ["disabled", "false", "bool"],
+    ["onChange", "() => {}", "function"],
+    ["dense", "false", "bool"],
+    ["helperText", "null", "string"],
+    ["htPersistent", "false", "bool"],
+    ["htValidationMsg", "false", "bool"],
+    ["fullwidth", "false", "bool"],
+    ["isTextarea", "false", "bool"],
+    ["isBoxed", "false", "bool"],
+    ["outlined", "false", "bool"],
+    ["leadingIcon", "null", "string"],
+    ["trailingIcon", "null", "string"],
+    ["onClickLI", "null", "function"],
+    ["onClickTI", "null", "function"],
+    ["noFloatingLabel", "false", "bool"],
+    ["defaultValue", "null", "string"]
   ]
 }
