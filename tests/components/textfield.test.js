@@ -6,7 +6,7 @@ describe("components/TextField", () => {
   it("renders correctly", () => {
     const component = renderer.create(
       <TextField
-        cid="unique-component-id"
+        id="unique-component-id"
       />
     );
 
@@ -17,7 +17,7 @@ describe("components/TextField", () => {
   it("can be marked as invalid", () => {
     const component = renderer.create(
       <TextField
-        cid="unique-component-id"
+        id="unique-component-id"
       />
     );
 
@@ -34,7 +34,7 @@ describe("components/TextField", () => {
     it("returns the input value", () => {
       const component = renderer.create(
         <TextField
-          cid="unique-component-id"
+          id="unique-component-id"
           defaultValue="hello"
         />
       );

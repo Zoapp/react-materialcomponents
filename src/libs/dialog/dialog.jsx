@@ -138,7 +138,7 @@ export default class Dialog extends Component {
             label={field.name}
             pattern={field.pattern}
             helperText={field.error}
-            cid={field.cid}
+            id={field.id}
             style={{ width: "100%" }}
             ref={(c) => { this.fieldRef = c; }}
           />
