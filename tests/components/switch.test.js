@@ -5,10 +5,8 @@ import Switch from "@libs/components/switch";
 
 describe("components/Switch", () => {
   it("renders correctly", () => {
-    // `cid` is fixed for testing purpose, usually we do not have to pass it as
-    // a prop. Use the `id` prop instead.
     const component = renderer.create(
-      <Switch cid="unique-component-id" label="label switch" />
+      <Switch id="unique-component-id" label="label switch" />
     );
 
     const tree = component.toJSON();
@@ -20,7 +18,7 @@ describe("components/Switch", () => {
 
     const wrapper = shallow(
       <Switch
-        cid="unique-component-id"
+        id="unique-component-id"
         label="label switch"
         onChange={onChangeSpy}
       />
@@ -33,7 +31,7 @@ describe("components/Switch", () => {
 
   it("marks the HTML input as checked", () => {
     const wrapper = shallow(
-      <Switch cid="unique-component-id" label="label switch" checked />
+      <Switch id="unique-component-id" label="label switch" checked />
     );
 
     expect(wrapper.find("input").html()).toEqual(
@@ -43,7 +41,7 @@ describe("components/Switch", () => {
 
   it("marks the HTML input as disabled", () => {
     const wrapper = shallow(
-      <Switch cid="unique-component-id" label="label switch" disabled />
+      <Switch id="unique-component-id" label="label switch" disabled />
     );
 
     expect(wrapper.find("input").html()).toEqual(
@@ -54,7 +52,7 @@ describe("components/Switch", () => {
   it("can be controlled when onChange is passed", () => {
     const wrapper = shallow(
       <Switch
-        cid="unique-component-id"
+        id="unique-component-id"
         label="label switch"
         checked
         onChange={jest.fn()}
@@ -67,7 +65,7 @@ describe("components/Switch", () => {
   it("updates the input attributs when the checked prop changes", () => {
     const wrapper = shallow(
       <Switch
-        cid="unique-component-id"
+        id="unique-component-id"
         label="label switch"
         onChange={jest.fn()}
       />

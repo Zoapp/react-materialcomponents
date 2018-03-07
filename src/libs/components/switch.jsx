@@ -35,7 +35,7 @@ class Switch extends Component {
     } = this.props;
 
     const classes = MDC_SWITCH;
-    const cid = this.props.cid || Zrmc.generateId(id);
+    const cid = Zrmc.generateId(id);
 
     let l = "";
     if (label) {
@@ -84,7 +84,6 @@ class Switch extends Component {
 
 Switch.defaultProps = {
   checked: false,
-  cid: null,
   disabled: false,
   formField: false,
   id: null,
@@ -95,7 +94,6 @@ Switch.defaultProps = {
 
 Switch.propTypes = {
   checked: PropTypes.bool,
-  cid: PropTypes.string,
   disabled: PropTypes.bool,
   formField: PropTypes.bool,
   id: PropTypes.string,
