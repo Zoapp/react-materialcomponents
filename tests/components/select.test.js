@@ -6,9 +6,9 @@ describe("components/Select", () => {
   it("can be disabled", () => {
     const component = renderer.create(
       <Select 
-      	disabled
+        disabled
       > 
-    	Children is Here!
+      Children is Here!
       </Select>
     );
     const tree = component.toJSON();
@@ -18,9 +18,9 @@ describe("components/Select", () => {
   it("can have a label", () => {
     const component = renderer.create(
       <Select 
-      	label="foo"
+        label="foo"
       > 
-    	Children is Here!
+      Children is Here!
       </Select>
     );
     const tree = component.toJSON();
@@ -30,9 +30,9 @@ describe("components/Select", () => {
   it("can be stylized", () => {
     const component = renderer.create(
       <Select 
-      	style={{ color: "red" }}
+        style={{ color: "red" }}
       > 
-    	Children is Here!
+      Children is Here!
       </Select>
     );
     const tree = component.toJSON();
@@ -42,11 +42,11 @@ describe("components/Select", () => {
   it("can render something on select", () => {
     const component = renderer.create(
       <Select 
-      	onSelected={
-      	  console.log("I'm selected")
-      	}
+        onSelected={
+          console.log("I'm selected")
+        }
       > 
-    	Children is Here!
+      Children is Here!
       </Select>
     );
     const tree = component.toJSON();
@@ -56,9 +56,9 @@ describe("components/Select", () => {
   it("can have a selected index", () => {
     const component = renderer.create(
       <Select 
-      	selectedIndex={-1}
+        selectedIndex={-1}
       > 
-    	Children is Here!
+      Children is Here!
       </Select>
     );
     const tree = component.toJSON();
