@@ -16,6 +16,7 @@ describe("components/Radio", () => {
   it("can have a label", () => {
     const component = renderer.create(
       <Radio
+        id="2"
         label="foo"
       />
     );
@@ -26,6 +27,7 @@ describe("components/Radio", () => {
   it("can have be disabled", () => {
     const component = renderer.create(
       <Radio
+        id="3"
         disabled
       />
     );
@@ -36,6 +38,7 @@ describe("components/Radio", () => {
   it("can be checked", () => {
     const component = renderer.create(
       <Radio
+        id="4"
         checked
       />
     );
@@ -46,6 +49,7 @@ describe("components/Radio", () => {
   it("can have a name", () => {
     const component = renderer.create(
       <Radio
+        id="5"
         name="bar"
       />
     );

@@ -7,7 +7,7 @@ exports[`components/Radio can be checked 1`] = `
   <input
     className="mdc-radio__native-control"
     defaultChecked="checked"
-    id="0.bg7tlkk6zla"
+    id="4"
     name={null}
     type="radio"
   />
@@ -33,7 +33,7 @@ exports[`components/Radio can have a label 1`] = `
   >
     <input
       className="mdc-radio__native-control"
-      id="0.6mbaxsc48ru"
+      id="2"
       name={null}
       type="radio"
     />
@@ -49,7 +49,7 @@ exports[`components/Radio can have a label 1`] = `
     </div>
   </div>
   <label
-    htmlFor="0.6mbaxsc48ru"
+    htmlFor="2"
   >
     foo
   </label>
@@ -62,7 +62,7 @@ exports[`components/Radio can have a name 1`] = `
 >
   <input
     className="mdc-radio__native-control"
-    id="0.k9842a5l1es"
+    id="5"
     name="bar"
     type="radio"
   />
@@ -109,7 +109,7 @@ exports[`components/Radio can have be disabled 1`] = `
   <input
     className="mdc-radio__native-control"
     disabled="disabled"
-    id="0.89mvvclrkgt"
+    id="3"
     name={null}
     type="radio"
   />
