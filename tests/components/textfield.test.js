@@ -5,8 +5,8 @@ import TextField from "@libs/components/textfield";
 describe("components/TextField", () => {
   it("can have an id", () => {
     const component = renderer.create(
-      <TextField 
-        id="1"
+      <TextField
+        id="unique-component-id"
       />
     );
     const tree = component.toJSON();
@@ -178,7 +178,7 @@ describe("components/TextField", () => {
   it("can be marked as invalid", () => {
     const component = renderer.create(
       <TextField
-        cid="unique-component-id"
+        id="unique-component-id"
       />
     );
 
@@ -189,5 +189,22 @@ describe("components/TextField", () => {
 
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  describe("getValue()", () => {
+    it("returns the input value", () => {
+      const component = renderer.create(
+        <TextField
+          id="unique-component-id"
+          defaultValue="hello"
+        />
+      );
+
+      let tree = component.toJSON();
+      expect(tree).toMatchSnapshot();
+
+      const value = component.getInstance().getValue();
+      expect(value).toEqual("hello");
+    });
   });
 });

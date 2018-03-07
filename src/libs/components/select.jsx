@@ -230,12 +230,13 @@ const propTypeForSelectChildren = (componentName, child) => {
     displayName = child.type.displayName || child.type.name || child.type;
   }
 
+  displayName = displayName || typeof child;
+
   if (!/MenuItem/.test(displayName)) {
     return new Error(`Invalid child '${displayName}' supplied to ${componentName}.`);
   }
 
-  displayName = displayName || typeof child;
-  return displayName;
+  return null;
 };
 
 Select.propTypes = {
