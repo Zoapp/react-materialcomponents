@@ -90,12 +90,12 @@ export default class TextField extends Component {
     } = this.props;
     const { focused, isInvalid } = this.state;
     let classes = `${MDC_TEXTFIELD} mdc-text-field--upgraded`;
-    let lc = "mdc-text-field__label";
+    let lc = "mdc-floating-label";
     let bc = "mdc-text-field__bottom-line";
     if (focused) {
       classes += " mdc-text-field--focused";
       if (!noFloatingLabel) {
-        lc += " mdc-text-field__label--float-above";
+        lc += " mdc-floating-label--float-above";
       }
       bc += " mdc-text-field__bottom-line--active";
     }
@@ -171,7 +171,7 @@ export default class TextField extends Component {
       if (noFloatingLabel) {
         sc.display = "none";
       } else if (!focused) {
-        lc += " mdc-text-field__label--float-above";
+        lc += " mdc-floating-label--float-above";
       }
     }
 

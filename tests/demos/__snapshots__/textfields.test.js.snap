@@ -19,7 +19,7 @@ exports[`demos/components/textfields renders correctly 1`] = `
         type="text"
       />
       <label
-        className="mdc-text-field__label"
+        className="mdc-floating-label"
         focused="false"
         htmlFor="1"
         style={Object {}}
@@ -51,7 +51,7 @@ exports[`demos/components/textfields renders correctly 1`] = `
         type="text"
       />
       <label
-        className="mdc-text-field__label mdc-text-field__label--float-above"
+        className="mdc-floating-label mdc-floating-label--float-above"
         focused="false"
         htmlFor="2"
         style={Object {}}
@@ -84,7 +84,7 @@ exports[`demos/components/textfields renders correctly 1`] = `
         type="text"
       />
       <label
-        className="mdc-text-field__label mdc-text-field__label--float-above"
+        className="mdc-floating-label mdc-floating-label--float-above"
         focused="false"
         htmlFor="3"
         style={Object {}}
@@ -116,7 +116,7 @@ exports[`demos/components/textfields renders correctly 1`] = `
         type="text"
       />
       <label
-        className="mdc-text-field__label"
+        className="mdc-floating-label"
         focused="false"
         htmlFor="4"
         style={Object {}}
@@ -157,7 +157,7 @@ exports[`demos/components/textfields renders correctly 1`] = `
         type="text"
       />
       <label
-        className="mdc-text-field__label mdc-text-field__label--float-above"
+        className="mdc-floating-label mdc-floating-label--float-above"
         focused="false"
         htmlFor="5"
         style={Object {}}
@@ -190,7 +190,7 @@ exports[`demos/components/textfields renders correctly 1`] = `
         type="text"
       />
       <label
-        className="mdc-text-field__label mdc-text-field__label--float-above"
+        className="mdc-floating-label mdc-floating-label--float-above"
         focused="false"
         htmlFor="6"
         style={Object {}}
@@ -231,7 +231,7 @@ exports[`demos/components/textfields renders correctly 1`] = `
         type="text"
       />
       <label
-        className="mdc-text-field__label mdc-text-field__label--float-above"
+        className="mdc-floating-label mdc-floating-label--float-above"
         focused="false"
         htmlFor="7"
         style={Object {}}
@@ -313,7 +313,7 @@ exports[`demos/components/textfields renders correctly 1`] = `
           type="text"
         />
         <label
-          className="mdc-text-field__label"
+          className="mdc-floating-label"
           focused="false"
           htmlFor="9"
           style={Object {}}
@@ -352,7 +352,7 @@ exports[`demos/components/textfields renders correctly 1`] = `
         type="text"
       />
       <label
-        className="mdc-text-field__label"
+        className="mdc-floating-label"
         focused="false"
         htmlFor="10"
         style={Object {}}
@@ -399,7 +399,7 @@ exports[`demos/components/textfields renders correctly 1`] = `
           type="text"
         />
         <label
-          className="mdc-text-field__label"
+          className="mdc-floating-label"
           focused="false"
           htmlFor="11"
           style={Object {}}

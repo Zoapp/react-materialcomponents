@@ -14,7 +14,7 @@ exports[`components/TextField can be marked as invalid 1`] = `
     type="text"
   />
   <label
-    className="mdc-text-field__label"
+    className="mdc-floating-label"
     focused="false"
     htmlFor="unique-component-id"
     style={Object {}}
@@ -39,7 +39,7 @@ exports[`components/TextField can be marked as invalid 2`] = `
     type="text"
   />
   <label
-    className="mdc-text-field__label"
+    className="mdc-floating-label"
     focused="false"
     htmlFor="unique-component-id"
     style={Object {}}
@@ -64,7 +64,7 @@ exports[`components/TextField getValue() returns the input value 1`] = `
     type="text"
   />
   <label
-    className="mdc-text-field__label mdc-text-field__label--float-above"
+    className="mdc-floating-label mdc-floating-label--float-above"
     focused="false"
     htmlFor="unique-component-id"
     style={Object {}}
@@ -89,7 +89,7 @@ exports[`components/TextField renders correctly 1`] = `
     type="text"
   />
   <label
-    className="mdc-text-field__label"
+    className="mdc-floating-label"
     focused="false"
     htmlFor="unique-component-id"
     style={Object {}}
