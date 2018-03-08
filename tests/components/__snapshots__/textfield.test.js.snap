@@ -14,7 +14,7 @@ exports[`components/TextField can be Boxed 1`] = `
     type="text"
   />
   <label
-    className="mdc-text-field__label"
+    className="mdc-floating-label"
     focused="false"
     htmlFor="unique-component-id"
     style={Object {}}
@@ -39,7 +39,7 @@ exports[`components/TextField can be a Textarea 1`] = `
     type="text"
   />
   <label
-    className="mdc-text-field__label"
+    className="mdc-floating-label"
     focused="false"
     htmlFor="unique-component-id"
     style={Object {}}
@@ -90,7 +90,7 @@ exports[`components/TextField can be disabled 1`] = `
     type="text"
   />
   <label
-    className="mdc-text-field__label"
+    className="mdc-floating-label"
     focused="false"
     htmlFor="unique-component-id"
     style={Object {}}
@@ -186,7 +186,7 @@ exports[`components/TextField can have a default Value 1`] = `
     type="text"
   />
   <label
-    className="mdc-text-field__label mdc-text-field__label--float-above"
+    className="mdc-floating-label mdc-floating-label--float-above"
     focused="false"
     htmlFor="unique-component-id"
     style={Object {}}
