@@ -204,9 +204,7 @@ class Select extends Component {
           onSelected={this.onSelected}
           onClose={this.onClose}
         >
-          {Children.map(children, (child) => {
-            React.cloneElement(child, { role: "option" });
-          })}
+          {Children.map(children, child => React.cloneElement(child, { role: "option" }))}
         </Menu>
       </div>);
 
