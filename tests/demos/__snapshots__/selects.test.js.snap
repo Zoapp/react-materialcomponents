@@ -44,7 +44,62 @@ exports[`demos/components/selects renders correctly 1`] = `
           aria-hidden="true"
           className="mdc-menu__items mdc-list"
           role="menu"
-        />
+        >
+          <li
+            className="mdc-list-item"
+            onClick={[Function]}
+            onKeyUp={[Function]}
+            role="option"
+            tabIndex="0"
+          >
+            read, Cereal, Rice, and Pasta
+          </li>
+          <li
+            className="mdc-list-item"
+            onClick={[Function]}
+            onKeyUp={[Function]}
+            role="option"
+            tabIndex="0"
+          >
+            Vegetables
+          </li>
+          <li
+            className="mdc-list-item"
+            onClick={[Function]}
+            onKeyUp={[Function]}
+            role="option"
+            tabIndex="0"
+          >
+            Fruit
+          </li>
+          <li
+            className="mdc-list-item"
+            onClick={[Function]}
+            onKeyUp={[Function]}
+            role="option"
+            tabIndex="0"
+          >
+            Milk, Yogurt, and Cheese
+          </li>
+          <li
+            className="mdc-list-item"
+            onClick={[Function]}
+            onKeyUp={[Function]}
+            role="option"
+            tabIndex="0"
+          >
+            Meat, Poultry, Fish, Dry Beans, Eggs, and Nuts
+          </li>
+          <li
+            className="mdc-list-item"
+            onClick={[Function]}
+            onKeyUp={[Function]}
+            role="option"
+            tabIndex="0"
+          >
+            Fats, Oils, and Sweets
+          </li>
+        </ul>
       </div>
     </div>
   </div>

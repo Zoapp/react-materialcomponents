@@ -32,7 +32,17 @@ exports[`components/Select can be disabled 1`] = `
       aria-hidden="true"
       className="mdc-menu__items mdc-list"
       role="menu"
-    />
+    >
+      <li
+        className="mdc-list-item"
+        onClick={[Function]}
+        onKeyUp={[Function]}
+        role="option"
+        tabIndex="0"
+      >
+        Children is Here!
+      </li>
+    </ul>
   </div>
 </div>
 `;
@@ -72,7 +82,17 @@ exports[`components/Select can be styled 1`] = `
       aria-hidden="true"
       className="mdc-menu__items mdc-list"
       role="menu"
-    />
+    >
+      <li
+        className="mdc-list-item"
+        onClick={[Function]}
+        onKeyUp={[Function]}
+        role="option"
+        tabIndex="0"
+      >
+        Children is Here!
+      </li>
+    </ul>
   </div>
 </div>
 `;
@@ -110,7 +130,17 @@ exports[`components/Select can have a label 1`] = `
       aria-hidden="true"
       className="mdc-menu__items mdc-list"
       role="menu"
-    />
+    >
+      <li
+        className="mdc-list-item"
+        onClick={[Function]}
+        onKeyUp={[Function]}
+        role="option"
+        tabIndex="0"
+      >
+        Children is Here!
+      </li>
+    </ul>
   </div>
 </div>
 `;
@@ -146,7 +176,17 @@ exports[`components/Select can have a selected index 1`] = `
       aria-hidden="true"
       className="mdc-menu__items mdc-list"
       role="menu"
-    />
+    >
+      <li
+        className="mdc-list-item"
+        onClick={[Function]}
+        onKeyUp={[Function]}
+        role="option"
+        tabIndex="0"
+      >
+        Children is Here!
+      </li>
+    </ul>
   </div>
 </div>
 `;
