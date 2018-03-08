@@ -43,7 +43,7 @@ exports[`dialog/Dialog can render a TextField if \`field\` prop is supplied 1`] 
             type="text"
           />
           <label
-            className="mdc-text-field__label"
+            className="mdc-floating-label"
             focused="false"
             htmlFor="unique-component-id"
             style={Object {}}
@@ -120,7 +120,7 @@ exports[`dialog/Dialog can render a TextField if \`field\` prop is supplied 2`] 
             type="text"
           />
           <label
-            className="mdc-text-field__label"
+            className="mdc-floating-label"
             focused="false"
             htmlFor="unique-component-id"
             style={Object {}}
