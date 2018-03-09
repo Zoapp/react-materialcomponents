@@ -27,6 +27,7 @@ const MDC_SIMPLE_MENU = "mdc-menu";
 export default class Menu extends Component {
   constructor(props) {
     super(props);
+
     this.selectedRef = null;
   }
 
@@ -42,6 +43,7 @@ export default class Menu extends Component {
     if (this.props.onSelected) {
       this.props.onSelected(child, index);
     }
+
     if (this.props.onClose) {
       this.props.onClose();
     }
@@ -76,24 +78,31 @@ export default class Menu extends Component {
           {Children.map(children, (child, index) => {
             if (child.props.mdcElement === "mdc-list-item") {
               const { tabIndex } = child.props;
-              const p = {};
-              p.onSelected = (c, i) => {
+
+              const newProps = {};
+              newProps.onSelected = (c, i) => {
                 this.handleOnSelected(c, index);
+
                 if (child.props.onSelected) {
                   child.props.onSelected(c, i);
                 }
               };
 
               if (focusedIndex === index) {
-                p.selected = true;
-                p.ref = (c) => {
+                newProps.selected = true;
+                newProps.ref = (c) => {
                   this.selectedRef = c;
                 };
               }
+
               if (tabIndex > -1) {
-                return React.cloneElement(child, p);
+                return React.cloneElement(child, {
+                  ...child.props,
+                  ...newProps,
+                });
               }
             }
+
             return child;
           })}
         </ul>
