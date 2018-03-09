@@ -12,4 +12,12 @@ import CardPrimary from "./primary";
 import CardTitle from "./title";
 import CardSubtitle from "./subtitle";
 
-export { Card, CardActions, CardMedia, CardText, CardPrimary, CardTitle, CardSubtitle };
+export {
+  Card,
+  CardActions,
+  CardMedia,
+  CardText,
+  CardPrimary,
+  CardTitle,
+  CardSubtitle,
+};

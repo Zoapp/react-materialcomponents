@@ -18,9 +18,7 @@ import Zrmc from "../";
 
 const MDC_TBSECTION = "mdc-toolbar__section";
 
-const Section = ({
-  children, align, shrinkToFit, ...props
-}) => {
+const Section = ({ children, align, shrinkToFit, ...props }) => {
   let classes = MDC_TBSECTION;
   if (align === "start") {
     classes += " mdc-toolbar__section--align-start";

@@ -36,7 +36,7 @@ export default class Ripple extends Component {
     this.state = { focused: false, isActivated: false };
 
     this.layoutFrame = 0;
-    this.frame = ({ width: 0, height: 0 });
+    this.frame = { width: 0, height: 0 };
     this.initialSize = 0;
     this.maxRadius = 0;
     this.unboundedCoords = {
@@ -62,21 +62,21 @@ export default class Ripple extends Component {
     if (previousOnBlur) {
       previousOnBlur(event);
     }
-  }
+  };
 
   onFocus = (event, previousOnFocus) => {
     this.setState({ focused: true });
     if (previousOnFocus) {
       previousOnFocus(event);
     }
-  }
+  };
 
   setRef = (ref, previous) => {
     this.ref = ref;
     if (previous.ref) {
       previous.ref(ref);
     }
-  }
+  };
 
   getFgTranslationCoordinates() {
     // Center the element around the start point.
@@ -103,18 +103,20 @@ export default class Ripple extends Component {
     if (previousActivation) {
       previousActivation(event);
     }
-  }
+  };
 
   handleDeactivate = (event, previousDeactivation) => {
     this.deactivate();
     if (previousDeactivation) {
       previousDeactivation(event);
     }
-  }
+  };
 
   deactivate() {
     if (this.state.isActivated) {
-      this.setState({ isActivated: false }, () => { this.animateDeactivation(); });
+      this.setState({ isActivated: false }, () => {
+        this.animateDeactivation();
+      });
     }
   }
 
@@ -123,7 +125,9 @@ export default class Ripple extends Component {
       // Stop previous action
       this.stopActivation();
     }
-    this.setState({ isActivated: true }, () => { this.animateActivation(); });
+    this.setState({ isActivated: true }, () => {
+      this.animateActivation();
+    });
   }
 
   stopActivation() {
@@ -161,13 +165,10 @@ export default class Ripple extends Component {
       this.ref.style.setProperty(VAR_FG_TRANSLATE_START, translateStart);
       this.ref.style.setProperty(VAR_FG_TRANSLATE_END, translateEnd);
       this.ref.classList.add(FG_ACTIVATION);
-      this.activationTimer = setTimeout(
-        () => {
-          this.activationAnimationHasEnded = true;
-          this.animateDeactivation();
-        },
-        DEACTIVATION_TIMEOUT_MS,
-      );
+      this.activationTimer = setTimeout(() => {
+        this.activationAnimationHasEnded = true;
+        this.animateDeactivation();
+      }, DEACTIVATION_TIMEOUT_MS);
     }
   }
 
@@ -176,7 +177,9 @@ export default class Ripple extends Component {
     const maxDim = Math.max(this.frame.height, this.frame.width);
 
     if (this.props.unbounded) {
-      const hypotenuse = Math.sqrt((this.frame.width ** 2) + (this.frame.height ** 2));
+      const hypotenuse = Math.sqrt(
+        this.frame.width ** 2 + this.frame.height ** 2,
+      );
       this.maxRadius = hypotenuse + PADDING;
     } else {
       this.maxRadius = maxDim;
@@ -192,8 +195,8 @@ export default class Ripple extends Component {
 
     if (this.props.unbounded) {
       this.unboundedCoords = {
-        left: Math.round((this.frame.width / 2) - (this.initialSize / 2)),
-        top: Math.round((this.frame.height / 2) - (this.initialSize / 2)),
+        left: Math.round(this.frame.width / 2 - this.initialSize / 2),
+        top: Math.round(this.frame.height / 2 - this.initialSize / 2),
       };
 
       this.ref.style.setProperty(VAR_LEFT, `${this.unboundedCoords.left}px`);
@@ -202,9 +205,7 @@ export default class Ripple extends Component {
   }
 
   render() {
-    const {
-      unbounded, children,
-    } = this.props;
+    const { unbounded, children } = this.props;
     const { ...props } = children.props;
     if (props.className) {
       props.className += " mdc-ripple-surface";
@@ -219,17 +220,35 @@ export default class Ripple extends Component {
     if (this.state.focused) {
       props.className += ` ${BG_FOCUSED}`;
     }
-    props.ref = (c) => { this.setRef(c, children); };
-    props.onTouchStart = (e) => { this.handleActivate(e, children.props.onTouchStart); };
+    props.ref = (c) => {
+      this.setRef(c, children);
+    };
+    props.onTouchStart = (e) => {
+      this.handleActivate(e, children.props.onTouchStart);
+    };
     /* props.onPointerDown = (e) => { this.handleActivation(e, children.props.onPointerDown); }; */
-    props.onMouseDown = (e) => { this.handleActivate(e, children.props.onMouseDown); };
-    props.onKeyDown = (e) => { this.handleActivate(e, children.props.onKeyDown); };
-    props.onTouchEnd = (e) => { this.handleDeactivate(e, children.props.onTouchEnd); };
+    props.onMouseDown = (e) => {
+      this.handleActivate(e, children.props.onMouseDown);
+    };
+    props.onKeyDown = (e) => {
+      this.handleActivate(e, children.props.onKeyDown);
+    };
+    props.onTouchEnd = (e) => {
+      this.handleDeactivate(e, children.props.onTouchEnd);
+    };
     /* props.onPointerUp = (e) => { this.handleDeactivate(e, children.props.onPointerUp); }; */
-    props.onMouseUp = (e) => { this.handleDeactivate(e, children.props.onMouseUp); };
-    props.onKeyUp = (e) => { this.handleDeactivate(e, children.props.onKeyUp); };
-    props.onBlur = (e) => { this.onBlur(e, children.props.onBlur); };
-    props.onFocus = (e) => { this.onFocus(e, children.props.onFocus); };
+    props.onMouseUp = (e) => {
+      this.handleDeactivate(e, children.props.onMouseUp);
+    };
+    props.onKeyUp = (e) => {
+      this.handleDeactivate(e, children.props.onKeyUp);
+    };
+    props.onBlur = (e) => {
+      this.onBlur(e, children.props.onBlur);
+    };
+    props.onFocus = (e) => {
+      this.onFocus(e, children.props.onFocus);
+    };
     return React.cloneElement(children, props);
   }
 }

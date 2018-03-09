@@ -32,7 +32,7 @@ export default class IconToggle extends Component {
     if (this.props.onChange) {
       this.props.onChange(pressed);
     }
-  }
+  };
 
   render() {
     const {
@@ -65,13 +65,16 @@ export default class IconToggle extends Component {
         arria-label={l}
         tabIndex="0"
         style={style}
-        onKeyUp={(e) => { e.preventDefault(); }}
+        onKeyUp={(e) => {
+          e.preventDefault();
+        }}
         onClick={(e) => {
           if (!disabled) {
             this.handleClick(e);
           }
         }}
-      >{n}
+      >
+        {n}
       </i>
     );
     return Zrmc.render(element, props);

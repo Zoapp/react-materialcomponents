@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import GridLists from "@demos/components/gridlists";
+import GridLists from "demos/components/gridlists";
 
 describe("demos/components/gridlists", () => {
   it("renders itself correctly", () => {

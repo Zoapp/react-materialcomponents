@@ -18,18 +18,14 @@ import Icon from "../components/icon";
 
 const MDC_DRAWERCONTENT = "mdc-drawer__content";
 
-const DrawerContent = ({
-  children, list, ...props
-}) => {
+const DrawerContent = ({ children, list, ...props }) => {
   let classes = MDC_DRAWERCONTENT;
   if (list) {
     classes += " mdc-list";
   }
   const ch = Children.map(children, (child, index) => {
     if (!child.props.mdcElement) {
-      const {
-        activated, icon, children: chn, ...ps
-      } = child.props;
+      const { activated, icon, children: chn, ...ps } = child.props;
       ps.className = "mdc-list-item";
       if (activated) {
         ps.className += " mdc-list-item--activated";
@@ -37,15 +33,22 @@ const DrawerContent = ({
       ps.key = `d_${index}`;
       let c = "";
       if (icon) {
-        c = (<Icon key={index} className="mdc-list-item__graphic" aria-hidden="true" name={icon} />);
+        c = (
+          <Icon
+            key={index}
+            className="mdc-list-item__graphic"
+            aria-hidden="true"
+            name={icon}
+          />
+        );
       }
       return React.createElement(child.type, ps, [c, chn]);
-    } else if ((!child.props.type) || child.props.type !== "a") {
+    } else if (!child.props.type || child.props.type !== "a") {
       return React.cloneElement(child, { type: "a", ...child.props.type });
     }
     return child;
   });
-  return Zrmc.render(<nav className={classes} >{ch}</nav>, props);
+  return Zrmc.render(<nav className={classes}>{ch}</nav>, props);
 };
 
 DrawerContent.defaultProps = {

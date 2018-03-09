@@ -19,9 +19,7 @@ import Zrmc from "../";
 
 const MDC_CHIP = "mdc-chip";
 
-const Chip = ({
-  color, children, ...props
-}) => {
+const Chip = ({ color, children, ...props }) => {
   const classes = MDC_CHIP;
   const p = Zrmc.sanitizeProps(props);
   if (color) {

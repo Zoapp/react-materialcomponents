@@ -18,7 +18,13 @@ import Zrmc from "../";
 const MDC_GRID = "mdc-layout-grid";
 
 const Grid = ({
-  children, fixedColumnWidth, align, margin, gutter, maxWidth, ...props
+  children,
+  fixedColumnWidth,
+  align,
+  margin,
+  gutter,
+  maxWidth,
+  ...props
 }) => {
   let classes = MDC_GRID;
   if (align) {
@@ -60,7 +66,12 @@ const Grid = ({
     }
     p.style.maxWidth = maxWidth;
   }
-  return Zrmc.render(<div className={classes} {...p} >{children}</div>, props);
+  return Zrmc.render(
+    <div className={classes} {...p}>
+      {children}
+    </div>,
+    props,
+  );
 };
 
 Grid.defaultProps = {

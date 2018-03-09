@@ -17,16 +17,12 @@ import Zrmc from "../";
 
 const MDC_DRAWERHEADER = "mdc-drawer__header";
 
-const DrawerHeader = ({
-  children, list, ...props
-}) => {
+const DrawerHeader = ({ children, list, ...props }) => {
   const classes = MDC_DRAWERHEADER;
   return Zrmc.render(
-    (
-      <header className={classes} >
-        <div className="mdc-drawer__header-content">{children}</div>
-      </header>
-    ),
+    <header className={classes}>
+      <div className="mdc-drawer__header-content">{children}</div>
+    </header>,
     props,
   );
 };

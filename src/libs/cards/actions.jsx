@@ -17,16 +17,15 @@ import Zrmc from "../";
 
 const MDC_CARD_ACTIONS = "mdc-card__actions";
 
-const CardActions = ({
-  children, vertical, ...props
-}) => {
+const CardActions = ({ children, vertical, ...props }) => {
   let classes = MDC_CARD_ACTIONS;
   if (vertical) {
     classes += " mdc-card__actions--vertical";
   }
   // Iterate through children and set 'mdc-card__action'
-  const ch = Children.map(children, child =>
-    React.cloneElement(child, { ...child.props, cardAction: true }));
+  const ch = Children.map(children, (child) =>
+    React.cloneElement(child, { ...child.props, cardAction: true }),
+  );
   return Zrmc.render(<section className={classes}>{ch}</section>, props);
 };
 

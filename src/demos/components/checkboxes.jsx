@@ -8,7 +8,7 @@ import React from "react";
 import { Checkbox } from "../../../src/libs";
 import Property from "./property";
 
-export default () => (
+const Checkboxes = () => (
   <section>
     <h1>Checkbox examples </h1>
     <div style={{ padding: "16px" }}>
@@ -24,3 +24,5 @@ export default () => (
     <Property name="Checkbox" />
   </section>
 );
+
+export default Checkboxes;

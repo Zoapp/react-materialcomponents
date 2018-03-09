@@ -18,9 +18,7 @@ import Zrmc from "../";
 
 const MDC_TBROW = "mdc-toolbar__row";
 
-const Row = ({
-  children, ...props
-}) => {
+const Row = ({ children, ...props }) => {
   const classes = MDC_TBROW;
   return Zrmc.render(<div className={classes}>{children}</div>, props);
 };

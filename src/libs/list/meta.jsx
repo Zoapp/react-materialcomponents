@@ -19,7 +19,13 @@ import Zrmc from "../";
 const MDC_LISTITEMMETA = "mdc-list-item__meta";
 
 const ListItemMeta = ({
-  children, icon, href, color, label, onClick, ...props
+  children,
+  icon,
+  href,
+  color,
+  label,
+  onClick,
+  ...props
 }) => {
   const classes = MDC_LISTITEMMETA;
   let element;
@@ -39,11 +45,13 @@ const ListItemMeta = ({
       <span
         role="button"
         tabIndex="0"
-        onKeyUp={() => { }}
+        onKeyUp={() => {}}
         className={classes}
         onClick={onClick}
-      >{children}
-      </span>);
+      >
+        {children}
+      </span>
+    );
   }
   return Zrmc.render(element, props);
 };

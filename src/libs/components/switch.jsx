@@ -40,7 +40,11 @@ class Switch extends Component {
     let l = "";
     if (label) {
       /* eslint-disable jsx-a11y/label-has-for */
-      l = (<label htmlFor={cid} className="mdc-switch-label">{label}</label>);
+      l = (
+        <label htmlFor={cid} className="mdc-switch-label">
+          {label}
+        </label>
+      );
       /* eslint-enable jsx-a11y/label-has-for */
     }
 
@@ -71,10 +75,20 @@ class Switch extends Component {
 
     if (label) {
       if (formField) {
-        element = (<FormField>{element}{l}</FormField>);
+        element = (
+          <FormField>
+            {element}
+            {l}
+          </FormField>
+        );
       } else {
         const cn = "rmdc-switch-wrapper";
-        element = (<div className={cn}>{element}{l}</div>);
+        element = (
+          <div className={cn}>
+            {element}
+            {l}
+          </div>
+        );
       }
     }
 

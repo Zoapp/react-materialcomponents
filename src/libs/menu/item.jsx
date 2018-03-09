@@ -26,7 +26,7 @@ export default class MenuItem extends Component {
 
   setRef = (c) => {
     this.innerRef = c;
-  }
+  };
 
   handleClick = (e) => {
     e.preventDefault();
@@ -37,7 +37,13 @@ export default class MenuItem extends Component {
 
   render() {
     const {
-      children, tabIndex, disabled, selected, role, onSelected, ...props
+      children,
+      tabIndex,
+      disabled,
+      selected,
+      role,
+      onSelected,
+      ...props
     } = this.props;
     const classes = MDC_LIST_ITEM;
 
@@ -53,7 +59,7 @@ export default class MenuItem extends Component {
       }
     }
     /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-    return Zrmc.render((
+    return Zrmc.render(
       <li
         className={classes}
         role={role}
@@ -63,7 +69,9 @@ export default class MenuItem extends Component {
         ref={this.setRef}
       >
         {children}
-      </li>), props);
+      </li>,
+      props,
+    );
     /* eslint-enable jsx-a11y/no-noninteractive-element-interactions */
   }
 }
@@ -86,4 +94,3 @@ MenuItem.propTypes = {
   onSelected: PropTypes.func,
   role: PropTypes.string,
 };
-

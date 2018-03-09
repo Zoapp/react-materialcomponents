@@ -15,7 +15,7 @@ import {
 } from "../../../src/libs";
 import Property from "./property";
 
-export default () => (
+const Lists = () => (
   <section>
     <h1>List examples</h1>
     <div>
@@ -41,15 +41,27 @@ export default () => (
     </div>
     <div style={{ padding: "16px" }}>
       <List avatar>
-        <ListItem imgSrc="https://material-components-web.appspot.com/images/animal3.svg" imgSize={56} imgLabel="Brown Bear">
+        <ListItem
+          imgSrc="https://material-components-web.appspot.com/images/animal3.svg"
+          imgSize={56}
+          imgLabel="Brown Bear"
+        >
           Brown Bear
           <ListItemMeta icon="favorite" color="#ff4081" />
         </ListItem>
-        <ListItem imgSrc="https://material-components-web.appspot.com/images/animal1.svg" imgSize={56} imgLabel="Panda">
+        <ListItem
+          imgSrc="https://material-components-web.appspot.com/images/animal1.svg"
+          imgSize={56}
+          imgLabel="Panda"
+        >
           Panda
           <ListItemMeta icon="favorite_border" color="#ff4081" />
         </ListItem>
-        <ListItem imgSrc="https://material-components-web.appspot.com/images/animal2.svg" imgSize={56} imgLabel="Sloth">
+        <ListItem
+          imgSrc="https://material-components-web.appspot.com/images/animal2.svg"
+          imgSize={56}
+          imgLabel="Sloth"
+        >
           Sloth
           <ListItemMeta icon="favorite_border" color="#ff4081" />
         </ListItem>
@@ -75,3 +87,5 @@ export default () => (
     <Property name="List" />
   </section>
 );
+
+export default Lists;

@@ -26,20 +26,29 @@ export default class Drawer extends PureComponent {
   }
 
   onClick = (event) => {
-    if (this.props.type === "temporary" && this.props.open &&
-        event.target === this.ref) {
+    if (
+      this.props.type === "temporary" &&
+      this.props.open &&
+      event.target === this.ref
+    ) {
       event.preventDefault();
       this.props.onClose();
     }
-  }
+  };
 
   render() {
     const {
-      children, type, open, onClose, above, toolbarSpacer, ...props
+      children,
+      type,
+      open,
+      onClose,
+      above,
+      toolbarSpacer,
+      ...props
     } = this.props;
     let classes = `${MDC_DRAWER} mdc-drawer--${type} rmdc-drawer`;
 
-    if ((!above) && (!toolbarSpacer) && type === "permanent") {
+    if (!above && !toolbarSpacer && type === "permanent") {
       classes += " rmdc-drawer--toolbar";
     }
     let spacer;
@@ -47,23 +56,33 @@ export default class Drawer extends PureComponent {
       spacer = <div className="mdc-drawer__toolbar-spacer" />;
     }
     if (type === "permanent") {
-      return Zrmc.render(<nav className={classes}>{spacer}{children}</nav>, props);
+      return Zrmc.render(
+        <nav className={classes}>
+          {spacer}
+          {children}
+        </nav>,
+        props,
+      );
     }
     if (open) {
       classes += " mdc-drawer--open";
     }
 
     return Zrmc.render(
-      (
-        <aside
-          className={classes}
-          role="presentation"
-          onKeyUp={() => { }}
-          onClick={this.onClick}
-          ref={(c) => { this.ref = c; }}
-        >
-          <nav className="mdc-drawer__drawer">{spacer}{children}</nav>
-        </aside>),
+      <aside
+        className={classes}
+        role="presentation"
+        onKeyUp={() => {}}
+        onClick={this.onClick}
+        ref={(c) => {
+          this.ref = c;
+        }}
+      >
+        <nav className="mdc-drawer__drawer">
+          {spacer}
+          {children}
+        </nav>
+      </aside>,
       props,
     );
   }

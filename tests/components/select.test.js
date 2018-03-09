@@ -1,7 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Select from "@libs/components/select";
-import MenuItem from "@libs/menu/item";
+import Select from "libs/components/select";
+import MenuItem from "libs/menu/item";
 
 describe("components/Select", () => {
   it("can be disabled", () => {

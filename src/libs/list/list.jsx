@@ -17,9 +17,7 @@ import Zrmc from "../";
 
 const MDC_LIST = "mdc-list";
 
-const List = ({
-  children, dense, avatar, twoLine, ...props
-}) => {
+const List = ({ children, dense, avatar, twoLine, ...props }) => {
   let classes = MDC_LIST;
   if (dense) {
     classes += " mdc-list--dense";
@@ -31,7 +29,7 @@ const List = ({
     classes += " mdc-list--two-line";
   }
   // TODO iterate througth children to check and set type
-  return Zrmc.render(<ul className={classes} >{children}</ul>, props);
+  return Zrmc.render(<ul className={classes}>{children}</ul>, props);
 };
 
 List.defaultProps = {

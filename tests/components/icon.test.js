@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Icon from "@libs/components/icon";
+import Icon from "libs/components/icon";
 
 describe("components/Icon", () => {
   it("renders correctly", () => {

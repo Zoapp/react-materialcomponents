@@ -41,14 +41,17 @@ export default class MenuAnchor extends Component {
 
   onClickOutsideHandler = (e) => {
     const { open } = this.state;
-    if (open &&
-      ((!this.anchorRef) || (!this.anchorRef.contains(e.target))) &&
-      ((!this.menuRef) ||
-      (!this.menuRef.innerRef) || (!this.menuRef.innerRef.contains(e.target)))) {
+    if (
+      open &&
+      (!this.anchorRef || !this.anchorRef.contains(e.target)) &&
+      (!this.menuRef ||
+        !this.menuRef.innerRef ||
+        !this.menuRef.innerRef.contains(e.target))
+    ) {
       e.preventDefault();
       this.onClose();
     }
-  }
+  };
 
   onClickHandler = (e) => {
     e.preventDefault();
@@ -62,12 +65,12 @@ export default class MenuAnchor extends Component {
     if (prevOnClick) {
       prevOnClick(e);
     }
-  }
+  };
 
   onClose = () => {
     this.setState({ open: false });
     Zrmc.unlockScroll();
-  }
+  };
 
   updateContent() {
     if (this.anchorRef && this.menuRef && this.state.open) {
@@ -78,30 +81,30 @@ export default class MenuAnchor extends Component {
   }
 
   render() {
-    const {
-      menu, anchor, ...props
-    } = this.props;
+    const { menu, anchor, ...props } = this.props;
     const classes = MDC_MENU_ANCHOR;
 
     // change onClick event for anchor
-    const anchorElement = React.cloneElement(
-      anchor,
-      { onClick: this.onClickHandler, ref: (c) => { this.anchorRef = c; } },
-    );
-    // change menu open based on onClick event
-    const menuElement = React.cloneElement(
-      menu,
-      {
-        open: this.state.open,
-        ref: (c) => { this.menuRef = c; },
-        onClose: this.onClose,
+    const anchorElement = React.cloneElement(anchor, {
+      onClick: this.onClickHandler,
+      ref: (c) => {
+        this.anchorRef = c;
       },
-    );
+    });
+    // change menu open based on onClick event
+    const menuElement = React.cloneElement(menu, {
+      open: this.state.open,
+      ref: (c) => {
+        this.menuRef = c;
+      },
+      onClose: this.onClose,
+    });
     const element = (
       <div className={classes}>
         {anchorElement}
         {menuElement}
-      </div>);
+      </div>
+    );
     return Zrmc.render(element, props);
   }
 }

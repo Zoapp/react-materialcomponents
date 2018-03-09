@@ -7,7 +7,7 @@
 import React from "react";
 import { Switch } from "../../../src/libs";
 
-export default () => (
+const Switches = () => (
   <section>
     <h1>Switch examples </h1>
     <div style={{ padding: "16px" }}>
@@ -21,3 +21,5 @@ export default () => (
     </div>
   </section>
 );
+
+export default Switches;

@@ -20,17 +20,22 @@ import Zrmc from "../";
 const MDC_CARD_PRIMARY = "mdc-card__primary";
 
 const CardPrimary = ({
-  children, title, subTitle, largeTitle, isTitlingSecond, ...props
+  children,
+  title,
+  subTitle,
+  largeTitle,
+  isTitlingSecond,
+  ...props
 }) => {
   const classes = MDC_CARD_PRIMARY;
 
   let t = "";
   let s = "";
   if (title) {
-    t = (<CardTitle>{title}</CardTitle>);
+    t = <CardTitle>{title}</CardTitle>;
   }
   if (subTitle) {
-    s = (<CardSubtitle>{subTitle}</CardSubtitle>);
+    s = <CardSubtitle>{subTitle}</CardSubtitle>;
   }
   let first = "";
   let ch = children;
@@ -43,7 +48,15 @@ const CardPrimary = ({
       return child;
     });
   }
-  return Zrmc.render(<section className={classes} >{first}{t}{s}{ch}</section>, props);
+  return Zrmc.render(
+    <section className={classes}>
+      {first}
+      {t}
+      {s}
+      {ch}
+    </section>,
+    props,
+  );
 };
 
 CardPrimary.defaultProps = {

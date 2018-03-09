@@ -8,7 +8,7 @@ import React from "react";
 import { Tabbar, Tab } from "../../../src/libs";
 import Property from "./property";
 
-export default () => (
+const Tabbars = () => (
   <section>
     <h1>Tabbar examples </h1>
     <div style={{ padding: "16px" }}>
@@ -22,3 +22,5 @@ export default () => (
     <Property name="Tab" />
   </section>
 );
+
+export default Tabbars;

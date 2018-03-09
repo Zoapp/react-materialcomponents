@@ -8,7 +8,7 @@ import React from "react";
 import { IconToggle } from "../../../src/libs";
 import Property from "./property";
 
-export default () => (
+const IconToggles = () => (
   <section>
     <h1>Menus examples </h1>
     <div style={{ padding: "16px" }}>
@@ -18,3 +18,5 @@ export default () => (
     <Property name="Toogle" />
   </section>
 );
+
+export default IconToggles;

@@ -17,9 +17,7 @@ import Zrmc from "../";
 
 const MDC_DIALOGBODY = "mdc-dialog__body";
 
-const DialogBody = ({
-  children, scrollable, ...props
-}) => {
+const DialogBody = ({ children, scrollable, ...props }) => {
   let classes = MDC_DIALOGBODY;
   if (scrollable) {
     classes += " mdc-dialog__body--scrollable";
@@ -34,9 +32,12 @@ DialogBody.defaultProps = {
 };
 
 DialogBody.propTypes = {
-// React component props
+  // React component props
   children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node), PropTypes.node, PropTypes.string]),
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]),
   mdcElement: PropTypes.string,
   scrollable: PropTypes.bool,
 };

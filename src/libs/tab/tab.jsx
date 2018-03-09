@@ -27,11 +27,19 @@ class Tab extends Component {
 
   setRef = (c) => {
     this.ref = c;
-  }
+  };
 
   render() {
     const {
-      children, active, text, icon, href, tabId, onTabSelect, color, ...props
+      children,
+      active,
+      text,
+      icon,
+      href,
+      tabId,
+      onTabSelect,
+      color,
+      ...props
     } = this.props;
     let classes = MDC_TAB;
     if (active) {
@@ -39,7 +47,7 @@ class Tab extends Component {
     }
     let i = "";
     if (icon) {
-      i = (<Icon name={icon} className="mdc-tab__icon" aria-hidden="true" />);
+      i = <Icon name={icon} className="mdc-tab__icon" aria-hidden="true" />;
     }
     let txt = text;
     if (!text) {
@@ -55,10 +63,15 @@ class Tab extends Component {
       <a
         className={classes}
         href={href}
-        onClick={() => { onTabSelect(text, tabId); }}
+        onClick={() => {
+          onTabSelect(text, tabId);
+        }}
         ref={this.setRef}
-      >{i}{txt}
-      </a>);
+      >
+        {i}
+        {txt}
+      </a>
+    );
     return Zrmc.render(element, props);
   }
 }
