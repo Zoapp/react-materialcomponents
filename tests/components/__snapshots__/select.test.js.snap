@@ -164,15 +164,7 @@ exports[`components/Select can have a selected index 1`] = `
     <div
       className="mdc-select__selected-text"
     >
-      <li
-        className="mdc-list-item"
-        onClick={[Function]}
-        onKeyUp={[Function]}
-        role="menuitem"
-        tabIndex="0"
-      >
-        This one should be selected
-      </li>
+      This one should be selected
     </div>
     <div
       className="mdc-select__bottom-line"

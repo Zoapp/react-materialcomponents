@@ -26,14 +26,14 @@ class Select extends Component {
   constructor(props) {
     super(props);
 
-    const selectedValue = Children.toArray(props.children).find(
+    const selectedChild = Children.toArray(props.children).find(
       (child, index) => index === props.selectedIndex,
     );
 
     this.state = {
       open: false,
       focused: false,
-      selectedValue,
+      selectedDisplayValue: selectedChild ? selectedChild.props.children : null,
       selectedIndex: props.selectedIndex,
     };
 
@@ -63,12 +63,16 @@ class Select extends Component {
   };
 
   onSelect = (selectedItem, selectedIndex) => {
-    const selectedValue =
-      selectedItem.props.value || selectedItem.props.children;
-
-    this.setState({ selectedIndex, selectedValue });
+    this.setState({
+      selectedIndex,
+      selectedDisplayValue: selectedItem.props.children,
+    });
 
     if (this.props.onSelected) {
+      // We pass the value of the selected item to the parent.
+      const selectedValue =
+        selectedItem.props.value || selectedItem.props.children;
+
       this.props.onSelected(selectedValue, selectedIndex);
     }
   };
@@ -180,7 +184,7 @@ class Select extends Component {
   render() {
     const { children, disabled, label, ...props } = this.props;
 
-    const { open, focused, selectedIndex, selectedValue } = this.state;
+    const { open, focused, selectedIndex, selectedDisplayValue } = this.state;
 
     const classes = MDC_SELECT;
     const p = {};
@@ -192,7 +196,7 @@ class Select extends Component {
     }
 
     let lc = "mdc-select__label";
-    if (selectedValue) {
+    if (selectedDisplayValue) {
       lc += " mdc-select__label--float-above";
     }
 
@@ -220,7 +224,9 @@ class Select extends Component {
           }}
         >
           <div className={lc}>{label}</div>
-          <div className="mdc-select__selected-text">{selectedValue}</div>
+          <div className="mdc-select__selected-text">
+            {selectedDisplayValue}
+          </div>
           <div className={bc} />
         </div>
         <Menu
