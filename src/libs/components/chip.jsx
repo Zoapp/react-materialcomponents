@@ -29,7 +29,13 @@ const Chip = ({ color, children, ...props }) => {
   p.className = classes;
   let text = children;
   if (typeof children === "string") {
-    text = React.createElement("div", { className: "mdc-chip__text" });
+    text = React.createElement(
+      "div",
+      {
+        className: "mdc-chip__text",
+      },
+      children,
+    );
   }
   const element = React.createElement("div", p, text);
   return Zrmc.render(element, props);
