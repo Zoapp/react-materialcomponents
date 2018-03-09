@@ -25,11 +25,18 @@ const MDC_SELECT = "mdc-select";
 class Select extends Component {
   constructor(props) {
     super(props);
+
+    const selectedValue = Children.toArray(props.children).find(
+      (child, index) => index === props.selectedIndex,
+    );
+
     this.state = {
       open: false,
       focused: false,
-      selectedIndex: this.props.selectedIndex,
+      selectedValue,
+      selectedIndex: props.selectedIndex,
     };
+
     this.ctx = null;
   }
 
@@ -55,11 +62,13 @@ class Select extends Component {
     this.setState({ focused: true });
   };
 
-  onSelected = (item, index) => {
-    const selected = item.props.children;
-    this.setState({ selected, selectedIndex: index });
+  onSelect = (selectedItem, selectedIndex) => {
+    const selectedValue = selectedItem.props.children;
+
+    this.setState({ selectedIndex, selectedValue });
+
     if (this.props.onSelected) {
-      this.props.onSelected(item, index);
+      this.props.onSelected(selectedValue, selectedIndex);
     }
   };
 
@@ -170,7 +179,7 @@ class Select extends Component {
   render() {
     const { children, disabled, label, ...props } = this.props;
 
-    const { open, focused, selected, selectedIndex } = this.state;
+    const { open, focused, selectedIndex, selectedValue } = this.state;
 
     const classes = MDC_SELECT;
     const p = {};
@@ -182,7 +191,7 @@ class Select extends Component {
     }
 
     let lc = "mdc-select__label";
-    if (selected) {
+    if (selectedValue) {
       lc += " mdc-select__label--float-above";
     }
 
@@ -210,7 +219,7 @@ class Select extends Component {
           }}
         >
           <div className={lc}>{label}</div>
-          <div className="mdc-select__selected-text">{selected}</div>
+          <div className="mdc-select__selected-text">{selectedValue}</div>
           <div className={bc} />
         </div>
         <Menu
@@ -220,11 +229,14 @@ class Select extends Component {
           ref={(c) => {
             this.menuRef = c;
           }}
-          onSelected={this.onSelected}
+          onSelected={this.onSelect}
           onClose={this.onClose}
         >
           {Children.map(children, (child) =>
-            React.cloneElement(child, { role: "option" }),
+            React.cloneElement(child, {
+              ...child.props,
+              role: "option",
+            }),
           )}
         </Menu>
       </div>

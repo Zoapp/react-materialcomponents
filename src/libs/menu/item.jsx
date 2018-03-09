@@ -21,6 +21,7 @@ const MDC_LIST_ITEM = "mdc-list-item";
 export default class MenuItem extends Component {
   constructor(props) {
     super(props);
+
     this.innerRef = null;
   }
 
@@ -30,6 +31,7 @@ export default class MenuItem extends Component {
 
   handleClick = (e) => {
     e.preventDefault();
+
     if (this.props.onSelected && this.props.tabIndex > -1) {
       this.props.onSelected(this, this.props.tabIndex);
     }

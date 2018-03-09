@@ -159,11 +159,21 @@ exports[`components/Select can have a selected index 1`] = `
     tabIndex="0"
   >
     <div
-      className="mdc-select__label"
+      className="mdc-select__label mdc-select__label--float-above"
     />
     <div
       className="mdc-select__selected-text"
-    />
+    >
+      <li
+        className="mdc-list-item"
+        onClick={[Function]}
+        onKeyUp={[Function]}
+        role="menuitem"
+        tabIndex="0"
+      >
+        This one should be selected
+      </li>
+    </div>
     <div
       className="mdc-select__bottom-line"
     />
@@ -178,13 +188,14 @@ exports[`components/Select can have a selected index 1`] = `
       role="menu"
     >
       <li
+        aria-selected="true"
         className="mdc-list-item"
         onClick={[Function]}
         onKeyUp={[Function]}
         role="option"
         tabIndex="0"
       >
-        Children is Here!
+        This one should be selected
       </li>
     </ul>
   </div>
