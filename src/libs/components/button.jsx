@@ -24,18 +24,19 @@ import Zrmc from "../";
 const MDC_BUTTON = "mdc-button";
 
 const Button = ({
+  cardAction,
   children,
-  raised,
-  unelevated,
-  stroked,
-  dense,
   compact,
-  secondary,
+  dense,
+  disabled,
   icon,
   link,
-  ripple,
-  cardAction,
   onClick,
+  raised,
+  ripple,
+  secondary,
+  stroked,
+  unelevated,
   ...props
 }) => {
   let classes = MDC_BUTTON;
@@ -76,7 +77,7 @@ const Button = ({
     );
   } else {
     element = (
-      <button className={classes} onClick={onClick}>
+      <button className={classes} onClick={onClick} disabled={disabled}>
         {i}
         {children}
       </button>
@@ -86,40 +87,37 @@ const Button = ({
 };
 
 Button.defaultProps = {
-  mdcElement: MDC_BUTTON,
+  cardAction: false,
   children: null,
-  raised: false,
-  unelevated: false,
-  stroked: false,
-  dense: false,
   compact: false,
-  secondary: false,
+  dense: false,
+  disabled: false,
   icon: null,
   link: null,
-  ripple: false,
-
-  cardAction: false,
-
+  mdcElement: MDC_BUTTON,
   onClick: null,
+  raised: false,
+  ripple: false,
+  secondary: false,
+  stroked: false,
+  unelevated: false,
 };
 
 Button.propTypes = {
-  mdcElement: PropTypes.string,
+  cardAction: PropTypes.bool,
   children: PropTypes.node,
-  raised: PropTypes.bool,
-  unelevated: PropTypes.bool,
-  stroked: PropTypes.bool,
-  dense: PropTypes.bool,
   compact: PropTypes.bool,
-  secondary: PropTypes.bool,
+  dense: PropTypes.bool,
+  disabled: PropTypes.bool,
   icon: PropTypes.string,
   link: PropTypes.string,
-
-  ripple: PropTypes.bool,
-
-  cardAction: PropTypes.bool,
-
+  mdcElement: PropTypes.string,
   onClick: PropTypes.func,
+  raised: PropTypes.bool,
+  ripple: PropTypes.bool,
+  secondary: PropTypes.bool,
+  stroked: PropTypes.bool,
+  unelevated: PropTypes.bool,
 };
 
 export default Button;

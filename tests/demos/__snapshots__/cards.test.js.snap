@@ -42,6 +42,7 @@ exports[`demos/components/cards renders itself correctly 1`] = `
           >
             <button
               className="mdc-button mdc-button--compact mdc-card__action"
+              disabled={false}
               onClick={null}
             >
               
@@ -49,6 +50,7 @@ exports[`demos/components/cards renders itself correctly 1`] = `
             </button>
             <button
               className="mdc-button mdc-button--compact mdc-card__action"
+              disabled={false}
               onClick={null}
             >
               
@@ -85,6 +87,7 @@ exports[`demos/components/cards renders itself correctly 1`] = `
           >
             <button
               className="mdc-button mdc-button--compact mdc-card__action"
+              disabled={false}
               onClick={null}
             >
               
@@ -92,6 +95,7 @@ exports[`demos/components/cards renders itself correctly 1`] = `
             </button>
             <button
               className="mdc-button mdc-button--compact mdc-card__action"
+              disabled={false}
               onClick={null}
             >
               
@@ -132,6 +136,7 @@ exports[`demos/components/cards renders itself correctly 1`] = `
           >
             <button
               className="mdc-button mdc-button--compact mdc-card__action"
+              disabled={false}
               onClick={null}
             >
               
@@ -139,6 +144,7 @@ exports[`demos/components/cards renders itself correctly 1`] = `
             </button>
             <button
               className="mdc-button mdc-button--compact mdc-card__action"
+              disabled={false}
               onClick={null}
             >
               

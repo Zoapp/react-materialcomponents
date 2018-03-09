@@ -3,6 +3,7 @@
 exports[`components/Button can be compact 1`] = `
 <button
   className="mdc-button mdc-button--compact"
+  disabled={false}
   onClick={null}
 >
   
@@ -12,15 +13,28 @@ exports[`components/Button can be compact 1`] = `
 exports[`components/Button can be dense 1`] = `
 <button
   className="mdc-button mdc-button--dense"
+  disabled={false}
   onClick={null}
 >
   
 </button>
 `;
 
+exports[`components/Button can be disabled 1`] = `
+<button
+  className="mdc-button"
+  disabled={true}
+  onClick={null}
+>
+  
+  disabled button
+</button>
+`;
+
 exports[`components/Button can be raised 1`] = `
 <button
   className="mdc-button mdc-button--raised"
+  disabled={false}
   onClick={null}
 >
   
@@ -30,6 +44,7 @@ exports[`components/Button can be raised 1`] = `
 exports[`components/Button can be rippled 1`] = `
 <button
   className="mdc-button"
+  disabled={false}
   onClick={null}
 >
   
@@ -39,6 +54,7 @@ exports[`components/Button can be rippled 1`] = `
 exports[`components/Button can be stroked 1`] = `
 <button
   className="mdc-button mdc-button--stroked"
+  disabled={false}
   onClick={null}
 >
   
@@ -48,6 +64,7 @@ exports[`components/Button can be stroked 1`] = `
 exports[`components/Button can be unelevated 1`] = `
 <button
   className="mdc-button mdc-button--unelevated"
+  disabled={false}
   onClick={null}
 >
   
@@ -57,6 +74,7 @@ exports[`components/Button can be unelevated 1`] = `
 exports[`components/Button can have children 1`] = `
 <button
   className="mdc-button"
+  disabled={false}
   onClick={null}
 >
   
@@ -76,6 +94,7 @@ exports[`components/Button can render a link if supplied 1`] = `
 exports[`components/Button can render an icon if supplied 1`] = `
 <button
   className="mdc-button"
+  disabled={false}
   onClick={null}
 >
   <i
@@ -89,6 +108,7 @@ exports[`components/Button can render an icon if supplied 1`] = `
 exports[`components/Button renders a secondary button 1`] = `
 <button
   className="mdc-button secondary-filled-button"
+  disabled={false}
   onClick={null}
 >
   
