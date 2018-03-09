@@ -54,4 +54,13 @@ describe("components/Button", () => {
     const component = renderer.create(<Button ripple />).toJSON();
     expect(component).toMatchSnapshot();
   });
+
+  it("can be disabled", () => {
+    const component = renderer.create(
+      <Button disabled>disabled button</Button>,
+    );
+    const tree = component.toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
 });

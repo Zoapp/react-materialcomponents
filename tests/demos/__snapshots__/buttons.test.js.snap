@@ -15,6 +15,7 @@ exports[`demos/components/buttons renders itself correctly 1`] = `
     >
       <button
         className="mdc-button"
+        disabled={false}
         onClick={null}
       >
         
@@ -30,6 +31,7 @@ exports[`demos/components/buttons renders itself correctly 1`] = `
     >
       <button
         className="mdc-button mdc-button--raised"
+        disabled={false}
         onClick={null}
       >
         <i
@@ -49,6 +51,7 @@ exports[`demos/components/buttons renders itself correctly 1`] = `
     >
       <button
         className="mdc-button mdc-button--raised"
+        disabled={false}
         onClick={null}
       >
         
@@ -64,6 +67,7 @@ exports[`demos/components/buttons renders itself correctly 1`] = `
     >
       <button
         className="mdc-button mdc-button--raised"
+        disabled={true}
         onClick={null}
       >
         
@@ -79,6 +83,7 @@ exports[`demos/components/buttons renders itself correctly 1`] = `
     >
       <button
         className="mdc-button mdc-button--unelevated mdc-button--compact secondary-filled-button"
+        disabled={false}
         onClick={null}
       >
         
@@ -94,6 +99,7 @@ exports[`demos/components/buttons renders itself correctly 1`] = `
     >
       <button
         className="mdc-button mdc-button--stroked mdc-button--dense"
+        disabled={false}
         onClick={null}
       >
         
