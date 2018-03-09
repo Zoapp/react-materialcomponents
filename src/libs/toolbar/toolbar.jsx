@@ -24,9 +24,7 @@ const MDC_TOOLBAR = "mdc-toolbar";
 
 export default class Toolbar extends PureComponent {
   render() {
-    const {
-      children, fixed, drawerAbove, ...otherProps
-    } = this.props;
+    const { children, fixed, drawerAbove, ...otherProps } = this.props;
     let classes = MDC_TOOLBAR;
     if (fixed) {
       classes += " mdc-toolbar--fixed";
@@ -35,9 +33,7 @@ export default class Toolbar extends PureComponent {
       // TODO rtl
       classes += " rmdc-content-drawer";
     }
-    const element = (
-      <header className={classes} >{children}</header>
-    );
+    const element = <header className={classes}>{children}</header>;
     return Zrmc.render(element, otherProps);
   }
 }

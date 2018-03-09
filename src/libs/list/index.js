@@ -11,4 +11,11 @@ import ListDivider from "./divider";
 import ListGroup from "./group";
 import ListGroupSubheader from "./subheader";
 
-export { List, ListItem, ListItemMeta, ListDivider, ListGroup, ListGroupSubheader };
+export {
+  List,
+  ListItem,
+  ListItemMeta,
+  ListDivider,
+  ListGroup,
+  ListGroupSubheader,
+};

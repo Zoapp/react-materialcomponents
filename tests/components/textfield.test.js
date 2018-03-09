@@ -1,25 +1,17 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import TextField from "@libs/components/textfield";
+import TextField from "libs/components/textfield";
 
 describe("components/TextField", () => {
   it("renders correctly", () => {
-    const component = renderer.create(
-      <TextField
-        id="unique-component-id"
-      />
-    );
+    const component = renderer.create(<TextField id="unique-component-id" />);
 
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it("can be marked as invalid", () => {
-    const component = renderer.create(
-      <TextField
-        id="unique-component-id"
-      />
-    );
+    const component = renderer.create(<TextField id="unique-component-id" />);
 
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -33,13 +25,10 @@ describe("components/TextField", () => {
   describe("getValue()", () => {
     it("returns the input value", () => {
       const component = renderer.create(
-        <TextField
-          id="unique-component-id"
-          defaultValue="hello"
-        />
+        <TextField id="unique-component-id" defaultValue="hello" />,
       );
 
-      let tree = component.toJSON();
+      const tree = component.toJSON();
       expect(tree).toMatchSnapshot();
 
       const value = component.getInstance().getValue();

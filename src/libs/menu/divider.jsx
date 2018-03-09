@@ -20,8 +20,7 @@ const MDC_LIST_DIVIDER = "mdc-list-divider";
 
 const MenuDivider = ({ ...props }) => {
   const classes = MDC_LIST_DIVIDER;
-  return Zrmc.render((
-    <li className={classes} role="separator" />), props);
+  return Zrmc.render(<li className={classes} role="separator" />, props);
 };
 
 MenuDivider.defaultProps = {

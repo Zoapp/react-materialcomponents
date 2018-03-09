@@ -22,17 +22,10 @@ const MDC_RADIO = "mdc-radio";
 export default class Radio extends Component {
   setRef = (c) => {
     this.inputRef = c;
-  }
+  };
 
   render() {
-    const {
-      id,
-      name,
-      label,
-      checked,
-      disabled,
-      ...props
-    } = this.props;
+    const { id, name, label, checked, disabled, ...props } = this.props;
 
     const classes = MDC_RADIO;
     const cid = Zrmc.generateId(id);
@@ -40,7 +33,7 @@ export default class Radio extends Component {
     let l = "";
     if (label) {
       /* eslint-disable jsx-a11y/label-has-for */
-      l = (<label htmlFor={cid}>{label}</label>);
+      l = <label htmlFor={cid}>{label}</label>;
       /* eslint-enable jsx-a11y/label-has-for */
     }
 
@@ -70,7 +63,12 @@ export default class Radio extends Component {
       </div>
     );
     if (label) {
-      element = (<FormField>{element}{l}</FormField>);
+      element = (
+        <FormField>
+          {element}
+          {l}
+        </FormField>
+      );
     }
 
     return Zrmc.render(element, props);

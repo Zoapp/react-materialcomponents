@@ -1,30 +1,28 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Button from "@libs/components/button";
+import Button from "libs/components/button";
 
 describe("components/Button", () => {
   it("can have children", () => {
-    const component = renderer.create(
-      <Button>
-        Children are here!
-      </Button>
-    ).toJSON();
+    const component = renderer
+      .create(<Button>Children are here!</Button>)
+      .toJSON();
     expect(component).toMatchSnapshot();
   });
-  
+
   it("can be raised", () => {
     const component = renderer.create(<Button raised />).toJSON();
     expect(component).toMatchSnapshot();
-  }); 
+  });
 
-  it("can be unelevated", () =>{
+  it("can be unelevated", () => {
     const component = renderer.create(<Button unelevated />).toJSON();
     expect(component).toMatchSnapshot();
   });
 
   it("can be stroked", () => {
     const component = renderer.create(<Button stroked />).toJSON();
-    expect(component).toMatchSnapshot();     
+    expect(component).toMatchSnapshot();
   });
 
   it("can be dense", () => {

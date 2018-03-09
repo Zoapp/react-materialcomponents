@@ -960,7 +960,7 @@ exports[`demos/components/sliders renders correctly 1`] = `
     </div>
   </div>
   <h2>
-    Slider  Properties
+    Slider Properties
   </h2>
   <div
     className="mdc-layout-grid"

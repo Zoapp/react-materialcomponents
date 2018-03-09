@@ -1,8 +1,7 @@
 import React from "react";
 import renderer from "react-test-renderer";
 import dialogPolyfill from "dialog-polyfill";
-import Dialog from "@libs/dialog/dialog";
-import DialogFooter from "@libs/dialog/footer";
+import Dialog from "libs/dialog/dialog";
 
 jest.mock("dialog-polyfill", () => jest.fn());
 
@@ -26,7 +25,7 @@ describe("dialog/Dialog", () => {
       >
         <div>Hello, here is some content</div>
       </Dialog>,
-      { createNodeMock }
+      { createNodeMock },
     );
 
     const tree = component.toJSON();
@@ -57,7 +56,7 @@ describe("dialog/Dialog", () => {
       >
         <div>Hello, here is some content</div>
       </Dialog>,
-      { createNodeMock }
+      { createNodeMock },
     );
 
     const tree = component.toJSON();
@@ -74,12 +73,10 @@ describe("dialog/Dialog", () => {
     });
 
     const component = renderer.create(
-      <Dialog
-        header="Are you happy?"
-      >
+      <Dialog header="Are you happy?">
         <div>Hello, here is some content</div>
       </Dialog>,
-      { createNodeMock }
+      { createNodeMock },
     );
 
     const tree = component.toJSON();
@@ -102,12 +99,10 @@ describe("dialog/Dialog", () => {
     };
 
     const component = renderer.create(
-      <Dialog
-        field={field}
-      >
+      <Dialog field={field}>
         <div>Hello, you should see a TextField</div>
       </Dialog>,
-      { createNodeMock }
+      { createNodeMock },
     );
 
     let tree = component.toJSON();
@@ -131,7 +126,7 @@ describe("dialog/Dialog", () => {
         <Dialog>
           <div>Hello, you should NOT see a TextField</div>
         </Dialog>,
-        { createNodeMock }
+        { createNodeMock },
       );
 
       const value = component.getInstance().getFieldValue();
@@ -154,12 +149,10 @@ describe("dialog/Dialog", () => {
       };
 
       const component = renderer.create(
-        <Dialog
-          field={field}
-        >
+        <Dialog field={field}>
           <div>Hello, you should see a TextField</div>
         </Dialog>,
-        { createNodeMock }
+        { createNodeMock },
       );
 
       const value = component.getInstance().getFieldValue();

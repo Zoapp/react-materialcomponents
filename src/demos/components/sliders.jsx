@@ -8,7 +8,7 @@ import React from "react";
 import { Slider } from "../../../src/libs";
 import Property from "./property";
 
-export default () => (
+const Sliders = () => (
   <section>
     <h1>Slider examples </h1>
     <div style={{ padding: "16px" }}>
@@ -20,7 +20,9 @@ export default () => (
     <div style={{ padding: "16px" }}>
       <Slider label="slider 3" discrete max={256} value={20} displayMarker />
     </div>
-    <h2>Slider  Properties</h2>
+    <h2>Slider Properties</h2>
     <Property name="Slider" />
   </section>
 );
+
+export default Sliders;

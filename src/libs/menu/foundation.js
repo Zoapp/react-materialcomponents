@@ -45,7 +45,7 @@ class RMDCMenuFoundation {
   }
 
   static getAnchorMargin(adapter) {
-    const margin = (adapter.props.anchor && adapter.props.anchor.margin) || { };
+    const margin = (adapter.props.anchor && adapter.props.anchor.margin) || {};
     return {
       top: margin.top || 0,
       bottom: margin.bottom || 0,
@@ -54,16 +54,21 @@ class RMDCMenuFoundation {
     };
   }
 
-
-  static getOriginCorner(origin, anchorMargin, anchorCorner, isRtl, {
-    viewportDistance, anchorHeight, anchorWidth, menuHeight, menuWidth,
-  }) {
+  static getOriginCorner(
+    origin,
+    anchorMargin,
+    anchorCorner,
+    isRtl,
+    { viewportDistance, anchorHeight, anchorWidth, menuHeight, menuWidth },
+  ) {
     let corner = origin;
     const isBottomAligned = Boolean(anchorCorner && CORNER_BOTTOM);
-    const availableTop = isBottomAligned ? viewportDistance.top + anchorHeight + anchorMargin.bottom
+    const availableTop = isBottomAligned
+      ? viewportDistance.top + anchorHeight + anchorMargin.bottom
       : viewportDistance.top + anchorMargin.top;
-    const availableBottom = isBottomAligned ? viewportDistance.bottom - anchorMargin.bottom
-      : (viewportDistance.bottom + anchorHeight) - anchorMargin.top;
+    const availableBottom = isBottomAligned
+      ? viewportDistance.bottom - anchorMargin.bottom
+      : viewportDistance.bottom + anchorHeight - anchorMargin.top;
 
     const topOverflow = menuHeight - availableTop;
     const bottomOverflow = menuHeight - availableBottom;
@@ -72,72 +77,105 @@ class RMDCMenuFoundation {
     }
 
     const isFlipRtl = Boolean(anchorCorner && CORNER_FLIP_RTL);
-    const avoidHorizontalOverlap = (anchorCorner && CORNER_RIGHT);
-    const isAlignedRight = Boolean(avoidHorizontalOverlap && !isRtl) ||
+    const avoidHorizontalOverlap = anchorCorner && CORNER_RIGHT;
+    const isAlignedRight =
+      Boolean(avoidHorizontalOverlap && !isRtl) ||
       (!avoidHorizontalOverlap && isFlipRtl && isRtl);
-    const availableLeft = isAlignedRight ?
-      viewportDistance.left + anchorWidth + anchorMargin.right :
-      viewportDistance.left + anchorMargin.left;
-    const availableRight = isAlignedRight ? viewportDistance.right - anchorMargin.right :
-      (viewportDistance.right + anchorWidth) - anchorMargin.left;
+    const availableLeft = isAlignedRight
+      ? viewportDistance.left + anchorWidth + anchorMargin.right
+      : viewportDistance.left + anchorMargin.left;
+    const availableRight = isAlignedRight
+      ? viewportDistance.right - anchorMargin.right
+      : viewportDistance.right + anchorWidth - anchorMargin.left;
 
     const leftOverflow = menuWidth - availableLeft;
     const rightOverflow = menuWidth - availableRight;
 
-    if ((leftOverflow < 0 && isAlignedRight && isRtl) ||
-        (avoidHorizontalOverlap && !isAlignedRight && leftOverflow < 0) ||
-        (rightOverflow > 0 && leftOverflow < rightOverflow)) {
+    if (
+      (leftOverflow < 0 && isAlignedRight && isRtl) ||
+      (avoidHorizontalOverlap && !isAlignedRight && leftOverflow < 0) ||
+      (rightOverflow > 0 && leftOverflow < rightOverflow)
+    ) {
       corner = corner || CORNER_RIGHT;
     }
 
     return corner;
   }
 
-  static getHorizontalOriginOffset(corner, anchorMargin, anchorCorner, { anchorWidth }) {
+  static getHorizontalOriginOffset(
+    corner,
+    anchorMargin,
+    anchorCorner,
+    { anchorWidth },
+  ) {
     const isRightAligned = Boolean(corner && CORNER_RIGHT);
     const avoidHorizontalOverlap = Boolean(anchorCorner && CORNER_RIGHT);
     let x = 0;
     if (isRightAligned) {
-      const rightOffset = avoidHorizontalOverlap ?
-        anchorWidth - anchorMargin.left : anchorMargin.right;
+      const rightOffset = avoidHorizontalOverlap
+        ? anchorWidth - anchorMargin.left
+        : anchorMargin.right;
       x = rightOffset;
     } else {
-      const leftOffset = avoidHorizontalOverlap ?
-        anchorWidth - anchorMargin.right : anchorMargin.left;
+      const leftOffset = avoidHorizontalOverlap
+        ? anchorWidth - anchorMargin.right
+        : anchorMargin.left;
       x = leftOffset;
     }
     return x;
   }
 
-  static getVerticalOriginOffset(corner, anchorMargin, anchorCorner, {
-    viewport, viewportDistance, anchorHeight, menuHeight,
-  }) {
+  static getVerticalOriginOffset(
+    corner,
+    anchorMargin,
+    anchorCorner,
+    { viewport, viewportDistance, anchorHeight, menuHeight },
+  ) {
     const isBottomAligned = Boolean(corner && CORNER_BOTTOM);
     const avoidVerticalOverlap = Boolean(anchorCorner && CORNER_BOTTOM);
     const canOverlapVertically = !avoidVerticalOverlap;
     let y = 0;
 
     if (isBottomAligned) {
-      y = avoidVerticalOverlap ? anchorHeight - anchorMargin.top : -anchorMargin.bottom;
+      y = avoidVerticalOverlap
+        ? anchorHeight - anchorMargin.top
+        : -anchorMargin.bottom;
       // adjust for when menu can overlap anchor, but too tall to be aligned to bottom
       // anchor corner. Bottom margin is ignored in such cases.
-      if (canOverlapVertically && menuHeight > viewportDistance.top + anchorHeight) {
-        y = -(Math.min(menuHeight, viewport.height - MARGIN_TO_EDGE) -
-        (viewportDistance.top + anchorHeight));
+      if (
+        canOverlapVertically &&
+        menuHeight > viewportDistance.top + anchorHeight
+      ) {
+        y = -(
+          Math.min(menuHeight, viewport.height - MARGIN_TO_EDGE) -
+          (viewportDistance.top + anchorHeight)
+        );
       }
     } else {
-      y = avoidVerticalOverlap ? (anchorHeight + anchorMargin.bottom) : anchorMargin.top;
+      y = avoidVerticalOverlap
+        ? anchorHeight + anchorMargin.bottom
+        : anchorMargin.top;
       // adjust for when menu can overlap anchor, but too tall to be aligned to top
       // anchor corners. Top margin is ignored in that case.
-      if (canOverlapVertically && menuHeight > viewportDistance.bottom + anchorHeight) {
-        y = -(Math.min(menuHeight, viewport.height - MARGIN_TO_EDGE) -
-        (viewportDistance.bottom + anchorHeight));
+      if (
+        canOverlapVertically &&
+        menuHeight > viewportDistance.bottom + anchorHeight
+      ) {
+        y = -(
+          Math.min(menuHeight, viewport.height - MARGIN_TO_EDGE) -
+          (viewportDistance.bottom + anchorHeight)
+        );
       }
     }
     return y;
   }
 
-  static getMenuMaxHeight(corner, anchorMargin, anchorCorner, { viewportDistance }) {
+  static getMenuMaxHeight(
+    corner,
+    anchorMargin,
+    anchorCorner,
+    { viewportDistance },
+  ) {
     let maxHeight = 0;
     const isBottomAligned = Boolean(corner && CORNER_BOTTOM);
 
@@ -172,8 +210,8 @@ class RMDCMenuFoundation {
       anchorCorner,
       measures,
     );
-    let verticalAlignment = (corner && CORNER_BOTTOM) ? "bottom" : "top";
-    let horizontalAlignment = (corner && CORNER_RIGHT) ? "right" : "left";
+    let verticalAlignment = corner && CORNER_BOTTOM ? "bottom" : "top";
+    let horizontalAlignment = corner && CORNER_RIGHT ? "right" : "left";
     const horizontalOffset = RMDCMenuFoundation.getHorizontalOriginOffset(
       corner,
       anchorMargin,
@@ -197,11 +235,15 @@ class RMDCMenuFoundation {
 
     // Adjust vertical origin when menu is positioned with significant offset from anchor.
     // This is done so that scale animation is "anchored" on the anchor.
-    if (!(anchorCorner && CORNER_BOTTOM) &&
-        Math.abs(verticalOffset / menuHeight) > OFFSET_TO_MENU_HEIGHT_RATIO) {
+    if (
+      !(anchorCorner && CORNER_BOTTOM) &&
+      Math.abs(verticalOffset / menuHeight) > OFFSET_TO_MENU_HEIGHT_RATIO
+    ) {
       const verticalOffsetPercent = Math.abs(verticalOffset / menuHeight) * 100;
-      const originPercent = (corner && CORNER_BOTTOM) ?
-        100 - verticalOffsetPercent : verticalOffsetPercent;
+      const originPercent =
+        corner && CORNER_BOTTOM
+          ? 100 - verticalOffsetPercent
+          : verticalOffsetPercent;
       verticalAlignment = `${Math.round(originPercent * 100) / 100}%`;
     }
 

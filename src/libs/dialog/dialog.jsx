@@ -60,7 +60,10 @@ export default class Dialog extends Component {
       if (this.dialogRef) {
         const dialogWidth = this.dialogRef.clientWidth;
         const dialogHeight = this.dialogRef.clientHeight;
-        if (dialogWidth !== this.dialogWidth || dialogHeight !== this.dialogHeight) {
+        if (
+          dialogWidth !== this.dialogWidth ||
+          dialogHeight !== this.dialogHeight
+        ) {
           this.dialogWidth = dialogWidth;
           this.dialogHeight = dialogHeight;
           this.dialogRef.style.position = "fixed";
@@ -98,11 +101,18 @@ export default class Dialog extends Component {
       }
     }
     DialogManager.close();
-  }
+  };
 
   render() {
     const {
-      open, header, children, actions, onClose, width, field, ...props
+      open,
+      header,
+      children,
+      actions,
+      onClose,
+      width,
+      field,
+      ...props
     } = this.props;
     let classes = `rmdc-dialog ${MDC_DIALOG}`;
     if (open) {
@@ -140,44 +150,63 @@ export default class Dialog extends Component {
             helperText={field.error}
             id={field.id}
             style={{ width: "100%" }}
-            ref={(c) => { this.fieldRef = c; }}
+            ref={(c) => {
+              this.fieldRef = c;
+            }}
           />
         </DialogBody>
       );
-    } else if (!(bodyElement.props &&
-      bodyElement.props.mdcElement &&
-      bodyElement.props.mdcElement === "mdc-dialog__body")) {
+    } else if (
+      !(
+        bodyElement.props &&
+        bodyElement.props.mdcElement &&
+        bodyElement.props.mdcElement === "mdc-dialog__body"
+      )
+    ) {
       bodyElement = <DialogBody>{bodyElement}</DialogBody>;
     }
-    if (!(headerElement && headerElement.props &&
-      headerElement.props.mdcElement &&
-      headerElement.props.mdcElement === "mdc-dialog__header")) {
+    if (
+      !(
+        headerElement &&
+        headerElement.props &&
+        headerElement.props.mdcElement &&
+        headerElement.props.mdcElement === "mdc-dialog__header"
+      )
+    ) {
       headerElement = <DialogHeader>{header}</DialogHeader>;
     }
-    if (!(footerElement && footerElement.props &&
-      footerElement.props.mdcElement &&
-      footerElement.props.mdcElement === "mdc-dialog__footer")) {
+    if (
+      !(
+        footerElement &&
+        footerElement.props &&
+        footerElement.props.mdcElement &&
+        footerElement.props.mdcElement === "mdc-dialog__footer"
+      )
+    ) {
       footerElement = (
-        <DialogFooter
-          actions={actions}
-          handleAction={this.handleClick}
-        />
+        <DialogFooter actions={actions} handleAction={this.handleClick} />
       );
     }
     const d = (
       <dialog
         role="presentation"
-        ref={(c) => { this.dialogRef = c; }}
+        ref={(c) => {
+          this.dialogRef = c;
+        }}
         className={classes}
-        onKeyUp={() => { }}
-        onClick={() => { this.props.onClose(); }}
+        onKeyUp={() => {}}
+        onClick={() => {
+          this.props.onClose();
+        }}
       >
         <div
           className="mdc-dialog__surface"
           role="presentation"
-          onKeyUp={() => { }}
+          onKeyUp={() => {}}
           style={s}
-          onClick={(e) => { e.stopPropagation(); }}
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
         >
           {headerElement}
           {bodyElement}
@@ -195,7 +224,9 @@ Dialog.defaultProps = {
   actions: [],
   width: null,
   open: true,
-  onClose: () => { DialogManager.close(); },
+  onClose: () => {
+    DialogManager.close();
+  },
   onCancel: null,
   onAction: null,
   field: null,
@@ -205,12 +236,13 @@ Dialog.defaultProps = {
 
 Dialog.propTypes = {
   mdcElement: PropTypes.string,
-  header: PropTypes.oneOfType([
-    PropTypes.node, PropTypes.string]),
+  header: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
   children: PropTypes.node,
-  actions: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string,
-  })),
+  actions: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+    }),
+  ),
   width: PropTypes.string,
   open: PropTypes.bool,
   onClose: PropTypes.func,

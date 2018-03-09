@@ -64,13 +64,23 @@ const Button = ({
   }
   let i = "";
   if (icon) {
-    i = (<Icon className="mdc-button__icon" name={icon} />);
+    i = <Icon className="mdc-button__icon" name={icon} />;
   }
   let element;
   if (link) {
-    element = (<a href={link} className={classes}>{i}{children}</a>);
+    element = (
+      <a href={link} className={classes}>
+        {i}
+        {children}
+      </a>
+    );
   } else {
-    element = (<button className={classes} onClick={onClick} >{i}{children}</button>);
+    element = (
+      <button className={classes} onClick={onClick}>
+        {i}
+        {children}
+      </button>
+    );
   }
   return Zrmc.render(element, props);
 };

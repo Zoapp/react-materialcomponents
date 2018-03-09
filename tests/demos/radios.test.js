@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import Radios from "@demos/components/radios";
+import Radios from "demos/components/radios";
 
 describe("demos/components/radios", () => {
   it("renders correctly", () => {

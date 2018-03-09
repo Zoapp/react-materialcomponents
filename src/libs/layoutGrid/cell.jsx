@@ -17,14 +17,16 @@ import Zrmc from "../";
 
 const MDC_GRIDCELL = "mdc-layout-grid__cell";
 
-const Cell = ({
-  children, span, spanDevice, order, align, ...props
-}) => {
+const Cell = ({ children, span, spanDevice, order, align, ...props }) => {
   let classes = MDC_GRIDCELL;
   if (span > 0 && span < 13) {
     classes += ` mdc-layout-grid__cell--span-${span}`;
   } else if (spanDevice) {
-    if (spanDevice.desktop && spanDevice.desktop > 0 && spanDevice.desktop < 13) {
+    if (
+      spanDevice.desktop &&
+      spanDevice.desktop > 0 &&
+      spanDevice.desktop < 13
+    ) {
       classes += ` mdc-layout-grid__cell--span-${spanDevice.desktop}-desktop`;
     }
     if (spanDevice.tablet && spanDevice.tablet > 0 && spanDevice.tablet < 13) {
@@ -40,7 +42,7 @@ const Cell = ({
   if (align) {
     classes += ` mdc-layout-grid__cell--align-${align}`;
   }
-  return Zrmc.render(<div className={classes} >{children}</div>, props);
+  return Zrmc.render(<div className={classes}>{children}</div>, props);
 };
 
 Cell.defaultProps = {

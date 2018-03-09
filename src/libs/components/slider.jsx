@@ -40,9 +40,11 @@ export default class Slider extends Component {
 
   componentWillReceiveProps(nextProps) {
     const { min, max, value } = nextProps;
-    if (min !== this.state.min ||
+    if (
+      min !== this.state.min ||
       max !== this.state.max ||
-      value !== this.state.value) {
+      value !== this.state.value
+    ) {
       this.setState({ min, max, value });
     }
   }
@@ -53,28 +55,28 @@ export default class Slider extends Component {
 
   onBlur = () => {
     this.setState({ focused: false, active: false });
-  }
+  };
 
   onFocus = () => {
     if (!this.props.disabled) {
       this.setState({ focused: true });
     }
-  }
+  };
 
   setRef = (c) => {
     this.thumbRef = c;
-  }
+  };
 
   setSliderThumbPosition(min, max, value) {
     let position = 0;
     if (this.contentWidth > 0 && max > 0 && max > min) {
-      position = (this.contentWidth / (max - min)) * value;
+      position = this.contentWidth / (max - min) * value;
     }
     return `transform: translateX(${position}px) translateX(-50%);`;
   }
 
   handleMoveStart = (event) => {
-    if ((!this.props.disabled) && this.state.focused) {
+    if (!this.props.disabled && this.state.focused) {
       event.preventDefault();
       this.setState({ active: true });
       const value = this.moveThumbPosition(event);
@@ -82,20 +84,20 @@ export default class Slider extends Component {
         this.props.onChange(value);
       }
     }
-  }
+  };
 
   handleMoveChange = (event) => {
-    if ((!this.props.disabled) && this.state.active) {
+    if (!this.props.disabled && this.state.active) {
       event.preventDefault();
       const value = this.moveThumbPosition(event);
       if (this.props.onChange) {
         this.props.onChange(value);
       }
     }
-  }
+  };
 
   handleMoveEnd = (event) => {
-    if ((!this.props.disabled)) {
+    if (!this.props.disabled) {
       event.preventDefault();
       this.setState({ active: false });
       const value = this.moveThumbPosition(event);
@@ -103,7 +105,7 @@ export default class Slider extends Component {
         this.props.onInput(value);
       }
     }
-  }
+  };
 
   moveThumbPosition(event) {
     const bounds = this.contentRef.getBoundingClientRect();
@@ -111,7 +113,7 @@ export default class Slider extends Component {
     const { min, max } = this.state;
     let value = 0;
     if (this.contentWidth > 0 && max > 0 && min < this.state.max) {
-      value = (((max - min) / this.contentWidth) * x) + min;
+      value = (max - min) / this.contentWidth * x + min;
       if (value > max) {
         value = max;
       } else if (value < min) {
@@ -147,13 +149,11 @@ export default class Slider extends Component {
     } = this.props;
     let classes = MDC_SLIDER;
     let container;
-    const {
-      focused, active, min, max, value,
-    } = this.state;
+    const { focused, active, min, max, value } = this.state;
     if (discrete) {
       classes += " mdc-slider--discrete";
       container = (
-        <div className="mdc-slider__thumb-container" ref={this.setRef} >
+        <div className="mdc-slider__thumb-container" ref={this.setRef}>
           <div className="mdc-slider__pin">
             <span className="mdc-slider__pin-value-marker">{value}</span>
           </div>
@@ -161,15 +161,17 @@ export default class Slider extends Component {
             <circle cx="10.5" cy="10.5" r="7.875" />
           </svg>
           <div className="mdc-slider__focus-ring" />
-        </div>);
+        </div>
+      );
     } else {
       container = (
-        <div className="mdc-slider__thumb-container" ref={this.setRef} >
+        <div className="mdc-slider__thumb-container" ref={this.setRef}>
           <svg className="mdc-slider__thumb" width="21" height="21">
             <circle cx="10.5" cy="10.5" r="7.875" />
           </svg>
           <div className="mdc-slider__focus-ring" />
-        </div>);
+        </div>
+      );
     }
     const p = {
       tabIndex: "0",
@@ -188,7 +190,9 @@ export default class Slider extends Component {
       onTouchMove: this.handleMoveChange,
       onTouchCancel: this.handleMoveEnd,
 
-      ref: (c) => { this.contentRef = c; },
+      ref: (c) => {
+        this.contentRef = c;
+      },
     };
     if (disabled) {
       classes += " mdc-slider--disabled";
@@ -212,19 +216,20 @@ export default class Slider extends Component {
         const key = `marker_${i}`;
         markers.push(<div className="mdc-slider__track-marker" key={key} />);
       }
-      marker = (<div className="mdc-slider__track-marker-container" >{markers}</div>);
+      marker = (
+        <div className="mdc-slider__track-marker-container">{markers}</div>
+      );
     }
-    return Zrmc.render((
-      <div
-        className={classes}
-        {...p}
-      >
+    return Zrmc.render(
+      <div className={classes} {...p}>
         <div className="mdc-slider__track-container">
           <div className="mdc-slider__track" style={styleTrack} />
           {marker}
         </div>
         {container}
-      </div>), props);
+      </div>,
+      props,
+    );
   }
 }
 

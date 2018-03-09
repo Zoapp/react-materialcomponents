@@ -27,7 +27,14 @@ const ToolbarIcon = ({ isMenu, ...props }) => {
   if (isMenu || name === "menu") {
     classes = MDC_TBMENUICON;
   }
-  return <Icon className={classes} mdcElement={classes} componentName="a" {...props} />;
+  return (
+    <Icon
+      className={classes}
+      mdcElement={classes}
+      componentName="a"
+      {...props}
+    />
+  );
 };
 
 ToolbarIcon.defaultProps = {

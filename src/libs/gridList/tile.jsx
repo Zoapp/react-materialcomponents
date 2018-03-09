@@ -21,9 +21,7 @@ import Icon from "../components/icon";
 
 const MDC_GRIDTILE = "mdc-grid-tile";
 
-const Tile = ({
-  children, background, width, title, text, icon, ...props
-}) => {
+const Tile = ({ children, background, width, title, text, icon, ...props }) => {
   const classes = MDC_GRIDTILE;
   const style = {};
   if (width) {
@@ -43,11 +41,11 @@ const Tile = ({
   if (title) {
     let i;
     if (icon) {
-      i = (<Icon className="mdc-grid-tile__icon" name={icon} />);
+      i = <Icon className="mdc-grid-tile__icon" name={icon} />;
     }
     let t;
     if (text) {
-      t = (<span className="mdc-grid-tile__support-text">{text}</span>);
+      t = <span className="mdc-grid-tile__support-text">{text}</span>;
     }
     secondary = (
       <span className="mdc-grid-tile__secondary">
@@ -57,13 +55,15 @@ const Tile = ({
       </span>
     );
   }
-  return Zrmc.render((
-    <ul className={classes} style={style} >
-      <div className="mdc-grid-tile__primary" style={primaryStyle} >
+  return Zrmc.render(
+    <ul className={classes} style={style}>
+      <div className="mdc-grid-tile__primary" style={primaryStyle}>
         {ch}
       </div>
       {secondary}
-    </ul>), props);
+    </ul>,
+    props,
+  );
 };
 
 Tile.defaultProps = {
@@ -81,8 +81,7 @@ Tile.propTypes = {
   children: (props, propName) => {
     const prop = props[propName];
     const types = ["img", "div"];
-    if (prop && (Children.count(prop) > 1 ||
-        types.indexOf(prop.type) === -1)) {
+    if (prop && (Children.count(prop) > 1 || types.indexOf(prop.type) === -1)) {
       return new Error("invalid Tile's child");
     }
     return null;

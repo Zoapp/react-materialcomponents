@@ -26,9 +26,7 @@ import Ripple from "./animations/ripple";
  * https://material.io/components/web/catalog/typography/
  */
 const Zrmc = new class {
-  init(root, {
-    rtl, themeDark, style, typography, ripple = true,
-  }) {
+  init(root, { rtl, themeDark, style, typography, ripple = true }) {
     this.isLockScroll = false;
     this.rtl = rtl;
     this.changeTheme(themeDark, style);
@@ -69,7 +67,16 @@ const Zrmc = new class {
 
   sanitizeProps(props) {
     const {
-      mdcElement, rtl, elevation, themeDark, style, typography, ripple, menu, className, ...p
+      mdcElement,
+      rtl,
+      elevation,
+      themeDark,
+      style,
+      typography,
+      ripple,
+      menu,
+      className,
+      ...p
     } = props;
     return p;
   }
@@ -81,22 +88,33 @@ const Zrmc = new class {
     }
   }
 
-  render(element, {
-    rtl, elevation, themeDark, style, typography, ripple, menu, className, ...props
-  }) {
+  render(
+    element,
+    {
+      rtl,
+      elevation,
+      themeDark,
+      style,
+      typography,
+      ripple,
+      menu,
+      className,
+      ...props
+    },
+  ) {
     const name = props.mdcElement;
     if (name === "mdc-toolbar__menu-icon") {
       this.menu = element;
       this.attachDrawer();
     }
-    const ps = { };
+    const ps = {};
     let change = false;
     let classes = element.props.className || "";
     if (className) {
       classes = `${className} ${classes}`;
       change = true;
     }
-    if (rtl && (!this.rtl)) {
+    if (rtl && !this.rtl) {
       ps.dir = "rtl";
       change = true;
     }
@@ -176,7 +194,10 @@ const Zrmc = new class {
   getFontStyle(element) {
     let font = this.getComputedStyleValue(element, "font");
     if (!font) {
-      const primaryFontFamily = this.getComputedStyleValue(element, "font-family").split(",")[0];
+      const primaryFontFamily = this.getComputedStyleValue(
+        element,
+        "font-family",
+      ).split(",")[0];
       const fontSize = this.getComputedStyleValue(element, "font-size");
       font = `${fontSize} ${primaryFontFamily}`;
     }

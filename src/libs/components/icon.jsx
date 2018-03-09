@@ -19,9 +19,7 @@ import Zrmc from "../";
 
 const MDC_ICON = "material-icons";
 
-const Icon = ({
-  name, componentName, color, label, onClick, ...props
-}) => {
+const Icon = ({ name, componentName, color, label, onClick, ...props }) => {
   const classes = MDC_ICON;
   const p = Zrmc.sanitizeProps(props);
   if (color) {

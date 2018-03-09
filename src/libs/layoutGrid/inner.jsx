@@ -19,7 +19,7 @@ const MDC_GRIDINNER = "mdc-layout-grid__inner";
 
 const Inner = ({ children, ...props }) => {
   const classes = MDC_GRIDINNER;
-  return Zrmc.render(<div className={classes} >{children}</div>, props);
+  return Zrmc.render(<div className={classes}>{children}</div>, props);
 };
 
 Inner.defaultProps = {
