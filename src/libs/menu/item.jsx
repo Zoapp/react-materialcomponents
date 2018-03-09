@@ -18,7 +18,7 @@ import Zrmc from "../";
 
 const MDC_LIST_ITEM = "mdc-list-item";
 
-export default class MenuItem extends Component {
+class MenuItem extends Component {
   constructor(props) {
     super(props);
 
@@ -96,3 +96,5 @@ MenuItem.propTypes = {
   onSelected: PropTypes.func,
   role: PropTypes.string,
 };
+
+export default MenuItem;

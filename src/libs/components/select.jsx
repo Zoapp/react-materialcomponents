@@ -63,7 +63,8 @@ class Select extends Component {
   };
 
   onSelect = (selectedItem, selectedIndex) => {
-    const selectedValue = selectedItem.props.children;
+    const selectedValue =
+      selectedItem.props.value || selectedItem.props.children;
 
     this.setState({ selectedIndex, selectedValue });
 

@@ -72,4 +72,29 @@ describe("components/Select", () => {
 
     expect(onSelectSpy).toHaveBeenCalledWith("item 2", 1);
   });
+
+  it("passes the `value` prop if it exists on the selected item", () => {
+    const onSelectSpy = jest.fn();
+    const wrapper = shallow(
+      <Select onSelected={onSelectSpy}>
+        <MenuItem value="value-1">item 1</MenuItem>
+        <MenuItem value="value-2">item 2</MenuItem>
+      </Select>,
+    );
+
+    wrapper
+      // let's find the Menu component first
+      .find(Menu)
+      // shallow it
+      .shallow()
+      // now find the second item
+      .find(MenuItem)
+      .at(1)
+      // shallow it so that we can simulate a click on it
+      .shallow()
+      // click!
+      .simulate("click", createFakeEvent());
+
+    expect(onSelectSpy).toHaveBeenCalledWith("value-2", 1);
+  });
 });
