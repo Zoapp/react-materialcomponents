@@ -20,28 +20,95 @@ import LinearProgress from "./components/linearProgress";
 import Switch from "./components/switch";
 import Slider from "./components/slider";
 import IconToggle from "./components/iconToggle";
-import { Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon } from "./toolbar";
+import {
+  Toolbar,
+  ToolbarRow,
+  ToolbarSection,
+  ToolbarTitle,
+  ToolbarIcon,
+} from "./toolbar";
 import { Drawer, DrawerContent, DrawerHeader } from "./drawer";
-import { List, ListItem, ListItemMeta, ListDivider, ListGroup, ListGroupSubheader } from "./list";
+import {
+  List,
+  ListItem,
+  ListItemMeta,
+  ListDivider,
+  ListGroup,
+  ListGroupSubheader,
+} from "./list";
 import { Grid, Inner, Cell } from "./layoutGrid";
-import { Card, CardActions, CardMedia, CardText, CardPrimary, CardTitle, CardSubtitle } from "./cards";
+import {
+  Card,
+  CardActions,
+  CardMedia,
+  CardText,
+  CardPrimary,
+  CardTitle,
+  CardSubtitle,
+} from "./cards";
 import { Tabbar, Tab } from "./tab";
 import { GridList, Tile } from "./gridList";
-import { Dialog, DialogHeader, DialogBody, DialogFooter, DialogManager } from "./dialog";
+import {
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter,
+  DialogManager,
+} from "./dialog";
 import Classnames from "./classnames";
 
 export {
-  Button, Content, Fab, TextField, Checkbox, Radio, FormField, Select, Snackbar,
-  LinearProgress, Switch, Slider, IconToggle, Icon,
-  Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon,
-  Drawer, DrawerContent, DrawerHeader,
-  List, ListItem, ListItemMeta, ListDivider, ListGroup, ListGroupSubheader,
-  Grid, Inner, Cell,
-  Card, CardActions, CardMedia, CardText, CardPrimary, CardTitle, CardSubtitle,
-  Tabbar, Tab,
-  GridList, Tile,
-  Dialog, DialogHeader, DialogBody, DialogFooter, DialogManager,
-  Menu, MenuAnchor, MenuItem, MenuDivider,
+  Button,
+  Content,
+  Fab,
+  TextField,
+  Checkbox,
+  Radio,
+  FormField,
+  Select,
+  Snackbar,
+  LinearProgress,
+  Switch,
+  Slider,
+  IconToggle,
+  Icon,
+  Toolbar,
+  ToolbarRow,
+  ToolbarSection,
+  ToolbarTitle,
+  ToolbarIcon,
+  Drawer,
+  DrawerContent,
+  DrawerHeader,
+  List,
+  ListItem,
+  ListItemMeta,
+  ListDivider,
+  ListGroup,
+  ListGroupSubheader,
+  Grid,
+  Inner,
+  Cell,
+  Card,
+  CardActions,
+  CardMedia,
+  CardText,
+  CardPrimary,
+  CardTitle,
+  CardSubtitle,
+  Tabbar,
+  Tab,
+  GridList,
+  Tile,
+  Dialog,
+  DialogHeader,
+  DialogBody,
+  DialogFooter,
+  DialogManager,
+  Menu,
+  MenuAnchor,
+  MenuItem,
+  MenuDivider,
   Classnames,
 };
 

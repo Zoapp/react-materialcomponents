@@ -8,9 +8,18 @@ import React, { Component } from "react";
 /* import "material-components-web/dist/material-components-web.css"; */
 /* import "material-design-icons/iconfont/material-icons.css"; */
 import Zrmc, {
-  Content, Fab, Snackbar, Tabbar, Tab,
-  Toolbar, ToolbarRow, ToolbarSection, ToolbarTitle, ToolbarIcon,
-  Drawer, DrawerContent,
+  Content,
+  Fab,
+  Snackbar,
+  Tabbar,
+  Tab,
+  Toolbar,
+  ToolbarRow,
+  ToolbarSection,
+  ToolbarTitle,
+  ToolbarIcon,
+  Drawer,
+  DrawerContent,
   ListItem,
   Dialog,
 } from "../../src/libs";
@@ -20,7 +29,10 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeTab: 0, drawer: "permanent", drawerOpen: false, aboveToolbar: false,
+      activeTab: 0,
+      drawer: "permanent",
+      drawerOpen: false,
+      aboveToolbar: false,
     };
   }
 
@@ -31,15 +43,19 @@ export default class App extends Component {
   onMenuClick = (event) => {
     event.preventDefault();
     this.toggleDrawer();
-  }
+  };
 
   handleDialog = () => {
     const dialog = (
-      <Dialog header="Are you happy?" actions={[{ name: "Cancel" }, { name: "Continue" }]}>
+      <Dialog
+        header="Are you happy?"
+        actions={[{ name: "Cancel" }, { name: "Continue" }]}
+      >
         <div>Please check the left and right side of this element for fun.</div>
-      </Dialog>);
+      </Dialog>
+    );
     Zrmc.showDialog(dialog);
-  }
+  };
 
   handleDrawerChange = (name, index) => {
     let drawer = name;
@@ -52,14 +68,17 @@ export default class App extends Component {
       }
     }
     this.setState({
-      drawer, activeTab: index, aboveToolbar, drawerOpen,
+      drawer,
+      activeTab: index,
+      aboveToolbar,
+      drawerOpen,
     });
-  }
+  };
 
   toggleDrawer = () => {
     const open = !this.state.drawerOpen;
     this.setState({ drawerOpen: open });
-  }
+  };
 
   render() {
     let icon;
@@ -70,11 +89,11 @@ export default class App extends Component {
       <Content>
         <Toolbar fixed>
           <ToolbarRow>
-            <ToolbarSection align="start" >
+            <ToolbarSection align="start">
               {icon}
               <ToolbarTitle>Title</ToolbarTitle>
             </ToolbarSection>
-            <ToolbarSection align="end" shrinkToFit >
+            <ToolbarSection align="end" shrinkToFit>
               <ToolbarIcon name="search" />
             </ToolbarSection>
           </ToolbarRow>
@@ -86,7 +105,9 @@ export default class App extends Component {
           onClose={this.toggleDrawer}
         >
           <DrawerContent list>
-            <ListItem icon="inbox" activated>Drawer</ListItem>
+            <ListItem icon="inbox" activated>
+              Drawer
+            </ListItem>
             <ListItem icon="account_circle">Cards</ListItem>
             <ListItem icon="panorama_wide_angle">Buttons</ListItem>
             <ListItem icon="check_box">Checkboxes</ListItem>
@@ -107,7 +128,10 @@ export default class App extends Component {
           <Main>
             <section>
               <h1>Drawer examples</h1>
-              <Tabbar onChange={this.handleDrawerChange} activeTab={this.state.activeTab} >
+              <Tabbar
+                onChange={this.handleDrawerChange}
+                activeTab={this.state.activeTab}
+              >
                 <Tab text="permanent below" />
                 <Tab text="permanent above" />
                 <Tab text="persistent" />

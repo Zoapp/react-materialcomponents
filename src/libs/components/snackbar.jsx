@@ -59,7 +59,7 @@ export default class Snackbar extends Component {
     if (this.props.onTimeout) {
       this.props.onTimeout();
     }
-  }
+  };
 
   clearTimer() {
     if (this.timer) {
@@ -105,11 +105,13 @@ export default class Snackbar extends Component {
             type="button"
             className="mdc-snackbar__action-button"
             onClick={onAction}
-          >{actionText}
+          >
+            {actionText}
           </button>
-        </div>);
+        </div>
+      );
     }
-    return Zrmc.render((
+    return Zrmc.render(
       <div
         className={classes}
         aria-live="assertive"
@@ -118,7 +120,9 @@ export default class Snackbar extends Component {
       >
         <div className="mdc-snackbar__text">{message}</div>
         {actionWrapper}
-      </div>), props);
+      </div>,
+      props,
+    );
   }
 }
 
@@ -146,4 +150,3 @@ Snackbar.propTypes = {
   actionOnBottom: PropTypes.bool,
   startAligned: PropTypes.bool,
 };
-

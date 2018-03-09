@@ -22,7 +22,6 @@ import Switchs from "./components/switchs";
 import Tabbars from "./components/tabbars";
 import TextFields from "./components/textfields";
 
-
 const Main = ({ children }) => (
   <main>
     {children}

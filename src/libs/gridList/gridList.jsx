@@ -66,12 +66,14 @@ const GridList = ({
     });
   }
 
-  return Zrmc.render((
+  return Zrmc.render(
     <div className={classes}>
-      <ul className="mdc-grid-list__tiles" style={style} >
+      <ul className="mdc-grid-list__tiles" style={style}>
         {ch}
       </ul>
-    </div>), props);
+    </div>,
+    props,
+  );
 };
 
 GridList.defaultProps = {
@@ -85,7 +87,6 @@ GridList.defaultProps = {
   twolineCaption: false,
   iconAlign: null,
   aspectRatio: null,
-
 };
 
 GridList.propTypes = {

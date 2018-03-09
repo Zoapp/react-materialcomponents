@@ -17,16 +17,14 @@ import Zrmc from "../";
 
 const MDC_LISTSUBHEADER = "mdc-list-group__subheader";
 
-const ListGroupSubheader = ({
-  children, type, ...props
-}) => {
+const ListGroupSubheader = ({ children, type, ...props }) => {
   const classes = MDC_LISTSUBHEADER;
   // TODO type
   let element;
   if (type !== "h3") {
-    element = (<h3 className={classes}>{children}</h3>);
+    element = <h3 className={classes}>{children}</h3>;
   } else {
-    element = (<h3 className={classes}>{children}</h3>);
+    element = <h3 className={classes}>{children}</h3>;
   }
   return Zrmc.render(element, props);
 };

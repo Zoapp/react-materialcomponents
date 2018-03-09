@@ -6,12 +6,18 @@
  */
 import React from "react";
 import {
-  Grid, Inner, Cell, Button,
-  Card, CardText, CardActions, CardMedia,
+  Grid,
+  Inner,
+  Cell,
+  Button,
+  Card,
+  CardText,
+  CardActions,
+  CardMedia,
 } from "../../../src/libs";
 import Property from "./property";
 
-export default () => (
+const Cards = () => (
   <section>
     <h1>Card examples</h1>
     <Grid>
@@ -19,21 +25,31 @@ export default () => (
         <Cell>
           <Card title="Title" subTitle="subtitle">
             <CardText>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor.
             </CardText>
-            <CardActions><Button>Ok</Button><Button>Cancel</Button></CardActions>
+            <CardActions>
+              <Button>Ok</Button>
+              <Button>Cancel</Button>
+            </CardActions>
           </Card>
         </Cell>
         <Cell>
           <Card title="Title" largeTitle>
             <CardMedia src="https://material-components-web.appspot.com/images/1-1.jpg" />
-            <CardActions><Button>Ok</Button><Button>Cancel</Button></CardActions>
+            <CardActions>
+              <Button>Ok</Button>
+              <Button>Cancel</Button>
+            </CardActions>
           </Card>
         </Cell>
         <Cell>
           <Card title="Title" horizontalBlock>
             <CardMedia src="https://material-components-web.appspot.com/images/1-1.jpg" />
-            <CardActions><Button>Ok</Button><Button>Cancel</Button></CardActions>
+            <CardActions>
+              <Button>Ok</Button>
+              <Button>Cancel</Button>
+            </CardActions>
           </Card>
         </Cell>
       </Inner>
@@ -42,3 +58,5 @@ export default () => (
     <Property name="Card" />
   </section>
 );
+
+export default Cards;

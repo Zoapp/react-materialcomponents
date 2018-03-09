@@ -20,7 +20,12 @@ import Zrmc from "../";
 const MDC_LINEARPROGRESS = "mdc-linear-progress";
 
 const LinearProgress = ({
-  indeterminate, reversed, closed, progress, buffer, ...props
+  indeterminate,
+  reversed,
+  closed,
+  progress,
+  buffer,
+  ...props
 }) => {
   let classes = MDC_LINEARPROGRESS;
   const progressStyle = {};
@@ -54,16 +59,20 @@ const LinearProgress = ({
     classes += " mdc-linear-progress--closed";
   }
   const element = (
-    <div role="progressbar" className={classes} >
+    <div role="progressbar" className={classes}>
       <div className="mdc-linear-progress__buffering-dots" />
       <div className="mdc-linear-progress__buffer" style={bufferStyle} />
-      <div className="mdc-linear-progress__bar mdc-linear-progress__primary-bar" style={progressStyle}>
+      <div
+        className="mdc-linear-progress__bar mdc-linear-progress__primary-bar"
+        style={progressStyle}
+      >
         <span className="mdc-linear-progress__bar-inner" />
       </div>
       <div className="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
         <span className="mdc-linear-progress__bar-inner" />
       </div>
-    </div>);
+    </div>
+  );
   return Zrmc.render(element, props);
 };
 

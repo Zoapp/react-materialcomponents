@@ -18,9 +18,7 @@ import Zrmc from "../";
 
 const MDC_TBTITLE = "mdc-toolbar__title";
 
-const Title = ({
-  children, ...props
-}) => {
+const Title = ({ children, ...props }) => {
   const classes = MDC_TBTITLE;
   return Zrmc.render(<span className={classes}>{children}</span>, props);
 };

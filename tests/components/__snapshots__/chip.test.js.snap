@@ -12,7 +12,9 @@ exports[`components/Chip can be colored 1`] = `
 >
   <div
     className="mdc-chip__text"
-  />
+  >
+    I am a chip
+  </div>
 </div>
 `;
 
@@ -23,6 +25,8 @@ exports[`components/Chip renders itself correctly 1`] = `
 >
   <div
     className="mdc-chip__text"
-  />
+  >
+    I am a chip
+  </div>
 </div>
 `;

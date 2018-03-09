@@ -17,11 +17,9 @@ import Zrmc from "../";
 
 const MDC_CARD_SUBTITLE = "mdc-card__subtitle";
 
-const CardSubtitle = ({
-  children, className, ...props
-}) => {
+const CardSubtitle = ({ children, className, ...props }) => {
   const classes = MDC_CARD_SUBTITLE;
-  return Zrmc.render(<h2 className={classes} >{children}</h2>, props);
+  return Zrmc.render(<h2 className={classes}>{children}</h2>, props);
 };
 
 CardSubtitle.defaultProps = {

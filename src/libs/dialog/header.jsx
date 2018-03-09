@@ -17,9 +17,7 @@ import Zrmc from "../";
 
 const MDC_DIALOGHEADER = "mdc-dialog__header";
 
-const DialogHeader = ({
-  children, ...props
-}) => {
+const DialogHeader = ({ children, ...props }) => {
   const classes = MDC_DIALOGHEADER;
   return Zrmc.render(<header className={classes}>{children}</header>, props);
 };

@@ -10,7 +10,7 @@
     "compile": "yarn compile:css && babel src/libs -d dist && cp -f ./package.json ./dist/package.json && cp -f ./LICENSE ./dist/LICENSE && cp -f ./README.md ./dist/README.md",
     "compile:css": "yarn clean-dist && cleancss -o dist/compressed.css node_modules/material-components-web/dist/material-components-web.css node_modules/dialog-polyfill/dialog-polyfill.css src/libs/css/app.css",
     "dev": "yarn compile:dev && yarn start:dev",
-    "lint": "eslint src/libs --ext=js --ext=jsx && eslint src/demos --ext=js --ext=jsx",
+    "lint": "eslint src tests --ext=js --ext=jsx",
     "check": "yarn lint && yarn test",
     "test": "jest",
     "compile:dev": "yarn compile:css && webpack --env=dev --progress --profile --colors",
@@ -65,15 +65,20 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.15.0",
     "eslint-config-airbnb": "16.1.0",
+    "eslint-config-prettier": "^2.9.0",
     "eslint-import-resolver-babel-module": "4.0.0",
+    "eslint-import-resolver-jest": "^2.0.1",
     "eslint-import-resolver-webpack": "0.8.4",
     "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-jest": "^21.13.0",
     "eslint-plugin-jsx-a11y": "6.0.3",
-    "eslint-plugin-react": "^7.5.1",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
     "file-loader": "1.1.6",
     "jest": "^22.3.0",
     "material-components-web": "0.32.0",
     "nodemon": "^1.14.11",
+    "prettier": "^1.11.1",
     "react-test-renderer": "^16.2.0",
     "style-loader": "0.19.1",
     "webpack": "^3.10.0",
@@ -82,8 +87,8 @@
   },
   "jest": {
     "moduleNameMapper": {
-      "@demos/(.*)": "<rootDir>/src/demos/$1",
-      "@libs/(.*)": "<rootDir>/src/libs/$1"
+      "demos/(.*)": "<rootDir>/src/demos/$1",
+      "libs/(.*)": "<rootDir>/src/libs/$1"
     },
     "setupTestFrameworkScriptFile": "<rootDir>/tests/setupTests.js"
   }

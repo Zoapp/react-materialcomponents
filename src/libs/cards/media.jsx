@@ -17,9 +17,7 @@ import Zrmc from "../";
 
 const MDC_CARD_MEDIA = "mdc-card__media";
 
-const CardMedia = ({
-  children, src, size, alt, ...props
-}) => {
+const CardMedia = ({ children, src, size, alt, ...props }) => {
   let classes = MDC_CARD_MEDIA;
   if (src) {
     classes += `-item mdc-card__media-item--${size}`;
@@ -28,9 +26,11 @@ const CardMedia = ({
   // Check if src and set img instead
   let element;
   if (src) {
-    element = (<img className={classes} src={src} alt={alt} style={props.style} />);
+    element = (
+      <img className={classes} src={src} alt={alt} style={props.style} />
+    );
   } else {
-    element = (<section className={classes}>{children}</section>);
+    element = <section className={classes}>{children}</section>;
   }
   return Zrmc.render(element, props);
 };

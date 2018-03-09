@@ -8,11 +8,11 @@ import React from "react";
 import { Select, MenuItem } from "../../../src/libs";
 import Property from "./property";
 
-export default () => (
+const Selects = () => (
   <section>
     <h1>Select examples </h1>
     <div style={{ padding: "16px" }}>
-      <Select label="Pick a Food Group" >
+      <Select label="Pick a Food Group">
         <MenuItem>read, Cereal, Rice, and Pasta</MenuItem>
         <MenuItem>Vegetables</MenuItem>
         <MenuItem>Fruit</MenuItem>
@@ -25,3 +25,5 @@ export default () => (
     <Property name="Select" />
   </section>
 );
+
+export default Selects;

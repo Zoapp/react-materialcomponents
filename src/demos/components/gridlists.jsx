@@ -8,11 +8,11 @@ import React from "react";
 import { GridList, Tile } from "../../../src/libs";
 import Property from "./property";
 
-export default () => (
+const GridLists = () => (
   <section>
     <h1>GridList examples </h1>
     <div style={{ padding: "16px" }}>
-      <GridList width="320px" tileWidth="76px" tileBackground="#212121" >
+      <GridList width="320px" tileWidth="76px" tileBackground="#212121">
         <Tile title="text" />
         <Tile title="text" />
         <Tile title="text" />
@@ -27,3 +27,5 @@ export default () => (
     <Property name="Grid" />
   </section>
 );
+
+export default GridLists;

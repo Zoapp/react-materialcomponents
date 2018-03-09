@@ -17,11 +17,9 @@ import Zrmc from "../";
 
 const MDC_FORMFIELD = "mdc-form-field";
 
-const FormField = ({
-  children, ...props
-}) => {
+const FormField = ({ children, ...props }) => {
   const classes = MDC_FORMFIELD;
-  const element = (<div className={classes} >{children}</div>);
+  const element = <div className={classes}>{children}</div>;
   return Zrmc.render(element, props);
 };
 

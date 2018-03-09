@@ -8,7 +8,7 @@ import React from "react";
 import { LinearProgress } from "../../../src/libs";
 import Property from "./property";
 
-export default () => (
+const LinearProgresses = () => (
   <section>
     <h1>LinearProgress examples </h1>
     <LinearProgress progress={0.2} buffer={0.5} />
@@ -16,3 +16,5 @@ export default () => (
     <Property name="Linear" />
   </section>
 );
+
+export default LinearProgresses;

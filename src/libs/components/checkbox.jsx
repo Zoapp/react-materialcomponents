@@ -20,7 +20,10 @@ const MDC_CHECKBOX = "mdc-checkbox";
 
 export default class Checkbox extends Component {
   componentDidMount() {
-    if ((this.inputRef.indeterminate !== null) || (this.props.indeterminate !== null)) {
+    if (
+      this.inputRef.indeterminate !== null ||
+      this.props.indeterminate !== null
+    ) {
       this.inputRef.indeterminate = this.props.indeterminate;
     }
   }
@@ -33,11 +36,17 @@ export default class Checkbox extends Component {
 
   setRef = (c) => {
     this.inputRef = c;
-  }
+  };
 
   render() {
     const {
-      id, label, disabled, checked, indeterminate, onChange, ...props
+      id,
+      label,
+      disabled,
+      checked,
+      indeterminate,
+      onChange,
+      ...props
     } = this.props;
     let classes = MDC_CHECKBOX;
     if (disabled) {
@@ -48,7 +57,7 @@ export default class Checkbox extends Component {
     let l = "";
     if (label) {
       /* eslint-disable jsx-a11y/label-has-for */
-      l = (<label htmlFor={cid}>{label}</label>);
+      l = <label htmlFor={cid}>{label}</label>;
       /* eslint-enable jsx-a11y/label-has-for */
     }
     const d = {};
@@ -79,9 +88,15 @@ export default class Checkbox extends Component {
           </svg>
           <div className="mdc-checkbox__mixedmark" />
         </div>
-      </div>);
+      </div>
+    );
     if (label) {
-      element = (<FormField>{element}{l}</FormField>);
+      element = (
+        <FormField>
+          {element}
+          {l}
+        </FormField>
+      );
     }
     return Zrmc.render(element, props);
   }

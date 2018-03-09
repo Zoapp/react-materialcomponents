@@ -54,17 +54,25 @@ export default class Menu extends Component {
   }
 
   render() {
-    const {
-      children, open, focusedIndex, ...props
-    } = this.props;
+    const { children, open, focusedIndex, ...props } = this.props;
     let classes = MDC_SIMPLE_MENU;
     this.selectedRef = null;
     if (open) {
       classes += ` ${MDC_SIMPLE_MENU}--open`;
     }
     const element = (
-      <div className={classes} tabIndex="-1" ref={(c) => { this.innerRef = c; }} >
-        <ul className={`${MDC_SIMPLE_MENU}__items mdc-list`} role="menu" aria-hidden="true">
+      <div
+        className={classes}
+        tabIndex="-1"
+        ref={(c) => {
+          this.innerRef = c;
+        }}
+      >
+        <ul
+          className={`${MDC_SIMPLE_MENU}__items mdc-list`}
+          role="menu"
+          aria-hidden="true"
+        >
           {Children.map(children, (child, index) => {
             if (child.props.mdcElement === "mdc-list-item") {
               const { tabIndex } = child.props;
@@ -78,7 +86,9 @@ export default class Menu extends Component {
 
               if (focusedIndex === index) {
                 p.selected = true;
-                p.ref = (c) => { this.selectedRef = c; };
+                p.ref = (c) => {
+                  this.selectedRef = c;
+                };
               }
               if (tabIndex > -1) {
                 return React.cloneElement(child, p);
@@ -87,7 +97,8 @@ export default class Menu extends Component {
             return child;
           })}
         </ul>
-      </div>);
+      </div>
+    );
     return Zrmc.render(element, props);
   }
 }
@@ -108,7 +119,12 @@ Menu.propTypes = {
   open: PropTypes.bool,
   onSelected: PropTypes.func,
   onClose: PropTypes.func,
-  anchorCorner: PropTypes.oneOf(["top_start", "top_end", "bottom_start", "bottom_end"]),
+  anchorCorner: PropTypes.oneOf([
+    "top_start",
+    "top_end",
+    "bottom_start",
+    "bottom_end",
+  ]),
   anchorMargin: PropTypes.shape({
     top: PropTypes.string,
     left: PropTypes.string,

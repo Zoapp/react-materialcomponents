@@ -17,9 +17,7 @@ import Zrmc from "../";
 
 const MDC_CARD_TITLE = "mdc-card__title";
 
-const CardTitle = ({
-  children, large, ...props
-}) => {
+const CardTitle = ({ children, large, ...props }) => {
   let classes = MDC_CARD_TITLE;
   if (large) {
     classes += " mdc-card__title--large";

@@ -8,7 +8,7 @@ import React from "react";
 import { Button } from "../../../src/libs";
 import Property from "./property";
 
-export default () => (
+const Buttons = () => (
   <section>
     <h1>Button examples</h1>
 
@@ -17,22 +17,32 @@ export default () => (
         <Button>Hello</Button>
       </div>
       <div style={{ padding: "16px" }}>
-        <Button raised icon="favorite">Hello</Button>
+        <Button raised icon="favorite">
+          Hello
+        </Button>
       </div>
       <div style={{ padding: "16px" }}>
         <Button raised>Hello</Button>
       </div>
       <div style={{ padding: "16px" }}>
-        <Button raised disabled>Hello</Button>
+        <Button raised disabled>
+          Hello
+        </Button>
       </div>
       <div style={{ padding: "16px" }}>
-        <Button unelevated compact secondary>Hello</Button>
+        <Button unelevated compact secondary>
+          Hello
+        </Button>
       </div>
       <div style={{ padding: "16px" }}>
-        <Button stroked dense>Hello</Button>
+        <Button stroked dense>
+          Hello
+        </Button>
       </div>
       <div style={{ padding: "16px" }}>
-        <Button raised link="#">Hello</Button>
+        <Button raised link="#">
+          Hello
+        </Button>
       </div>
     </div>
 
@@ -40,3 +50,5 @@ export default () => (
     <Property name="Button" />
   </section>
 );
+
+export default Buttons;

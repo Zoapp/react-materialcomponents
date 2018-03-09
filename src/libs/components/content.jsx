@@ -18,9 +18,7 @@ import Zrmc from "../";
 
 const MDC_CONTENT = "rmdc-content";
 
-const Content = ({
-  children, fixed, toolbarAdjust, ...props
-}) => {
+const Content = ({ children, fixed, toolbarAdjust, ...props }) => {
   let classes = MDC_CONTENT;
   let fix = fixed;
   let ta = false;
@@ -33,9 +31,11 @@ const Content = ({
       if (name === "mdc-toolbar") {
         fix = child.props.fixed;
         ta = true;
-      } else if (name === "mdc-drawer" &&
-       ((child.props.open && child.props.type !== "temporary") ||
-       child.props.type === "permanent")) {
+      } else if (
+        name === "mdc-drawer" &&
+        ((child.props.open && child.props.type !== "temporary") ||
+          child.props.type === "permanent")
+      ) {
         if (child.props.type === "persistent" || child.props.above) {
           // For toolbar
           drawerAbove = true;
@@ -55,8 +55,10 @@ const Content = ({
           // TODO rtl
           return React.cloneElement(child, { drawerAbove });
         }
-      } else if (name === "rmdc-content" &&
-      (fix !== child.props.fixed || ta !== child.props.toolbarAdjust)) {
+      } else if (
+        name === "rmdc-content" &&
+        (fix !== child.props.fixed || ta !== child.props.toolbarAdjust)
+      ) {
         return React.cloneElement(child, { fixed: fix, toolbarAdjust: ta });
       }
     }
@@ -78,7 +80,7 @@ const Content = ({
     }
   }
 
-  const element = (<div className={classes}>{ch}</div>);
+  const element = <div className={classes}>{ch}</div>;
   return Zrmc.render(element, props);
 };
 

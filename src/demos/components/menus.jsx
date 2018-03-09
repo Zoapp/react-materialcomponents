@@ -7,7 +7,7 @@
 import React from "react";
 import { Button, Menu, MenuItem, MenuDivider } from "../../../src/libs";
 
-export default () => (
+const Menus = () => (
   <section>
     <h1>Menus examples </h1>
     <div style={{ padding: "16px" }}>
@@ -19,10 +19,13 @@ export default () => (
             <MenuItem disabled>Forward</MenuItem>
             <MenuDivider />
             <MenuItem>Help</MenuItem>
-          </Menu>}
+          </Menu>
+        }
       >
         Show menu
       </Button>
     </div>
   </section>
 );
+
+export default Menus;

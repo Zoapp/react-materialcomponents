@@ -8,7 +8,7 @@ import React from "react";
 import { Radio } from "../../../src/libs";
 import Property from "./property";
 
-export default () => (
+const Radios = () => (
   <section>
     <h1>Radio examples </h1>
     <div style={{ padding: "16px" }}>
@@ -27,3 +27,5 @@ export default () => (
     <Property name="Radio" />
   </section>
 );
+
+export default Radios;

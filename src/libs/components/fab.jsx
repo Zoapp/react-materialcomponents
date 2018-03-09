@@ -18,15 +18,17 @@ import Zrmc from "../";
 
 const MDC_FAB = "mdc-fab";
 
-const Fab = ({
-  children, icon, label, onClick, ...props
-}) => {
+const Fab = ({ children, icon, label, onClick, ...props }) => {
   const classes = "mdc-fab material-icons rmdc-fab--absolute";
   let ch = children;
   if (icon) {
-    ch = (<span className="mdc-fab__icon">{icon}</span>);
+    ch = <span className="mdc-fab__icon">{icon}</span>;
   }
-  const element = (<button className={classes} onClick={onClick} aria-label={label} >{ch}</button>);
+  const element = (
+    <button className={classes} onClick={onClick} aria-label={label}>
+      {ch}
+    </button>
+  );
   return Zrmc.render(element, props);
 };
 

@@ -10,17 +10,16 @@ import Zrmc, { Icon } from "../../../src/libs";
 export default () => {
   const ripple = Zrmc.render(
     <div
-      style={
-        {
-          alignItems: "center",
-          justifyContent: "center",
-          width: "200px",
-          height: "100px",
-          padding: "1rem",
-          cursor: "pointer",
-        }
-      }
-    >Interact with me !
+      style={{
+        alignItems: "center",
+        justifyContent: "center",
+        width: "200px",
+        height: "100px",
+        padding: "1rem",
+        cursor: "pointer",
+      }}
+    >
+      Interact with me !
     </div>,
     { ripple: true },
   );
@@ -29,13 +28,13 @@ export default () => {
       name="favorite"
       ripple="unbounded"
       style={{ width: "24px", height: "24px", padding: "12px" }}
-    />);
+    />
+  );
   return (
     <section>
       <h1>Ripple examples </h1>
       {ripple}
-      <div style={{ margin: "16px" }} >
-        {bounded}
-      </div>
-    </section>);
+      <div style={{ margin: "16px" }}>{bounded}</div>
+    </section>
+  );
 };

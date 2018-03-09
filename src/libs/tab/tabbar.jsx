@@ -50,7 +50,7 @@ export default class Tabbar extends Component {
       }
       this.setState({ activeTab: tabId });
     }
-  }
+  };
 
   updateIndicator() {
     if (this.activeRef && this.activeRef.ref && this.ref) {
@@ -59,9 +59,8 @@ export default class Tabbar extends Component {
       const width = this.ref.clientWidth;
       const tabWidth = rect.width;
       const tabLeft = rect.left - r.left;
-      const scaledWidth = (tabWidth / width);
-      let style =
-      `transform: translateX(${tabLeft}px) scale(${scaledWidth}, 1); visibility: visible;`;
+      const scaledWidth = tabWidth / width;
+      let style = `transform: translateX(${tabLeft}px) scale(${scaledWidth}, 1); visibility: visible;`;
       if (this.props.activeColor) {
         style += ` background-color:${this.props.activeColor}`;
       }
@@ -69,21 +68,18 @@ export default class Tabbar extends Component {
     }
   }
 
-
   render() {
-    const {
-      children, onChange, color, activeColor, ...props
-    } = this.props;
+    const { children, onChange, color, activeColor, ...props } = this.props;
     let classes = MDC_TABBAR;
     let text = false;
     let icon = false;
     const { activeTab } = this.state;
     // Check icon / text from children Tabs
     Children.forEach(children, (child) => {
-      if (child.props && (child.props.text)) {
+      if (child.props && child.props.text) {
         text = true;
       }
-      if (child.props && (child.props.icon)) {
+      if (child.props && child.props.icon) {
         icon = true;
       }
     });
@@ -97,21 +93,34 @@ export default class Tabbar extends Component {
       style = { backgroundColor: activeColor };
     }
     const element = (
-      <nav className={classes} ref={(c) => { this.ref = c; }}>
+      <nav
+        className={classes}
+        ref={(c) => {
+          this.ref = c;
+        }}
+      >
         {Children.map(children, (child, tabId) =>
           React.cloneElement(child, {
             tabId,
             active: tabId === activeTab,
             color: tabId === activeTab ? activeColor : color,
-            ref: (c) => { if (tabId === activeTab) { this.activeRef = c; } },
+            ref: (c) => {
+              if (tabId === activeTab) {
+                this.activeRef = c;
+              }
+            },
             onTabSelect: this.handleTabSelect,
-          }))}
+          }),
+        )}
         <span
           className="mdc-tab-bar__indicator"
           style={style}
-          ref={(c) => { this.indicatorRef = c; }}
+          ref={(c) => {
+            this.indicatorRef = c;
+          }}
         />
-      </nav>);
+      </nav>
+    );
     return Zrmc.render(element, props);
   }
 }

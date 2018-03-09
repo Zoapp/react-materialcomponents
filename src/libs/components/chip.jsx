@@ -19,9 +19,7 @@ import Zrmc from "../";
 
 const MDC_CHIP = "mdc-chip";
 
-const Chip = ({
-  color, children, ...props
-}) => {
+const Chip = ({ color, children, ...props }) => {
   const classes = MDC_CHIP;
   const p = Zrmc.sanitizeProps(props);
   if (color) {
@@ -31,7 +29,13 @@ const Chip = ({
   p.className = classes;
   let text = children;
   if (typeof children === "string") {
-    text = React.createElement("div", { className: "mdc-chip__text" });
+    text = React.createElement(
+      "div",
+      {
+        className: "mdc-chip__text",
+      },
+      children,
+    );
   }
   const element = React.createElement("div", p, text);
   return Zrmc.render(element, props);

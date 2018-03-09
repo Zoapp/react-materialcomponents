@@ -17,9 +17,7 @@ import Button from "../components/button";
 
 const MDC_DIALOGFOOTER = "mdc-dialog__footer";
 
-const DialogFooter = ({
-  children, actions, handleAction, ...props
-}) => {
+const DialogFooter = ({ children, actions, handleAction, ...props }) => {
   const classes = MDC_DIALOGFOOTER;
 
   let buttonsOrActions;
@@ -60,7 +58,7 @@ const DialogFooter = ({
     buttonsOrActions = actions.map((action, index) => {
       const title = action.title || action.name;
       let cs = "mdc-dialog__footer__button";
-      if ((!action.type) || action.type === "accept") {
+      if (!action.type || action.type === "accept") {
         cs += " mdc-dialog__footer__button--accept";
       } else if (action.type === "cancel") {
         cs += " mdc-dialog__footer__button--cancel";
@@ -71,7 +69,9 @@ const DialogFooter = ({
         <Button
           key={key}
           className={cs}
-          onClick={() => { handleAction(action.name); }}
+          onClick={() => {
+            handleAction(action.name);
+          }}
         >
           {title}
         </Button>
@@ -80,9 +80,7 @@ const DialogFooter = ({
   }
 
   return Zrmc.render(
-    <footer className={classes}>
-      {buttonsOrActions}
-    </footer>,
+    <footer className={classes}>{buttonsOrActions}</footer>,
     props,
   );
 };

@@ -25,7 +25,11 @@ const MDC_SELECT = "mdc-select";
 class Select extends Component {
   constructor(props) {
     super(props);
-    this.state = { open: false, focused: false, selectedIndex: this.props.selectedIndex };
+    this.state = {
+      open: false,
+      focused: false,
+      selectedIndex: this.props.selectedIndex,
+    };
     this.ctx = null;
   }
 
@@ -45,11 +49,11 @@ class Select extends Component {
 
   onBlur = () => {
     this.setState({ focused: false });
-  }
+  };
 
   onFocus = () => {
     this.setState({ focused: true });
-  }
+  };
 
   onSelected = (item, index) => {
     const selected = item.props.children;
@@ -57,18 +61,21 @@ class Select extends Component {
     if (this.props.onSelected) {
       this.props.onSelected(item, index);
     }
-  }
+  };
 
   onClickOutsideHandler = (e) => {
     const { open } = this.state;
-    if (open &&
-      ((!this.anchorRef) || (!this.anchorRef.contains(e.target))) &&
-      ((!this.menuRef) ||
-      (!this.menuRef.innerRef) || (!this.menuRef.innerRef.contains(e.target)))) {
+    if (
+      open &&
+      (!this.anchorRef || !this.anchorRef.contains(e.target)) &&
+      (!this.menuRef ||
+        !this.menuRef.innerRef ||
+        !this.menuRef.innerRef.contains(e.target))
+    ) {
       e.preventDefault();
       this.onClose();
     }
-  }
+  };
 
   onClickHandler = (e) => {
     e.preventDefault();
@@ -78,7 +85,7 @@ class Select extends Component {
       this.setState({ open: true });
       Zrmc.lockScroll();
     }
-  }
+  };
 
   onClose = () => {
     this.setState({ open: false }, () => {
@@ -87,20 +94,28 @@ class Select extends Component {
         this.focusRef.focus();
       }
     });
-  }
+  };
 
   setRef = (c) => {
     this.anchorRef = c;
-  }
+  };
 
   calculateWidth() {
     if (!this.ctx) {
       this.ctx = document.createElement("canvas").getContext("2d");
     }
     this.ctx.font = Zrmc.getFontStyle(this.anchorRef);
-    const letterSpacing = parseFloat(Zrmc.getComputedStyleValue(this.anchorRef, "letter-spacing"));
-    const surfacePaddingRight = parseInt(Zrmc.getComputedStyleValue(this.anchorRef, "padding-right"), 10);
-    const surfacePaddingLeft = parseInt(Zrmc.getComputedStyleValue(this.anchorRef, "padding-left"), 10);
+    const letterSpacing = parseFloat(
+      Zrmc.getComputedStyleValue(this.anchorRef, "letter-spacing"),
+    );
+    const surfacePaddingRight = parseInt(
+      Zrmc.getComputedStyleValue(this.anchorRef, "padding-right"),
+      10,
+    );
+    const surfacePaddingLeft = parseInt(
+      Zrmc.getComputedStyleValue(this.anchorRef, "padding-left"),
+      10,
+    );
     const selectBoxAddedPadding = surfacePaddingRight + surfacePaddingLeft;
     let maxTextLength = 0;
     Children.forEach(this.props.children, (child) => {
@@ -108,8 +123,10 @@ class Select extends Component {
         const txt = child.props.children.trim();
         const { width } = this.ctx.measureText(txt);
         const addedSpace = letterSpacing * txt.length;
-        maxTextLength =
-        Math.max(maxTextLength, Math.ceil(width + addedSpace + selectBoxAddedPadding));
+        maxTextLength = Math.max(
+          maxTextLength,
+          Math.ceil(width + addedSpace + selectBoxAddedPadding),
+        );
       }
     });
     return maxTextLength;
@@ -128,9 +145,11 @@ class Select extends Component {
         const { left, top } = this.anchorRef.getBoundingClientRect();
         const menuHeight = this.menuRef.innerRef.offsetHeight;
         let itemOffsetTop = 0;
-        if (this.state.selectedIndex > -1 &&
+        if (
+          this.state.selectedIndex > -1 &&
           this.menuRef.selectedRef &&
-          this.menuRef.selectedRef.innerRef) {
+          this.menuRef.selectedRef.innerRef
+        ) {
           itemOffsetTop = this.menuRef.selectedRef.innerRef.offsetTop;
         }
 
@@ -149,13 +168,9 @@ class Select extends Component {
   }
 
   render() {
-    const {
-      children, disabled, label, ...props
-    } = this.props;
+    const { children, disabled, label, ...props } = this.props;
 
-    const {
-      open, focused, selected, selectedIndex,
-    } = this.state;
+    const { open, focused, selected, selectedIndex } = this.state;
 
     const classes = MDC_SELECT;
     const p = {};
@@ -190,23 +205,30 @@ class Select extends Component {
         <div
           className="mdc-select__surface"
           tabIndex={tabIndex}
-          ref={(c) => { this.focusRef = c; }}
+          ref={(c) => {
+            this.focusRef = c;
+          }}
         >
           <div className={lc}>{label}</div>
-          <div className="mdc-select__selected-text" >{selected}</div>
+          <div className="mdc-select__selected-text">{selected}</div>
           <div className={bc} />
         </div>
         <Menu
           open={open}
           focusedIndex={selectedIndex}
           className="mdc-select__menu"
-          ref={(c) => { this.menuRef = c; }}
+          ref={(c) => {
+            this.menuRef = c;
+          }}
           onSelected={this.onSelected}
           onClose={this.onClose}
         >
-          {Children.map(children, child => React.cloneElement(child, { role: "option" }))}
+          {Children.map(children, (child) =>
+            React.cloneElement(child, { role: "option" }),
+          )}
         </Menu>
-      </div>);
+      </div>
+    );
 
     /* eslint-enable jsx-a11y/no-noninteractive-tabindex */
     return Zrmc.render(element, props);
@@ -231,7 +253,9 @@ const propTypeForSelectChildren = (componentName, child) => {
   displayName = displayName || typeof child;
 
   if (!/MenuItem/.test(displayName)) {
-    return new Error(`Invalid child '${displayName}' supplied to ${componentName}.`);
+    return new Error(
+      `Invalid child '${displayName}' supplied to ${componentName}.`,
+    );
   }
 
   return null;
@@ -239,9 +263,11 @@ const propTypeForSelectChildren = (componentName, child) => {
 
 Select.propTypes = {
   children: PropTypes.oneOfType([
-    (props, propName, componentName) => propTypeForSelectChildren(componentName, props[propName]),
+    (props, propName, componentName) =>
+      propTypeForSelectChildren(componentName, props[propName]),
     PropTypes.arrayOf((propValue, key, componentName) =>
-      propTypeForSelectChildren(componentName, propValue[key])),
+      propTypeForSelectChildren(componentName, propValue[key]),
+    ),
   ]).isRequired,
   mdcElement: PropTypes.string,
   disabled: PropTypes.bool,

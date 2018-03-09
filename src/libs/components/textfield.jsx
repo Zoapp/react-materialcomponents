@@ -34,11 +34,11 @@ export default class TextField extends Component {
 
   onBlur = () => {
     this.setState({ focused: false });
-  }
+  };
 
   onFocus = () => {
     this.setState({ focused: true });
-  }
+  };
 
   onChange = (e) => {
     if (this.inputRef) {
@@ -55,7 +55,7 @@ export default class TextField extends Component {
         this.props.onChange(e);
       }
     }
-  }
+  };
 
   getValue() {
     return this.state.value;
@@ -125,7 +125,8 @@ export default class TextField extends Component {
               onClickLI();
             }
           }}
-        />);
+        />
+      );
     }
     tabIndex = null;
     if (trailingIcon) {
@@ -144,7 +145,8 @@ export default class TextField extends Component {
               onClickTI();
             }
           }}
-        />);
+        />
+      );
     }
 
     const p = Zrmc.sanitizeProps(props);
@@ -188,12 +190,14 @@ export default class TextField extends Component {
     p.onBlur = this.onBlur;
     p.onFocus = this.onFocus;
     p.onChange = this.onChange;
-    p.ref = (c) => { this.inputRef = c; };
+    p.ref = (c) => {
+      this.inputRef = c;
+    };
     if (isTextarea) {
       classes += " mdc-text-field--textarea";
-      input = (<textarea {...p} />);
+      input = <textarea {...p} />;
     } else {
-      input = (<input {...p} />);
+      input = <input {...p} />;
     }
     let labelElement;
     /* eslint-disable jsx-a11y/label-has-for */
@@ -204,9 +208,13 @@ export default class TextField extends Component {
           className={lc}
           htmlFor={cid}
           style={sc}
-          ref={(c) => { this.labelRef = c; }}
-        >{label}
-        </label>);
+          ref={(c) => {
+            this.labelRef = c;
+          }}
+        >
+          {label}
+        </label>
+      );
     }
     let bcElement1;
     let bcElement2;
@@ -216,21 +224,24 @@ export default class TextField extends Component {
           <svg>
             <path className="mdc-text-field__outline-path" />
           </svg>
-        </div>);
-      bcElement2 = (<div className="mdc-text-field__idle-outline" />);
+        </div>
+      );
+      bcElement2 = <div className="mdc-text-field__idle-outline" />;
     } else {
       bcElement1 = <div className={bc} />;
     }
 
-    let element = Zrmc.render((
-      <div className={classes} >
+    let element = Zrmc.render(
+      <div className={classes}>
         {li}
         {input}
         {labelElement}
         {ti}
         {bcElement1}
         {bcElement2}
-      </div>), props);
+      </div>,
+      props,
+    );
     /* eslint-enable jsx-a11y/label-has-for */
     if (helperText) {
       let cht = "mdc-text-field-helper-text";
