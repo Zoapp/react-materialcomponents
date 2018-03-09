@@ -96,5 +96,7 @@ describe("components/Select", () => {
       .simulate("click", createFakeEvent());
 
     expect(onSelectSpy).toHaveBeenCalledWith("value-2", 1);
+
+    expect(wrapper.state("selectedDisplayValue")).toEqual("item 2");
   });
 });
