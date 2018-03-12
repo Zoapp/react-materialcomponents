@@ -37,6 +37,7 @@ const Button = ({
   secondary,
   stroked,
   unelevated,
+  type,
   ...props
 }) => {
   let classes = MDC_BUTTON;
@@ -77,7 +78,12 @@ const Button = ({
     );
   } else {
     element = (
-      <button className={classes} onClick={onClick} disabled={disabled}>
+      <button
+        className={classes}
+        onClick={onClick}
+        disabled={disabled}
+        type={type}
+      >
         {i}
         {children}
       </button>
@@ -100,6 +106,7 @@ Button.defaultProps = {
   ripple: false,
   secondary: false,
   stroked: false,
+  type: "button",
   unelevated: false,
 };
 
