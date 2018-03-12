@@ -1,10 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`components/Button can be a submit button 1`] = `
+<button
+  className="mdc-button"
+  disabled={false}
+  onClick={null}
+  type="submit"
+>
+  
+</button>
+`;
+
 exports[`components/Button can be compact 1`] = `
 <button
   className="mdc-button mdc-button--compact"
   disabled={false}
   onClick={null}
+  type="button"
 >
   
 </button>
@@ -15,6 +27,7 @@ exports[`components/Button can be dense 1`] = `
   className="mdc-button mdc-button--dense"
   disabled={false}
   onClick={null}
+  type="button"
 >
   
 </button>
@@ -25,6 +38,7 @@ exports[`components/Button can be disabled 1`] = `
   className="mdc-button"
   disabled={true}
   onClick={null}
+  type="button"
 >
   
   disabled button
@@ -36,6 +50,7 @@ exports[`components/Button can be raised 1`] = `
   className="mdc-button mdc-button--raised"
   disabled={false}
   onClick={null}
+  type="button"
 >
   
 </button>
@@ -46,6 +61,7 @@ exports[`components/Button can be rippled 1`] = `
   className="mdc-button"
   disabled={false}
   onClick={null}
+  type="button"
 >
   
 </button>
@@ -56,6 +72,7 @@ exports[`components/Button can be stroked 1`] = `
   className="mdc-button mdc-button--stroked"
   disabled={false}
   onClick={null}
+  type="button"
 >
   
 </button>
@@ -66,6 +83,7 @@ exports[`components/Button can be unelevated 1`] = `
   className="mdc-button mdc-button--unelevated"
   disabled={false}
   onClick={null}
+  type="button"
 >
   
 </button>
@@ -76,6 +94,7 @@ exports[`components/Button can have children 1`] = `
   className="mdc-button"
   disabled={false}
   onClick={null}
+  type="button"
 >
   
   Children are here!
@@ -96,6 +115,7 @@ exports[`components/Button can render an icon if supplied 1`] = `
   className="mdc-button"
   disabled={false}
   onClick={null}
+  type="button"
 >
   <i
     className="mdc-button__icon material-icons"
@@ -110,6 +130,7 @@ exports[`components/Button renders a secondary button 1`] = `
   className="mdc-button secondary-filled-button"
   disabled={false}
   onClick={null}
+  type="button"
 >
   
 </button>
