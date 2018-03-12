@@ -35,6 +35,11 @@ describe("components/Button", () => {
     expect(component).toMatchSnapshot();
   });
 
+  it("can be a submit button", () => {
+    const component = renderer.create(<Button type="submit" />).toJSON();
+    expect(component).toMatchSnapshot();
+  });
+
   it("renders a secondary button", () => {
     const component = renderer.create(<Button secondary />).toJSON();
     expect(component).toMatchSnapshot();
