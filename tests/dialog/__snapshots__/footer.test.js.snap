@@ -8,6 +8,7 @@ exports[`dialog/DialogFooter renders a footer with only one button 1`] = `
     className="mdc-dialog__footer__button mdc-dialog__footer__button--cancel mdc-button"
     disabled={false}
     onClick={null}
+    type="button"
   >
     
     I am another button
@@ -23,6 +24,7 @@ exports[`dialog/DialogFooter renders a footer with some buttons 1`] = `
     className="mdc-dialog__footer__button mdc-dialog__footer__button--cancel mdc-button"
     disabled={false}
     onClick={null}
+    type="button"
   >
     
     I am a button
@@ -31,6 +33,7 @@ exports[`dialog/DialogFooter renders a footer with some buttons 1`] = `
     className="mdc-dialog__footer__button mdc-dialog__footer__button--cancel mdc-button"
     disabled={false}
     onClick={null}
+    type="button"
   >
     
     I am another button

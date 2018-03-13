@@ -69,6 +69,7 @@ exports[`dialog/Dialog can render a TextField if \`field\` prop is supplied 1`] 
         className="mdc-dialog__footer__button mdc-dialog__footer__button--accept mdc-button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         
         Ok
@@ -147,6 +148,7 @@ exports[`dialog/Dialog can render a TextField if \`field\` prop is supplied 2`] 
         className="mdc-dialog__footer__button mdc-dialog__footer__button--accept mdc-button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         
         Ok
@@ -189,6 +191,7 @@ exports[`dialog/Dialog renders a dialog with no actions specified 1`] = `
         className="mdc-dialog__footer__button mdc-dialog__footer__button--accept mdc-button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         
         Ok
@@ -231,6 +234,7 @@ exports[`dialog/Dialog renders correctly 1`] = `
         className="mdc-dialog__footer__button mdc-dialog__footer__button--accept mdc-button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         
         Cancel
@@ -239,6 +243,7 @@ exports[`dialog/Dialog renders correctly 1`] = `
         className="mdc-dialog__footer__button mdc-dialog__footer__button--accept mdc-button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         
         Continue
@@ -281,6 +286,7 @@ exports[`dialog/Dialog uses the dialog-polyfill when needed 1`] = `
         className="mdc-dialog__footer__button mdc-dialog__footer__button--accept mdc-button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         
         Cancel
@@ -289,6 +295,7 @@ exports[`dialog/Dialog uses the dialog-polyfill when needed 1`] = `
         className="mdc-dialog__footer__button mdc-dialog__footer__button--accept mdc-button"
         disabled={false}
         onClick={[Function]}
+        type="button"
       >
         
         Continue
