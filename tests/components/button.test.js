@@ -35,6 +35,11 @@ describe("components/Button", () => {
     expect(component).toMatchSnapshot();
   });
 
+  it("can render a button with id", () => {
+    const component = renderer.create(<Button id="button" />).toJSON();
+    expect(component).toMatchSnapshot();
+  });
+
   it("can be a submit button", () => {
     const component = renderer.create(<Button type="submit" />).toJSON();
     expect(component).toMatchSnapshot();
@@ -52,6 +57,11 @@ describe("components/Button", () => {
 
   it("can render a link if supplied", () => {
     const component = renderer.create(<Button link="#" />).toJSON();
+    expect(component).toMatchSnapshot();
+  });
+
+  it("can render a link with id", () => {
+    const component = renderer.create(<Button id="link" link="#" />).toJSON();
     expect(component).toMatchSnapshot();
   });
 
