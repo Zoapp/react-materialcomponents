@@ -110,11 +110,33 @@ exports[`components/Button can have children 1`] = `
 </button>
 `;
 
+exports[`components/Button can render a button with id 1`] = `
+<button
+  className="mdc-button"
+  disabled={false}
+  id="button"
+  onClick={null}
+  type="button"
+>
+  
+</button>
+`;
+
 exports[`components/Button can render a link if supplied 1`] = `
 <a
   className="mdc-button"
   href="#"
   id={null}
+>
+  
+</a>
+`;
+
+exports[`components/Button can render a link with id 1`] = `
+<a
+  className="mdc-button"
+  href="#"
+  id="link"
 >
   
 </a>
