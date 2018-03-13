@@ -68,6 +68,7 @@ exports[`dialog/Dialog can render a TextField if \`field\` prop is supplied 1`] 
       <button
         className="mdc-dialog__footer__button mdc-dialog__footer__button--accept mdc-button"
         disabled={false}
+        id={null}
         onClick={[Function]}
         type="button"
       >
@@ -147,6 +148,7 @@ exports[`dialog/Dialog can render a TextField if \`field\` prop is supplied 2`] 
       <button
         className="mdc-dialog__footer__button mdc-dialog__footer__button--accept mdc-button"
         disabled={false}
+        id={null}
         onClick={[Function]}
         type="button"
       >
@@ -190,6 +192,7 @@ exports[`dialog/Dialog renders a dialog with no actions specified 1`] = `
       <button
         className="mdc-dialog__footer__button mdc-dialog__footer__button--accept mdc-button"
         disabled={false}
+        id={null}
         onClick={[Function]}
         type="button"
       >
@@ -233,6 +236,7 @@ exports[`dialog/Dialog renders correctly 1`] = `
       <button
         className="mdc-dialog__footer__button mdc-dialog__footer__button--accept mdc-button"
         disabled={false}
+        id={null}
         onClick={[Function]}
         type="button"
       >
@@ -242,6 +246,7 @@ exports[`dialog/Dialog renders correctly 1`] = `
       <button
         className="mdc-dialog__footer__button mdc-dialog__footer__button--accept mdc-button"
         disabled={false}
+        id={null}
         onClick={[Function]}
         type="button"
       >
@@ -285,6 +290,7 @@ exports[`dialog/Dialog uses the dialog-polyfill when needed 1`] = `
       <button
         className="mdc-dialog__footer__button mdc-dialog__footer__button--accept mdc-button"
         disabled={false}
+        id={null}
         onClick={[Function]}
         type="button"
       >
@@ -294,6 +300,7 @@ exports[`dialog/Dialog uses the dialog-polyfill when needed 1`] = `
       <button
         className="mdc-dialog__footer__button mdc-dialog__footer__button--accept mdc-button"
         disabled={false}
+        id={null}
         onClick={[Function]}
         type="button"
       >

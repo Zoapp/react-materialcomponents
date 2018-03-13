@@ -30,6 +30,7 @@ const Button = ({
   dense,
   disabled,
   icon,
+  id,
   link,
   onClick,
   raised,
@@ -71,7 +72,7 @@ const Button = ({
   let element;
   if (link) {
     element = (
-      <a href={link} className={classes}>
+      <a id={id} href={link} className={classes}>
         {i}
         {children}
       </a>
@@ -79,6 +80,7 @@ const Button = ({
   } else {
     element = (
       <button
+        id={id}
         className={classes}
         onClick={onClick}
         disabled={disabled}
@@ -99,6 +101,7 @@ Button.defaultProps = {
   dense: false,
   disabled: false,
   icon: null,
+  id: null,
   link: null,
   mdcElement: MDC_BUTTON,
   onClick: null,
