@@ -4,6 +4,7 @@ exports[`components/Button can be a submit button 1`] = `
 <button
   className="mdc-button"
   disabled={false}
+  id={null}
   onClick={null}
   type="submit"
 >
@@ -15,6 +16,7 @@ exports[`components/Button can be compact 1`] = `
 <button
   className="mdc-button mdc-button--compact"
   disabled={false}
+  id={null}
   onClick={null}
   type="button"
 >
@@ -26,6 +28,7 @@ exports[`components/Button can be dense 1`] = `
 <button
   className="mdc-button mdc-button--dense"
   disabled={false}
+  id={null}
   onClick={null}
   type="button"
 >
@@ -37,6 +40,7 @@ exports[`components/Button can be disabled 1`] = `
 <button
   className="mdc-button"
   disabled={true}
+  id={null}
   onClick={null}
   type="button"
 >
@@ -49,6 +53,7 @@ exports[`components/Button can be raised 1`] = `
 <button
   className="mdc-button mdc-button--raised"
   disabled={false}
+  id={null}
   onClick={null}
   type="button"
 >
@@ -60,6 +65,7 @@ exports[`components/Button can be rippled 1`] = `
 <button
   className="mdc-button"
   disabled={false}
+  id={null}
   onClick={null}
   type="button"
 >
@@ -71,6 +77,7 @@ exports[`components/Button can be stroked 1`] = `
 <button
   className="mdc-button mdc-button--stroked"
   disabled={false}
+  id={null}
   onClick={null}
   type="button"
 >
@@ -82,6 +89,7 @@ exports[`components/Button can be unelevated 1`] = `
 <button
   className="mdc-button mdc-button--unelevated"
   disabled={false}
+  id={null}
   onClick={null}
   type="button"
 >
@@ -93,6 +101,7 @@ exports[`components/Button can have children 1`] = `
 <button
   className="mdc-button"
   disabled={false}
+  id={null}
   onClick={null}
   type="button"
 >
@@ -101,10 +110,33 @@ exports[`components/Button can have children 1`] = `
 </button>
 `;
 
+exports[`components/Button can render a button with id 1`] = `
+<button
+  className="mdc-button"
+  disabled={false}
+  id="button"
+  onClick={null}
+  type="button"
+>
+  
+</button>
+`;
+
 exports[`components/Button can render a link if supplied 1`] = `
 <a
   className="mdc-button"
   href="#"
+  id={null}
+>
+  
+</a>
+`;
+
+exports[`components/Button can render a link with id 1`] = `
+<a
+  className="mdc-button"
+  href="#"
+  id="link"
 >
   
 </a>
@@ -114,6 +146,7 @@ exports[`components/Button can render an icon if supplied 1`] = `
 <button
   className="mdc-button"
   disabled={false}
+  id={null}
   onClick={null}
   type="button"
 >
@@ -129,6 +162,7 @@ exports[`components/Button renders a secondary button 1`] = `
 <button
   className="mdc-button secondary-filled-button"
   disabled={false}
+  id={null}
   onClick={null}
   type="button"
 >
