@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tab/Tabbar can be colored 1`] = `
+<nav
+  className="mdc-tab-bar"
+>
+  <span
+    className="mdc-tab-bar__indicator"
+    style={undefined}
+  />
+</nav>
+`;
+
+exports[`tab/Tabbar can configure the active tab 1`] = `
+<nav
+  className="mdc-tab-bar"
+>
+  <span
+    className="mdc-tab-bar__indicator"
+    style={undefined}
+  />
+</nav>
+`;
+
+exports[`tab/Tabbar can have an active color 1`] = `
+<nav
+  className="mdc-tab-bar"
+>
+  <span
+    className="mdc-tab-bar__indicator"
+    style={
+      Object {
+        "backgroundColor": "pink",
+      }
+    }
+  />
+</nav>
+`;
+
+exports[`tab/Tabbar can have children 1`] = `
+<nav
+  className="mdc-tab-bar"
+>
+  <a
+    className="mdc-tab mdc-tab--active"
+    href={null}
+    onClick={[Function]}
+  >
+    
+    persistent
+  </a>
+  <span
+    className="mdc-tab-bar__indicator"
+    style={undefined}
+  />
+</nav>
+`;
