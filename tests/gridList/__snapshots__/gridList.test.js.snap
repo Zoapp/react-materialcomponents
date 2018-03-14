@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/GridList can have a variable children tile's width 1`] = `
+<div
+  className="mdc-grid-list"
+>
+  <ul
+    className="mdc-grid-list__tiles"
+    style={Object {}}
+  />
+</div>
+`;
+
+exports[`components/GridList can have a variable width 1`] = `
+<div
+  className="mdc-grid-list"
+>
+  <ul
+    className="mdc-grid-list__tiles"
+    style={
+      Object {
+        "width": "50px;",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`components/GridList can have an header caption 1`] = `
+<div
+  className="mdc-grid-list mdc-grid-list--header-caption"
+>
+  <ul
+    className="mdc-grid-list__tiles"
+    style={Object {}}
+  />
+</div>
+`;
+
+exports[`components/GridList can have an multiline caption 1`] = `
+<div
+  className="mdc-grid-list mdc-grid-list--twoline-caption"
+>
+  <ul
+    className="mdc-grid-list__tiles"
+    style={Object {}}
+  />
+</div>
+`;
+
+exports[`components/GridList can have an overflow 1`] = `
+<div
+  className="mdc-grid-list mdc-grid-list--tile-gutter-1"
+>
+  <ul
+    className="mdc-grid-list__tiles"
+    style={Object {}}
+  />
+</div>
+`;
+
+exports[`components/GridList can have children 1`] = `
+<div
+  className="mdc-grid-list"
+>
+  <ul
+    className="mdc-grid-list__tiles"
+    style={Object {}}
+  >
+    Children are here!
+  </ul>
+</div>
+`;
+
+exports[`components/GridList can render different aspect ratio 1`] = `
+<div
+  className="mdc-grid-list mdc-grid-list--tile-aspect-16x9"
+>
+  <ul
+    className="mdc-grid-list__tiles"
+    style={Object {}}
+  />
+</div>
+`;
+
+exports[`components/GridList can render icon aligned 1`] = `
+<div
+  className="mdc-grid-list mdc-grid-list--with-icon-align-start"
+>
+  <ul
+    className="mdc-grid-list__tiles"
+    style={Object {}}
+  />
+</div>
+`;
+
+exports[`components/GridList can set background children tile's color 1`] = `
+<div
+  className="mdc-grid-list"
+>
+  <ul
+    className="mdc-grid-list__tiles"
+    style={Object {}}
+  />
+</div>
+`;
