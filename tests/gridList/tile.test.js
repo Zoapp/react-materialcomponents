@@ -4,7 +4,13 @@ import { Tile } from "libs/gridList";
 
 describe("components/Tile", () => {
   it("can have children", () => {
-    const tree = renderer.create(<Tile><div>Children are here!</div></Tile>).toJSON();
+    const tree = renderer
+      .create(
+        <Tile>
+          <div>Children are here!</div>
+        </Tile>,
+      )
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 
