@@ -64,7 +64,7 @@ exports[`components/TextField can be dense 1`] = `
     type="text"
   />
   <label
-    className="mdc-text-field__label"
+    className="mdc-floating-label"
     focused="false"
     htmlFor="unique-component-id"
     style={Object {}}
@@ -136,7 +136,7 @@ exports[`components/TextField can be marked as invalid 1`] = `
     type="text"
   />
   <label
-    className="mdc-text-field__label"
+    className="mdc-floating-label"
     focused="false"
     htmlFor="unique-component-id"
     style={Object {}}
@@ -161,7 +161,7 @@ exports[`components/TextField can be marked as invalid 2`] = `
     type="text"
   />
   <label
-    className="mdc-text-field__label"
+    className="mdc-floating-label"
     focused="false"
     htmlFor="unique-component-id"
     style={Object {}}
@@ -172,13 +172,13 @@ exports[`components/TextField can be marked as invalid 2`] = `
 </div>
 `;
 
-exports[`components/TextField can have a default Value 1`] = `
+exports[`components/TextField can be outlined 1`] = `
 <div
-  className="mdc-text-field mdc-text-field--upgraded"
+  className="mdc-text-field mdc-text-field--upgraded mdc-text-field--outlined"
 >
   <input
     className="mdc-text-field__input"
-    defaultValue="favorite"
+    defaultValue={null}
     id="unique-component-id"
     onBlur={[Function]}
     onChange={[Function]}
@@ -186,13 +186,22 @@ exports[`components/TextField can have a default Value 1`] = `
     type="text"
   />
   <label
-    className="mdc-floating-label mdc-floating-label--float-above"
+    className="mdc-floating-label"
     focused="false"
     htmlFor="unique-component-id"
     style={Object {}}
   />
   <div
-    className="mdc-text-field__bottom-line"
+    className="mdc-text-field__outline"
+  >
+    <svg>
+      <path
+        className="mdc-text-field__outline-path"
+      />
+    </svg>
+  </div>
+  <div
+    className="mdc-text-field__idle-outline"
   />
 </div>
 `;
@@ -211,7 +220,7 @@ exports[`components/TextField can have a label 1`] = `
     type="text"
   />
   <label
-    className="mdc-text-field__label"
+    className="mdc-floating-label"
     focused="false"
     htmlFor="unique-component-id"
     style={Object {}}
@@ -247,7 +256,32 @@ exports[`components/TextField can have a leadingIcon 1`] = `
     type="text"
   />
   <label
-    className="mdc-text-field__label"
+    className="mdc-floating-label"
+    focused="false"
+    htmlFor="unique-component-id"
+    style={Object {}}
+  />
+  <div
+    className="mdc-text-field__bottom-line"
+  />
+</div>
+`;
+
+exports[`components/TextField can have a no floating label 1`] = `
+<div
+  className="mdc-text-field mdc-text-field--upgraded"
+>
+  <input
+    className="mdc-text-field__input"
+    defaultValue={null}
+    id="unique-component-id"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+  />
+  <label
+    className="mdc-floating-label"
     focused="false"
     htmlFor="unique-component-id"
     style={Object {}}
@@ -272,7 +306,7 @@ exports[`components/TextField can have a trailing Icon 1`] = `
     type="text"
   />
   <label
-    className="mdc-text-field__label"
+    className="mdc-floating-label"
     focused="false"
     htmlFor="unique-component-id"
     style={Object {}}
@@ -306,7 +340,7 @@ exports[`components/TextField can have a type 1`] = `
     type="bar"
   />
   <label
-    className="mdc-text-field__label"
+    className="mdc-floating-label"
     focused="false"
     htmlFor="unique-component-id"
     style={Object {}}
@@ -335,7 +369,7 @@ exports[`components/TextField can have an helper Text 1`] = `
       type="text"
     />
     <label
-      className="mdc-text-field__label"
+      className="mdc-floating-label"
       focused="false"
       htmlFor="unique-component-id"
       style={Object {}}
@@ -367,7 +401,7 @@ exports[`components/TextField can have an helper text persistent 1`] = `
     type="text"
   />
   <label
-    className="mdc-text-field__label"
+    className="mdc-floating-label"
     focused="false"
     htmlFor="unique-component-id"
     style={Object {}}
@@ -392,7 +426,7 @@ exports[`components/TextField can have an helper text with a validation message 
     type="text"
   />
   <label
-    className="mdc-text-field__label"
+    className="mdc-floating-label"
     focused="false"
     htmlFor="unique-component-id"
     style={Object {}}
@@ -403,23 +437,48 @@ exports[`components/TextField can have an helper text with a validation message 
 </div>
 `;
 
-exports[`components/TextField can have an id 1`] = `
+exports[`components/TextField getValue() returns the input value 1`] = `
 <div
   className="mdc-text-field mdc-text-field--upgraded"
 >
   <input
     className="mdc-text-field__input"
-    defaultValue={null}
-    id="1"
+    defaultValue="hello"
+    id="unique-component-id"
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
     type="text"
   />
   <label
-    className="mdc-text-field__label"
+    className="mdc-floating-label mdc-floating-label--float-above"
     focused="false"
-    htmlFor="1"
+    htmlFor="unique-component-id"
+    style={Object {}}
+  />
+  <div
+    className="mdc-text-field__bottom-line"
+  />
+</div>
+`;
+
+exports[`components/TextField renders correctly 1`] = `
+<div
+  className="mdc-text-field mdc-text-field--upgraded"
+>
+  <input
+    className="mdc-text-field__input"
+    defaultValue={null}
+    id="unique-component-id"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+  />
+  <label
+    className="mdc-floating-label"
+    focused="false"
+    htmlFor="unique-component-id"
     style={Object {}}
   />
   <div

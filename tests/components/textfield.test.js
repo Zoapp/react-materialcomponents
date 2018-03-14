@@ -2,172 +2,124 @@ import React from "react";
 import renderer from "react-test-renderer";
 import TextField from "libs/components/textfield";
 
-describe("components/TextField", () => 
+describe("components/TextField", () => {
   it("renders correctly", () => {
-    const component = renderer.create(<TextField id="unique-component-id" />);
+    const tree = renderer
+      .create(<TextField id="unique-component-id" />)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   it("can have a label", () => {
     const component = renderer.create(
-    	<TextField 
-    	  cid="unique-component-id"
-    	  label="foo" 
-    	/>
-   	);
+      <TextField id="unique-component-id" label="foo" />,
+    );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it("can have a type", () => {
     const component = renderer.create(
-    	<TextField 
-    	  cid="unique-component-id"
-    	  type="bar" 
-    	/>
-   	);
+      <TextField id="unique-component-id" type="bar" />,
+    );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
-  
+
   it("can be disabled", () => {
     const component = renderer.create(
-    	<TextField 
-    	  cid="unique-component-id"
-    	  disabled
-    	/>
-   	);
+      <TextField id="unique-component-id" disabled />,
+    );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it("can be dense", () => {
     const component = renderer.create(
-    	<TextField 
-    	  cid="unique-component-id"
-    	  dense
-    	/>
-   	);
+      <TextField id="unique-component-id" dense />,
+    );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it("can have an helper Text", () => {
     const component = renderer.create(
-    	<TextField 
-    	  cid="unique-component-id"
-    	  helperText="foobar"
-    	/>
-   	);
+      <TextField id="unique-component-id" helperText="foobar" />,
+    );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it("can have an helper text persistent", () => {
     const component = renderer.create(
-    	<TextField 
-    	  cid="unique-component-id"
-    	  htPersistent
-    	/>
-   	);
+      <TextField id="unique-component-id" htPersistent />,
+    );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it("can have an helper text with a validation message", () => {
     const component = renderer.create(
-    	<TextField 
-    	  cid="unique-component-id"
-    	  htValidationMsg
-    	/>
-   	);
+      <TextField id="unique-component-id" htValidationMsg />,
+    );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it("can be full width", () => {
     const component = renderer.create(
-    	<TextField 
-    	  cid="unique-component-id"
-    	  fullwidth
-    	/>
-   	);
+      <TextField id="unique-component-id" fullwidth />,
+    );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it("can be a Textarea", () => {
     const component = renderer.create(
-    	<TextField 
-    	  cid="unique-component-id"
-    	  isTextarea
-    	/>
-   	);
+      <TextField id="unique-component-id" isTextarea />,
+    );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-
   it("can be Boxed", () => {
     const component = renderer.create(
-    	<TextField 
-    	  cid="unique-component-id"
-    	  isBoxed
-    	/>
-   	);
+      <TextField id="unique-component-id" isBoxed />,
+    );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it("can be outlined", () => {
     const component = renderer.create(
-    	<TextField 
-    	  cid="unique-component-id"
-    	  outlined
-    	/>
-   	);
-  });
-
-  it("can have a leadingIcon", () => {
-    const component = renderer.create(
-    	<TextField 
-    	  cid="unique-component-id"
-    	  leadingIcon="favorite"
-    	/>
-   	);
+      <TextField id="unique-component-id" outlined />,
+    );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it("can have a default Value", () => {
+  it("can have a leadingIcon", () => {
     const component = renderer.create(
-    	<TextField 
-    	  cid="unique-component-id"
-    	  defaultValue="favorite"
-    	/>
-   	);
+      <TextField id="unique-component-id" leadingIcon="favorite" />,
+    );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it("can have a trailing Icon", () => {
     const component = renderer.create(
-    	<TextField 
-    	  cid="unique-component-id"
-    	  trailingIcon="favorite"
-    	/>
-   	);
+      <TextField id="unique-component-id" trailingIcon="favorite" />,
+    );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
   it("can have a no floating label", () => {
     const component = renderer.create(
-    	<TextField 
-    	  cid="unique-component-id"
-    	  noFloatingLabel
-    	/>
-   	);
+      <TextField id="unique-component-id" noFloatingLabel />,
+    );
     const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   it("can be marked as invalid", () => {
