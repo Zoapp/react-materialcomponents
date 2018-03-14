@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Card can be a followed by an other title 1`] = `
+<div
+  className="mdc-card"
+>
+  
+</div>
+`;
+
+exports[`components/Card can have a subtitle 1`] = `
+<div
+  className="mdc-card"
+>
+  <section
+    className="mdc-card__primary"
+  >
+    
+    
+    <h2
+      className="mdc-card__subtitle"
+    >
+      bar
+    </h2>
+  </section>
+</div>
+`;
+
+exports[`components/Card can have an title 1`] = `
+<div
+  className="mdc-card"
+>
+  <section
+    className="mdc-card__primary"
+  >
+    
+    <h1
+      className="mdc-card__title"
+    >
+      foo
+    </h1>
+    
+  </section>
+</div>
+`;
+
+exports[`components/Card can have children 1`] = `
+<div
+  className="mdc-card"
+>
+  
+  Children are here!
+</div>
+`;

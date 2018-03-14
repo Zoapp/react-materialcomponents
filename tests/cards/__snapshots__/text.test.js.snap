@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/CardText can have children 1`] = `
+<div
+  className="mdc-card"
+>
+  
+  <section
+    className="mdc-card__supporting-text"
+  >
+    Children are Here !
+  </section>
+</div>
+`;
