@@ -25,21 +25,51 @@ import TextFields from "./components/textfields";
 const Main = ({ children }) => (
   <main>
     {children}
-    <Ripples />
-    <Cards />
-    <Buttons />
-    <Checkboxes />
-    <GridLists />
-    <IconToggles />
-    <LinearProgresses />
-    <Lists />
-    <Menus />
-    <Radios />
-    <Selects />
-    <Sliders />
-    <Switchs />
-    <Tabbars />
-    <TextFields />
+    <div id="ripple">
+      <Ripples />
+    </div>
+    <div id="cards">
+      <Cards />
+    </div>
+    <div id="buttons">
+      <Buttons />
+    </div>
+    <div id="checkboxes">
+      <Checkboxes />
+    </div>
+    <div id="gridlists">
+      <GridLists />
+    </div>
+    <div id="icon">
+      <IconToggles />
+    </div>
+    <div id="linear">
+      <LinearProgresses />
+    </div>
+    <div id="list">
+      <Lists />
+    </div>
+    <div id="menu">
+      <Menus />
+    </div>
+    <div id="radio">
+      <Radios />
+    </div>
+    <div id="select">
+      <Selects />
+    </div>
+    <div id="slider">
+      <Sliders />
+    </div>
+    <div id="switch">
+      <Switchs />
+    </div>
+    <div id="tab">
+      <Tabbars />
+    </div>
+    <div id="textfield">
+      <TextFields />
+    </div>
     <section style={{ height: "200px" }} />
   </main>
 );

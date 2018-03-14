@@ -105,28 +105,59 @@ export default class App extends Component {
           onClose={this.toggleDrawer}
         >
           <DrawerContent list>
-            <ListItem icon="inbox" activated>
+            <ListItem icon="inbox" href="#drawer">
               Drawer
             </ListItem>
-            <ListItem icon="account_circle">Cards</ListItem>
-            <ListItem icon="panorama_wide_angle">Buttons</ListItem>
-            <ListItem icon="check_box">Checkboxes</ListItem>
-            <ListItem icon="grid_on">Grid</ListItem>
-            <ListItem icon="hdr_strong">Icons Toogles</ListItem>
-            <ListItem icon="linear_scale">Linear Progress</ListItem>
-            <ListItem icon="list">List</ListItem>
-            <ListItem icon="menu">Menus</ListItem>
-            <ListItem icon="radio_button_checked">Radio</ListItem>
-            <ListItem icon="arrow_drop_down_circle">Select</ListItem>
-            <ListItem icon="sort">Sliders</ListItem>
-            <ListItem icon="dns">Switchs</ListItem>
-            <ListItem icon="tab">Tabbar</ListItem>
-            <ListItem icon="textsms">TextFields</ListItem>
+            <ListItem icon="aspect_ratio" href="#ripple">
+              Ripples
+            </ListItem>
+            <ListItem icon="account_circle" href="#cards">
+              Cards
+            </ListItem>
+            <ListItem icon="panorama_wide_angle" href="#buttons">
+              Buttons
+            </ListItem>
+            <ListItem icon="check_box" href="#checkboxes">
+              Checkboxes
+            </ListItem>
+            <ListItem icon="grid_on" href="#gridlists">
+              Grid
+            </ListItem>
+            <ListItem icon="hdr_strong" href="#icon">
+              Icons Toogles
+            </ListItem>
+            <ListItem icon="linear_scale" href="#linear">
+              Linear Progress
+            </ListItem>
+            <ListItem icon="list" href="#list">
+              List
+            </ListItem>
+            <ListItem icon="menu" href="#menu">
+              Menus
+            </ListItem>
+            <ListItem icon="radio_button_checked" href="#radio">
+              Radio
+            </ListItem>
+            <ListItem icon="arrow_drop_down_circle" href="#select">
+              Select
+            </ListItem>
+            <ListItem icon="sort" href="#slider">
+              Sliders
+            </ListItem>
+            <ListItem icon="dns" href="#switch">
+              Switchs
+            </ListItem>
+            <ListItem icon="tab" href="#tab">
+              Tabbar
+            </ListItem>
+            <ListItem icon="textsms" href="#textfield">
+              TextFields
+            </ListItem>
           </DrawerContent>
         </Drawer>
         <Content>
           <Main>
-            <section>
+            <section id="drawer">
               <h1>Drawer examples</h1>
               <Tabbar
                 onChange={this.handleDrawerChange}
