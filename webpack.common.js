@@ -33,19 +33,10 @@ module.exports = {
     ]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
-      '__REACT_DEVTOOLS_GLOBAL_HOOK__': '({ isDisabled: true })'
-    }),
     new CopyWebpackPlugin([
       {
         from: "./public",
         to: path.resolve(__dirname, "./dist/public"),
-        force: true
-      },
-      {
-        from: "../dist/compressed.css",
-        to: path.resolve(__dirname, "./dist/public/css/compressed.css"),
         force: true
       },
       {
@@ -54,10 +45,10 @@ module.exports = {
         force: true
       },
       {
-        from: path.resolve(__dirname, "./package.json"),
-        to: path.resolve(__dirname, "./dist/package.json"),
+        from: "../dist/compressed.css",
+        to: path.resolve(__dirname, "./dist/public/css/compressed.css"),
         force: true
-      }
+      },
     ])
   ]
 };
