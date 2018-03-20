@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`gridList/Tile can have a background color 1`] = `
+<ul
+  className="mdc-grid-tile"
+  style={Object {}}
+>
+  <div
+    className="mdc-grid-tile__primary"
+    style={
+      Object {
+        "background": "pink",
+      }
+    }
+  />
+</ul>
+`;
+
+exports[`gridList/Tile can have a text 1`] = `
+<ul
+  className="mdc-grid-tile"
+  style={Object {}}
+>
+  <div
+    className="mdc-grid-tile__primary"
+    style={Object {}}
+  />
+</ul>
+`;
+
+exports[`gridList/Tile can have a title 1`] = `
+<ul
+  className="mdc-grid-tile"
+  style={Object {}}
+>
+  <div
+    className="mdc-grid-tile__primary"
+    style={Object {}}
+  />
+  <span
+    className="mdc-grid-tile__secondary"
+  >
+    <span
+      className="mdc-grid-tile__title"
+    >
+      foobar
+    </span>
+  </span>
+</ul>
+`;
+
+exports[`gridList/Tile can have a variable width 1`] = `
+<ul
+  className="mdc-grid-tile"
+  style={
+    Object {
+      "width": "10px",
+    }
+  }
+>
+  <div
+    className="mdc-grid-tile__primary"
+    style={Object {}}
+  />
+</ul>
+`;
+
+exports[`gridList/Tile can have an icon 1`] = `
+<ul
+  className="mdc-grid-tile"
+  style={Object {}}
+>
+  <div
+    className="mdc-grid-tile__primary"
+    style={Object {}}
+  />
+</ul>
+`;
+
+exports[`gridList/Tile can have children 1`] = `
+<ul
+  className="mdc-grid-tile"
+  style={Object {}}
+>
+  <div
+    className="mdc-grid-tile__primary"
+    style={Object {}}
+  >
+    <div
+      className="mdc-grid-tile__primary-content  undefined)"
+    >
+      Children are here!
+    </div>
+  </div>
+</ul>
+`;
