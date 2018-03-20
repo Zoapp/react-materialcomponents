@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/CardMedia can have a children 1`] = `
+exports[`components/cards/CardMedia can have a children 1`] = `
 <section
   className="mdc-card__media"
 >
@@ -8,7 +8,7 @@ exports[`components/CardMedia can have a children 1`] = `
 </section>
 `;
 
-exports[`components/CardMedia can have an image source 1`] = `
+exports[`components/cards/CardMedia can have an image source 1`] = `
 <img
   alt=""
   className="mdc-card__media-item mdc-card__media-item--1x"
@@ -17,13 +17,13 @@ exports[`components/CardMedia can have an image source 1`] = `
 />
 `;
 
-exports[`components/CardMedia can have different size 1`] = `
+exports[`components/cards/CardMedia can have different size 1`] = `
 <section
   className="mdc-card__media"
 />
 `;
 
-exports[`components/CardMedia can specify an alternate text for the source 1`] = `
+exports[`components/cards/CardMedia can specify an alternate text for the source 1`] = `
 <section
   className="mdc-card__media"
 />

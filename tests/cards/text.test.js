@@ -2,7 +2,7 @@ import React from "react";
 import renderer from "react-test-renderer";
 import { Card, CardText } from "libs/cards/";
 
-describe("components/CardText", () => {
+describe("components/cards/CardText", () => {
   it("can have children", () => {
     const tree = renderer
       .create(

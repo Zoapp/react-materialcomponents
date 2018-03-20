@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/CardText can have children 1`] = `
+exports[`components/cards/CardText can have children 1`] = `
 <div
   className="mdc-card"
 >

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/Card can have a subtitle 1`] = `
+exports[`components/cards/Card can have a subtitle 1`] = `
 <div
   className="mdc-card"
 >
@@ -18,7 +18,7 @@ exports[`components/Card can have a subtitle 1`] = `
 </div>
 `;
 
-exports[`components/Card can have a title 1`] = `
+exports[`components/cards/Card can have a title 1`] = `
 <div
   className="mdc-card"
 >
@@ -36,7 +36,7 @@ exports[`components/Card can have a title 1`] = `
 </div>
 `;
 
-exports[`components/Card can have an horizontal block 1`] = `
+exports[`components/cards/Card can have an horizontal block 1`] = `
 <div
   className="mdc-card"
 >
@@ -48,7 +48,7 @@ exports[`components/Card can have an horizontal block 1`] = `
 </div>
 `;
 
-exports[`components/Card can have children 1`] = `
+exports[`components/cards/Card can have children 1`] = `
 <div
   className="mdc-card"
 >
