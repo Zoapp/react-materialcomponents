@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`toolbar/ToolbarIcon can be inside a menu 1`] = `
+<a
+  className="mdc-toolbar__menu-icon material-icons"
+>
+  foobar
+</a>
+`;
+
+exports[`toolbar/ToolbarIcon can render children 1`] = `
+<a
+  className="mdc-toolbar__icon material-icons"
+>
+  foo
+</a>
+`;

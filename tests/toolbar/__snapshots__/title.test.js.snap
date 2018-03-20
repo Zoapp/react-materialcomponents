@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`toolbar/Title can render children 1`] = `
+<span
+  className="mdc-toolbar__title"
+>
+  Children are here!
+</span>
+`;

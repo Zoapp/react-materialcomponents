@@ -1,10 +1,10 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import { Toolbar } from "libs/toolbar/";
+import Title from "libs/toolbar/title";
 
-describe("toolbar/Toolbar", () => {
+describe("toolbar/Title", () => {
   it("can render children", () => {
-    const component = renderer.create(<Toolbar>Children are here!</Toolbar>);
+    const component = renderer.create(<Title>Children are here!</Title>);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

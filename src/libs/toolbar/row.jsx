@@ -32,5 +32,4 @@ Row.propTypes = {
   mdcElement: PropTypes.string,
   children: PropTypes.node,
 };
-
 export default Row;
