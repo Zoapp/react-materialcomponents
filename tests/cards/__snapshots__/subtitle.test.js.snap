@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/cards/CardSubtitle can have children 1`] = `
+exports[`cards/CardSubtitle can have children 1`] = `
 <h2
   className="mdc-card__subtitle"
 >

@@ -2,7 +2,7 @@ import React from "react";
 import renderer from "react-test-renderer";
 import { CardActions, Button } from "libs/";
 
-describe("components/cards/CardActions", () => {
+describe("cards/CardActions", () => {
   it("can render correctly", () => {
     const tree = renderer
       .create(

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/cards/Card can be a followed by an other title 1`] = `
+exports[`cards/Card can be a followed by an other title 1`] = `
 <div
   className="mdc-card"
 >
@@ -8,7 +8,7 @@ exports[`components/cards/Card can be a followed by an other title 1`] = `
 </div>
 `;
 
-exports[`components/cards/Card can have a subtitle 1`] = `
+exports[`cards/Card can have a subtitle 1`] = `
 <div
   className="mdc-card"
 >
@@ -26,7 +26,7 @@ exports[`components/cards/Card can have a subtitle 1`] = `
 </div>
 `;
 
-exports[`components/cards/Card can have an title 1`] = `
+exports[`cards/Card can have an title 1`] = `
 <div
   className="mdc-card"
 >
@@ -44,7 +44,7 @@ exports[`components/cards/Card can have an title 1`] = `
 </div>
 `;
 
-exports[`components/cards/Card can have children 1`] = `
+exports[`cards/Card can have children 1`] = `
 <div
   className="mdc-card"
 >

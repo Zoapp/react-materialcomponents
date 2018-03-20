@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/cards/CardActions can be verticaly aligned 1`] = `
+exports[`cards/CardActions can be verticaly aligned 1`] = `
 <section
   className="mdc-card__actions mdc-card__actions--vertical"
 />
 `;
 
-exports[`components/cards/CardActions can render correctly 1`] = `
+exports[`cards/CardActions can render correctly 1`] = `
 <section
   className="mdc-card__actions"
 >

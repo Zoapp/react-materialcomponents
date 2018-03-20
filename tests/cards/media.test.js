@@ -2,7 +2,7 @@ import React from "react";
 import renderer from "react-test-renderer";
 import { CardMedia } from "libs/cards/";
 
-describe("components/cards/CardMedia", () => {
+describe("cards/CardMedia", () => {
   it("can have a children", () => {
     const tree = renderer
       .create(<CardMedia>Children are here!</CardMedia>)

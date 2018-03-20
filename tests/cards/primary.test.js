@@ -2,7 +2,7 @@ import React from "react";
 import renderer from "react-test-renderer";
 import { Card } from "libs/cards/";
 
-describe("components/cards/Card", () => {
+describe("cards/Card", () => {
   it("can have children", () => {
     const tree = renderer.create(<Card>Children are here!</Card>).toJSON();
     expect(tree).toMatchSnapshot();
