@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/TextField can be Boxed 1`] = `
+exports[`components/TextField can be a textarea 1`] = `
 <div
-  className="mdc-text-field mdc-text-field--upgraded mdc-text-field--box"
+  className="mdc-text-field mdc-text-field--upgraded mdc-text-field--textarea"
 >
-  <input
+  <textarea
     className="mdc-text-field__input"
     defaultValue={null}
     id="unique-component-id"
@@ -25,11 +25,11 @@ exports[`components/TextField can be Boxed 1`] = `
 </div>
 `;
 
-exports[`components/TextField can be a Textarea 1`] = `
+exports[`components/TextField can be boxed 1`] = `
 <div
-  className="mdc-text-field mdc-text-field--upgraded mdc-text-field--textarea"
+  className="mdc-text-field mdc-text-field--upgraded mdc-text-field--box"
 >
-  <textarea
+  <input
     className="mdc-text-field__input"
     defaultValue={null}
     id="unique-component-id"
@@ -233,7 +233,7 @@ exports[`components/TextField can have a label 1`] = `
 </div>
 `;
 
-exports[`components/TextField can have a leadingIcon 1`] = `
+exports[`components/TextField can have a leading icon 1`] = `
 <div
   className="mdc-text-field mdc-text-field--upgraded mdc-text-field--with-leading-icon"
 >
@@ -292,7 +292,32 @@ exports[`components/TextField can have a no floating label 1`] = `
 </div>
 `;
 
-exports[`components/TextField can have a trailing Icon 1`] = `
+exports[`components/TextField can have a persistent helper text 1`] = `
+<div
+  className="mdc-text-field mdc-text-field--upgraded"
+>
+  <input
+    className="mdc-text-field__input"
+    defaultValue={null}
+    id="unique-component-id"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+  />
+  <label
+    className="mdc-floating-label"
+    focused="false"
+    htmlFor="unique-component-id"
+    style={Object {}}
+  />
+  <div
+    className="mdc-text-field__bottom-line"
+  />
+</div>
+`;
+
+exports[`components/TextField can have a trailing icon 1`] = `
 <div
   className="mdc-text-field mdc-text-field--upgraded mdc-text-field--with-trailing-icon"
 >
@@ -351,7 +376,7 @@ exports[`components/TextField can have a type 1`] = `
 </div>
 `;
 
-exports[`components/TextField can have an helper Text 1`] = `
+exports[`components/TextField can have an helper text 1`] = `
 <div
   className="rmdc-text-field-wrapper"
 >
@@ -384,31 +409,6 @@ exports[`components/TextField can have an helper Text 1`] = `
   >
     foobar
   </p>
-</div>
-`;
-
-exports[`components/TextField can have an helper text persistent 1`] = `
-<div
-  className="mdc-text-field mdc-text-field--upgraded"
->
-  <input
-    className="mdc-text-field__input"
-    defaultValue={null}
-    id="unique-component-id"
-    onBlur={[Function]}
-    onChange={[Function]}
-    onFocus={[Function]}
-    type="text"
-  />
-  <label
-    className="mdc-floating-label"
-    focused="false"
-    htmlFor="unique-component-id"
-    style={Object {}}
-  />
-  <div
-    className="mdc-text-field__bottom-line"
-  />
 </div>
 `;
 

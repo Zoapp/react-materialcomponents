@@ -42,7 +42,7 @@ describe("components/TextField", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("can have an helper Text", () => {
+  it("can have an helper text", () => {
     const component = renderer.create(
       <TextField id="unique-component-id" helperText="foobar" />,
     );
@@ -50,7 +50,7 @@ describe("components/TextField", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("can have an helper text persistent", () => {
+  it("can have a persistent helper text", () => {
     const component = renderer.create(
       <TextField id="unique-component-id" htPersistent />,
     );
@@ -74,7 +74,7 @@ describe("components/TextField", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("can be a Textarea", () => {
+  it("can be a textarea", () => {
     const component = renderer.create(
       <TextField id="unique-component-id" isTextarea />,
     );
@@ -82,7 +82,7 @@ describe("components/TextField", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("can be Boxed", () => {
+  it("can be boxed", () => {
     const component = renderer.create(
       <TextField id="unique-component-id" isBoxed />,
     );
@@ -98,7 +98,7 @@ describe("components/TextField", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("can have a leadingIcon", () => {
+  it("can have a leading icon", () => {
     const component = renderer.create(
       <TextField id="unique-component-id" leadingIcon="favorite" />,
     );
@@ -106,7 +106,7 @@ describe("components/TextField", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("can have a trailing Icon", () => {
+  it("can have a trailing icon", () => {
     const component = renderer.create(
       <TextField id="unique-component-id" trailingIcon="favorite" />,
     );
