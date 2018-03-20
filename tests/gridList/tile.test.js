@@ -2,7 +2,7 @@ import React from "react";
 import renderer from "react-test-renderer";
 import { Tile } from "libs/gridList";
 
-describe("components/Tile", () => {
+describe("gridList/Tile", () => {
   it("can have children", () => {
     const tree = renderer
       .create(

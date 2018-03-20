@@ -2,7 +2,7 @@ import React from "react";
 import renderer from "react-test-renderer";
 import { GridList } from "libs/gridList";
 
-describe("components/GridList", () => {
+describe("gridList/GridList", () => {
   it("can have children", () => {
     const tree = renderer
       .create(<GridList>Children are here!</GridList>)

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/GridList can have a custom children tile's width 1`] = `
+exports[`gridList/GridList can have a custom children tile's width 1`] = `
 <div
   className="mdc-grid-list"
 >
@@ -11,7 +11,7 @@ exports[`components/GridList can have a custom children tile's width 1`] = `
 </div>
 `;
 
-exports[`components/GridList can have a custom width 1`] = `
+exports[`gridList/GridList can have a custom width 1`] = `
 <div
   className="mdc-grid-list"
 >
@@ -26,7 +26,7 @@ exports[`components/GridList can have a custom width 1`] = `
 </div>
 `;
 
-exports[`components/GridList can have a gutter 1`] = `
+exports[`gridList/GridList can have a gutter 1`] = `
 <div
   className="mdc-grid-list mdc-grid-list--tile-gutter-1"
 >
@@ -37,7 +37,7 @@ exports[`components/GridList can have a gutter 1`] = `
 </div>
 `;
 
-exports[`components/GridList can have a two-line caption 1`] = `
+exports[`gridList/GridList can have a two-line caption 1`] = `
 <div
   className="mdc-grid-list mdc-grid-list--twoline-caption"
 >
@@ -48,7 +48,7 @@ exports[`components/GridList can have a two-line caption 1`] = `
 </div>
 `;
 
-exports[`components/GridList can have an header caption 1`] = `
+exports[`gridList/GridList can have an header caption 1`] = `
 <div
   className="mdc-grid-list mdc-grid-list--header-caption"
 >
@@ -59,7 +59,7 @@ exports[`components/GridList can have an header caption 1`] = `
 </div>
 `;
 
-exports[`components/GridList can have children 1`] = `
+exports[`gridList/GridList can have children 1`] = `
 <div
   className="mdc-grid-list"
 >
@@ -72,7 +72,7 @@ exports[`components/GridList can have children 1`] = `
 </div>
 `;
 
-exports[`components/GridList can render different aspect ratio 1`] = `
+exports[`gridList/GridList can render different aspect ratio 1`] = `
 <div
   className="mdc-grid-list mdc-grid-list--tile-aspect-16x9"
 >
@@ -83,7 +83,7 @@ exports[`components/GridList can render different aspect ratio 1`] = `
 </div>
 `;
 
-exports[`components/GridList can render icon aligned 1`] = `
+exports[`gridList/GridList can render icon aligned 1`] = `
 <div
   className="mdc-grid-list mdc-grid-list--with-icon-align-start"
 >
@@ -94,7 +94,7 @@ exports[`components/GridList can render icon aligned 1`] = `
 </div>
 `;
 
-exports[`components/GridList can set background tile's color 1`] = `
+exports[`gridList/GridList can set background tile's color 1`] = `
 <div
   className="mdc-grid-list"
 >
