@@ -10,22 +10,22 @@ describe("components/GridList", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("can have a variable width", () => {
+  it("can have a custom width", () => {
     const tree = renderer.create(<GridList width="50px;" />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it("can have a variable children tile's width", () => {
+  it("can have a custom children tile's width", () => {
     const tree = renderer.create(<GridList tileWidth="10px;" />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it("can set background children tile's color", () => {
+  it("can set background tile's color", () => {
     const tree = renderer.create(<GridList tileBackground="pink" />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it("can have an overflow", () => {
+  it("can have a gutter", () => {
     const tree = renderer.create(<GridList gutter={1} />).toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -35,7 +35,7 @@ describe("components/GridList", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("can have an multiline caption", () => {
+  it("can have a two-line caption", () => {
     const tree = renderer.create(<GridList twolineCaption />).toJSON();
     expect(tree).toMatchSnapshot();
   });

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components/GridList can have a variable children tile's width 1`] = `
+exports[`components/GridList can have a custom children tile's width 1`] = `
 <div
   className="mdc-grid-list"
 >
@@ -11,7 +11,7 @@ exports[`components/GridList can have a variable children tile's width 1`] = `
 </div>
 `;
 
-exports[`components/GridList can have a variable width 1`] = `
+exports[`components/GridList can have a custom width 1`] = `
 <div
   className="mdc-grid-list"
 >
@@ -26,9 +26,9 @@ exports[`components/GridList can have a variable width 1`] = `
 </div>
 `;
 
-exports[`components/GridList can have an header caption 1`] = `
+exports[`components/GridList can have a gutter 1`] = `
 <div
-  className="mdc-grid-list mdc-grid-list--header-caption"
+  className="mdc-grid-list mdc-grid-list--tile-gutter-1"
 >
   <ul
     className="mdc-grid-list__tiles"
@@ -37,7 +37,7 @@ exports[`components/GridList can have an header caption 1`] = `
 </div>
 `;
 
-exports[`components/GridList can have an multiline caption 1`] = `
+exports[`components/GridList can have a two-line caption 1`] = `
 <div
   className="mdc-grid-list mdc-grid-list--twoline-caption"
 >
@@ -48,9 +48,9 @@ exports[`components/GridList can have an multiline caption 1`] = `
 </div>
 `;
 
-exports[`components/GridList can have an overflow 1`] = `
+exports[`components/GridList can have an header caption 1`] = `
 <div
-  className="mdc-grid-list mdc-grid-list--tile-gutter-1"
+  className="mdc-grid-list mdc-grid-list--header-caption"
 >
   <ul
     className="mdc-grid-list__tiles"
@@ -94,7 +94,7 @@ exports[`components/GridList can render icon aligned 1`] = `
 </div>
 `;
 
-exports[`components/GridList can set background children tile's color 1`] = `
+exports[`components/GridList can set background tile's color 1`] = `
 <div
   className="mdc-grid-list"
 >
