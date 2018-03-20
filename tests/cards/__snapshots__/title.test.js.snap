@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`cards/CardTitle can be a large title 1`] = `
+<h1
+  className="mdc-card__title mdc-card__title--large"
+/>
+`;
+
+exports[`cards/CardTitle can have children 1`] = `
+<h1
+  className="mdc-card__title"
+>
+  Children are here!
+</h1>
+`;
