@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`drawer/DrawerContent can have a listed prop 1`] = `
+<nav
+  className="mdc-drawer__content"
+/>
+`;
+
+exports[`drawer/DrawerContent can have children 1`] = `
+<nav
+  className="mdc-drawer__content"
+>
+  Children is Here!
+</nav>
+`;

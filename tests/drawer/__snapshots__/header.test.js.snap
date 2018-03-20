@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`drawer/DrawerHeader can have a listed prop 1`] = `
+<header
+  className="mdc-drawer__header"
+>
+  <div
+    className="mdc-drawer__header-content"
+  />
+</header>
+`;
+
+exports[`drawer/DrawerHeader can have children 1`] = `
+<header
+  className="mdc-drawer__header"
+>
+  <div
+    className="mdc-drawer__header-content"
+  >
+    Children is Here!
+  </div>
+</header>
+`;
