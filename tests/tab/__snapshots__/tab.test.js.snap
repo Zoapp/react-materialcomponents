@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tab/Tab can be active 1`] = `
+<a
+  className="mdc-tab mdc-tab--active"
+  href={null}
+  onClick={[Function]}
+>
+  
+</a>
+`;
+
+exports[`tab/Tab can be colored 1`] = `
+<a
+  className="mdc-tab"
+  href={null}
+  onClick={[Function]}
+  style={
+    Object {
+      "color": "pink",
+    }
+  }
+>
+  
+</a>
+`;
+
+exports[`tab/Tab can have a link 1`] = `
+<a
+  className="mdc-tab"
+  href="#"
+  onClick={[Function]}
+>
+  
+</a>
+`;
+
+exports[`tab/Tab can have a text 1`] = `
+<a
+  className="mdc-tab"
+  href={null}
+  onClick={[Function]}
+>
+  
+  foobar
+</a>
+`;
+
+exports[`tab/Tab can have an icon 1`] = `
+<a
+  className="mdc-tab"
+  href={null}
+  onClick={[Function]}
+>
+  <i
+    aria-hidden="true"
+    className="mdc-tab__icon material-icons"
+  >
+    foobar
+  </i>
+</a>
+`;
+
+exports[`tab/Tab can have an id 1`] = `
+<a
+  className="mdc-tab"
+  href={null}
+  onClick={[Function]}
+>
+  
+</a>
+`;
+
+exports[`tab/Tab can have children 1`] = `
+<a
+  className="mdc-tab"
+  href={null}
+  onClick={[Function]}
+>
+  
+  Children are here!
+</a>
+`;
