@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`toolbar/Toolbar can render children 1`] = `
-<header
-  className="mdc-toolbar"
->
-  Children are here!
-</header>
-`;
