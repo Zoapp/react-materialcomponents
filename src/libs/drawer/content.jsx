@@ -24,13 +24,15 @@ const DrawerContent = ({ children, list, ...props }) => {
     classes += " mdc-list";
   }
   const ch = Children.map(children, (child, index) => {
-    if (!child.props.mdcElement) {
+    if (child.props && !child.props.mdcElement) {
       const { activated, icon, children: chn, ...ps } = child.props;
+
       ps.className = "mdc-list-item";
       if (activated) {
         ps.className += " mdc-list-item--activated";
       }
       ps.key = `d_${index}`;
+
       let c = "";
       if (icon) {
         c = (
@@ -42,12 +44,15 @@ const DrawerContent = ({ children, list, ...props }) => {
           />
         );
       }
+
       return React.createElement(child.type, ps, [c, chn]);
-    } else if (!child.props.type || child.props.type !== "a") {
+    } else if (child.props && (!child.props.type || child.props.type !== "a")) {
       return React.cloneElement(child, { type: "a", ...child.props.type });
     }
+
     return child;
   });
+
   return Zrmc.render(<nav className={classes}>{ch}</nav>, props);
 };
 

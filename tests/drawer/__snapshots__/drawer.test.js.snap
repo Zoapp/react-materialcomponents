@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`drawer/Drawer can be opened 1`] = `
+<nav
+  className="mdc-drawer mdc-drawer--permanent rmdc-drawer rmdc-drawer--toolbar"
+/>
+`;
+
+exports[`drawer/Drawer can have a above prop 1`] = `
+<nav
+  className="mdc-drawer mdc-drawer--permanent rmdc-drawer"
+/>
+`;
+
+exports[`drawer/Drawer can have a toolbar spacer 1`] = `
+<nav
+  className="mdc-drawer mdc-drawer--permanent rmdc-drawer"
+>
+  <div
+    className="mdc-drawer__toolbar-spacer"
+  />
+</nav>
+`;
+
+exports[`drawer/Drawer can have a type 1`] = `
+<nav
+  className="mdc-drawer mdc-drawer--permanent rmdc-drawer rmdc-drawer--toolbar"
+/>
+`;
+
+exports[`drawer/Drawer can have children 1`] = `
+<nav
+  className="mdc-drawer mdc-drawer--permanent rmdc-drawer rmdc-drawer--toolbar"
+>
+  Children is Here!
+</nav>
+`;
