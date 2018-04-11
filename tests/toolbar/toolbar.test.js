@@ -1,6 +1,6 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import { Toolbar } from "libs/toolbar/";
+import { Toolbar } from "libs/toolbar";
 
 describe("toolbar/Toolbar", () => {
   it("can render children", () => {

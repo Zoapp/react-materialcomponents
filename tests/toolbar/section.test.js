@@ -15,7 +15,7 @@ describe("toolbar/Section", () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it("can be return as a range object.", () => {
+  it("can return True if text automatically shrinks to fit in the available column width", () => {
     const component = renderer.create(<Section shrinkToFit />);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

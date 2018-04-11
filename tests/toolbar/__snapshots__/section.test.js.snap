@@ -6,16 +6,16 @@ exports[`toolbar/Section can be aligned 1`] = `
 />
 `;
 
-exports[`toolbar/Section can be return as a range object. 1`] = `
-<section
-  className="mdc-toolbar__section mdc-toolbar__section--shrink-to-fit"
-/>
-`;
-
 exports[`toolbar/Section can render children 1`] = `
 <section
   className="mdc-toolbar__section"
 >
   Children are here!
 </section>
+`;
+
+exports[`toolbar/Section can return True if text automatically shrinks to fit in the available column width 1`] = `
+<section
+  className="mdc-toolbar__section mdc-toolbar__section--shrink-to-fit"
+/>
 `;
