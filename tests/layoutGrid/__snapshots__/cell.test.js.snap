@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`layoutGrid/Cell can be aligned 1`] = `
+<div
+  className="mdc-layout-grid__cell mdc-layout-grid__cell--align-top"
+/>
+`;
+
+exports[`layoutGrid/Cell can be ordored 1`] = `
+<div
+  className="mdc-layout-grid__cell mdc-layout-grid__cell--order-2"
+/>
+`;
+
+exports[`layoutGrid/Cell can have children 1`] = `
+<div
+  className="mdc-layout-grid__cell"
+>
+  Children are here!
+</div>
+`;
+
+exports[`layoutGrid/Cell can take multiple columns 1`] = `
+<div
+  className="mdc-layout-grid__cell"
+/>
+`;
+
+exports[`layoutGrid/Cell can take multiple columns on a specify device 1`] = `
+<div
+  className="mdc-layout-grid__cell"
+/>
+`;
