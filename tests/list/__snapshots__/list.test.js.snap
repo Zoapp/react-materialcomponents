@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`list/List can be densed 1`] = `
+<ul
+  className="mdc-list mdc-list--dense"
+/>
+`;
+
+exports[`list/List can be extend on two line 1`] = `
+<ul
+  className="mdc-list"
+/>
+`;
+
+exports[`list/List can have an avatar 1`] = `
+<ul
+  className="mdc-list mdc-list--avatar-list"
+/>
+`;
+
+exports[`list/List can have children 1`] = `
+<ul
+  className="mdc-list"
+>
+  <div>
+    Children are here!
+  </div>
+</ul>
+`;
