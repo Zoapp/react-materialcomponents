@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`layoutGrid/Inner can have children 1`] = `
+<div
+  className="mdc-layout-grid__inner"
+>
+  Children are here!
+</div>
+`;
