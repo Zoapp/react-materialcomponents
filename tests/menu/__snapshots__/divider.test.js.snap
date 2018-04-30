@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`menu/Menu can render itself correctly 1`] = `
+<div
+  className="mdc-menu"
+  tabIndex="-1"
+>
+  <ul
+    aria-hidden="true"
+    className="mdc-menu__items mdc-list"
+    role="menu"
+  >
+    <li
+      className="mdc-list-divider"
+      role="separator"
+    />
+  </ul>
+</div>
+`;

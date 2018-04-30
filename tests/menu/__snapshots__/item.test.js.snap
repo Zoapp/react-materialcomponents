@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`menu/MenuItem can be disabled 1`] = `
+<li
+  aria-disabled="true"
+  className="mdc-list-item"
+  disabled="disabled"
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="menuitem"
+  tabIndex="-1"
+>
+  Children are here!
+</li>
+`;
+
+exports[`menu/MenuItem can be selected 1`] = `
+<li
+  aria-selected="true"
+  className="mdc-list-item"
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="menuitem"
+  tabIndex="0"
+>
+  Children are here!
+</li>
+`;
+
+exports[`menu/MenuItem can have a role 1`] = `
+<li
+  className="mdc-list-item"
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="foobar"
+  tabIndex="0"
+>
+  Children are here!
+</li>
+`;
+
+exports[`menu/MenuItem can have a specified index 1`] = `
+<li
+  className="mdc-list-item"
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="menuitem"
+  tabIndex="2"
+>
+  Children are here!
+</li>
+`;
+
+exports[`menu/MenuItem can render itself correctly 1`] = `
+<li
+  className="mdc-list-item"
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="menuitem"
+  tabIndex="0"
+>
+  Children are here!
+</li>
+`;
