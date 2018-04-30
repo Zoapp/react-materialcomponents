@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`list/ListGroup can have children 1`] = `
+<div
+  className="mdc-list-group"
+>
+  <div>
+    Children are here!
+  </div>
+</div>
+`;

@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`list/ListItemMeta can be colored 1`] = `
+<span
+  className="mdc-list-item__meta"
+  onClick={null}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex="0"
+/>
+`;
+
+exports[`list/ListItemMeta can have a label 1`] = `
+<span
+  className="mdc-list-item__meta"
+  onClick={null}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex="0"
+/>
+`;
+
+exports[`list/ListItemMeta can have a link 1`] = `
+<span
+  className="mdc-list-item__meta"
+  onClick={null}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex="0"
+/>
+`;
+
+exports[`list/ListItemMeta can have a specified classname 1`] = `
+<span
+  className="foo mdc-list-item__meta"
+  onClick={null}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex="0"
+/>
+`;
+
+exports[`list/ListItemMeta can have an icon 1`] = `
+<i
+  className="mdc-list-item__meta material-icons"
+  href={null}
+>
+  favorite
+</i>
+`;
+
+exports[`list/ListItemMeta can have children 1`] = `
+<span
+  className="mdc-list-item__meta"
+  onClick={null}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex="0"
+>
+  <div>
+    Children are here!
+  </div>
+</span>
+`;

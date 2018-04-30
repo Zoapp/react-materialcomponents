@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`list/ListItem can be activated 1`] = `
+<li
+  className="mdc-list-item mdc-list-item--activated"
+  onKeyPress={[Function]}
+  role="menuitem"
+/>
+`;
+
+exports[`list/ListItem can be an image 1`] = `
+<li
+  className="mdc-list-item"
+  onKeyPress={[Function]}
+  role="menuitem"
+>
+  <img
+    alt={null}
+    className="mdc-list-item__graphic"
+    height={56}
+    src="foo"
+    width={56}
+  />
+</li>
+`;
+
+exports[`list/ListItem can be an image and have a label 1`] = `
+<li
+  className="mdc-list-item"
+  onKeyPress={[Function]}
+  role="menuitem"
+/>
+`;
+
+exports[`list/ListItem can be an image and sized 1`] = `
+<li
+  className="mdc-list-item"
+  onKeyPress={[Function]}
+  role="menuitem"
+/>
+`;
+
+exports[`list/ListItem can be typed 1`] = `
+<li
+  className="mdc-list-item"
+  onKeyPress={[Function]}
+  role="menuitem"
+/>
+`;
+
+exports[`list/ListItem can have a link 1`] = `
+<a
+  className="mdc-list-item"
+  href="foobar"
+/>
+`;
+
+exports[`list/ListItem can have a secondary text 1`] = `
+<li
+  className="mdc-list-item"
+  onKeyPress={[Function]}
+  role="menuitem"
+>
+  <span
+    className="mdc-list-item__text"
+  >
+    <span
+      className="mdc-list-item__secondary-text"
+    >
+      foobar
+    </span>
+  </span>
+</li>
+`;
+
+exports[`list/ListItem can have an icon 1`] = `
+<li
+  className="mdc-list-item"
+  onKeyPress={[Function]}
+  role="menuitem"
+>
+  <i
+    aria-hidden="true"
+    className="mdc-list-item__graphic material-icons"
+  >
+    favorite
+  </i>
+</li>
+`;
+
+exports[`list/ListItem can have children 1`] = `
+<li
+  className="mdc-list-item"
+  onKeyPress={[Function]}
+  role="menuitem"
+>
+  <div>
+    Children are here!
+  </div>
+</li>
+`;

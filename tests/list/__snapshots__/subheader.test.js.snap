@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`list/ListGroupSubheader can be typed 1`] = `
+<h3
+  className="mdc-list-group__subheader"
+/>
+`;
+
+exports[`list/ListGroupSubheader can have children 1`] = `
+<h3
+  className="mdc-list-group__subheader"
+>
+  <div>
+    Children are here!
+  </div>
+</h3>
+`;
