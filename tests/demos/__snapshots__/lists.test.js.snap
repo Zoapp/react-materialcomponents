@@ -288,7 +288,7 @@ exports[`demos/components/lists renders itself correctly 1`] = `
           }
         }
       >
-        ListProperties
+        List Properties
       </div>
     </div>
     <div
@@ -323,17 +323,17 @@ exports[`demos/components/lists renders itself correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        children
+        mdcElement
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        node
+        MDC_LIST
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        These are usually ListItems that are passed to be part of the list.
+        string
       </div>
     </div>
     <div
@@ -349,17 +349,95 @@ exports[`demos/components/lists renders itself correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        style
+        children
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        object
+        null
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        Override the inline-styles of the root element.
+        node
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        dense
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        false
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        bool
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        avatar
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        false
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        bool
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        twoLine
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        false
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        bool
       </div>
     </div>
   </div>
@@ -378,7 +456,7 @@ exports[`demos/components/lists renders itself correctly 1`] = `
           }
         }
       >
-        ListItemProperties
+        List Item Properties
       </div>
     </div>
     <div
@@ -413,17 +491,17 @@ exports[`demos/components/lists renders itself correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        autoGenerateNestedIndicator
+        mdcElement
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        bool
+        MDC_LISTITEM
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        If true,  generate a nested-list-indicator icon when nested list items are detected. Note that an indicator will not be created if a rightIcon or rightIconButton has been provided to the element.
+        string
       </div>
     </div>
     <div
@@ -444,13 +522,13 @@ exports[`demos/components/lists renders itself correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
         node
       </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Children passed into the ListItem.
-      </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
@@ -465,96 +543,18 @@ exports[`demos/components/lists renders itself correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        containerElement
+        type
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        union:stringelement'span'
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        The element to use as the container for the ListItem. Either a string to use a DOM element or a ReactElement. This is useful for wrapping the ListItem in a custom Link component. If a ReactElement is given,  ensure that it passes all of its given props through to the underlying DOM element and renders its children prop for proper integration.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        disableKeyboardFocus
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        bool
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        If true,  the element will not be able to be focused by the keyboard.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        disabled
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        bool
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        If true,  the element will not be clickable and will not display hover effects. This is automatically disabled if either leftCheckbox or rightToggle is set.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        hoverColor
+        li
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
         string
       </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Override the hover background color.
-      </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
@@ -569,17 +569,43 @@ exports[`demos/components/lists renders itself correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        initiallyOpen
+        activated
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        false
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
         bool
       </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
       <div
         className="mdc-layout-grid__cell"
       >
-        If true,  the nested ListItems are initially displayed.
+        icon
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
       </div>
     </div>
     <div
@@ -595,43 +621,17 @@ exports[`demos/components/lists renders itself correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        innerDivStyle
+        imgSrc
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        object
+        null
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        Override the inline-styles of the inner div element.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        insetChildren
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        bool
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        If true,  the children will be indented by 72px. This is useful if there is no left avatar or left icon.
+        string
       </div>
     </div>
     <div
@@ -647,148 +647,18 @@ exports[`demos/components/lists renders itself correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        isKeyboardFocused
+        imgSize
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        bool
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Use to control if the list item should render as keyboard focused. If undefined (default),  this will be automatically managed. If provided,  it will change the components style. Note that this will not change the actual focus - and should only be used when you want to simulate keyboard focus (eg. in a rich text input autocomplete).
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        leftAvatar
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        element
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        This is the Avatar element to be displayed on the left side.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        leftCheckbox
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        element
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        This is the Checkbox element to be displayed on the left side.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        leftIcon
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        element
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        This is the SvgIcon or FontIcon to be displayed on the left side.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        nestedItems
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        arrayOf
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        An array of ListItems to nest underneath the current ListItem.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        nestedLevel
+        56
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
         number
       </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Controls how deep a ListItem appears. This property is automatically managed,  so modify at your own risk.
-      </div>
     </div>
     <div
       className="mdc-layout-grid__inner"
@@ -803,277 +673,17 @@ exports[`demos/components/lists renders itself correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        nestedListStyle
+        imgLabel
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        object
+        null
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        Override the inline-styles of the nested items' NestedList.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        onClick
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        function
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Callback function fired when the list item is clicked.Signature: function(event: object) =&gt; void event: Click event targeting the list item.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        onKeyboardFocus
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        function
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Callback function fired when the ListItem is focused or blurred by the keyboard. Signature: function(event: object,  isKeyboardFocused: boolean) =&gt; void event: focus or blur event targeting the ListItem. isKeyboardFocused: If true,  the ListItem is focused.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        onNestedListToggle
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        function
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Callback function fired when the ListItem toggles its nested list.Signature: function(listItem: object) =&gt; voidlistItem: The ListItem.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        open
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        bool
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        Control toggle state of nested list.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        primaryText
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        node
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        This is the block element that contains the primary text. If a string is passed in,  a div tag will be rendered.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        primaryTogglesNestedList
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        bool
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        If true,  clicking or tapping the primary text of the ListItem toggles the nested list.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        rightAvatar
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        element
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        This is the Avatar element to be displayed on the right side.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        rightIcon
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        element
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        This is the SvgIcon or FontIcon to be displayed on the right side.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        rightIconButton
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        element
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        This is the IconButton to be displayed on the right side. Hovering over this button will remove the ListItem hover. Also,  clicking on this button will not trigger a ripple on the ListItem; the event will be stopped and prevented from bubbling up to cause a ListItem click.
-      </div>
-    </div>
-    <div
-      className="mdc-layout-grid__inner"
-      style={
-        Object {
-          "borderBottom": "solid black 1px",
-          "marginBottom": "16px",
-          "paddingTop": "5px",
-        }
-      }
-    >
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        rightToggle
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        element
-      </div>
-      <div
-        className="mdc-layout-grid__cell"
-      >
-        This is the Toggle element to display on the right side.
+        string
       </div>
     </div>
     <div
@@ -1094,12 +704,38 @@ exports[`demos/components/lists renders itself correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
         node
       </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
       <div
         className="mdc-layout-grid__cell"
       >
-        This is the block element that contains the secondary text. If a string is passed in,  a div tag will be rendered.
+        href
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
       </div>
     </div>
     <div
@@ -1115,17 +751,55 @@ exports[`demos/components/lists renders itself correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        secondaryTextLines
+        onClick
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        enum:1, 2
+        null
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        Can be 1 or 2. This is the number of secondary text lines before ellipsis will show.
+        function
+      </div>
+    </div>
+  </div>
+  <div
+    className="mdc-layout-grid"
+  >
+    <div
+      className="mdc-layout-grid__inner"
+    >
+      <div
+        className="mdc-layout-grid__cell"
+        style={
+          Object {
+            "fontSize": "20px",
+            "fontWeight": "bold",
+          }
+        }
+      >
+        List Group Properties
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        Name
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        Default
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        Type
       </div>
     </div>
     <div
@@ -1141,17 +815,495 @@ exports[`demos/components/lists renders itself correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        style
+        mdcElement
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        object
+        MDC_LISTGROUP
       </div>
       <div
         className="mdc-layout-grid__cell"
       >
-        Override the inline-styles of the root element.
+        string
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        children
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        node
+      </div>
+    </div>
+  </div>
+  <div
+    className="mdc-layout-grid"
+  >
+    <div
+      className="mdc-layout-grid__inner"
+    >
+      <div
+        className="mdc-layout-grid__cell"
+        style={
+          Object {
+            "fontSize": "20px",
+            "fontWeight": "bold",
+          }
+        }
+      >
+        List Divider Properties
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        Name
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        Default
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        Type
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        mdcElement
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        MDC_LISTDIVIDER
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        type
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        li
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        inset
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        false
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        bool
+      </div>
+    </div>
+  </div>
+  <div
+    className="mdc-layout-grid"
+  >
+    <div
+      className="mdc-layout-grid__inner"
+    >
+      <div
+        className="mdc-layout-grid__cell"
+        style={
+          Object {
+            "fontSize": "20px",
+            "fontWeight": "bold",
+          }
+        }
+      >
+        List Meta Properties
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        Name
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        Default
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        Type
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        mdcElement
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        MDC_LISTITEMMETA
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        children
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        node
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        icon
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        href
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        color
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        label
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        onClick
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        function
+      </div>
+    </div>
+  </div>
+  <div
+    className="mdc-layout-grid"
+  >
+    <div
+      className="mdc-layout-grid__inner"
+    >
+      <div
+        className="mdc-layout-grid__cell"
+        style={
+          Object {
+            "fontSize": "20px",
+            "fontWeight": "bold",
+          }
+        }
+      >
+        List Subheaders Properties
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        Name
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        Default
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        Type
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        mdcElement
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        MDC_LISTSUBHEADER
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        children
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        node
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        type
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        h3
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
       </div>
     </div>
   </div>
