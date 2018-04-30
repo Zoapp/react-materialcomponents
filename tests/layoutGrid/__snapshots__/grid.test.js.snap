@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`layoutGrid/Grid can be aligned 1`] = `
+<div
+  className="mdc-layout-grid mdc-layout-grid--align-right"
+/>
+`;
+
+exports[`layoutGrid/Grid can have a fixed columns width 1`] = `
+<div
+  className="mdc-layout-gridmdc-layout-grid--fixed-column-width"
+/>
+`;
+
+exports[`layoutGrid/Grid can have a max width 1`] = `
+<div
+  className="mdc-layout-grid"
+  style={
+    Object {
+      "maxWidth": "100",
+    }
+  }
+/>
+`;
+
+exports[`layoutGrid/Grid can have children 1`] = `
+<div
+  className="mdc-layout-grid"
+>
+  Children are here!
+</div>
+`;
+
+exports[`layoutGrid/Grid can take differents gutter on a specify device 1`] = `
+<div
+  className="mdc-layout-grid"
+  style={
+    Object {
+      "--mdc-layout-grid-gutter-desktop": "200",
+    }
+  }
+/>
+`;
+
+exports[`layoutGrid/Grid can take differents margins on a specify device 1`] = `
+<div
+  className="mdc-layout-grid"
+/>
+`;
