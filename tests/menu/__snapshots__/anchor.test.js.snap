@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`menu/MenuAnchor can render itself correctly 1`] = `
+<div
+  className="mdc-menu-anchor"
+>
+  <div
+    className="mdc-menu"
+    tabIndex="-1"
+  >
+    <ul
+      aria-hidden="true"
+      className="mdc-menu__items mdc-list"
+      role="menu"
+    >
+      <div>
+        children are here!
+      </div>
+    </ul>
+  </div>
+  <div
+    className="mdc-menu"
+    tabIndex="-1"
+  >
+    <ul
+      aria-hidden="true"
+      className="mdc-menu__items mdc-list"
+      role="menu"
+    >
+      <div>
+        children are here!
+      </div>
+    </ul>
+  </div>
+</div>
+`;

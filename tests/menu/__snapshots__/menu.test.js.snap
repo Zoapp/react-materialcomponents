@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`menu/Menu can be render open 1`] = `
+<div
+  className="mdc-menu mdc-menu--open"
+  tabIndex="-1"
+>
+  <ul
+    aria-hidden="true"
+    className="mdc-menu__items mdc-list"
+    role="menu"
+  >
+    <div>
+      Children are here!
+    </div>
+  </ul>
+</div>
+`;
+
+exports[`menu/Menu can be render sticked to a specified corner 1`] = `
+<div
+  className="mdc-menu"
+  tabIndex="-1"
+>
+  <ul
+    aria-hidden="true"
+    className="mdc-menu__items mdc-list"
+    role="menu"
+  >
+    <div>
+      Children are here!
+    </div>
+  </ul>
+</div>
+`;
+
+exports[`menu/Menu can have an index render focused 1`] = `
+<div
+  className="mdc-menu"
+  tabIndex="-1"
+>
+  <ul
+    aria-hidden="true"
+    className="mdc-menu__items mdc-list"
+    role="menu"
+  >
+    <div>
+      Children are here!
+    </div>
+  </ul>
+</div>
+`;
+
+exports[`menu/Menu can have an specified margins 1`] = `
+<div
+  className="mdc-menu"
+  tabIndex="-1"
+>
+  <ul
+    aria-hidden="true"
+    className="mdc-menu__items mdc-list"
+    role="menu"
+  >
+    <div>
+      Children are here!
+    </div>
+  </ul>
+</div>
+`;
+
+exports[`menu/Menu can render it self correctly 1`] = `
+<div
+  className="mdc-menu"
+  tabIndex="-1"
+>
+  <ul
+    aria-hidden="true"
+    className="mdc-menu__items mdc-list"
+    role="menu"
+  >
+    <div>
+      Children are here!
+    </div>
+  </ul>
+</div>
+`;
