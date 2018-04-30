@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`animations/Ripple can be unbounded 1`] = `
+<div
+  unbounded={true}
+>
+  Interact with me !
+</div>
+`;
+
+exports[`animations/Ripple can have children 1`] = `
+<div>
+  Interact with me !
+</div>
+`;
