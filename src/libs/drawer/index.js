@@ -7,5 +7,6 @@
 import Drawer from "./drawer";
 import DrawerContent from "./content";
 import DrawerHeader from "./header";
+import DrawerFooter from "./footer";
 
-export { Drawer, DrawerContent, DrawerHeader };
+export { Drawer, DrawerContent, DrawerHeader, DrawerFooter };

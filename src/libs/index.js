@@ -27,7 +27,7 @@ import {
   ToolbarTitle,
   ToolbarIcon,
 } from "./toolbar";
-import { Drawer, DrawerContent, DrawerHeader } from "./drawer";
+import { Drawer, DrawerContent, DrawerHeader, DrawerFooter } from "./drawer";
 import {
   List,
   ListItem,
@@ -80,6 +80,7 @@ export {
   Drawer,
   DrawerContent,
   DrawerHeader,
+  DrawerFooter,
   List,
   ListItem,
   ListItemMeta,
