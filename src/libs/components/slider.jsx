@@ -38,15 +38,16 @@ export default class Slider extends Component {
     this.updateContent();
   }
 
-  componentWillReceiveProps(nextProps) {
+  static getDerivedStateFromProps(nextProps, prevState) {
     const { min, max, value } = nextProps;
     if (
-      min !== this.state.min ||
-      max !== this.state.max ||
-      value !== this.state.value
+      min !== prevState.min ||
+      max !== prevState.max ||
+      value !== prevState.value
     ) {
-      this.setState({ min, max, value });
+      return { min, max, value };
     }
+    return null;
   }
 
   componentDidUpdate() {

@@ -30,10 +30,11 @@ export default class Snackbar extends Component {
     this.setTimer();
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.active !== this.state.active) {
-      this.setState({ active: nextProps.active });
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.active !== prevState.active) {
+      return { active: nextProps.active };
     }
+    return null;
   }
 
   componentDidUpdate() {
