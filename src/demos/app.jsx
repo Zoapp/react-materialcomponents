@@ -34,9 +34,7 @@ export default class App extends Component {
       drawerOpen: false,
       aboveToolbar: false,
     };
-  }
 
-  componentWillMount() {
     Zrmc.init(this, { typography: true });
   }
 

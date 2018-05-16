@@ -32,11 +32,12 @@ export default class Tabbar extends Component {
     this.updateIndicator();
   }
 
-  componentWillReceiveProps(nextProps) {
-    const { activeTab } = this.state;
-    if (activeTab !== nextProps.activeTab) {
-      this.setState({ activeTab: nextProps.activeTab });
+  static getDerivedStateFromProps(nextProps, prevState) {
+    const { activeTab } = nextProps;
+    if (activeTab !== prevState.activeTab) {
+      return { activeTab };
     }
+    return null;
   }
 
   componentDidUpdate() {
