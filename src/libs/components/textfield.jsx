@@ -120,7 +120,7 @@ export default class TextField extends Component {
           name={leadingIcon}
           tabIndex={tabIndex}
           onClick={(e) => {
-            e.prenventDefault();
+            e.preventDefault();
             if (onClickLI) {
               onClickLI();
             }
@@ -140,7 +140,7 @@ export default class TextField extends Component {
           name={trailingIcon}
           tabIndex={tabIndex}
           onClick={(e) => {
-            e.prenventDefault();
+            e.preventDefault();
             if (onClickTI) {
               onClickTI();
             }
