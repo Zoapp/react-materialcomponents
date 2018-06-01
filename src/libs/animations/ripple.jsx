@@ -135,15 +135,17 @@ export default class Ripple extends Component {
     clearTimeout(this.fgDeactivationRemovalTimer);
     this.activationTimer = null;
     this.fgDeactivationRemovalTimer = null;
-    this.rmBoundedActivationClasses();
-    this.ref.classList.remove(FG_DEACTIVATION);
+    if (this.ref) {
+      this.rmBoundedActivationClasses();
+      this.ref.classList.remove(FG_DEACTIVATION);
+    }
   }
 
   animateDeactivation() {
     const { isActivated } = this.state.isActivated;
     const activationHasEnded = !isActivated;
 
-    if (activationHasEnded && this.activationAnimationHasEnded) {
+    if (activationHasEnded && this.activationAnimationHasEnded && this.ref) {
       this.rmBoundedActivationClasses();
       this.ref.classList.add(FG_DEACTIVATION);
       this.fgDeactivationRemovalTimer = setTimeout(() => {
@@ -153,7 +155,7 @@ export default class Ripple extends Component {
   }
 
   animateActivation() {
-    if (this.state.isActivated) {
+    if (this.state.isActivated && this.ref) {
       let translateStart = "";
       let translateEnd = "";
 
@@ -173,20 +175,22 @@ export default class Ripple extends Component {
   }
 
   layout() {
-    this.frame = this.ref.getBoundingClientRect();
-    const maxDim = Math.max(this.frame.height, this.frame.width);
+    if (this.ref) {
+      this.frame = this.ref.getBoundingClientRect();
+      const maxDim = Math.max(this.frame.height, this.frame.width);
 
-    if (this.props.unbounded) {
-      const hypotenuse = Math.sqrt(
-        this.frame.width ** 2 + this.frame.height ** 2,
-      );
-      this.maxRadius = hypotenuse + PADDING;
-    } else {
-      this.maxRadius = maxDim;
+      if (this.props.unbounded) {
+        const hypotenuse = Math.sqrt(
+          this.frame.width ** 2 + this.frame.height ** 2,
+        );
+        this.maxRadius = hypotenuse + PADDING;
+      } else {
+        this.maxRadius = maxDim;
+      }
+      this.initialSize = maxDim * INITIAL_ORIGIN_SCALE;
+      this.fgScale = this.maxRadius / this.initialSize;
+      this.updateLayoutCssVars();
     }
-    this.initialSize = maxDim * INITIAL_ORIGIN_SCALE;
-    this.fgScale = this.maxRadius / this.initialSize;
-    this.updateLayoutCssVars();
   }
 
   updateLayoutCssVars() {

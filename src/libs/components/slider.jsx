@@ -71,7 +71,7 @@ export default class Slider extends Component {
   setSliderThumbPosition(min, max, value) {
     let position = 0;
     if (this.contentWidth > 0 && max > 0 && max > min) {
-      position = this.contentWidth / (max - min) * value;
+      position = (this.contentWidth / (max - min)) * value;
     }
     return `transform: translateX(${position}px) translateX(-50%);`;
   }
@@ -114,7 +114,7 @@ export default class Slider extends Component {
     const { min, max } = this.state;
     let value = 0;
     if (this.contentWidth > 0 && max > 0 && min < this.state.max) {
-      value = (max - min) / this.contentWidth * x + min;
+      value = ((max - min) / this.contentWidth) * x + min;
       if (value > max) {
         value = max;
       } else if (value < min) {
