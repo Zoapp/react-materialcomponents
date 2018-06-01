@@ -28,13 +28,6 @@ export default class Tabbar extends Component {
     this.indicatorRef = null;
   }
 
-  componentWillReceiveProps(nextProps) {
-    const activeTab = nextProps.activeTab;
-    if (activeTab != this.state.activeTab) {
-      this.setState({ activeTab });
-    }
-  }
-
   componentDidMount() {
     this.updateIndicator();
   }
