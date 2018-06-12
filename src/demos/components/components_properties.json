@@ -227,6 +227,6 @@
     ["onClickLI", "null", "function"],
     ["onClickTI", "null", "function"],
     ["noFloatingLabel", "false", "bool"],
-    ["defaultValue", "null", "string"]
+    ["defaultValue", "undefined", "string"]
   ]
 }

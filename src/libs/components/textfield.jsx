@@ -284,7 +284,7 @@ TextField.defaultProps = {
   onClickLI: null,
   onClickTI: null,
   noFloatingLabel: false,
-  defaultValue: null,
+  defaultValue: undefined,
 };
 
 TextField.propTypes = {

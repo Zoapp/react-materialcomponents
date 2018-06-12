@@ -11,7 +11,7 @@ exports[`demos/components/textfields renders correctly 1`] = `
     >
       <input
         className="mdc-text-field__input"
-        defaultValue={null}
+        defaultValue={undefined}
         id="1"
         onBlur={[Function]}
         onChange={[Function]}
@@ -108,7 +108,7 @@ exports[`demos/components/textfields renders correctly 1`] = `
     >
       <input
         className="mdc-text-field__input"
-        defaultValue={null}
+        defaultValue={undefined}
         id="4"
         onBlur={[Function]}
         onChange={[Function]}
@@ -303,7 +303,7 @@ exports[`demos/components/textfields renders correctly 1`] = `
         <input
           aria-controls="9-helper-text"
           className="mdc-text-field__input"
-          defaultValue={null}
+          defaultValue={undefined}
           id="9"
           onBlur={[Function]}
           onChange={[Function]}
@@ -344,7 +344,7 @@ exports[`demos/components/textfields renders correctly 1`] = `
     >
       <input
         className="mdc-text-field__input"
-        defaultValue={null}
+        defaultValue={undefined}
         id="10"
         onBlur={[Function]}
         onChange={[Function]}
@@ -389,7 +389,7 @@ exports[`demos/components/textfields renders correctly 1`] = `
         <input
           aria-controls="11-helper-text"
           className="mdc-text-field__input"
-          defaultValue={null}
+          defaultValue={undefined}
           id="11"
           onBlur={[Function]}
           onChange={[Function]}
@@ -955,7 +955,7 @@ exports[`demos/components/textfields renders correctly 1`] = `
       <div
         className="mdc-layout-grid__cell"
       >
-        null
+        undefined
       </div>
       <div
         className="mdc-layout-grid__cell"
