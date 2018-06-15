@@ -29,7 +29,7 @@ export default class TextField extends Component {
   constructor(props) {
     super(props);
     const value = props.defaultValue || "";
-    this.state = { focused: false, value, isInvalid: false };
+    this.state = { focused: false, value };
   }
 
   onBlur = () => {
@@ -61,10 +61,6 @@ export default class TextField extends Component {
     return this.state.value;
   }
 
-  setAsInvalid() {
-    this.setState({ isInvalid: true });
-  }
-
   render() {
     const {
       mdcElement,
@@ -86,9 +82,11 @@ export default class TextField extends Component {
       onClickLI,
       onClickTI,
       noFloatingLabel,
+      pattern,
       ...props
     } = this.props;
-    const { focused, isInvalid } = this.state;
+    const { focused, value } = this.state;
+    const isValid = pattern ? RegExp(pattern).test(value) : true;
     let classes = `${MDC_TEXTFIELD} mdc-text-field--upgraded`;
     let lc = "mdc-floating-label";
     let bc = "mdc-text-field__bottom-line";
@@ -102,8 +100,7 @@ export default class TextField extends Component {
     if (outlined) {
       classes += " mdc-text-field--outlined";
     }
-    if (isInvalid) {
-      // TODO invalidate input
+    if (!isValid) {
       classes += " mdc-text-field--invalid";
     }
     let li;
@@ -166,7 +163,6 @@ export default class TextField extends Component {
     if (isBoxed) {
       classes += " mdc-text-field--box";
     }
-    const { value } = this.state;
     const sc = {};
 
     if (value && value.trim().length > 0) {
@@ -308,4 +304,5 @@ TextField.propTypes = {
   onClickTI: PropTypes.func,
   defaultValue: PropTypes.string,
   noFloatingLabel: PropTypes.bool,
+  pattern: PropTypes.string,
 };

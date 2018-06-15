@@ -123,14 +123,11 @@ describe("components/TextField", () => {
   });
 
   it("can be marked as invalid", () => {
-    const component = renderer.create(<TextField id="unique-component-id" />);
+    const component = renderer.create(
+      <TextField defaultValue="a" pattern="b" id="unique-component-id" />,
+    );
 
-    let tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-
-    component.getInstance().setAsInvalid();
-
-    tree = component.toJSON();
+    const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 

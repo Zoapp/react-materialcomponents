@@ -98,7 +98,7 @@ describe("dialog/Dialog", () => {
       id: "unique-component-id", // avoid random id generation
     };
 
-    const component = renderer.create(
+    let component = renderer.create(
       <Dialog field={field}>
         <div>Hello, you should see a TextField</div>
       </Dialog>,
@@ -108,7 +108,13 @@ describe("dialog/Dialog", () => {
     let tree = component.toJSON();
     expect(tree).toMatchSnapshot();
 
-    component.getInstance().invalidateField();
+    // invalid field
+    component = renderer.create(
+      <Dialog field={{ ...field, pattern: "a" }}>
+        <div>Hello, you should see a TextField</div>
+      </Dialog>,
+      { createNodeMock },
+    );
 
     tree = component.toJSON();
     expect(tree).toMatchSnapshot();

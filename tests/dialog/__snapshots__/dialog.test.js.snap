@@ -39,7 +39,6 @@ exports[`dialog/Dialog can render a TextField if \`field\` prop is supplied 1`] 
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
-            pattern=""
             type="text"
           />
           <label
@@ -56,7 +55,7 @@ exports[`dialog/Dialog can render a TextField if \`field\` prop is supplied 1`] 
         </div>
         <p
           aria-hidden="true"
-          className="mdc-text-field-helper-text"
+          className="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg"
         >
           error message
         </p>
@@ -119,7 +118,6 @@ exports[`dialog/Dialog can render a TextField if \`field\` prop is supplied 2`] 
             onBlur={[Function]}
             onChange={[Function]}
             onFocus={[Function]}
-            pattern=""
             type="text"
           />
           <label
@@ -136,7 +134,7 @@ exports[`dialog/Dialog can render a TextField if \`field\` prop is supplied 2`] 
         </div>
         <p
           aria-hidden="true"
-          className="mdc-text-field-helper-text"
+          className="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg"
         >
           error message
         </p>

@@ -88,12 +88,6 @@ export default class Dialog extends Component {
     return this.fieldRef.getValue();
   }
 
-  invalidateField() {
-    if (this.fieldRef) {
-      this.fieldRef.setAsInvalid();
-    }
-  }
-
   handleClick = (action = "close") => {
     if (this.props.onAction) {
       if (!this.props.onAction(this, action, this.props.data)) {
@@ -148,6 +142,7 @@ export default class Dialog extends Component {
             label={field.name}
             pattern={field.pattern}
             helperText={field.error}
+            htValidationMsg
             id={field.id}
             style={{ width: "100%" }}
             ref={(c) => {
