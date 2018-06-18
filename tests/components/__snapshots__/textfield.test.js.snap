@@ -124,36 +124,11 @@ exports[`components/TextField can be full width 1`] = `
 
 exports[`components/TextField can be marked as invalid 1`] = `
 <div
-  className="mdc-text-field mdc-text-field--upgraded"
->
-  <input
-    className="mdc-text-field__input"
-    defaultValue={undefined}
-    id="unique-component-id"
-    onBlur={[Function]}
-    onChange={[Function]}
-    onFocus={[Function]}
-    type="text"
-  />
-  <label
-    className="mdc-floating-label"
-    focused="false"
-    htmlFor="unique-component-id"
-    style={Object {}}
-  />
-  <div
-    className="mdc-text-field__bottom-line"
-  />
-</div>
-`;
-
-exports[`components/TextField can be marked as invalid 2`] = `
-<div
   className="mdc-text-field mdc-text-field--upgraded mdc-text-field--invalid"
 >
   <input
     className="mdc-text-field__input"
-    defaultValue={undefined}
+    defaultValue="a"
     id="unique-component-id"
     onBlur={[Function]}
     onChange={[Function]}
@@ -161,7 +136,7 @@ exports[`components/TextField can be marked as invalid 2`] = `
     type="text"
   />
   <label
-    className="mdc-floating-label"
+    className="mdc-floating-label mdc-floating-label--float-above"
     focused="false"
     htmlFor="unique-component-id"
     style={Object {}}
