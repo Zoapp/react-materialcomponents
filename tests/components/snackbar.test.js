@@ -1,8 +1,15 @@
 import React from "react";
+import { shallow } from "enzyme";
 import renderer from "react-test-renderer";
 import Snackbar from "libs/components/snackbar";
 
 describe("components/Snackbar", () => {
+  let wrapper = null;
+
+  beforeEach(() => {
+    wrapper = shallow(<Snackbar message="foo" />);
+  });
+
   it("can be active", () => {
     const component = renderer.create(<Snackbar message="foo" active />);
     const tree = component.toJSON();
@@ -24,22 +31,17 @@ describe("components/Snackbar", () => {
   });
 
   it("can have be multiline", () => {
-    const component = renderer.create(<Snackbar message="foo" multiline />);
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ multiline: true });
+    expect(wrapper.hasClass("mdc-snackbar--multiline")).toEqual(true);
   });
 
   it("can have an actionOnBottom", () => {
-    const component = renderer.create(
-      <Snackbar message="foo" actionOnBottom />,
-    );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ actionOnBottom: true });
+    expect(wrapper.hasClass("mdc-snackbar--action-on-bottom")).toEqual(true);
   });
 
   it("can start aligned", () => {
-    const component = renderer.create(<Snackbar message="foo" startAligned />);
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ startAligned: true });
+    expect(wrapper.hasClass("mdc-snackbar--align-start")).toEqual(true);
   });
 });

@@ -1,23 +1,20 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { shallow } from "enzyme";
 import Chip from "libs/components/chip";
 
 describe("components/Chip", () => {
+  let wrapper = null;
+
+  beforeEach(() => {
+    wrapper = shallow(<Chip name="Chip"> I am a chip </Chip>);
+  });
+
   it("renders itself correctly", () => {
-    const component = renderer
-      .create(<Chip name="Chip">I am a chip</Chip>)
-      .toJSON();
-    expect(component).toMatchSnapshot();
+    expect(wrapper).toHaveLength(1);
   });
 
   it("can be colored", () => {
-    const component = renderer
-      .create(
-        <Chip name="Chip" color="pink">
-          I am a chip
-        </Chip>,
-      )
-      .toJSON();
-    expect(component).toMatchSnapshot();
+    wrapper.setProps({ color: "pink" });
+    expect(wrapper.prop("style").color).toEqual("pink");
   });
 });
