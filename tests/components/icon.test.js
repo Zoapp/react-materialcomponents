@@ -1,12 +1,11 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { shallow } from "enzyme";
 import Icon from "libs/components/icon";
 
 describe("components/Icon", () => {
   it("renders correctly", () => {
-    const component = renderer.create(<Icon name="foo" />);
-
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    const wrapper = shallow(<Icon name="foo" />);
+    expect(wrapper.hasClass("material-icons")).toEqual(true);
+    expect(wrapper.contains("foo")).toEqual(true);
   });
 });
