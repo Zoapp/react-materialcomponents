@@ -138,3 +138,53 @@ describe("components/TextField", () => {
     });
   });
 });
+
+describe("onChange()", () => {
+  it("should call onChange callback", () => {
+    const onChangeSpy = jest.fn();
+    const wrapper = shallow(
+      <TextField id="unique-component-id" onChange={onChangeSpy} />,
+    );
+    wrapper.instance().inputRef = {};
+    wrapper.instance().onChange({});
+    expect(onChangeSpy).toHaveBeenCalled();
+  });
+});
+
+describe("onClickLI()", () => {
+  it("should call onClickLI callback", () => {
+    const onClickLISpy = jest.fn();
+    const wrapper = shallow(
+      <TextField
+        id="unique-component-id"
+        leadingIcon="favorite"
+        onClickLI={onClickLISpy}
+      />,
+    );
+
+    expect(wrapper.find(".mdc-text-field--with-leading-icon")).toHaveLength(1);
+    wrapper
+      .find(".mdc-text-field__icon")
+      .simulate("click", { preventDefault: () => {} });
+    expect(onClickLISpy).toHaveBeenCalled();
+  });
+});
+
+describe("onClickTI()", () => {
+  it("should call onClickTI callback", () => {
+    const onClickTISpy = jest.fn();
+    const wrapper = shallow(
+      <TextField
+        id="unique-component-id"
+        trailingIcon="favorite"
+        onClickTI={onClickTISpy}
+      />,
+    );
+
+    expect(wrapper.find(".mdc-text-field--with-trailing-icon")).toHaveLength(1);
+    wrapper
+      .find(".mdc-text-field__icon")
+      .simulate("click", { preventDefault: () => {} });
+    expect(onClickTISpy).toHaveBeenCalled();
+  });
+});

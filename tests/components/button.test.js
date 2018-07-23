@@ -84,3 +84,13 @@ describe("components/Button", () => {
     expect(wrapper.props().disabled).toEqual(true);
   });
 });
+
+describe("onClick()", () => {
+  it("should call onClick callback", () => {
+    const onClickSpy = jest.fn();
+    const wrapper = shallow(<Button onClick={onClickSpy} />);
+
+    wrapper.simulate("click");
+    expect(onClickSpy).toHaveBeenCalled();
+  });
+});

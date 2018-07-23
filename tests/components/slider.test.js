@@ -46,3 +46,26 @@ describe("components/Slider", () => {
     expect(tree).toMatchSnapshot();
   });
 });
+
+describe("onInput()", () => {
+  it("should call onInput callback", () => {
+    const onInputSpy = jest.fn();
+    const wrapper = shallow(<Slider onInput={onInputSpy} />);
+
+    wrapper.instance().moveThumbPosition = jest.fn().mockReturnValue("value");
+    wrapper.instance().handleMoveEnd({ preventDefault: () => {} });
+    expect(onInputSpy).toHaveBeenCalledWith("value");
+  });
+});
+
+describe("onChange()", () => {
+  it("should call onChange callback", () => {
+    const onChangeSpy = jest.fn();
+    const wrapper = shallow(<Slider disabled={false} onChange={onChangeSpy} />);
+
+    wrapper.setState({ active: true });
+    wrapper.instance().moveThumbPosition = jest.fn().mockReturnValue("value");
+    wrapper.instance().handleMoveChange({ preventDefault: () => {} });
+    expect(onChangeSpy).toHaveBeenCalledWith("value");
+  });
+});
