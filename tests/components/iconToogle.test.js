@@ -38,3 +38,17 @@ describe("components/IconToggle", () => {
     expect(wrapper.prop("style").color).toEqual("pink");
   });
 });
+
+describe("onChange()", () => {
+  it("should call onChange callback", () => {
+    const onChangeSpy = jest.fn();
+    const wrapper = shallow(
+      <IconToggle name="foo" nameOff="bar" onChange={onChangeSpy} />,
+    );
+    expect(wrapper.state("pressed")).toEqual(false);
+    wrapper.instance().handleClick({ preventDefault: () => {} });
+    expect(onChangeSpy).toHaveBeenCalledWith(true);
+    wrapper.instance().handleClick({ preventDefault: () => {} });
+    expect(onChangeSpy).toHaveBeenCalledWith(false);
+  });
+});

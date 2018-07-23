@@ -9,3 +9,13 @@ describe("components/Icon", () => {
     expect(wrapper.contains("foo")).toEqual(true);
   });
 });
+
+describe("onClick()", () => {
+  it("should call onClick callback", () => {
+    const onClickSpy = jest.fn();
+    const wrapper = shallow(<Icon name="foo" onClick={onClickSpy} />);
+
+    wrapper.simulate("click");
+    expect(onClickSpy).toHaveBeenCalled();
+  });
+});
