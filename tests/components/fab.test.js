@@ -27,3 +27,13 @@ describe("components/Fab", () => {
     expect(wrapper.prop("aria-label")).toEqual("bar");
   });
 });
+
+describe("onClick()", () => {
+  it("should call onClick callback", () => {
+    const onClickSpy = jest.fn();
+    const wrapper = shallow(<Fab onClick={onClickSpy} />);
+
+    wrapper.simulate("click");
+    expect(onClickSpy).toHaveBeenCalled();
+  });
+});

@@ -3,6 +3,8 @@ import { shallow } from "enzyme";
 import renderer from "react-test-renderer";
 import Snackbar from "libs/components/snackbar";
 
+jest.useFakeTimers();
+
 describe("components/Snackbar", () => {
   let wrapper = null;
 
@@ -43,5 +45,44 @@ describe("components/Snackbar", () => {
   it("can start aligned", () => {
     wrapper.setProps({ startAligned: true });
     expect(wrapper.hasClass("mdc-snackbar--align-start")).toEqual(true);
+  });
+});
+
+describe("onAction()", () => {
+  it("should call onAction callback", () => {
+    const onActionSpy = jest.fn();
+    const wrapper = shallow(
+      <Snackbar message="foo" actionText="test" onAction={onActionSpy} />,
+    );
+
+    wrapper.find("button").simulate("click");
+    expect(onActionSpy).toHaveBeenCalled();
+  });
+});
+
+describe("onTimeout()", () => {
+  it("should call desactivate", () => {
+    const onTimeoutSpy = jest.fn();
+    const wrapper = shallow(
+      <Snackbar message="foo" timeout={250} onTimeout={onTimeoutSpy} />,
+    );
+
+    wrapper.update();
+    expect(wrapper.state("active")).toEqual(true);
+    expect(wrapper.instance().timer).not.toEqual(undefined);
+
+    wrapper.instance().desactivate = jest.fn();
+    jest.runOnlyPendingTimers();
+    expect(wrapper.instance().desactivate).toHaveBeenCalled();
+  });
+
+  it("should call onTimeout callback", () => {
+    const onTimeoutSpy = jest.fn();
+    const wrapper = shallow(
+      <Snackbar message="foo" timeout={250} onTimeout={onTimeoutSpy} />,
+    );
+
+    wrapper.instance().desactivate();
+    expect(onTimeoutSpy).toHaveBeenCalled();
   });
 });
