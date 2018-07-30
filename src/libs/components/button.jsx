@@ -23,76 +23,89 @@ import Zrmc from "../";
 
 const MDC_BUTTON = "mdc-button";
 
-const Button = ({
-  cardAction,
-  children,
-  compact,
-  dense,
-  disabled,
-  icon,
-  id,
-  link,
-  onClick,
-  raised,
-  ripple,
-  secondary,
-  stroked,
-  unelevated,
-  type,
-  ...props
-}) => {
-  let classes = MDC_BUTTON;
-  // Special case for inner buttons of CardActions
-  if (cardAction) {
-    classes += " mdc-button--compact mdc-card__action";
-  } else {
-    if (raised) {
-      classes += " mdc-button--raised";
+class Button extends React.Component {
+  render() {
+    const {
+      cardAction,
+      children,
+      compact,
+      dense,
+      disabled,
+      icon,
+      id,
+      link,
+      onClick,
+      raised,
+      ripple,
+      secondary,
+      stroked,
+      unelevated,
+      type,
+      ...props
+    } = this.props;
+    let classes = MDC_BUTTON;
+    // Special case for inner buttons of CardActions
+    if (cardAction) {
+      classes += " mdc-button--compact mdc-card__action";
+    } else {
+      if (raised) {
+        classes += " mdc-button--raised";
+      }
+      if (unelevated) {
+        classes += " mdc-button--unelevated";
+      }
+      if (stroked) {
+        classes += " mdc-button--stroked";
+      }
+      if (dense) {
+        classes += " mdc-button--dense";
+      }
+      if (compact) {
+        classes += " mdc-button--compact";
+      }
+      if (secondary) {
+        classes += " secondary-filled-button";
+      }
     }
-    if (unelevated) {
-      classes += " mdc-button--unelevated";
+    let i = "";
+    if (icon) {
+      i = <Icon className="mdc-button__icon" name={icon} />;
     }
-    if (stroked) {
-      classes += " mdc-button--stroked";
+    let element;
+    if (link) {
+      element = (
+        <a
+          id={id}
+          href={link}
+          className={classes}
+          ref={(e) => {
+            this.innerRef = e;
+          }}
+        >
+          {i}
+          {children}
+        </a>
+      );
+    } else {
+      element = (
+        <button
+          id={id}
+          className={classes}
+          onClick={onClick}
+          disabled={disabled}
+          type={type}
+          ref={(e) => {
+            this.innerRef = e;
+          }}
+        >
+          {i}
+          {children}
+        </button>
+      );
     }
-    if (dense) {
-      classes += " mdc-button--dense";
-    }
-    if (compact) {
-      classes += " mdc-button--compact";
-    }
-    if (secondary) {
-      classes += " secondary-filled-button";
-    }
+    return Zrmc.render(element, props);
   }
-  let i = "";
-  if (icon) {
-    i = <Icon className="mdc-button__icon" name={icon} />;
-  }
-  let element;
-  if (link) {
-    element = (
-      <a id={id} href={link} className={classes}>
-        {i}
-        {children}
-      </a>
-    );
-  } else {
-    element = (
-      <button
-        id={id}
-        className={classes}
-        onClick={onClick}
-        disabled={disabled}
-        type={type}
-      >
-        {i}
-        {children}
-      </button>
-    );
-  }
-  return Zrmc.render(element, props);
-};
+}
 
 Button.defaultProps = {
   cardAction: false,
@@ -128,6 +141,8 @@ Button.propTypes = {
   secondary: PropTypes.bool,
   stroked: PropTypes.bool,
   unelevated: PropTypes.bool,
+  type: PropTypes.string,
+  id: PropTypes.string,
 };
 
 export default Button;

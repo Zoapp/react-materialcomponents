@@ -188,3 +188,8 @@ main {
   margin-left: 16px;
   margin-right: 0;
 }
+
+.mdc-dialog__footer {
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+}
