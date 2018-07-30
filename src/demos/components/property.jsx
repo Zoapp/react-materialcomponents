@@ -36,7 +36,11 @@ const Property = (Props) => {
           </Cell>
           {/* eslint-enable no-plusplus */}
         </Inner>
-        <Inner>{Head.map((title) => <Cell key={title}>{title}</Cell>)}</Inner>
+        <Inner>
+          {Head.map((title) => (
+            <Cell key={title}>{title}</Cell>
+          ))}
+        </Inner>
         {elements.map((element) => (
           <Inner
             key={element}
@@ -46,7 +50,9 @@ const Property = (Props) => {
               paddingTop: "5px",
             }}
           >
-            {element.map((value) => <Cell key={value}>{value}</Cell>)}
+            {element.map((value) => (
+              <Cell key={value}>{value}</Cell>
+            ))}
           </Inner>
         ))}
       </Grid>
@@ -54,7 +60,11 @@ const Property = (Props) => {
   }
   return (
     <Grid>
-      <Inner>{Head.map((title) => <Cell key={title}>{title}</Cell>)}</Inner>
+      <Inner>
+        {Head.map((title) => (
+          <Cell key={title}>{title}</Cell>
+        ))}
+      </Inner>
       {bodysingle.map((element) => (
         <Inner
           key={element}
@@ -64,7 +74,9 @@ const Property = (Props) => {
             paddingTop: "5px",
           }}
         >
-          {element.map((value) => <Cell key={value}>{value}</Cell>)}
+          {element.map((value) => (
+            <Cell key={value}>{value}</Cell>
+          ))}
         </Inner>
       ))}
     </Grid>
