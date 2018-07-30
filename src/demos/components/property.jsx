@@ -26,6 +26,7 @@ const Property = (Props) => {
     }
   });
   count = 0;
+  // prettier-ignore
   if (bodysingle.length === 0) {
     return bodymultipleprops.map((elements) => (
       <Grid key={elements}>
@@ -58,6 +59,7 @@ const Property = (Props) => {
       </Grid>
     ));
   }
+  // prettier-ignore
   return (
     <Grid>
       <Inner>
