@@ -94,6 +94,7 @@
       "libs/(.*)": "<rootDir>/src/libs/$1",
       "tests/(.*)": "<rootDir>/tests/$1"
     },
+    "testURL": "http://localhost/",
     "setupTestFrameworkScriptFile": "<rootDir>/tests/setupTests.js"
   }
 }

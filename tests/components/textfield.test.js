@@ -1,53 +1,62 @@
 import React from "react";
+import { shallow } from "enzyme";
 import renderer from "react-test-renderer";
 import TextField from "libs/components/textfield";
 
 describe("components/TextField", () => {
+  let wrapper = null;
+
+  beforeEach(() => {
+    wrapper = shallow(<TextField id="unique-component-id" />);
+  });
+
   it("renders correctly", () => {
-    const tree = renderer
-      .create(<TextField id="unique-component-id" />)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(wrapper.hasClass("mdc-text-field")).toEqual(true);
   });
 
   it("can have a label", () => {
-    const component = renderer.create(
-      <TextField id="unique-component-id" label="foo" />,
-    );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ label: "foo" });
+    expect(
+      wrapper
+        .find("label")
+        .shallow()
+        .contains("foo"),
+    ).toEqual(true);
   });
 
   it("can have a type", () => {
-    const component = renderer.create(
-      <TextField id="unique-component-id" type="bar" />,
-    );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ type: "bar" });
+    expect(
+      wrapper
+        .find("input")
+        .shallow()
+        .props().type,
+    ).toEqual("bar");
   });
 
   it("can be disabled", () => {
-    const component = renderer.create(
-      <TextField id="unique-component-id" disabled />,
-    );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ disabled: true });
+    expect(
+      wrapper
+        .find("input")
+        .shallow()
+        .props().disabled,
+    ).toEqual("disabled");
   });
 
   it("can be dense", () => {
-    const component = renderer.create(
-      <TextField id="unique-component-id" dense />,
-    );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ dense: true });
+    expect(wrapper.hasClass("mdc-text-field--dense")).toEqual(true);
   });
 
   it("can have an helper text", () => {
-    const component = renderer.create(
-      <TextField id="unique-component-id" helperText="foobar" />,
-    );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ helperText: "foobar" });
+    expect(
+      wrapper
+        .find("p")
+        .shallow()
+        .hasClass("mdc-text-field-helper-text"),
+    ).toEqual(true);
   });
 
   it("can have a persistent helper text", () => {
@@ -67,81 +76,115 @@ describe("components/TextField", () => {
   });
 
   it("can be full width", () => {
-    const component = renderer.create(
-      <TextField id="unique-component-id" fullwidth />,
-    );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ fullwidth: true });
+    expect(wrapper.hasClass("mdc-text-field--fullwidth")).toEqual(true);
   });
 
   it("can be a textarea", () => {
-    const component = renderer.create(
-      <TextField id="unique-component-id" isTextarea />,
-    );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ isTextarea: true });
+    expect(wrapper.hasClass("mdc-text-field--textarea")).toEqual(true);
   });
 
   it("can be boxed", () => {
-    const component = renderer.create(
-      <TextField id="unique-component-id" isBoxed />,
-    );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ isBoxed: true });
+    expect(wrapper.hasClass("mdc-text-field--box")).toEqual(true);
   });
 
   it("can be outlined", () => {
-    const component = renderer.create(
-      <TextField id="unique-component-id" outlined />,
-    );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ outlined: true });
+    expect(wrapper.hasClass("mdc-text-field--outlined")).toEqual(true);
   });
 
   it("can have a leading icon", () => {
-    const component = renderer.create(
-      <TextField id="unique-component-id" leadingIcon="favorite" />,
-    );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ leadingIcon: "favorite" });
+    expect(wrapper.hasClass("mdc-text-field--with-leading-icon")).toEqual(true);
   });
 
   it("can have a trailing icon", () => {
-    const component = renderer.create(
-      <TextField id="unique-component-id" trailingIcon="favorite" />,
+    wrapper.setProps({ trailingIcon: "favorite" });
+    expect(wrapper.hasClass("mdc-text-field--with-trailing-icon")).toEqual(
+      true,
     );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
   });
 
   it("can have a no floating label", () => {
-    const component = renderer.create(
-      <TextField id="unique-component-id" noFloatingLabel />,
-    );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ noFloatingLabel: true });
+    expect(
+      wrapper
+        .find("label")
+        .shallow()
+        .hasClass("mdc-floating-label"),
+    ).toEqual(true);
   });
 
   it("can be marked as invalid", () => {
-    const component = renderer.create(
-      <TextField defaultValue="a" pattern="b" id="unique-component-id" />,
-    );
-
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({
+      defaultValue: "a",
+      pattern: "b",
+      id: "unique-component-id",
+    });
+    expect(wrapper.hasClass("mdc-text-field--invalid")).toEqual(true);
   });
 
   describe("getValue()", () => {
     it("returns the input value", () => {
-      const component = renderer.create(
-        <TextField id="unique-component-id" defaultValue="hello" />,
-      );
-
-      const tree = component.toJSON();
-      expect(tree).toMatchSnapshot();
-
-      const value = component.getInstance().getValue();
-      expect(value).toEqual("hello");
+      wrapper.setProps({ defaultValue: "hello" });
+      expect(
+        wrapper
+          .find("input")
+          .shallow()
+          .props().defaultValue,
+      ).toEqual("hello");
     });
+  });
+});
+
+describe("onChange()", () => {
+  it("should call onChange callback", () => {
+    const onChangeSpy = jest.fn();
+    const wrapper = shallow(
+      <TextField id="unique-component-id" onChange={onChangeSpy} />,
+    );
+    wrapper.instance().inputRef = {};
+    wrapper.instance().onChange({});
+    expect(onChangeSpy).toHaveBeenCalled();
+  });
+});
+
+describe("onClickLI()", () => {
+  it("should call onClickLI callback", () => {
+    const onClickLISpy = jest.fn();
+    const wrapper = shallow(
+      <TextField
+        id="unique-component-id"
+        leadingIcon="favorite"
+        onClickLI={onClickLISpy}
+      />,
+    );
+
+    expect(wrapper.find(".mdc-text-field--with-leading-icon")).toHaveLength(1);
+    wrapper
+      .find(".mdc-text-field__icon")
+      .simulate("click", { preventDefault: () => {} });
+    expect(onClickLISpy).toHaveBeenCalled();
+  });
+});
+
+describe("onClickTI()", () => {
+  it("should call onClickTI callback", () => {
+    const onClickTISpy = jest.fn();
+    const wrapper = shallow(
+      <TextField
+        id="unique-component-id"
+        trailingIcon="favorite"
+        onClickTI={onClickTISpy}
+      />,
+    );
+
+    expect(wrapper.find(".mdc-text-field--with-trailing-icon")).toHaveLength(1);
+    wrapper
+      .find(".mdc-text-field__icon")
+      .simulate("click", { preventDefault: () => {} });
+    expect(onClickTISpy).toHaveBeenCalled();
   });
 });

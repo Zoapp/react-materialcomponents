@@ -1,29 +1,46 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { shallow } from "enzyme";
 import Radio from "libs/components/radio";
 
 describe("components/Radio", () => {
+  let wrapper = null;
+
+  beforeEach(() => {
+    wrapper = shallow(<Radio id="fixed-id" />);
+  });
+
   it("can have a label", () => {
-    const component = renderer.create(<Radio id="fixed-id" label="foo" />);
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ label: "foo" });
+    expect(wrapper.contains("foo")).toEqual(true);
   });
 
   it("can be disabled", () => {
-    const component = renderer.create(<Radio id="fixed-id" disabled />);
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ disabled: true });
+    expect(
+      wrapper
+        .find("input")
+        .shallow()
+        .props().disabled,
+    ).toEqual("disabled");
   });
 
   it("can be checked", () => {
-    const component = renderer.create(<Radio id="fixed-id" checked />);
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ checked: true });
+    expect(
+      wrapper
+        .find("input")
+        .shallow()
+        .props().defaultChecked,
+    ).toEqual("checked");
   });
 
   it("can have a name", () => {
-    const component = renderer.create(<Radio id="fixed-id" name="bar" />);
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ name: "bar" });
+    expect(
+      wrapper
+        .find("input")
+        .shallow()
+        .props().name,
+    ).toEqual("bar");
   });
 });

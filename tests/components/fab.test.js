@@ -1,20 +1,39 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { shallow } from "enzyme";
 import Fab from "libs/components/fab";
 
 describe("components/Fab", () => {
+  let wrapper = null;
+
+  beforeEach(() => {
+    wrapper = shallow(
+      <Fab>
+        <div className="child" />
+      </Fab>,
+    );
+  });
+
   it("can have children", () => {
-    const component = renderer.create(<Fab>Children are here !</Fab>).toJSON();
-    expect(component).toMatchSnapshot();
+    expect(wrapper.contains(<div className="child" />)).toEqual(true);
   });
 
   it("renders an icon if supplied", () => {
-    const component = renderer.create(<Fab icon="favorite" />).toJSON();
-    expect(component).toMatchSnapshot();
+    wrapper.setProps({ icon: "favorite" });
+    expect(wrapper.find("button .mdc-fab__icon")).toHaveLength(1);
   });
 
   it("can have a custom label", () => {
-    const component = renderer.create(<Fab label="bar" />).toJSON();
-    expect(component).toMatchSnapshot();
+    wrapper.setProps({ label: "bar" });
+    expect(wrapper.prop("aria-label")).toEqual("bar");
+  });
+});
+
+describe("onClick()", () => {
+  it("should call onClick callback", () => {
+    const onClickSpy = jest.fn();
+    const wrapper = shallow(<Fab onClick={onClickSpy} />);
+
+    wrapper.simulate("click");
+    expect(onClickSpy).toHaveBeenCalled();
   });
 });

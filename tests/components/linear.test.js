@@ -1,24 +1,30 @@
 import React from "react";
+import { shallow } from "enzyme";
 import renderer from "react-test-renderer";
 import LinearProgress from "libs/components/linearProgress";
 
 describe("components/LinearProgress", () => {
+  let wrapper = null;
+
+  beforeEach(() => {
+    wrapper = shallow(<LinearProgress />);
+  });
+
   it("can be indeterminate", () => {
-    const component = renderer.create(<LinearProgress indeterminate />);
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ indeterminate: true });
+    expect(wrapper.hasClass("mdc-linear-progress--indeterminate")).toEqual(
+      true,
+    );
   });
 
   it("can be closed", () => {
-    const component = renderer.create(<LinearProgress closed />);
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ closed: true });
+    expect(wrapper.hasClass("mdc-linear-progress--closed")).toEqual(true);
   });
 
   it("can be reversed", () => {
-    const component = renderer.create(<LinearProgress reversed />);
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ reversed: true });
+    expect(wrapper.hasClass("mdc-linear-progress--reversed")).toEqual(true);
   });
 
   it("can render a presetted progress", () => {

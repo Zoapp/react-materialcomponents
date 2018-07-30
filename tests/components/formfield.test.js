@@ -1,12 +1,15 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { shallow } from "enzyme";
 import FormField from "libs/components/formField";
 
 describe("components/FormField", () => {
+  const wrapper = shallow(
+    <FormField>
+      <div className="child" />
+    </FormField>,
+  );
+
   it("can have children", () => {
-    const tree = renderer
-      .create(<FormField>Children is here!</FormField>)
-      .toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(wrapper.contains(<div className="child" />)).toEqual(true);
   });
 });
