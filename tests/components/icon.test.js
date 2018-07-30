@@ -1,12 +1,21 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { shallow } from "enzyme";
 import Icon from "libs/components/icon";
 
 describe("components/Icon", () => {
   it("renders correctly", () => {
-    const component = renderer.create(<Icon name="foo" />);
+    const wrapper = shallow(<Icon name="foo" />);
+    expect(wrapper.hasClass("material-icons")).toEqual(true);
+    expect(wrapper.contains("foo")).toEqual(true);
+  });
+});
 
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+describe("onClick()", () => {
+  it("should call onClick callback", () => {
+    const onClickSpy = jest.fn();
+    const wrapper = shallow(<Icon name="foo" onClick={onClickSpy} />);
+
+    wrapper.simulate("click");
+    expect(onClickSpy).toHaveBeenCalled();
   });
 });

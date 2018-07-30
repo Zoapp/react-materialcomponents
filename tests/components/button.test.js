@@ -1,68 +1,77 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { shallow } from "enzyme";
 import Button from "libs/components/button";
+import renderer from "react-test-renderer";
 
 describe("components/Button", () => {
+  let wrapper = null;
+
+  beforeEach(() => {
+    wrapper = shallow(
+      <Button>
+        <div className="child" />
+      </Button>,
+    );
+  });
+
   it("can have children", () => {
-    const component = renderer
-      .create(<Button>Children are here!</Button>)
-      .toJSON();
-    expect(component).toMatchSnapshot();
+    expect(wrapper.find("button .child")).toHaveLength(1);
   });
 
   it("can be raised", () => {
-    const component = renderer.create(<Button raised />).toJSON();
-    expect(component).toMatchSnapshot();
+    wrapper.setProps({ raised: true });
+    expect(wrapper.hasClass("mdc-button--raised")).toEqual(true);
   });
 
   it("can be unelevated", () => {
-    const component = renderer.create(<Button unelevated />).toJSON();
-    expect(component).toMatchSnapshot();
+    wrapper.setProps({ unelevated: true });
+    expect(wrapper.hasClass("mdc-button--unelevated")).toEqual(true);
   });
 
   it("can be stroked", () => {
-    const component = renderer.create(<Button stroked />).toJSON();
-    expect(component).toMatchSnapshot();
+    wrapper.setProps({ stroked: true });
+    expect(wrapper.hasClass("mdc-button--stroked")).toEqual(true);
   });
 
   it("can be dense", () => {
-    const component = renderer.create(<Button dense />).toJSON();
-    expect(component).toMatchSnapshot();
+    wrapper.setProps({ dense: true });
+    expect(wrapper.hasClass("mdc-button--dense")).toEqual(true);
   });
 
   it("can be compact", () => {
-    const component = renderer.create(<Button compact />).toJSON();
-    expect(component).toMatchSnapshot();
+    wrapper.setProps({ compact: true });
+    expect(wrapper.hasClass("mdc-button--compact")).toEqual(true);
   });
 
   it("can render a button with id", () => {
-    const component = renderer.create(<Button id="button" />).toJSON();
-    expect(component).toMatchSnapshot();
+    wrapper.setProps({ id: "button" });
+    expect(wrapper.props().id).toEqual("button");
   });
 
   it("can be a submit button", () => {
-    const component = renderer.create(<Button type="submit" />).toJSON();
-    expect(component).toMatchSnapshot();
+    wrapper.setProps({ type: "submit" });
+    expect(wrapper.props().type).toEqual("submit");
   });
 
   it("renders a secondary button", () => {
-    const component = renderer.create(<Button secondary />).toJSON();
-    expect(component).toMatchSnapshot();
+    wrapper.setProps({ secondary: true });
+    expect(wrapper.hasClass("secondary-filled-button")).toEqual(true);
   });
 
   it("can render an icon if supplied", () => {
-    const component = renderer.create(<Button icon="favorite" />).toJSON();
-    expect(component).toMatchSnapshot();
+    wrapper.setProps({ icon: "favorite" });
+    expect(wrapper.find("button .mdc-button__icon")).toHaveLength(1);
   });
 
   it("can render a link if supplied", () => {
-    const component = renderer.create(<Button link="#" />).toJSON();
-    expect(component).toMatchSnapshot();
+    wrapper.setProps({ link: "#" });
+    expect(wrapper.prop("href")).toEqual("#");
   });
 
   it("can render a link with id", () => {
-    const component = renderer.create(<Button id="link" link="#" />).toJSON();
-    expect(component).toMatchSnapshot();
+    wrapper.setProps({ id: "link", link: "#" });
+    expect(wrapper.prop("href")).toEqual("#");
+    expect(wrapper.prop("id")).toEqual("link");
   });
 
   it("can be rippled", () => {
@@ -71,11 +80,17 @@ describe("components/Button", () => {
   });
 
   it("can be disabled", () => {
-    const component = renderer.create(
-      <Button disabled>disabled button</Button>,
-    );
-    const tree = component.toJSON();
+    wrapper.setProps({ disabled: true });
+    expect(wrapper.props().disabled).toEqual(true);
+  });
+});
 
-    expect(tree).toMatchSnapshot();
+describe("onClick()", () => {
+  it("should call onClick callback", () => {
+    const onClickSpy = jest.fn();
+    const wrapper = shallow(<Button onClick={onClickSpy} />);
+
+    wrapper.simulate("click");
+    expect(onClickSpy).toHaveBeenCalled();
   });
 });

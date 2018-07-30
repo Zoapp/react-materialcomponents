@@ -1,17 +1,24 @@
 import React from "react";
-import renderer from "react-test-renderer";
+import { shallow } from "enzyme";
 import Content from "libs/components/content";
 
 describe("components/Content", () => {
+  let wrapper = null;
+
+  beforeEach(() => {
+    wrapper = shallow(
+      <Content>
+        <div className="child" />
+      </Content>,
+    );
+  });
+
   it("can render children", () => {
-    const component = renderer.create(<Content>Children are here!</Content>);
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    expect(wrapper.contains(<div className="child" />)).toEqual(true);
   });
 
   it("can be fixed", () => {
-    const component = renderer.create(<Content fixed />);
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
+    wrapper.setProps({ fixed: true });
+    expect(wrapper.hasClass("rmdc-content-fixed-adjust")).toEqual(true);
   });
 });
