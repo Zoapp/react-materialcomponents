@@ -46,10 +46,10 @@ export default class Drawer extends PureComponent {
       toolbarSpacer,
       ...props
     } = this.props;
-    let classes = `${MDC_DRAWER} mdc-drawer--${type} rmdc-drawer`;
+    let classes = `${MDC_DRAWER} mdc-drawer--${type} zrmc-drawer`;
 
     if (!above && !toolbarSpacer && type === "permanent") {
-      classes += " rmdc-drawer--toolbar";
+      classes += " zrmc-drawer--toolbar";
     }
     let spacer;
     if (toolbarSpacer) {

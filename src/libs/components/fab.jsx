@@ -19,7 +19,7 @@ import Zrmc from "../";
 const MDC_FAB = "mdc-fab";
 
 const Fab = ({ children, icon, label, onClick, ...props }) => {
-  const classes = "mdc-fab material-icons rmdc-fab--absolute";
+  const classes = "mdc-fab material-icons zrmc-fab--absolute";
   let ch = children;
   if (icon) {
     ch = <span className="mdc-fab__icon">{icon}</span>;

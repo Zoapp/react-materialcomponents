@@ -9,14 +9,14 @@ import PropTypes from "prop-types";
 import Zrmc from "../";
 
 /**
- * rmdc-content
+ * zrmc-content
  * Helper container for mdc-toolbar-fixed-adjust
  * See
  * https://material.io/components/web/catalog/toolbar/
  *
  */
 
-const MDC_CONTENT = "rmdc-content";
+const MDC_CONTENT = "zrmc-content";
 
 const Content = ({ children, fixed, toolbarAdjust, ...props }) => {
   let classes = MDC_CONTENT;
@@ -56,7 +56,7 @@ const Content = ({ children, fixed, toolbarAdjust, ...props }) => {
           return React.cloneElement(child, { drawerAbove });
         }
       } else if (
-        name === "rmdc-content" &&
+        name === "zrmc-content" &&
         (fix !== child.props.fixed || ta !== child.props.toolbarAdjust)
       ) {
         return React.cloneElement(child, { fixed: fix, toolbarAdjust: ta });
@@ -65,18 +65,18 @@ const Content = ({ children, fixed, toolbarAdjust, ...props }) => {
     return child;
   });
   if (fix) {
-    classes += " rmdc-content-fixed-adjust";
+    classes += " zrmc-content-fixed-adjust";
   } else {
-    classes += " rmdc-content-height";
+    classes += " zrmc-content-height";
   }
   if (toolbarAdjust) {
     classes += " mdc-toolbar-fixed-adjust";
   }
   if (above) {
     if (rtl) {
-      classes += " rmdc-content-drawer-rtl";
+      classes += " zrmc-content-drawer-rtl";
     } else {
-      classes += " rmdc-content-drawer";
+      classes += " zrmc-content-drawer";
     }
   }
 

@@ -248,7 +248,7 @@ export default class TextField extends Component {
         cht += " mdc-text-field-helper-text--validation-msg";
       }
       element = (
-        <div className="rmdc-text-field-wrapper">
+        <div className="zrmc-text-field-wrapper">
           {element}
           <p className={cht} aria-hidden="true">
             {helperText}

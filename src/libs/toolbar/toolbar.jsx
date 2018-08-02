@@ -31,7 +31,7 @@ export default class Toolbar extends PureComponent {
     }
     if (drawerAbove) {
       // TODO rtl
-      classes += " rmdc-content-drawer";
+      classes += " zrmc-content-drawer";
     }
     const element = <header className={classes}>{children}</header>;
     return Zrmc.render(element, otherProps);
