@@ -82,7 +82,7 @@ class Switch extends Component {
           </FormField>
         );
       } else {
-        const cn = "rmdc-switch-wrapper";
+        const cn = "zrmc-switch-wrapper";
         element = (
           <div className={cn}>
             {element}

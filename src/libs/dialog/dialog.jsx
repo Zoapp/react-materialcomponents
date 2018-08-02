@@ -108,7 +108,7 @@ export default class Dialog extends Component {
       field,
       ...props
     } = this.props;
-    let classes = `rmdc-dialog ${MDC_DIALOG}`;
+    let classes = `zrmc-dialog ${MDC_DIALOG}`;
     if (open) {
       classes += " mdc-dialog--open";
     }

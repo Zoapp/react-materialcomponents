@@ -19,6 +19,6 @@ describe("components/Content", () => {
 
   it("can be fixed", () => {
     wrapper.setProps({ fixed: true });
-    expect(wrapper.hasClass("rmdc-content-fixed-adjust")).toEqual(true);
+    expect(wrapper.hasClass("zrmc-content-fixed-adjust")).toEqual(true);
   });
 });

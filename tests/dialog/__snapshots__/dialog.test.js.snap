@@ -2,7 +2,7 @@
 
 exports[`dialog/Dialog can render a TextField if \`field\` prop is supplied 1`] = `
 <dialog
-  className="rmdc-dialog mdc-dialog mdc-dialog--open"
+  className="zrmc-dialog mdc-dialog mdc-dialog--open"
   onClick={[Function]}
   onKeyUp={[Function]}
   role="presentation"
@@ -21,7 +21,7 @@ exports[`dialog/Dialog can render a TextField if \`field\` prop is supplied 1`] 
       className="mdc-dialog__body"
     >
       <div
-        className="rmdc-text-field-wrapper"
+        className="zrmc-text-field-wrapper"
       >
         <div
           className="mdc-text-field mdc-text-field--upgraded"
@@ -81,7 +81,7 @@ exports[`dialog/Dialog can render a TextField if \`field\` prop is supplied 1`] 
 
 exports[`dialog/Dialog can render a TextField if \`field\` prop is supplied 2`] = `
 <dialog
-  className="rmdc-dialog mdc-dialog mdc-dialog--open"
+  className="zrmc-dialog mdc-dialog mdc-dialog--open"
   onClick={[Function]}
   onKeyUp={[Function]}
   role="presentation"
@@ -100,7 +100,7 @@ exports[`dialog/Dialog can render a TextField if \`field\` prop is supplied 2`] 
       className="mdc-dialog__body"
     >
       <div
-        className="rmdc-text-field-wrapper"
+        className="zrmc-text-field-wrapper"
       >
         <div
           className="mdc-text-field mdc-text-field--upgraded mdc-text-field--invalid"
@@ -160,7 +160,7 @@ exports[`dialog/Dialog can render a TextField if \`field\` prop is supplied 2`] 
 
 exports[`dialog/Dialog renders a dialog with no actions specified 1`] = `
 <dialog
-  className="rmdc-dialog mdc-dialog mdc-dialog--open"
+  className="zrmc-dialog mdc-dialog mdc-dialog--open"
   onClick={[Function]}
   onKeyUp={[Function]}
   role="presentation"
@@ -204,7 +204,7 @@ exports[`dialog/Dialog renders a dialog with no actions specified 1`] = `
 
 exports[`dialog/Dialog renders correctly 1`] = `
 <dialog
-  className="rmdc-dialog mdc-dialog mdc-dialog--open"
+  className="zrmc-dialog mdc-dialog mdc-dialog--open"
   onClick={[Function]}
   onKeyUp={[Function]}
   role="presentation"
@@ -258,7 +258,7 @@ exports[`dialog/Dialog renders correctly 1`] = `
 
 exports[`dialog/Dialog uses the dialog-polyfill when needed 1`] = `
 <dialog
-  className="rmdc-dialog mdc-dialog"
+  className="zrmc-dialog mdc-dialog"
   onClick={[Function]}
   onKeyUp={[Function]}
   role="presentation"

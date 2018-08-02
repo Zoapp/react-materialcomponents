@@ -207,14 +207,14 @@ const Zrmc = new class {
   lockScroll() {
     if (!this.isLockScroll) {
       this.isLockScroll = true;
-      document.body.classList.add("rmdc-scroll-lock");
+      document.body.classList.add("zrmc-scroll-lock");
     }
   }
 
   unlockScroll() {
     if (this.isLockScroll) {
       this.isLockScroll = false;
-      document.body.classList.remove("rmdc-scroll-lock");
+      document.body.classList.remove("zrmc-scroll-lock");
     }
   }
 }();

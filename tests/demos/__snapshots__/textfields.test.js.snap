@@ -295,7 +295,7 @@ exports[`demos/components/textfields renders correctly 1`] = `
     }
   >
     <div
-      className="rmdc-text-field-wrapper"
+      className="zrmc-text-field-wrapper"
     >
       <div
         className="mdc-text-field mdc-text-field--upgraded mdc-text-field--invalid"
@@ -380,7 +380,7 @@ exports[`demos/components/textfields renders correctly 1`] = `
     }
   >
     <div
-      className="rmdc-text-field-wrapper"
+      className="zrmc-text-field-wrapper"
     >
       <div
         className="mdc-text-field mdc-text-field--upgraded mdc-text-field--invalid mdc-text-field--box"

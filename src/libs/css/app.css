@@ -4,64 +4,64 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-.rmdc-content-fixed-adjust {
+.zrmc-content-fixed-adjust {
   height: calc(100% - 64px);
 }
 
-.rmdc-content-height {
+.zrmc-content-height {
   height: 100%;
 }
 
-.rmdc-content {
+.zrmc-content {
   display: flex;
   flex: 1 1 auto;
   box-sizing: border-box;
 }
 
-.rmdc-drawer {
+.zrmc-drawer {
   position: fixed;
   top: 0;
   left: 0; /* TODO rtl */
   height: 100%;
 }
 
-.rmdc-drawer--toolbar {
+.zrmc-drawer--toolbar {
   top: 64px;
 }
 
-.rmdc-content-drawer {
+.zrmc-content-drawer {
   margin-left: 240px;
   width: calc(100% - 240px);
 }
 
-.rmdc-content-drawer-rtl {
+.zrmc-content-drawer-rtl {
   margin-left: 0px;
   margin-right: 240px;
 }
 
-.rmdc-fab--absolute {
+.zrmc-fab--absolute {
   position: fixed;
   bottom: 1rem;
   right: 1rem;
 }
 
 @media(min-width: 1024px) {
-   .rmdc-fab--absolute {
+   .zrmc-fab--absolute {
     bottom: 1.5rem;
     right: 1.5rem;
   }
 }
 
-.rmdc-switch-wrapper > label {
+.zrmc-switch-wrapper > label {
   margin-left: 16px;
 }
 
-.rmdc-dialog {
+.zrmc-dialog {
   background: transparent;
   border: transparent;
 }
 
-.rmdc-scroll-lock {
+.zrmc-scroll-lock {
   overflow: hidden;
 }
 
