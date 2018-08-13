@@ -23,8 +23,8 @@ const GridLists = () => (
         <Tile title="text" />
       </GridList>
     </div>
-    <h2>Grid List Properties</h2>
-    <Property name="Grid" />
+    <h2>Grid Properties</h2>
+    <Property name="GridList" />
   </section>
 );
 

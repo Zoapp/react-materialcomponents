@@ -10,7 +10,7 @@ import Property from "./property";
 
 const IconToggles = () => (
   <section>
-    <h1>Menus examples </h1>
+    <h1>Toggle examples </h1>
     <div style={{ padding: "16px" }}>
       <IconToggle name="favorite" nameOff="favorite_border" />
     </div>

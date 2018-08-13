@@ -60,7 +60,7 @@ class Tab extends Component {
       props.style.color = color;
     }
     const element = (
-      <a
+      <button
         className={classes}
         href={href}
         onClick={() => {
@@ -68,9 +68,11 @@ class Tab extends Component {
         }}
         ref={this.setRef}
       >
-        {i}
-        {txt}
-      </a>
+        <span className="mdc-tab__content">
+          {i}
+          <span className="mdc-tab__text-label">{txt}</span>
+        </span>
+      </button>
     );
     return Zrmc.render(element, props);
   }
