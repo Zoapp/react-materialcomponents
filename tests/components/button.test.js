@@ -28,19 +28,14 @@ describe("components/Button", () => {
     expect(wrapper.hasClass("mdc-button--unelevated")).toEqual(true);
   });
 
-  it("can be stroked", () => {
-    wrapper.setProps({ stroked: true });
-    expect(wrapper.hasClass("mdc-button--stroked")).toEqual(true);
+  it("can be outlined", () => {
+    wrapper.setProps({ outlined: true });
+    expect(wrapper.hasClass("mdc-button--outlined")).toEqual(true);
   });
 
   it("can be dense", () => {
     wrapper.setProps({ dense: true });
     expect(wrapper.hasClass("mdc-button--dense")).toEqual(true);
-  });
-
-  it("can be compact", () => {
-    wrapper.setProps({ compact: true });
-    expect(wrapper.hasClass("mdc-button--compact")).toEqual(true);
   });
 
   it("can render a button with id", () => {
@@ -51,11 +46,6 @@ describe("components/Button", () => {
   it("can be a submit button", () => {
     wrapper.setProps({ type: "submit" });
     expect(wrapper.props().type).toEqual("submit");
-  });
-
-  it("renders a secondary button", () => {
-    wrapper.setProps({ secondary: true });
-    expect(wrapper.hasClass("secondary-filled-button")).toEqual(true);
   });
 
   it("can render an icon if supplied", () => {
