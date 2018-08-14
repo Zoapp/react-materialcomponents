@@ -24,6 +24,14 @@ export default class IconToggle extends Component {
     this.state = { pressed: this.props.pressed };
   }
 
+  static getDerivedStateFromProps(nextProps, prevState) {
+    const { pressed } = nextProps;
+    if (pressed !== prevState.pressed) {
+      return { pressed };
+    }
+    return null;
+  }
+
   handleClick = (event) => {
     event.preventDefault();
     const pressed = !this.state.pressed;
@@ -35,7 +43,6 @@ export default class IconToggle extends Component {
 
   render() {
     const {
-      pressed,
       disabled,
       name,
       label,
