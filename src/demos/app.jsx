@@ -122,6 +122,9 @@ export default class App extends Component {
               Grid
             </ListItem>
             <ListItem icon="hdr_strong" href="#icon">
+              Icons
+            </ListItem>
+            <ListItem icon="hdr_strong" href="#toggle">
               Icons Toogles
             </ListItem>
             <ListItem icon="linear_scale" href="#linear">

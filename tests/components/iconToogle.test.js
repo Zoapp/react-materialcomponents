@@ -7,7 +7,7 @@ describe("components/IconToggle", () => {
   let wrapper = null;
 
   beforeEach(() => {
-    wrapper = shallow(<IconToggle name="foo" nameOff="bar" />);
+    wrapper = shallow(<IconToggle name="foo" off="bar" />);
   });
 
   it("can be pressed", () => {
@@ -22,7 +22,7 @@ describe("components/IconToggle", () => {
 
   it("can have a label", () => {
     const component = renderer.create(
-      <IconToggle name="foo" nameOff="bar" label="foobar" />,
+      <IconToggle name="foo" off="bar" label="foobar" />,
     );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
@@ -43,7 +43,7 @@ describe("onChange()", () => {
   it("should call onChange callback", () => {
     const onChangeSpy = jest.fn();
     const wrapper = shallow(
-      <IconToggle name="foo" nameOff="bar" onChange={onChangeSpy} />,
+      <IconToggle name="foo" off="bar" onChange={onChangeSpy} />,
     );
     expect(wrapper.state("pressed")).toEqual(false);
     wrapper.instance().handleClick({ preventDefault: () => {} });

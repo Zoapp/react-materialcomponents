@@ -3,7 +3,7 @@
 exports[`components/IconToggle can have a label 1`] = `
 <i
   aria-pressed={false}
-  arria-label={null}
+  arria-label={undefined}
   className="mdc-icon-toggle material-icons"
   onClick={[Function]}
   onKeyUp={[Function]}

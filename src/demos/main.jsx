@@ -11,6 +11,7 @@ import Cards from "./components/cards";
 import Buttons from "./components/buttons";
 import Checkboxes from "./components/checkboxes";
 import GridLists from "./components/gridlists";
+import Icons from "./components/icons";
 import IconToggles from "./components/iconToggles";
 import LinearProgresses from "./components/linearProgress";
 import Lists from "./components/lists";
@@ -41,6 +42,9 @@ const Main = ({ children }) => (
       <GridLists />
     </div>
     <div id="icon">
+      <Icons />
+    </div>
+    <div id="toggle">
       <IconToggles />
     </div>
     <div id="linear">

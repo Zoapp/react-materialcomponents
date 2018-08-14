@@ -12,8 +12,7 @@ import Zrmc from "../";
  * mdc-icon-toggle
  *
  * See:
- * https://material.io/components/web/catalog/buttons/icon-toggle-buttons/
- * https://material-components-web.appspot.com/icon-toggle.html
+ * https://material.io/develop/web/components/buttons/icon-toggle-buttons/
  *
  */
 
@@ -39,15 +38,34 @@ export default class IconToggle extends Component {
       pressed,
       disabled,
       name,
-      nameOff,
       label,
       labelOff,
       onChange,
       color,
+      fa,
+      children,
+      off,
       ...props
     } = this.props;
-    // TODO Font Awesome
-    let classes = `${MDC_ICONTOGGLE} material-icons`;
+    let classes = MDC_ICONTOGGLE;
+    let ch = this.state.pressed ? children : off;
+    if (name) {
+      ch = this.state.pressed ? name : off;
+      classes += " material-icons";
+    } else if (fa) {
+      let cn = "fa";
+      let icon = ` fa-${fa}`;
+      if (this.state.pressed) {
+        if (!off) {
+          cn = "fas";
+        }
+      } else if (off) {
+        icon = ` fa-${off}`;
+      } else {
+        cn = "far";
+      }
+      ch = <i className={`${cn}${icon}`} />;
+    }
     if (disabled) {
       classes += " mdc-icon-toggle--disabled";
     }
@@ -55,7 +73,6 @@ export default class IconToggle extends Component {
     if (color) {
       style.color = color;
     }
-    const n = this.state.pressed ? name : nameOff;
     const l = this.state.pressed ? label : labelOff;
     const element = (
       <i
@@ -74,7 +91,7 @@ export default class IconToggle extends Component {
           }
         }}
       >
-        {n}
+        {ch}
       </i>
     );
     return Zrmc.render(element, props);
@@ -86,7 +103,9 @@ IconToggle.defaultProps = {
   pressed: false,
   disabled: false,
   label: null,
-  labelOff: null,
+  fa: null,
+  children: null,
+  off: null,
   onChange: null,
   color: null,
 };
@@ -95,8 +114,10 @@ IconToggle.propTypes = {
   mdcElement: PropTypes.string,
   pressed: PropTypes.bool,
   disabled: PropTypes.bool,
-  name: PropTypes.string.isRequired,
-  nameOff: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  fa: PropTypes.string,
+  children: PropTypes.node,
+  off: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
   label: PropTypes.string,
   labelOff: PropTypes.string,
   onChange: PropTypes.func,
