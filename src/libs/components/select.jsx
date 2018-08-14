@@ -169,15 +169,8 @@ class Select extends Component {
 
         const adjustedLeft = 0;
         let adjustedTop = 0 - itemOffsetTop;
-        console.log("anchorRef", this.anchorRef);
-        console.log(
-          "innerHeight",
-          innerHeight,
-          " itemOffsetTop",
-          itemOffsetTop,
-        );
-        if (adjustedTop < 0) {
-          adjustedTop = 0;
+        if (top < itemOffsetTop) {
+          adjustedTop = -top;
         } else if (top + menuHeight > innerHeight) {
           adjustedTop = Math.max(0, innerHeight - menuHeight) - top;
         }
