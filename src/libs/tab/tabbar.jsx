@@ -34,7 +34,7 @@ export default class Tabbar extends Component {
 
   static getDerivedStateFromProps(nextProps, prevState) {
     const { activeTab } = nextProps;
-    if (activeTab !== prevState.activeTab) {
+    if (activeTab !== prevState.activeTab && !nextProps.derivedState) {
       return { activeTab };
     }
     return null;

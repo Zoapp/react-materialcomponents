@@ -12,7 +12,7 @@ import Zrmc from "../";
  * zrmc-content
  * Helper container for mdc-toolbar-fixed-adjust
  * See
- * https://material.io/components/web/catalog/toolbar/
+ * https://material.io/develop/web/components/toolbar/
  *
  */
 

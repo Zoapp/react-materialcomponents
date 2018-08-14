@@ -13,8 +13,7 @@ import Zrmc from "../";
  * mdc-radio
  *
  * See:
- * https://material.io/components/web/catalog/input-controls/radio-buttons/
- * https://material-components-web.appspot.com/radio.html
+ * https://material.io/develop/web/components/input-controls/radio-buttons/
  */
 
 const MDC_RADIO = "mdc-radio";

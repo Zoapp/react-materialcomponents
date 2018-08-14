@@ -16,22 +16,27 @@ exports[`demos/components/switchs renders correctly 1`] = `
       className="zrmc-switch-wrapper"
     >
       <div
-        className="mdc-switch"
+        className="mdc-switch mdc-switch--checked"
+        onClick={[Function]}
       >
-        <input
-          className="mdc-switch__native-control"
-          defaultChecked={true}
-          disabled={false}
-          id="1"
-          onChange={null}
-          type="checkbox"
+        <div
+          className="mdc-switch__track"
         />
         <div
-          className="mdc-switch__background"
+          className="mdc-switch__thumb-underlay"
         >
           <div
-            className="mdc-switch__knob"
-          />
+            className="mdc-switch__thumb"
+          >
+            <input
+              className="mdc-switch__native-control"
+              defaultChecked={true}
+              disabled={false}
+              id="1"
+              role="switch"
+              type="checkbox"
+            />
+          </div>
         </div>
       </div>
       <label
@@ -53,22 +58,27 @@ exports[`demos/components/switchs renders correctly 1`] = `
       className="zrmc-switch-wrapper"
     >
       <div
-        className="mdc-switch"
+        className="mdc-switch mdc-switch--disabled mdc-switch--checked"
+        onClick={[Function]}
       >
-        <input
-          className="mdc-switch__native-control"
-          defaultChecked={true}
-          disabled={true}
-          id="2"
-          onChange={null}
-          type="checkbox"
+        <div
+          className="mdc-switch__track"
         />
         <div
-          className="mdc-switch__background"
+          className="mdc-switch__thumb-underlay"
         >
           <div
-            className="mdc-switch__knob"
-          />
+            className="mdc-switch__thumb"
+          >
+            <input
+              className="mdc-switch__native-control"
+              defaultChecked={true}
+              disabled={true}
+              id="2"
+              role="switch"
+              type="checkbox"
+            />
+          </div>
         </div>
       </div>
       <label
@@ -91,21 +101,26 @@ exports[`demos/components/switchs renders correctly 1`] = `
     >
       <div
         className="mdc-switch"
+        onClick={[Function]}
       >
-        <input
-          className="mdc-switch__native-control"
-          defaultChecked={false}
-          disabled={false}
-          id="3"
-          onChange={null}
-          type="checkbox"
+        <div
+          className="mdc-switch__track"
         />
         <div
-          className="mdc-switch__background"
+          className="mdc-switch__thumb-underlay"
         >
           <div
-            className="mdc-switch__knob"
-          />
+            className="mdc-switch__thumb"
+          >
+            <input
+              className="mdc-switch__native-control"
+              defaultChecked={false}
+              disabled={false}
+              id="3"
+              role="switch"
+              type="checkbox"
+            />
+          </div>
         </div>
       </div>
       <label

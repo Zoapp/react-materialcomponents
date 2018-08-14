@@ -10,8 +10,7 @@ import PropTypes from "prop-types";
 /**
  * mdc-ripple-surface
  * See:
- * https://material.io/components/web/catalog/ripples/
- * https://material-components-web.appspot.com/ripple.html
+ * https://material.io/develop/web/components/ripples/
  * https://github.com/material-components/material-components-web/blob/master/packages/mdc-ripple/foundation.js
  *
  */

@@ -12,8 +12,7 @@ import Zrmc from "../";
  * mdc-linear-progress
  *
  * See:
- * https://material.io/components/web/catalog/linear-progress/
- * https://material-components-web.appspot.com/linear-progress.html
+ * https://material.io/develop/web/components/linear-progress/
  *
  */
 

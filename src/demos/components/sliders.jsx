@@ -12,13 +12,20 @@ const Sliders = () => (
   <section>
     <h1>Slider examples </h1>
     <div style={{ padding: "16px" }}>
-      <Slider label="slider 1" />
+      <Slider label="slider 1" derivedState />
     </div>
     <div style={{ padding: "16px" }}>
       <Slider label="slider 2" discrete disabled />
     </div>
     <div style={{ padding: "16px" }}>
-      <Slider label="slider 3" discrete max={256} value={20} displayMarker />
+      <Slider
+        label="slider 3"
+        discrete
+        max={256}
+        value={20}
+        displayMarker
+        derivedState
+      />
     </div>
     <h2>Slider Properties</h2>
     <Property name="Slider" />

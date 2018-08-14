@@ -20,22 +20,22 @@ import Zrmc from "../";
 const MDC_SWITCH = "mdc-switch";
 
 class Switch extends Component {
-  constructor(props) {
-    super(props);
-    const { checked } = props;
-    this.state = { checked };
-  }
+  state = { checked: this.props.checked };
 
   static getDerivedStateFromProps(nextProps, prevState) {
     const { checked } = nextProps;
-    if (checked !== prevState.checked) {
+    if (checked !== prevState.checked && !nextProps.derivedState) {
       return { checked };
     }
     return null;
   }
 
   handleClick = (event) => {
-    event.preventDefault();
+    event.stopPropagation();
+    this.handleChange();
+  };
+
+  handleChange = () => {
     const checked = !this.state.checked;
     this.setState({ checked });
     if (this.props.onChange) {
@@ -46,7 +46,6 @@ class Switch extends Component {
   render() {
     const { disabled, formField, id, label, onChange, ...props } = this.props;
     const { checked } = this.state;
-
     let classes = MDC_SWITCH;
     if (disabled) {
       classes += " mdc-switch--disabled";
@@ -87,6 +86,7 @@ class Switch extends Component {
               type="checkbox"
               className="mdc-switch__native-control"
               role="switch"
+              /* onChange={this.handleChange} */
               {...inputProps}
             />
           </div>

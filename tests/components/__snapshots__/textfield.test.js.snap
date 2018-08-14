@@ -6,7 +6,6 @@ exports[`components/TextField can have a persistent helper text 1`] = `
 >
   <input
     className="mdc-text-field__input"
-    defaultValue={undefined}
     id="unique-component-id"
     onBlur={[Function]}
     onChange={[Function]}
@@ -31,7 +30,6 @@ exports[`components/TextField can have an helper text with a validation message 
 >
   <input
     className="mdc-text-field__input"
-    defaultValue={undefined}
     id="unique-component-id"
     onBlur={[Function]}
     onChange={[Function]}

@@ -12,7 +12,7 @@ describe("components/IconToggle", () => {
 
   it("can be pressed", () => {
     wrapper.setProps({ pressed: true });
-    expect(wrapper.contains("bar")).toEqual(true);
+    expect(wrapper.contains("foo")).toEqual(true);
   });
 
   it("can be disabled", () => {

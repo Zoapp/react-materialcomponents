@@ -13,10 +13,11 @@ const IconToggles = () => (
     <h1>Toggle examples </h1>
     <div style={{ display: "flex" }}>
       <div style={{ padding: "16px" }}>
-        <IconToggle name="favorite" off="favorite_border" />
+        <IconToggle name="favorite" off="favorite_border" derivedState />
       </div>
       <div style={{ padding: "16px" }}>
         <IconToggle
+          derivedState
           off={
             <svg viewBox="0 0 24 24">
               <path
@@ -35,11 +36,11 @@ const IconToggles = () => (
         </IconToggle>
       </div>
       <div style={{ padding: "16px" }}>
-        <IconToggle fa="angry" />
+        <IconToggle fa="angry" derivedState />
       </div>
     </div>
     <h2>Toogle properties</h2>
-    <Property name="Toogle" />
+    <Property name="Toogle" derivedState />
   </section>
 );
 

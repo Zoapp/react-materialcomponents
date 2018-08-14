@@ -13,10 +13,8 @@ import Menu from "../menu/menu";
  * mdc-select
  *
  * See:
- * https://material.io/components/web/catalog/input-controls/select-menus/
- * https://material-components-web.appspot.com/select.html
+ * https://material.io/develop/web/components/input-controls/select-menus/
  *
- * TODO : all
  *
  */
 

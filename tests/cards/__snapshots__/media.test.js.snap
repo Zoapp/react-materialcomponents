@@ -13,7 +13,6 @@ exports[`cards/CardMedia can have an image source 1`] = `
   alt=""
   className="mdc-card__media-item mdc-card__media-item--1x"
   src="https://material-components-web.appspot.com/images/1-1.jpg"
-  style={undefined}
 />
 `;
 

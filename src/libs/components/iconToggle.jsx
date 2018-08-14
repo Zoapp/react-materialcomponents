@@ -19,14 +19,11 @@ import Zrmc from "../";
 const MDC_ICONTOGGLE = "mdc-icon-toggle";
 
 export default class IconToggle extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { pressed: this.props.pressed };
-  }
+  state = { pressed: this.props.pressed };
 
   static getDerivedStateFromProps(nextProps, prevState) {
     const { pressed } = nextProps;
-    if (pressed !== prevState.pressed) {
+    if (pressed !== prevState.pressed && !nextProps.derivedState) {
       return { pressed };
     }
     return null;

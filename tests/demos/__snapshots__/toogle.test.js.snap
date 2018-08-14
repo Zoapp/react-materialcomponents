@@ -21,7 +21,6 @@ exports[`demos/components/iconToggles renders correctly 1`] = `
     >
       <i
         aria-pressed={false}
-        arria-label={undefined}
         className="mdc-icon-toggle material-icons"
         onClick={[Function]}
         onKeyUp={[Function]}
@@ -41,7 +40,6 @@ exports[`demos/components/iconToggles renders correctly 1`] = `
     >
       <i
         aria-pressed={false}
-        arria-label={undefined}
         className="mdc-icon-toggle"
         onClick={[Function]}
         onKeyUp={[Function]}
@@ -68,7 +66,6 @@ exports[`demos/components/iconToggles renders correctly 1`] = `
     >
       <i
         aria-pressed={false}
-        arria-label={undefined}
         className="mdc-icon-toggle"
         onClick={[Function]}
         onKeyUp={[Function]}

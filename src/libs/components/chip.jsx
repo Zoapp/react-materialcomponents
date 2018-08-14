@@ -11,8 +11,7 @@ import Zrmc from "../";
 /**
  * mdc_chip
  * See:
- * https://material.io/components/web/catalog/chips/
- * https://material-components-web.appspot.com/chips.html
+ * https://material.io/develop/web/components/chips/
  *
  * TODO : migrate to mdc 0.30.0 to integrate chips css
  */

@@ -13,11 +13,8 @@ import Zrmc from "../";
  * mdc-button
  *
  * See:
- * https://material.io/components/web/catalog/buttons/
- * http://material-components-web.appspot.com/button.html
+ * https://material.io/develop/web/components/buttons/
  *
- * TODO:
- * - secondary no related css in mdc.css
  *
  */
 

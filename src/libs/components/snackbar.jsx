@@ -9,32 +9,20 @@ import PropTypes from "prop-types";
 import Zrmc from "../";
 
 /**
- * mdc-layout-grid__cell
+ * mdc-snackbar
  *
  * See:
- * https://material.io/components/web/catalog/snackbars/
- * https://material-components-web.appspot.com/snackbar.html
+ * https://material.io/develop/web/components/snackbars/
  *
  */
 
 const MDC_SNACKBAR = "mdc-snackbar";
 
 export default class Snackbar extends Component {
-  constructor(props) {
-    super(props);
-    const { active } = props;
-    this.state = { active };
-  }
+  state = { active: this.props.active, message: this.props.message };
 
   componentDidMount() {
     this.setTimer();
-  }
-
-  static getDerivedStateFromProps(nextProps, prevState) {
-    if (nextProps.active !== prevState.active) {
-      return { active: nextProps.active };
-    }
-    return null;
   }
 
   componentDidUpdate() {
@@ -43,6 +31,10 @@ export default class Snackbar extends Component {
 
   componentWillUnmount() {
     this.clearTimer();
+  }
+
+  updateMessage(message) {
+    this.setState({ active: true, message });
   }
 
   setTimer() {
@@ -70,8 +62,6 @@ export default class Snackbar extends Component {
 
   render() {
     const {
-      active,
-      message,
       timeout,
       onTimeout,
       onAction,
@@ -81,9 +71,9 @@ export default class Snackbar extends Component {
       startAligned,
       ...props
     } = this.props;
-    const sactive = this.state.active;
+    const { message, active } = this.state;
     let classes = MDC_SNACKBAR;
-    if (sactive) {
+    if (active) {
       classes += " mdc-snackbar--active";
     }
     if (multiline) {
