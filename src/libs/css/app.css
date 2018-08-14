@@ -52,6 +52,12 @@
   }
 }
 
+.zrmc-floating-label {
+  position: relative;
+  margin-top: 16px;
+  margin-right: 4px;
+}
+
 .zrmc-switch-wrapper > label {
   margin-left: 16px;
 }
