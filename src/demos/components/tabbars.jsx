@@ -12,7 +12,7 @@ const Tabbars = () => (
   <section>
     <h1>Tabbar examples </h1>
     <div style={{ padding: "16px" }}>
-      <Tabbar>
+      <Tabbar ripple derivedState>
         <Tab text="tab1" />
         <Tab text="tab2" />
         <Tab text="tab3" />

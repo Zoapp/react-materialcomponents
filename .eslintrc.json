@@ -53,6 +53,9 @@
             "webpack": {
                 "config": "webpack.common.js"
             }
+        },
+        "react": {
+            "version": "16.4"
         }
     }
 }

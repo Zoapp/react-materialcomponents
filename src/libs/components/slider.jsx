@@ -12,11 +12,7 @@ import Zrmc from "../";
  * mdc-slider
  *
  * See:
- * https://material.io/components/web/catalog/input-controls/sliders/
- * https://material-components-web.appspot.com/slider.html
- *
- * TODO:
- * - move cursor, onchange
+ * https://material.io/develop/web/components/input-controls/sliders/
  */
 
 const MDC_SLIDER = "mdc-slider";
@@ -41,9 +37,10 @@ export default class Slider extends Component {
   static getDerivedStateFromProps(nextProps, prevState) {
     const { min, max, value } = nextProps;
     if (
-      min !== prevState.min ||
-      max !== prevState.max ||
-      value !== prevState.value
+      (min !== prevState.min ||
+        max !== prevState.max ||
+        value !== prevState.value) &&
+      !nextProps.derivedState
     ) {
       return { min, max, value };
     }

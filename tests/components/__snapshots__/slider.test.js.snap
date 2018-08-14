@@ -24,7 +24,6 @@ exports[`components/Slider can have a display marker 1`] = `
   >
     <div
       className="mdc-slider__track"
-      style={undefined}
     />
   </div>
   <div

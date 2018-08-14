@@ -13,11 +13,8 @@ import Zrmc from "../";
  * mdc-button
  *
  * See:
- * https://material.io/components/web/catalog/buttons/
- * http://material-components-web.appspot.com/button.html
+ * https://material.io/develop/web/components/buttons/
  *
- * TODO:
- * - secondary no related css in mdc.css
  *
  */
 
@@ -28,7 +25,6 @@ class Button extends React.Component {
     const {
       cardAction,
       children,
-      compact,
       dense,
       disabled,
       icon,
@@ -37,8 +33,7 @@ class Button extends React.Component {
       onClick,
       raised,
       ripple,
-      secondary,
-      stroked,
+      outlined,
       unelevated,
       type,
       ...props
@@ -46,7 +41,7 @@ class Button extends React.Component {
     let classes = MDC_BUTTON;
     // Special case for inner buttons of CardActions
     if (cardAction) {
-      classes += " mdc-button--compact mdc-card__action";
+      classes += " mdc-button--dense mdc-card__action";
     } else {
       if (raised) {
         classes += " mdc-button--raised";
@@ -54,17 +49,11 @@ class Button extends React.Component {
       if (unelevated) {
         classes += " mdc-button--unelevated";
       }
-      if (stroked) {
-        classes += " mdc-button--stroked";
+      if (outlined) {
+        classes += " mdc-button--outlined";
       }
       if (dense) {
         classes += " mdc-button--dense";
-      }
-      if (compact) {
-        classes += " mdc-button--compact";
-      }
-      if (secondary) {
-        classes += " secondary-filled-button";
       }
     }
     let i = "";
@@ -110,7 +99,6 @@ class Button extends React.Component {
 Button.defaultProps = {
   cardAction: false,
   children: null,
-  compact: false,
   dense: false,
   disabled: false,
   icon: null,
@@ -120,8 +108,7 @@ Button.defaultProps = {
   onClick: null,
   raised: false,
   ripple: false,
-  secondary: false,
-  stroked: false,
+  outlined: false,
   type: "button",
   unelevated: false,
 };
@@ -129,7 +116,6 @@ Button.defaultProps = {
 Button.propTypes = {
   cardAction: PropTypes.bool,
   children: PropTypes.node,
-  compact: PropTypes.bool,
   dense: PropTypes.bool,
   disabled: PropTypes.bool,
   icon: PropTypes.string,
@@ -138,8 +124,7 @@ Button.propTypes = {
   onClick: PropTypes.func,
   raised: PropTypes.bool,
   ripple: PropTypes.bool,
-  secondary: PropTypes.bool,
-  stroked: PropTypes.bool,
+  outlined: PropTypes.bool,
   unelevated: PropTypes.bool,
   type: PropTypes.string,
   id: PropTypes.string,

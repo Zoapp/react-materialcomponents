@@ -12,7 +12,7 @@ import Zrmc from "../";
  * mdc-fab
  *
  * See
- * https://material.io/components/web/catalog/buttons/floating-action-buttons/
+ * https://material.io/develop/web/components/buttons/floating-action-buttons/
  *
  */
 

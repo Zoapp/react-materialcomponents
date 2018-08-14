@@ -2,7 +2,7 @@ const merge = require("webpack-merge");
 const commonConfig = require("./webpack.common.js");
 const path = require("path");
 const webpack = require("webpack");
-// const CopyWebpackPlugin = require('copy-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = merge(commonConfig, {
   entry: [
@@ -46,6 +46,12 @@ module.exports = merge(commonConfig, {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": JSON.stringify("dev")
+    }),
+    new ExtractTextPlugin({
+      filename: "css/[name].css",
+    }),
   ]
 });
 

@@ -30,12 +30,12 @@ const Buttons = () => (
         </Button>
       </div>
       <div style={{ padding: "16px" }}>
-        <Button unelevated compact secondary>
+        <Button unelevated dense>
           Hello
         </Button>
       </div>
       <div style={{ padding: "16px" }}>
-        <Button stroked dense>
+        <Button outlined dense>
           Hello
         </Button>
       </div>

@@ -14,6 +14,7 @@ describe("components/Switch", () => {
     expect(tree).toMatchSnapshot();
   });
 
+  /* Deprecated 
   it("calls the onChange prop if supplied", () => {
     const onChangeSpy = jest.fn();
 
@@ -28,7 +29,7 @@ describe("components/Switch", () => {
     wrapper.find("input").simulate("change");
 
     expect(onChangeSpy).toHaveBeenCalled();
-  });
+  }); */
 
   it("marks the HTML input as checked", () => {
     const wrapper = shallow(
@@ -36,7 +37,7 @@ describe("components/Switch", () => {
     );
 
     expect(wrapper.find("input").html()).toEqual(
-      '<input type="checkbox" id="unique-component-id" class="mdc-switch__native-control" checked=""/>',
+      '<input type="checkbox" id="unique-component-id" class="mdc-switch__native-control" role="switch" checked=""/>',
     );
   });
 
@@ -46,7 +47,7 @@ describe("components/Switch", () => {
     );
 
     expect(wrapper.find("input").html()).toEqual(
-      '<input type="checkbox" id="unique-component-id" class="mdc-switch__native-control" disabled=""/>',
+      '<input type="checkbox" id="unique-component-id" class="mdc-switch__native-control" role="switch" disabled=""/>',
     );
   });
 

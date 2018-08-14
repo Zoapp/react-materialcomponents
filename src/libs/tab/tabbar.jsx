@@ -34,7 +34,7 @@ export default class Tabbar extends Component {
 
   static getDerivedStateFromProps(nextProps, prevState) {
     const { activeTab } = nextProps;
-    if (activeTab !== prevState.activeTab) {
+    if (activeTab !== prevState.activeTab && !nextProps.derivedState) {
       return { activeTab };
     }
     return null;
@@ -54,7 +54,7 @@ export default class Tabbar extends Component {
   };
 
   updateIndicator() {
-    if (this.activeRef && this.activeRef.ref && this.ref) {
+    if (this.activeRef && this.activeRef.ref && this.ref && this.indicatorRef) {
       const r = this.ref.getBoundingClientRect();
       const rect = this.activeRef.ref.getBoundingClientRect();
       const width = this.ref.clientWidth;
@@ -70,7 +70,14 @@ export default class Tabbar extends Component {
   }
 
   render() {
-    const { children, onChange, color, activeColor, ...props } = this.props;
+    const {
+      children,
+      onChange,
+      color,
+      activeColor,
+      ripple,
+      ...props
+    } = this.props;
     let classes = MDC_TABBAR;
     let text = false;
     let icon = false;
@@ -89,38 +96,38 @@ export default class Tabbar extends Component {
     } else if (icon) {
       classes += " mdc-tab-bar--icon-tab-bar";
     }
-    let style;
-    if (activeColor) {
+    // let style;
+    /* if (activeColor) {
       style = { backgroundColor: activeColor };
-    }
+    } */
     const element = (
-      <nav
+      <div
         className={classes}
         ref={(c) => {
           this.ref = c;
         }}
       >
-        {Children.map(children, (child, tabId) =>
-          React.cloneElement(child, {
-            tabId,
-            active: tabId === activeTab,
-            color: tabId === activeTab ? activeColor : color,
-            ref: (c) => {
-              if (tabId === activeTab) {
-                this.activeRef = c;
-              }
-            },
-            onTabSelect: this.handleTabSelect,
-          }),
-        )}
-        <span
-          className="mdc-tab-bar__indicator"
-          style={style}
-          ref={(c) => {
-            this.indicatorRef = c;
-          }}
-        />
-      </nav>
+        <div className="mdc-tab-scroller">
+          <div className="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll">
+            <div className="mdc-tab-scroller__scroll-content">
+              {Children.map(children, (child, tabId) =>
+                React.cloneElement(child, {
+                  tabId,
+                  active: tabId === activeTab,
+                  ripple,
+                  color: tabId === activeTab ? activeColor : color,
+                  ref: (c) => {
+                    if (tabId === activeTab) {
+                      this.activeRef = c;
+                    }
+                  },
+                  onTabSelect: this.handleTabSelect,
+                }),
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
     );
     return Zrmc.render(element, props);
   }
@@ -133,6 +140,7 @@ Tabbar.defaultProps = {
   onChange: null,
   color: null,
   activeColor: null,
+  ripple: false,
 };
 
 Tabbar.propTypes = {
@@ -142,4 +150,5 @@ Tabbar.propTypes = {
   onChange: PropTypes.func,
   color: PropTypes.string,
   activeColor: PropTypes.string,
+  ripple: PropTypes.bool,
 };

@@ -12,8 +12,8 @@ import Zrmc from "../";
 /**
  * mdc-checkbox
  * See:
- * https://material.io/components/web/catalog/input-controls/checkboxes/
- * https://material-components-web.appspot.com/checkbox.html
+ * https://material.io/develop/web/components/input-controls/checkboxes/
+ *
  */
 
 const MDC_CHECKBOX = "mdc-checkbox";

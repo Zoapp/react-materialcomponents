@@ -11,13 +11,13 @@ const Switches = () => (
   <section>
     <h1>Switch examples </h1>
     <div style={{ padding: "16px" }}>
-      <Switch id="1" label="switch 1" checked />
+      <Switch id="1" label="switch 1" checked derivedState />
     </div>
     <div style={{ padding: "16px" }}>
       <Switch id="2" label="switch 2" checked disabled />
     </div>
     <div style={{ padding: "16px" }}>
-      <Switch id="3" label="switch 3" />
+      <Switch id="3" label="switch 3" derivedState />
     </div>
   </section>
 );

@@ -6,21 +6,26 @@ exports[`components/Switch renders correctly 1`] = `
 >
   <div
     className="mdc-switch"
+    onClick={[Function]}
   >
-    <input
-      className="mdc-switch__native-control"
-      defaultChecked={false}
-      disabled={false}
-      id="unique-component-id"
-      onChange={null}
-      type="checkbox"
+    <div
+      className="mdc-switch__track"
     />
     <div
-      className="mdc-switch__background"
+      className="mdc-switch__thumb-underlay"
     >
       <div
-        className="mdc-switch__knob"
-      />
+        className="mdc-switch__thumb"
+      >
+        <input
+          className="mdc-switch__native-control"
+          defaultChecked={false}
+          disabled={false}
+          id="unique-component-id"
+          role="switch"
+          type="checkbox"
+        />
+      </div>
     </div>
   </div>
   <label

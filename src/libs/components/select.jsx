@@ -13,10 +13,8 @@ import Menu from "../menu/menu";
  * mdc-select
  *
  * See:
- * https://material.io/components/web/catalog/input-controls/select-menus/
- * https://material-components-web.appspot.com/select.html
+ * https://material.io/develop/web/components/input-controls/select-menus/
  *
- * TODO : all
  *
  */
 
@@ -156,7 +154,7 @@ class Select extends Component {
       }
       if (this.state.open) {
         const { innerHeight } = window;
-        const { left, top } = this.anchorRef.getBoundingClientRect();
+        const { top } = this.anchorRef.getBoundingClientRect();
         const menuHeight = this.menuRef.innerRef.offsetHeight;
         let itemOffsetTop = 0;
         if (
@@ -167,15 +165,14 @@ class Select extends Component {
           itemOffsetTop = this.menuRef.selectedRef.innerRef.offsetTop;
         }
 
-        let adjustedTop = top - itemOffsetTop;
-        const overflowsTop = adjustedTop < 0;
-        const overflowsBottom = adjustedTop + menuHeight > innerHeight;
-        if (overflowsTop) {
-          adjustedTop = 0;
-        } else if (overflowsBottom) {
-          adjustedTop = Math.max(0, innerHeight - menuHeight);
+        const adjustedLeft = 0;
+        let adjustedTop = 0 - itemOffsetTop;
+        if (top < itemOffsetTop) {
+          adjustedTop = -top;
+        } else if (top + menuHeight > innerHeight) {
+          adjustedTop = Math.max(0, innerHeight - menuHeight) - top;
         }
-        style = `left: ${left}px; top: ${adjustedTop}px; transform-origin: center ${itemOffsetTop}px;`;
+        style = `left: ${adjustedLeft}px; top: ${adjustedTop}px; transform-origin: center ${itemOffsetTop}px;`;
         this.menuRef.innerRef.style = style;
       }
     }
@@ -195,14 +192,16 @@ class Select extends Component {
       tabIndex = "-1";
     }
 
-    let lc = "mdc-select__label";
+    let lc = "mdc-floating-label";
     if (selectedDisplayValue) {
-      lc += " mdc-select__label--float-above";
+      lc += " mdc-floating-label--float-above";
+    } else {
+      lc += " zrmc-floating-label";
     }
 
-    let bc = "mdc-select__bottom-line";
+    let bc = "mdc-line-ripple";
     if (focused) {
-      bc += " mdc-select__bottom-line--active";
+      bc += " mdc-line-ripple--active";
     }
 
     /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
@@ -217,7 +216,7 @@ class Select extends Component {
         {...p}
       >
         <div
-          className="mdc-select__surface"
+          className="mdc-select__native-control"
           tabIndex={tabIndex}
           ref={(c) => {
             this.focusRef = c;

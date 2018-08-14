@@ -12,15 +12,7 @@ import Icon from "./icon";
 /**
  * mdc-text-field
  * See
- * https://material.io/components/web/catalog/input-controls/text-field/
- * https://material-components-web.appspot.com/text-field.html
- *
- *  TODO
- * - Fullwidth
- * - TextArea
- * - Outlined
- * - Helper
- * - Leading and Trailing icons
+ * https://material.io/develop/web/components/input-controls/text-field/
  */
 
 const MDC_TEXTFIELD = "mdc-text-field";

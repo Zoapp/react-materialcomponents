@@ -13,28 +13,46 @@ import Zrmc from "../";
  * mdc-switch
  *
  * See:
- * https://material.io/components/web/catalog/input-controls/switches/
- * https://material-components-web.appspot.com/switch.html
+ * https://material.io/develop/web/components/input-controls/switches/
  *
- * TODO:
- * - All
  */
 
 const MDC_SWITCH = "mdc-switch";
 
 class Switch extends Component {
-  render() {
-    const {
-      checked,
-      disabled,
-      formField,
-      id,
-      label,
-      onChange,
-      ...props
-    } = this.props;
+  state = { checked: this.props.checked };
 
-    const classes = MDC_SWITCH;
+  static getDerivedStateFromProps(nextProps, prevState) {
+    const { checked } = nextProps;
+    if (checked !== prevState.checked && !nextProps.derivedState) {
+      return { checked };
+    }
+    return null;
+  }
+
+  handleClick = (event) => {
+    event.stopPropagation();
+    this.handleChange();
+  };
+
+  handleChange = () => {
+    const checked = !this.state.checked;
+    this.setState({ checked });
+    if (this.props.onChange) {
+      this.props.onChange(checked);
+    }
+  };
+
+  render() {
+    const { disabled, formField, id, label, onChange, ...props } = this.props;
+    const { checked } = this.state;
+    let classes = MDC_SWITCH;
+    if (disabled) {
+      classes += " mdc-switch--disabled";
+    }
+    if (checked) {
+      classes += " mdc-switch--checked";
+    }
     const cid = Zrmc.generateId(id);
 
     let l = "";
@@ -59,16 +77,19 @@ class Switch extends Component {
     }
 
     let element = (
-      <div className={classes}>
-        <input
-          id={cid}
-          type="checkbox"
-          className="mdc-switch__native-control"
-          onChange={onChange}
-          {...inputProps}
-        />
-        <div className="mdc-switch__background">
-          <div className="mdc-switch__knob" />
+      <div className={classes} onClick={this.handleClick}>
+        <div className="mdc-switch__track" />
+        <div className="mdc-switch__thumb-underlay">
+          <div className="mdc-switch__thumb">
+            <input
+              id={cid}
+              type="checkbox"
+              className="mdc-switch__native-control"
+              role="switch"
+              /* onChange={this.handleChange} */
+              {...inputProps}
+            />
+          </div>
         </div>
       </div>
     );
