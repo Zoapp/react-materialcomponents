@@ -70,7 +70,14 @@ export default class Tabbar extends Component {
   }
 
   render() {
-    const { children, onChange, color, activeColor, ...props } = this.props;
+    const {
+      children,
+      onChange,
+      color,
+      activeColor,
+      ripple,
+      ...props
+    } = this.props;
     let classes = MDC_TABBAR;
     let text = false;
     let icon = false;
@@ -107,6 +114,7 @@ export default class Tabbar extends Component {
                 React.cloneElement(child, {
                   tabId,
                   active: tabId === activeTab,
+                  ripple,
                   color: tabId === activeTab ? activeColor : color,
                   ref: (c) => {
                     if (tabId === activeTab) {
@@ -132,6 +140,7 @@ Tabbar.defaultProps = {
   onChange: null,
   color: null,
   activeColor: null,
+  ripple: false,
 };
 
 Tabbar.propTypes = {
@@ -141,4 +150,5 @@ Tabbar.propTypes = {
   onChange: PropTypes.func,
   color: PropTypes.string,
   activeColor: PropTypes.string,
+  ripple: PropTypes.bool,
 };

@@ -29,10 +29,12 @@ class Tab extends Component {
     this.ref = c;
   };
 
+  // TODO correct ripple behaviour
   render() {
     const {
       children,
       active,
+      /* ripple, */
       text,
       icon,
       href,
@@ -59,6 +61,10 @@ class Tab extends Component {
       }
       props.style.color = color;
     }
+    let indicator = "mdc-tab-indicator";
+    if (active) {
+      indicator += " mdc-tab-indicator--active";
+    }
     const element = (
       <button
         className={classes}
@@ -67,11 +73,18 @@ class Tab extends Component {
           onTabSelect(text, tabId);
         }}
         ref={this.setRef}
+        aria-selected={active}
+        tabIndex={active ? 0 : -1}
+        role="tab"
       >
-        <span className="mdc-tab__content">
+        <div className="mdc-tab__content">
           {i}
           <span className="mdc-tab__text-label">{txt}</span>
+        </div>
+        <span className={indicator}>
+          <span className="mdc-tab-indicator__content mdc-tab-indicator__content--underline" />
         </span>
+        {/* ripple ? <div className="mdc-tab__ripple" /> : "" */}
       </button>
     );
     return Zrmc.render(element, props);
@@ -82,6 +95,7 @@ Tab.defaultProps = {
   mdcElement: MDC_TAB,
   children: null,
   active: false,
+  ripple: false,
   text: null,
   icon: null,
   href: null,
@@ -94,6 +108,7 @@ Tab.propTypes = {
   mdcElement: PropTypes.string,
   children: PropTypes.string,
   active: PropTypes.bool,
+  ripple: PropTypes.bool,
   text: PropTypes.string,
   icon: PropTypes.string,
   href: PropTypes.string,

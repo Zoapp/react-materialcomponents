@@ -3,7 +3,7 @@
 exports[`demos/components/iconToggles renders correctly 1`] = `
 <section>
   <h1>
-    Menus examples 
+    Toggle examples 
   </h1>
   <div
     style={

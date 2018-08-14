@@ -160,6 +160,7 @@ export default class App extends Component {
               <Tabbar
                 onChange={this.handleDrawerChange}
                 activeTab={this.state.activeTab}
+                ripple
               >
                 <Tab text="permanent below" />
                 <Tab text="permanent above" />

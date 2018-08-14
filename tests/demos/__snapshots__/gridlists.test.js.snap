@@ -235,7 +235,525 @@ exports[`demos/components/gridlists renders itself correctly 1`] = `
     </div>
   </div>
   <h2>
-    Grid List Properties
+    Grid Properties
   </h2>
+  <div
+    className="mdc-layout-grid"
+  >
+    <div
+      className="mdc-layout-grid__inner"
+    >
+      <div
+        className="mdc-layout-grid__cell"
+        style={
+          Object {
+            "fontSize": "20px",
+            "fontWeight": "bold",
+          }
+        }
+      >
+        GridList Properties
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        Name
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        Default
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        Type
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        mdcElement
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        MDC_GRIDLIST
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        children
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        node
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        width
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        titleWith
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        tileBackground
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        gutter
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        0
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        number
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        headerCaption
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        false
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        bool
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        twolineCaption
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        false
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        bool
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        iconAlign
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        oneOf(['start','end'])
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        aspectRatio
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        oneOf(['1x1', '16x9', '2x3', '3x2', '4x3', '4x3'])
+      </div>
+    </div>
+  </div>
+  <div
+    className="mdc-layout-grid"
+  >
+    <div
+      className="mdc-layout-grid__inner"
+    >
+      <div
+        className="mdc-layout-grid__cell"
+        style={
+          Object {
+            "fontSize": "20px",
+            "fontWeight": "bold",
+          }
+        }
+      >
+        GridList Tile Properties
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        Name
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        Default
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        Type
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        mdcElement
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        MDC_GRIDLIST
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        children
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        node
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        background
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        width
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        title
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        text
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
+      </div>
+    </div>
+    <div
+      className="mdc-layout-grid__inner"
+      style={
+        Object {
+          "borderBottom": "solid black 1px",
+          "marginBottom": "16px",
+          "paddingTop": "5px",
+        }
+      }
+    >
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        icon
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        null
+      </div>
+      <div
+        className="mdc-layout-grid__cell"
+      >
+        string
+      </div>
+    </div>
+  </div>
 </section>
 `;

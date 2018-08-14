@@ -1,57 +1,100 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tab/Tabbar can be colored 1`] = `
-<nav
+<div
   className="mdc-tab-bar"
 >
-  <span
-    className="mdc-tab-bar__indicator"
-    style={undefined}
-  />
-</nav>
+  <div
+    className="mdc-tab-scroller"
+  >
+    <div
+      className="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll"
+    >
+      <div
+        className="mdc-tab-scroller__scroll-content"
+      />
+    </div>
+  </div>
+</div>
 `;
 
 exports[`tab/Tabbar can configure the active tab 1`] = `
-<nav
+<div
   className="mdc-tab-bar"
 >
-  <span
-    className="mdc-tab-bar__indicator"
-    style={undefined}
-  />
-</nav>
+  <div
+    className="mdc-tab-scroller"
+  >
+    <div
+      className="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll"
+    >
+      <div
+        className="mdc-tab-scroller__scroll-content"
+      />
+    </div>
+  </div>
+</div>
 `;
 
 exports[`tab/Tabbar can have an active color 1`] = `
-<nav
+<div
   className="mdc-tab-bar"
 >
-  <span
-    className="mdc-tab-bar__indicator"
-    style={
-      Object {
-        "backgroundColor": "pink",
-      }
-    }
-  />
-</nav>
+  <div
+    className="mdc-tab-scroller"
+  >
+    <div
+      className="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll"
+    >
+      <div
+        className="mdc-tab-scroller__scroll-content"
+      />
+    </div>
+  </div>
+</div>
 `;
 
 exports[`tab/Tabbar can have children 1`] = `
-<nav
+<div
   className="mdc-tab-bar"
 >
-  <a
-    className="mdc-tab mdc-tab--active"
-    href={null}
-    onClick={[Function]}
+  <div
+    className="mdc-tab-scroller"
   >
-    
-    persistent
-  </a>
-  <span
-    className="mdc-tab-bar__indicator"
-    style={undefined}
-  />
-</nav>
+    <div
+      className="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll"
+    >
+      <div
+        className="mdc-tab-scroller__scroll-content"
+      >
+        <button
+          aria-selected={true}
+          className="mdc-tab mdc-tab--active"
+          href={null}
+          onClick={[Function]}
+          role="tab"
+          tabIndex={0}
+        >
+          <div
+            className="mdc-tab__content"
+          >
+            
+            <span
+              className="mdc-tab__text-label"
+            >
+              persistent
+            </span>
+          </div>
+          <span
+            className="mdc-tab-indicator mdc-tab-indicator--active"
+          >
+            <span
+              className="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+            />
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 `;

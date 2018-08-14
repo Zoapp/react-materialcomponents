@@ -1,83 +1,204 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`tab/Tab can be active 1`] = `
-<a
+<button
+  aria-selected={true}
   className="mdc-tab mdc-tab--active"
   href={null}
   onClick={[Function]}
+  role="tab"
+  tabIndex={0}
 >
-  
-</a>
+  <div
+    className="mdc-tab__content"
+  >
+    
+    <span
+      className="mdc-tab__text-label"
+    />
+  </div>
+  <span
+    className="mdc-tab-indicator mdc-tab-indicator--active"
+  >
+    <span
+      className="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+    />
+  </span>
+</button>
 `;
 
 exports[`tab/Tab can be colored 1`] = `
-<a
+<button
+  aria-selected={false}
   className="mdc-tab"
   href={null}
   onClick={[Function]}
+  role="tab"
   style={
     Object {
       "color": "pink",
     }
   }
+  tabIndex={-1}
 >
-  
-</a>
+  <div
+    className="mdc-tab__content"
+  >
+    
+    <span
+      className="mdc-tab__text-label"
+    />
+  </div>
+  <span
+    className="mdc-tab-indicator"
+  >
+    <span
+      className="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+    />
+  </span>
+</button>
 `;
 
 exports[`tab/Tab can have a link 1`] = `
-<a
+<button
+  aria-selected={false}
   className="mdc-tab"
   href="#"
   onClick={[Function]}
+  role="tab"
+  tabIndex={-1}
 >
-  
-</a>
+  <div
+    className="mdc-tab__content"
+  >
+    
+    <span
+      className="mdc-tab__text-label"
+    />
+  </div>
+  <span
+    className="mdc-tab-indicator"
+  >
+    <span
+      className="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+    />
+  </span>
+</button>
 `;
 
 exports[`tab/Tab can have a text 1`] = `
-<a
+<button
+  aria-selected={false}
   className="mdc-tab"
   href={null}
   onClick={[Function]}
+  role="tab"
+  tabIndex={-1}
 >
-  
-  foobar
-</a>
+  <div
+    className="mdc-tab__content"
+  >
+    
+    <span
+      className="mdc-tab__text-label"
+    >
+      foobar
+    </span>
+  </div>
+  <span
+    className="mdc-tab-indicator"
+  >
+    <span
+      className="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+    />
+  </span>
+</button>
 `;
 
 exports[`tab/Tab can have an icon 1`] = `
-<a
+<button
+  aria-selected={false}
   className="mdc-tab"
   href={null}
   onClick={[Function]}
+  role="tab"
+  tabIndex={-1}
 >
-  <i
-    aria-hidden="true"
-    className="mdc-tab__icon material-icons"
+  <div
+    className="mdc-tab__content"
   >
-    foobar
-  </i>
-</a>
+    <i
+      aria-hidden="true"
+      className="mdc-tab__icon material-icons"
+    >
+      foobar
+    </i>
+    <span
+      className="mdc-tab__text-label"
+    />
+  </div>
+  <span
+    className="mdc-tab-indicator"
+  >
+    <span
+      className="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+    />
+  </span>
+</button>
 `;
 
 exports[`tab/Tab can have an id 1`] = `
-<a
+<button
+  aria-selected={false}
   className="mdc-tab"
   href={null}
   onClick={[Function]}
+  role="tab"
+  tabIndex={-1}
 >
-  
-</a>
+  <div
+    className="mdc-tab__content"
+  >
+    
+    <span
+      className="mdc-tab__text-label"
+    />
+  </div>
+  <span
+    className="mdc-tab-indicator"
+  >
+    <span
+      className="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+    />
+  </span>
+</button>
 `;
 
 exports[`tab/Tab can have children 1`] = `
-<a
+<button
+  aria-selected={false}
   className="mdc-tab"
   href={null}
   onClick={[Function]}
+  role="tab"
+  tabIndex={-1}
 >
-  
-  Children are here!
-</a>
+  <div
+    className="mdc-tab__content"
+  >
+    
+    <span
+      className="mdc-tab__text-label"
+    >
+      Children are here!
+    </span>
+  </div>
+  <span
+    className="mdc-tab-indicator"
+  >
+    <span
+      className="mdc-tab-indicator__content mdc-tab-indicator__content--underline"
+    />
+  </span>
+</button>
 `;
