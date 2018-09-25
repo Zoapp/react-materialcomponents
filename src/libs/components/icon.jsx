@@ -19,16 +19,19 @@ const MDC_ICON = "mdc-icon-button";
 
 const Icon = ({
   name,
+  fa,
   componentName,
   color,
   label,
-  fa,
   onClick,
   children,
   isButton,
   ...props
 }) => {
-  const classes = MDC_ICON;
+  let classes = MDC_ICON;
+  if (!isButton) {
+    classes = "zrmc-icon";
+  }
   const p = Zrmc.sanitizeProps(props);
   if (color) {
     p.style = {};
@@ -38,11 +41,21 @@ const Icon = ({
     p["aria-label"] = label;
   }
   let ch = children;
+  let n = name;
+  let f = fa;
   p.className = classes;
-  if (fa) {
-    ch = <i className={`fa fa-${fa}`} />;
-  } else if (name) {
-    ch = name;
+  if (ch && typeof ch === "string") {
+    if (ch.startsWith("fa-")) {
+      f = ch.substring(3);
+    } else {
+      n = ch;
+    }
+  }
+  if (f) {
+    p.className += ` fa fa-${f} fa-fw`;
+    ch = null;
+  } else if (n) {
+    ch = n;
     if (isButton) {
       p.className += " material-icons";
     } else {
