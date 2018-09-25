@@ -40,8 +40,9 @@ const DrawerContent = ({ children, list, ...props }) => {
             key={index}
             className="mdc-list-item__graphic"
             aria-hidden="true"
-            name={icon}
-          />
+          >
+            {icon}
+          </Icon>
         );
       }
 

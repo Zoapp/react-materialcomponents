@@ -94,6 +94,19 @@
 
 }
 
+.mdc-drawer__content > a > i {
+  padding: 0px;
+}
+
+.mdc-drawer--permanent .mdc-list-item__graphic > * {
+  color: rgba(0,0,0,.54);
+  fill: rgba(0,0,0,.54);
+}
+
+.mdc-drawer__content .mdc-list-item__graphic > svg {
+  margin-top: 6px;
+}
+
 main {
   padding: 24px;
 }

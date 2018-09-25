@@ -41,11 +41,12 @@ class RMDCMenuFoundation {
 
   static getAnchorCorner(adapter) {
     // TODO
-    return adapter.props.anchor.corner || 0;
+    return adapter.props.children.corner || 0;
   }
 
   static getAnchorMargin(adapter) {
-    const margin = (adapter.props.anchor && adapter.props.anchor.margin) || {};
+    const margin =
+      (adapter.props.children && adapter.props.children.margin) || {};
     return {
       top: margin.top || 0,
       bottom: margin.bottom || 0,
