@@ -28,6 +28,12 @@ const Icons = () => (
           </svg>
         </Icon>
       </div>
+      <div style={{ padding: "16px" }}>
+        <Icon>fa-trophy</Icon>
+      </div>
+      <div style={{ padding: "16px" }}>
+        <Icon>favorite</Icon>
+      </div>
     </div>
     <h2>Icon properties</h2>
     <Property name="Icon" />
