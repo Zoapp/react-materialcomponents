@@ -7,17 +7,16 @@ describe("menu/MenuAnchor", () => {
     const tree = renderer
       .create(
         <MenuAnchor
-          anchor={
-            <Menu>
-              <div>children are here!</div>
-            </Menu>
-          }
           menu={
             <Menu>
               <div>children are here!</div>
             </Menu>
           }
-        />,
+        >
+          <Menu>
+            <div>children are here!</div>
+          </Menu>
+        </MenuAnchor>,
       )
       .toJSON();
     expect(tree).toMatchSnapshot();

@@ -151,7 +151,7 @@ const Zrmc = new class {
     }
     if (menu) {
       // Create Menu Anchor
-      return React.createElement(MenuAnchor, { menu, anchor: el });
+      return React.createElement(MenuAnchor, { menu }, el);
     }
     return el;
   }

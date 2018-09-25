@@ -61,7 +61,7 @@ export default class MenuAnchor extends Component {
       this.setState({ open: true });
       Zrmc.lockScroll();
     }
-    const prevOnClick = this.props.anchor.props.onClick;
+    const prevOnClick = this.props.children.props.onClick;
     if (prevOnClick) {
       prevOnClick(e);
     }
@@ -81,11 +81,12 @@ export default class MenuAnchor extends Component {
   }
 
   render() {
-    const { menu, anchor, ...props } = this.props;
+    const { menu, children, ...props } = this.props;
     const classes = MDC_MENU_ANCHOR;
 
     // change onClick event for anchor
-    const anchorElement = React.cloneElement(anchor, {
+    const a = children;
+    const anchorElement = React.cloneElement(a, {
       onClick: this.onClickHandler,
       ref: (c) => {
         this.anchorRef = c;
@@ -116,5 +117,5 @@ MenuAnchor.defaultProps = {
 MenuAnchor.propTypes = {
   mdcElement: PropTypes.string,
   menu: PropTypes.element.isRequired,
-  anchor: PropTypes.element.isRequired,
+  children: PropTypes.element,
 };

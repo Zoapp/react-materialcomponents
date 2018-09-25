@@ -38,7 +38,9 @@ const ListItem = ({
   }
   if (icon) {
     graphic = (
-      <Icon className="mdc-list-item__graphic" aria-hidden="true" name={icon} />
+      <Icon className="mdc-list-item__graphic" aria-hidden="true">
+        {icon}
+      </Icon>
     );
   } else if (imgSrc) {
     graphic = (
@@ -113,7 +115,7 @@ ListItem.propTypes = {
   children: PropTypes.node,
   type: PropTypes.string,
   activated: PropTypes.bool,
-  icon: PropTypes.string,
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
   imgSrc: PropTypes.string,
   imgSize: PropTypes.number,
   imgLabel: PropTypes.string,
