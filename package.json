@@ -1,6 +1,6 @@
 {
   "name": "zrmc",
-  "version": "0.12.3",
+  "version": "0.12.2",
   "description": "ZRMC is an ES7 React wrapper for Material Components Web.",
   "author": "Mik BRY <mik@zoapp.com>",
   "license": "MIT",
