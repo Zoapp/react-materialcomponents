@@ -42,19 +42,17 @@ class Button extends React.Component {
     // Special case for inner buttons of CardActions
     if (cardAction) {
       classes += " mdc-button--dense mdc-card__action";
-    } else {
-      if (raised) {
-        classes += " mdc-button--raised";
-      }
-      if (unelevated) {
-        classes += " mdc-button--unelevated";
-      }
-      if (outlined) {
-        classes += " mdc-button--outlined";
-      }
-      if (dense) {
-        classes += " mdc-button--dense";
-      }
+    } else if (dense) {
+      classes += " mdc-button--dense";
+    }
+    if (raised) {
+      classes += " mdc-button--raised";
+    }
+    if (unelevated) {
+      classes += " mdc-button--unelevated";
+    }
+    if (outlined) {
+      classes += " mdc-button--outlined";
     }
     let i = "";
     if (icon) {
