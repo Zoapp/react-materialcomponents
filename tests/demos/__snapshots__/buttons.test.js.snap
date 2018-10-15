@@ -90,7 +90,7 @@ exports[`demos/components/buttons renders itself correctly 1`] = `
       }
     >
       <button
-        className="mdc-button mdc-button--unelevated mdc-button--dense"
+        className="mdc-button mdc-button--dense mdc-button--unelevated"
         disabled={false}
         id={null}
         onClick={null}
@@ -108,7 +108,7 @@ exports[`demos/components/buttons renders itself correctly 1`] = `
       }
     >
       <button
-        className="mdc-button mdc-button--outlined mdc-button--dense"
+        className="mdc-button mdc-button--dense mdc-button--outlined"
         disabled={false}
         id={null}
         onClick={null}
