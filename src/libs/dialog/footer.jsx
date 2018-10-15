@@ -60,7 +60,9 @@ class DialogFooter extends React.Component {
           } else if (child.props.type === "cancel") {
             cs += " mdc-dialog__footer__button--cancel";
           }
-
+          if (child.props.className) {
+            cs += ` ${child.props.className}`;
+          }
           p.className = cs;
           p.key = `f_${index}`;
           if (isActive) {
