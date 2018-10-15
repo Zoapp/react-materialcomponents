@@ -151,13 +151,18 @@ export default class Dialog extends Component {
           />
         </DialogBody>
       );
-    } else if (
-      !(
-        bodyElement.props &&
-        bodyElement.props.mdcElement &&
-        bodyElement.props.mdcElement === "mdc-dialog__body"
-      )
-    ) {
+    } else if (bodyElement.length === 1) {
+      if (
+        !(
+          bodyElement[0].props &&
+          (bodyElement[0].props.mdcElement === "mdc-dialog__body" ||
+            (bodyElement[0].props.container &&
+              bodyElement[0].props.container.name === "DialogBody"))
+        )
+      ) {
+        bodyElement = <DialogBody>{bodyElement[0]}</DialogBody>;
+      }
+    } else if (bodyElement.length > 1) {
       bodyElement = <DialogBody>{bodyElement}</DialogBody>;
     }
     if (
