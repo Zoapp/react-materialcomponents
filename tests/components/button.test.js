@@ -73,6 +73,12 @@ describe("components/Button", () => {
     wrapper.setProps({ disabled: true });
     expect(wrapper.props().disabled).toEqual(true);
   });
+
+  it("can render a link with targetBlank", () => {
+    wrapper.setProps({ link: "#", newTarget: true });
+    expect(wrapper.prop("target")).toEqual("_blank");
+    expect(wrapper.prop("rel")).toEqual("noopener noreferrer");
+  });
 });
 
 describe("onClick()", () => {

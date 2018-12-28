@@ -30,6 +30,7 @@ class Button extends React.Component {
       icon,
       id,
       link,
+      newTarget,
       onClick,
       raised,
       ripple,
@@ -68,6 +69,8 @@ class Button extends React.Component {
           ref={(e) => {
             this.innerRef = e;
           }}
+          target={newTarget && "_blank"}
+          rel={newTarget && "noopener noreferrer"}
         >
           {i}
           {children}
@@ -118,6 +121,7 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   icon: PropTypes.string,
   link: PropTypes.string,
+  newTarget: PropTypes.bool,
   mdcElement: PropTypes.string,
   onClick: PropTypes.func,
   raised: PropTypes.bool,
