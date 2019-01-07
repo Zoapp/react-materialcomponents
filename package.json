@@ -18,6 +18,8 @@
     "lint": "eslint src tests --ext=js --ext=jsx",
     "publish:demo": "yarn build:demo && gh-pages -d dist/public/",
     "start:dev": "webpack-dev-server --env=dev --inline",
+    "stylelint": "stylelint 'src/libs/css/app.css'",
+    "stylelint:fix": "stylelint 'src/libs/css/app.css' --fix",
     "test": "jest",
     "willPublish": "yarn lint && yarn test && yarn compile"
   },
@@ -85,6 +87,11 @@
     "react-hot-loader": "4.3.4",
     "react-test-renderer": "16.4.2",
     "style-loader": "0.19.1",
+    "stylelint": "^9.9.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^2.0.0",
+    "stylelint-scss": "^3.4.3",
+    "stylelint-selector-bem-pattern": "^2.0.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.0",
     "webpack-merge": "^4.1.1"
