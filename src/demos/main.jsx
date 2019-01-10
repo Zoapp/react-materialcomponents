@@ -24,7 +24,7 @@ import Tabbars from "./components/tabbars";
 import TextFields from "./components/textfields";
 
 const Main = ({ children }) => (
-  <main>
+  <main className="zrmc-main">
     {children}
     <div id="ripple">
       <Ripples />
