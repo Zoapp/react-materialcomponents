@@ -15,7 +15,7 @@
     "dev": "yarn compile:dev && yarn start:dev",
     "distribute": "yarn willPublish && npm publish ./dist",
     "distribute:dev": "yarn compile && cd ./dist && yarn pack",
-    "lint": "eslint src tests --ext=js --ext=jsx",
+    "lint": "eslint src tests --ext=js --ext=jsx && yarn stylelint",
     "publish:demo": "yarn build:demo && gh-pages -d dist/public/",
     "start:dev": "webpack-dev-server --env=dev --inline",
     "stylelint": "stylelint 'src/libs/css/app.css'",
