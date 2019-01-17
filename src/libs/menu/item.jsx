@@ -30,7 +30,7 @@ class MenuItem extends Component {
   };
 
   handleClick = (e) => {
-    e.preventDefault();
+    e.stopPropagation();
 
     if (this.props.onSelected && this.props.tabIndex > -1) {
       this.props.onSelected(this, this.props.tabIndex);

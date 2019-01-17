@@ -54,7 +54,7 @@ export default class MenuAnchor extends Component {
   };
 
   onClickHandler = (e) => {
-    e.preventDefault();
+    e.stopPropagation();
     if (this.state.open) {
       this.onClose();
     } else {
