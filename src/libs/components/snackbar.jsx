@@ -23,6 +23,11 @@ export default class Snackbar extends Component {
 
   componentDidMount() {
     this.setTimer();
+    document.getElementById("snack").addEventListener("transitionend", () => {
+      if (this.props.onTimeout) {
+        this.props.onTimeout();
+      }
+    });
   }
 
   componentDidUpdate() {
@@ -49,9 +54,6 @@ export default class Snackbar extends Component {
   desactivate = () => {
     this.setState({ active: false });
     this.timer = null;
-    if (this.props.onTimeout) {
-      this.props.onTimeout();
-    }
   };
 
   clearTimer() {
@@ -82,9 +84,6 @@ export default class Snackbar extends Component {
     if (actionOnBottom) {
       classes += " mdc-snackbar--action-on-bottom";
     }
-    if (actionOnBottom) {
-      classes += " mdc-snackbar--action-on-bottom";
-    }
     if (startAligned) {
       classes += " mdc-snackbar--align-start";
     }
@@ -95,7 +94,10 @@ export default class Snackbar extends Component {
           <button
             type="button"
             className="mdc-snackbar__action-button"
-            onClick={onAction}
+            onClick={() => {
+              this.desactivate();
+              onAction();
+            }}
           >
             {actionText}
           </button>
@@ -104,6 +106,7 @@ export default class Snackbar extends Component {
     }
     return Zrmc.render(
       <div
+        id="snack"
         className={classes}
         aria-live="assertive"
         aria-atomic="true"
