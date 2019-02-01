@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import renderer from "react-test-renderer";
 import Snackbar from "libs/components/snackbar";
 
@@ -63,10 +63,11 @@ describe("onAction()", () => {
 describe("onTimeout()", () => {
   it("should call desactivate", () => {
     const onTimeoutSpy = jest.fn();
-    const wrapper = shallow(
+    const wrapper = mount(
       <Snackbar message="foo" timeout={250} onTimeout={onTimeoutSpy} />,
     );
 
+    jest.runOnlyPendingTimers();
     wrapper.update();
     expect(wrapper.state("active")).toEqual(true);
     expect(wrapper.instance().timer).not.toEqual(undefined);
@@ -83,6 +84,7 @@ describe("onTimeout()", () => {
     );
 
     wrapper.instance().desactivate();
+    wrapper.simulate("transitionEnd");
     expect(onTimeoutSpy).toHaveBeenCalled();
   });
 });

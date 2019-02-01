@@ -19,10 +19,25 @@ import Zrmc from "../";
 const MDC_SNACKBAR = "mdc-snackbar";
 
 export default class Snackbar extends Component {
-  state = { active: this.props.active, message: this.props.message };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      active: false,
+      message: props.message,
+      transitionEnd: false,
+    };
+  }
 
   componentDidMount() {
-    this.setTimer();
+    setTimeout(() => {
+      this.setState(
+        {
+          active: true,
+        },
+        this.setTimer(),
+      );
+    }, 1);
   }
 
   componentDidUpdate() {
@@ -49,9 +64,6 @@ export default class Snackbar extends Component {
   desactivate = () => {
     this.setState({ active: false });
     this.timer = null;
-    if (this.props.onTimeout) {
-      this.props.onTimeout();
-    }
   };
 
   clearTimer() {
@@ -59,6 +71,13 @@ export default class Snackbar extends Component {
       clearTimeout(this.timer);
     }
   }
+
+  onTransitionEnd = () => {
+    if (!this.state.transitionEnd && !this.state.active) {
+      this.setState({ transitionEnd: true });
+      this.props.onTimeout();
+    }
+  };
 
   render() {
     const {
@@ -82,9 +101,6 @@ export default class Snackbar extends Component {
     if (actionOnBottom) {
       classes += " mdc-snackbar--action-on-bottom";
     }
-    if (actionOnBottom) {
-      classes += " mdc-snackbar--action-on-bottom";
-    }
     if (startAligned) {
       classes += " mdc-snackbar--align-start";
     }
@@ -95,7 +111,10 @@ export default class Snackbar extends Component {
           <button
             type="button"
             className="mdc-snackbar__action-button"
-            onClick={onAction}
+            onClick={() => {
+              this.desactivate();
+              onAction();
+            }}
           >
             {actionText}
           </button>
@@ -108,6 +127,7 @@ export default class Snackbar extends Component {
         aria-live="assertive"
         aria-atomic="true"
         aria-hidden="true"
+        onTransitionEnd={this.onTransitionEnd}
       >
         <div className="mdc-snackbar__text">{message}</div>
         {actionWrapper}
