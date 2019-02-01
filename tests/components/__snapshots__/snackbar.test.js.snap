@@ -5,7 +5,8 @@ exports[`components/Snackbar can be active 1`] = `
   aria-atomic="true"
   aria-hidden="true"
   aria-live="assertive"
-  className="mdc-snackbar mdc-snackbar--active"
+  className="mdc-snackbar"
+  onTransitionEnd={[Function]}
 >
   <div
     className="mdc-snackbar__text"
@@ -21,7 +22,8 @@ exports[`components/Snackbar can have a timeout 1`] = `
   aria-atomic="true"
   aria-hidden="true"
   aria-live="assertive"
-  className="mdc-snackbar mdc-snackbar--active"
+  className="mdc-snackbar"
+  onTransitionEnd={[Function]}
 >
   <div
     className="mdc-snackbar__text"
@@ -37,7 +39,8 @@ exports[`components/Snackbar can have an action text 1`] = `
   aria-atomic="true"
   aria-hidden="true"
   aria-live="assertive"
-  className="mdc-snackbar mdc-snackbar--active"
+  className="mdc-snackbar"
+  onTransitionEnd={[Function]}
 >
   <div
     className="mdc-snackbar__text"

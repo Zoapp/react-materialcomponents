@@ -19,15 +19,25 @@ import Zrmc from "../";
 const MDC_SNACKBAR = "mdc-snackbar";
 
 export default class Snackbar extends Component {
-  state = { active: this.props.active, message: this.props.message };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      active: false,
+      message: props.message,
+      transitionEnd: false,
+    };
+  }
 
   componentDidMount() {
-    this.setTimer();
-    document.getElementById("snack").addEventListener("transitionend", () => {
-      if (this.props.onTimeout) {
-        this.props.onTimeout();
-      }
-    });
+    setTimeout(() => {
+      this.setState(
+        {
+          active: true,
+        },
+        this.setTimer(),
+      );
+    }, 1);
   }
 
   componentDidUpdate() {
@@ -61,6 +71,13 @@ export default class Snackbar extends Component {
       clearTimeout(this.timer);
     }
   }
+
+  onTransitionEnd = () => {
+    if (!this.state.transitionEnd && !this.state.active) {
+      this.setState({ transitionEnd: true });
+      this.props.onTimeout();
+    }
+  };
 
   render() {
     const {
@@ -106,11 +123,11 @@ export default class Snackbar extends Component {
     }
     return Zrmc.render(
       <div
-        id="snack"
         className={classes}
         aria-live="assertive"
         aria-atomic="true"
         aria-hidden="true"
+        onTransitionEnd={this.onTransitionEnd}
       >
         <div className="mdc-snackbar__text">{message}</div>
         {actionWrapper}
