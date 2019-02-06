@@ -30,15 +30,10 @@ const renderModal = () => {
   const { length } = modals;
   if (length > 0) {
     const dialog = modals[length - 1];
-    if (!node) {
-      /* global document */
-      node = document.createElement("div");
-      node.className = "dialog_bg";
-      document.body.appendChild(node);
-    } else {
+    if (currentDialog) {
       ReactDOM.unmountComponentAtNode(node);
+      currentDialog = null;
     }
-    currentDialog = null;
     ReactDOM.render(dialog, node);
     Zrmc.lockScroll();
   }
@@ -47,8 +42,18 @@ const renderModal = () => {
 const DialogManager = {
   init() {
     modalsArray = null;
-    node = null;
     currentDialog = null;
+
+    // Fix error on multiple zrmc import
+    // Zrmc.showDialog call on Opla & Zrmc.closeDialog call on Zoapp
+    // Before node are not the same
+    node = document.getElementById("dialog-container");
+    if (!node) {
+      node = document.createElement("div");
+      node.className = "dialog_bg";
+      node.id = "dialog-container";
+      document.body.appendChild(node);
+    }
   },
 
   open(dialog) {
