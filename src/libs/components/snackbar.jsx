@@ -44,17 +44,12 @@ export default class Snackbar extends Component {
     this.setTimer();
   }
 
-  componentWillUnmount() {
-    this.clearTimer();
-  }
-
   updateMessage(message) {
     this.setState({ active: true, message });
   }
 
   setTimer() {
-    this.clearTimer();
-    if (this.state.active) {
+    if (this.state.active && !this.timer) {
       this.timer = setTimeout(() => {
         this.desactivate();
       }, this.props.timeout);
@@ -63,14 +58,9 @@ export default class Snackbar extends Component {
 
   desactivate = () => {
     this.setState({ active: false });
+    clearTimeout(this.timer);
     this.timer = null;
   };
-
-  clearTimer() {
-    if (this.timer) {
-      clearTimeout(this.timer);
-    }
-  }
 
   onTransitionEnd = () => {
     if (!this.state.transitionEnd && !this.state.active) {
